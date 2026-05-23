@@ -1,6 +1,6 @@
 {
   "$schema": "https://railway.com/railway.schema.json",
   "build": {
-    "buildCommand": "yarn run build"
+    "buildCommand": "chmod +x node_modules/.bin/encore && yarn run build"
   }
 }
