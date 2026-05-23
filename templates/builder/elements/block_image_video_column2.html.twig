@@ -1,0 +1,63 @@
+{% if element.position == "video_image" %}
+    {% set first_element = 'order-1' %}
+    {% set second_element = 'order-0' %}
+{% endif %}
+
+{% set videoId = "" %}
+{% if element.videoPath %}
+    {# On enlève les paramètres éventuels (#, ?, etc.) pour isoler uniquement l'ID #}
+    {% set cleanPath = element.videoPath | split('?') | first %}
+    {% set pathParts = cleanPath | split('/') %}
+    {% set videoId = pathParts | last %}
+{% endif %}
+
+
+<div class="container-xl position-relative">
+    <div class="px-3 px-xl-0">
+        <div class="builder_block_image_video_column2 pt-3 pb-4 px-xl-5">
+            <div class="wysiwyg_content">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-start pt-4 {% if first_element is defined %}{{ first_element }}{% endif %}">
+                        <div>
+                            {% if element.imagePath_url %}
+                                <div class="mb-4">
+                                    <img src="{{ absolute_url(element.imagePath_url) }}" alt="{{ element.titleImage }}" />
+                                </div>
+                            {% endif %}
+                            {% if element.titleImage %}
+                                <div class="mb-2 mb-lg-4 builder_line_height2 letter-spacing1 builder_size6 builder_color2 fw-semibold builder_title_font2">
+                                    {{ element.titleImage }}
+                                </div>
+                            {% endif %}
+                            {% if element.contenuImage %}
+                                <div class="wysiwyg_content">
+                                    {{ element.contenuImage | raw }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-start pt-4 {% if second_element is defined %}{{ second_element }}{% endif %}">
+                        <div class="ps-md-4">
+                            {% if element.videoPath %}
+                                <a target="_blank" href="{{ element.videoPath }}" class="mb-4 d-block mask_video position-relative">
+                                    <img src="https://i3.ytimg.com/vi/{% if videoId %}{{ videoId }}{% endif %}/maxresdefault.jpg" alt="{{ element.titleVideo }}" />
+                                </a>
+                            {% endif %}
+                            {% if element.titleVideo %}
+                                <div class="mb-2 mb-lg-4 builder_line_height2 letter-spacing1 builder_size6 builder_color2 fw-semibold builder_title_font2">
+                                    {{ element.titleVideo }}
+                                </div>
+                            {% endif %}
+                            {% if element.contenuVideo %}
+                                <div class="wysiwyg_content">
+                                    {{ element.contenuVideo | raw }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

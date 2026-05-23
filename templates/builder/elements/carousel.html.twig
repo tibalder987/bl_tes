@@ -1,0 +1,46 @@
+{% set galleryId = 'gal' ~ random() %}
+
+{% if element.fullwidth == 'false' %}<div class="container-xl position-relative">{% endif %}
+    <div class="px-3 px-xl-0">
+        <div class="builder_carousel pt-3 pb-4 px-xl-5 position-relative">
+            <div class="slider_news">
+                {% for item in element.images|default([]) %}
+                    {% set imagePath = item.imagePath_url|default(item.imagePath|default(null)) %}
+                    {% if imagePath %}
+                        <div class="p-3">
+                            <img src="{{ absolute_url(imagePath | imagine_filter('list_news')) }}"
+                                 alt="Photo"
+                                 class="gallery_modal"
+                                 data-target="#{{ galleryId }}Slider"
+                                 data-slideto="{{ loop.index0 }}"
+                                 data-bs-toggle="modal"
+                                 data-bs-target="#{{ galleryId }}Modal"
+                            />
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="modal fade" id="{{ galleryId }}Modal" tabindex="-1" aria-labelledby="GalleryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content rounded-0 bg-black custom_modal border-0 position-relative">
+                    <button type="button" class="btn-close btn_gallery_close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body p-0">
+                        <div id="{{ galleryId }}Slider" class="slider_gallery">
+                            {% for item in element.images|default([]) %}
+                                {% set imagePath = item.imagePath_url|default(item.imagePath|default(null)) %}
+                                {% if imagePath %}
+                                    <div class="text-center">
+                                        <img class="mx-auto" src="{{ absolute_url(imagePath) | imagine_filter('home_slider') }}" alt="Photo"/>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% if element.fullwidth == 'false' %}</div>{% endif %}
+

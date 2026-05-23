@@ -1,0 +1,13 @@
+{% if element.fullwidth == 'false' %}<div class="container px-xl-5 position-relative">{% endif %}
+    <div class="px-4 px-xxl-5">
+        <div class="builder_citation pt-3 pb-4 position-relative d-flex align-items-center justify-content-center">
+            <div class="px-0 px-lg-5 py-4 text-center">
+                {% if element.text %}
+                    <div class="builder_title_font2 fw-semibold fw-light builder_size3 builder_color2 fst-italic">{{ element.text | raw }}</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% if element.fullwidth == 'false' %}</div>{% endif %}
+

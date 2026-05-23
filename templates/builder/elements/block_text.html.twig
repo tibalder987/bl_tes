@@ -1,0 +1,44 @@
+{% if element.type == "12" %}
+    {% set col1 = "col-lg-6" %}
+    {% set col2 = "col-lg-6" %}
+{% endif %}
+{% if element.type == "13" %}
+    {% set col1 = "col-lg-4 pe-lg-5" %}
+    {% set col2 = "col-lg-8 ps-lg-5 border-lg-left" %}
+{% endif %}
+{% if element.type == "23" %}
+    {% set col1 = "col-lg-8 pe-lg-5" %}
+    {% set col2 = "col-lg-4 ps-lg-5 border-lg-left" %}
+{% endif %}
+
+
+{% if element.fullwidth == 'false' %}<div class="container-xl position-relative">{% endif %}
+    <div class="px-3 px-xl-0">
+        <div class="builder_block_text pt-3 pb-4 px-xl-5">
+            <div class="wysiwyg_content">
+                <div class="row">
+                    <div class="{{ col1 }} pt-4">
+                        {% if element.title1 %}
+                            <div class="mb-2 mb-lg-4 builder_line_height2 letter-spacing1 builder_size5 builder_color2 fw-semibold builder_title_font2">
+                                {{ element.title1 }}
+                            </div>
+                        {% endif %}
+                        <div class="wysiwyg_content">
+                            {{ element.contenu1 | raw }}
+                        </div>
+                    </div>
+                    <div class="{{ col2 }} pt-4">
+                        {% if element.title2 %}
+                            <div class="mb-2 mb-lg-4 builder_line_height2 letter-spacing1 builder_size5 builder_color2 fw-semibold builder_title_font2">
+                                {{ element.title2 }}
+                            </div>
+                        {% endif %}
+                        <div class="wysiwyg_content">
+                            {{ element.contenu2 | raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% if element.fullwidth == 'false' %}</div>{% endif %}

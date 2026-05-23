@@ -1,0 +1,17 @@
+$font-balney: "Balney", sans-serif;
+$font-epilogue: "Epilogue", sans-serif;
+
+$color-red: #951914;
+$color-dark: #17110d;
+$color-brown: #422c19;
+$color-blue: #3c849c;
+$color-green: #787a55;
+$color-light-brown: #7b5330;
+$color-gold: #e3cca3;
+$color-gray: #999;
+
+//$font-size-large: 150px;
+$font-size-large: clamp(65px, 10vw, 160px);
+
+//$font-size-medium: 110px;
+$font-size-medium: clamp(45px, 8vw, 110px);

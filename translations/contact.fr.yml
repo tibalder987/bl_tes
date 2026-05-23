@@ -1,0 +1,26 @@
+contact:
+  form:
+    success: Votre demande a été envoyée avec succès — nous vous reviendrons dans les plus brefs délais.
+    label:
+      service: Service
+      firstname: Prénom
+      lastname: Nom
+      email: Email
+      phone: Téléphone
+      message: Message
+    placeholder:
+      service: Service
+    validation:
+      email_required: Veuillez entrer votre adresse email
+  page:
+    title_line1: Nous
+    title_span: Contacter.
+    lead: "Une question concernant votre séjour, une occasion spéciale, ou juste un petit mot ? Nous serons ravis d'échanger.<br>Merci de remplir le formulaire ci-dessous."
+    details_aria: Contact details
+    label_write: Nous écrire
+    label_call: Nous appeler
+    label_visit: Notre adresse
+    address_line1: Povai Bay, Bora-Bora 98730
+    address_line2: Polynésie française
+    submit: Envoyer
+    popup_close: Fermer

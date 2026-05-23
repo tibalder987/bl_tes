@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création d'accès - Enqûete satisfaction{% endblock %}
+
+{% block body %}
+    <div class="wysiwyg_content">
+        <div class="text-center pt-5">
+            <h1 class="builder_size2 fw-semibold builder_title_font2 builder_color2 line-height1 mb-4">
+                Bonjour,
+            </h1>
+            <h4>Pour quelle enquête/sondage souhaitez-vous générer un accès ?</h4>
+        </div>
+        <div class="container px-0 position-relative pb-5 mb-5">
+            <div class="px-4 px-xxl-5 text-center">
+                {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    <div class="row mb-3">
+                        {{ form_row(form.survey) }}
+                    </div>
+
+                    <div class="text-center my-5">
+                        <input type="submit" class="btn btn-lg-custom rounded-5 btn-outline-primary px-5" value="Générer un accès">
+                    </div>
+                {{ form_end(form) }}
+            </div>
+
+            {% if surveyAccess is defined and surveyAccess is not null %}
+                <div class="text-center mt-5 pt-5">
+                    <h4>Félicitations, vous avez créé un accès pour l'enquête {{ (surveyAccess.survey.public) ? "publique" : "privée"}} suivante : <b>{{ surveyAccess.survey.title }}</b></h4>
+
+                    <div class="fs-5 mt-3">
+                        {{ absolute_url~"/"~app.request.locale~"/forms/"~surveyAccess.link }}
+                    </div>
+                    <div class="mt-3">
+                        <button class="copy-to-clipboard btn btn-lg-custom btn-secondary" data-link="{{ absolute_url~"/"~app.request.locale~"/forms/"~surveyAccess.link }}">Copier l'URL dans mon presse papier</button>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

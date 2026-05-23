@@ -1,0 +1,33 @@
+<section class="team-members py-5 {{ element.fullwidth ? 'container-fluid' : 'container' }}">
+    {% if element.title %}
+        <h2 class="text-center mb-5 font-weight-bold">{{ element.title }}</h2>
+    {% endif %}
+    <div class="row justify-content-center">
+        {% for item in element.members|default([]) %}
+            {% set name = item.name|default(null) %}
+            {% if name %}
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 shadow-sm text-center h-100 hover-lift">
+                        <div class="card-body p-4">
+                            <div class="mb-4 position-relative d-inline-block">
+                                {% set photo = item.photo_url|default(item.photo|default(null)) %}
+                                <img src="{{ photo }}" class="rounded-circle shadow-sm member-photo" alt="{{ name }}">
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-1">{{ name }}</h5>
+                            <p class="text-primary font-weight-bold mb-3 text-uppercase small">{{ item.position|default('') }}</p>
+                            <p class="card-text text-muted small mb-4">{{ item.bio|default('') }}</p>
+                            <div class="social-links pt-3 border-top">
+                                {% if item.linkedin|default(null) %}
+                                    <a href="{{ item.linkedin }}" class="text-muted mx-2"><i class="fa fa-linkedin fa-lg"></i></a>
+                                {% endif %}
+                                {% if item.twitter|default(null) %}
+                                    <a href="{{ item.twitter }}" class="text-muted mx-2"><i class="fa fa-twitter fa-lg"></i></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

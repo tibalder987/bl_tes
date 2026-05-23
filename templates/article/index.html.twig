@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% set pageTitle = 'Actualités' %}
+{% if type == constant('App\\Utilities\\GlobalConstants::ARTICLE_ACTUALITE') %}
+    {% set pageTitle = 'Actualités' %}
+{% endif %}
+{% if type == constant('App\\Utilities\\GlobalConstants::ARTICLE_COMMUNIQUE_PRESSE') %}
+    {% set pageTitle = 'Communiqués de presse' %}
+{% endif %}
+{% if type == constant('App\\Utilities\\GlobalConstants::ARTICLE_EVENEMENT') %}
+    {% set pageTitle = 'Evénements' %}
+{% endif %}
+
+{% block title %}{{ app.request.attributes.get('seo').metaTitle }}{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('app-article') }}
+{% endblock %}
+
+{% block body %}
+    <div class="wysiwyg_content">
+        <div class="text-center pt-5">
+            <h1 class="builder_size2 fw-semibold builder_title_font2 builder_color2 line-height1 mb-4">
+                {{ pageTitle }}
+            </h1>
+        </div>
+        <div class="container px-0 position-relative">
+            <div class="px-4 px-xxl-5">
+                <div class="pt-3 pt-xl-5 pb-0 px-xl-5">
+                    <div class="filters px-3 px-xl-5">
+                        <form method="POST" action="/" onsubmit="return false;">
+                            <div class="row flex-wrap justify-content-center">
+                                <div class="pb-3 col">
+                                    <input id="filter-search" class="min-width100 form-control-sm form-control letter-spacing1" type="text" placeholder="MOT CLÉ" value="">
+                                </div>
+                                <div class="pb-3 col">
+                                    <input id="filter-date" class="min-width100 form-control-sm form-control letter-spacing1" type="date" placeholder="DATE">
+                                </div>
+
+                                {% if type == constant('App\\Utilities\\GlobalConstants::ARTICLE_ACTUALITE') %}
+                                    {% if categories is defined %}
+                                        <div class="pb-3 col">
+                                            <select id="filter-category" class="min-width100 form-select-sm form-select letter-spacing1">
+                                                <option value="">Catégorie</option>
+                                                {% for categoryUnique in categories %}
+                                                    <option {% if category and category.id == categoryUnique.id %}selected{% endif%} value="{{ categoryUnique.id }}">{{ categoryUnique.title }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+
+                                <div class="max-width65 pb-3 text-end text-md-start col">
+                                    <button id="search" class="btn btn-sm btn-custom" type="button">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="result d-inline-block p-2 w-100" data-path="{{ path('app_article_list_result') }}" data-type="{{ type }}">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<section class="timeline py-5 {{ element.fullwidth ? 'container-fluid' : 'container' }}">
+    <div class="timeline-container {{ element.orientation == 'horizontal' ? 'timeline-horizontal' : '' }}">
+        {% for item in element.events|default([]) %}
+            {% set title = item.title|default(null) %}
+            {% if title %}
+                <div class="timeline-item position-relative mb-4">
+                    {% if element.orientation == 'vertical' %}
+                        <div class="timeline-marker bg-primary rounded-circle position-absolute"></div>
+                        <div class="timeline-line position-absolute"></div>
+                    {% endif %}
+                    <div class="card shadow-sm border-0 hover-lift">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                {% if item.icon|default(null) %}
+                                    <div class="timeline-icon-box bg-light rounded-circle p-2 mr-3 d-flex align-items-center justify-content-center">
+                                        <i class="{{ item.icon }} text-primary"></i>
+                                    </div>
+                                {% endif %}
+                                <span class="badge badge-pill badge-primary px-3 py-2">{{ item.date|default('') }}</span>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">{{ title }}</h5>
+                            <p class="card-text text-muted small">{{ item.description|default('') }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

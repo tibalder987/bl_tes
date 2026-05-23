@@ -1,0 +1,83 @@
+hero.background: Black and white photograph of Tahitian dancers in traditional dress performing on stage at night.
+hero.opening: Opening
+hero.summer: Summer 2026
+img.boat: Dramatic sunset over silhouetted islands and palm trees, sun rays through clouds on the lagoon.
+img.fire_mob: Meat grilling over open flames on a barbecue, chef's hand with tongs.
+img.flow: White catamaran on calm water at sunset with golden sunbeams through purple clouds.
+img.flower_s1: Smiling woman in traditional Polynesian attire with white flower lei and green leaf crown.
+img.flower_s7: Pink hibiscus backlit by the sun, tropical foliage and thatched roof in the background.
+img.guitar: Musician in a red floral shirt playing a Yamaha acoustic guitar outdoors.
+img.orchestre: Signed promotional photo of the band Chicago with dedication To Bloody Mary's, 1999.
+img.stay: Thatched Polynesian fare roofs with Mount Otemanu and forested peaks under a blue sky.
+img.sunset: Silhouetted palm tree at sunset over calm tropical water, pink and orange sky.
+img.table: Bloody Mary's restaurant interior with sand floor, guest at the wooden bar, and carved sign.
+img.tiki: Carved wooden tiki at night with Bloody Mary's sign and Since 1979 on the stone base.
+img.water: Spotted eagle rays swimming in a group over clear turquoise lagoon water.
+img.wild: Mount Otemanu and coconut palms at golden hour above lush tropical forest, Bora Bora.
+meta_description: "Bloody Mary's Hotel, a boutique hotel in Bora Bora inspired by the spirit of Bloody Mary's—where contemporary elegance meets tiki energy and island hospitality. Opening Summer 2026."
+meta_keywords: "Bloody Mary's Hotel, Bora Bora, boutique hotel, French Polynesia, luxury hotel, tiki culture, Bloody Mary's Restaurant, lagoon, stay, accommodation"
+og_description: "A boutique hotel in Bora Bora inspired by the spirit of Bloody Mary's—contemporary design, tiki energy, and island hospitality. Opening Summer 2026."
+og_title: "Bloody Mary's Hotel - Bora Bora | Welcome"
+page_title: "Bloody Mary's Hotel - Bora Bora | Welcome"
+reservation.add_date: Add date
+reservation.checkin: Check in
+reservation.checkin_date_aria: Check in date
+reservation.checkout: Check out
+reservation.checkout_date_aria: Check out date
+reservation.dates_aria: Dates de séjour
+reservation.explore: Explore
+reservation.guests: Guests
+reservation.guests_summary_default: "2 adults"
+reservation.guests_summary.adults_one: "1 adult"
+reservation.guests_summary.adults: "__COUNT__ adults"
+reservation.guests_summary.kid_one: "1 kid"
+reservation.guests_summary.kids: "__COUNT__ kids"
+reservation.guests_summary.sep: " · "
+reservation.popover.adults: Adults
+reservation.popover.adults_decrease_aria: Decrease adults
+reservation.popover.adults_hint: Ages 13 or above
+reservation.popover.adults_increase_aria: Increase adults
+reservation.popover.done: Done
+reservation.popover.kids: Kids
+reservation.popover.kids_decrease_aria: Decrease kids
+reservation.popover.kids_hint: Ages 2 to 12
+reservation.popover.kids_increase_aria: Increase kids
+reservation.popover.title: Guests
+s1.arrow_flow: Follow the flow
+s1.btn: step into the story
+s1.p1: 'Inspired by the legendary <b>Bloody Mary''s Restaurant</b> - whose name it proudly carries - <b>the 53-key boutique Bloody Mary''s Hotel</b> blends the vivid, playful energy of "tiki culture" with an effortless, contemporary elegance, shaping a kind of luxury that feels <b>grounded, social, and deeply connected.</b>'
+s1.p2: "A lively meeting point between land and sea - intimate yet open to the world - it emerges as an inclusive and inspiring haven where <b>genuine encounters</b>, gentle modernity, and a deep <b>sense of belonging</b> to the island are celebrated. "
+s1.p3: "Bloody Mary's Hotel reveals a fresh way to experience Bora Bora - <b>authentic</b>, unapologetically <b>alive</b> and <b>human</b> at its core."
+s1.sub.island: and the island, as it is.
+s1.sub.just_you: Just you
+s1.sub.no_scripts: No scripts. No clichés.
+s1.sub.thanks_prefix: Thank you for
+s1.sub.thanks: meeting us here.
+s1.subtitle_diff: Differently
+s1.subtitle_lived: Lived
+s1.title: Bora Bora
+s2.pulse: Pulse
+s2.subtitle: Hospitality
+s2.subtitle2: with a
+s2.title: Island
+s3.btn: settle In
+s3.p: "Intimate sanctuaries shaped by natural textures, light, and island views - designed for slow mornings, late nights, and the moments you did not plan."
+s3.title: Stay
+s4.arrow: Follow the rhythm
+s4.btn: At the table
+s4.p: "A modern echo to Bloody Mary's Restaurant legacy - food and drinks as an invitation to linger, connect, and feel at home."
+s4.title: Dine
+s5.btn: In motion
+s5.p: "Architecture and spaces that breathe with the island - designed to move like music from shore to sky."
+s5.title: Flow
+s6.arrow: Follow the wind
+s6.btn: Stay for a while
+s6.p: "A place where guests, local voices, and the island meet as one - for moments that unfold naturally."
+s6.title: Be
+s8.p1: "A vibrant tapestry of color and light, Bora Bora reveals its true character in the everyday rhythm of island life - social, sun-warmed, lagoon-lulled."
+s8.p2: "Here, life unfolds between mountain and ocean - from early swims to lively conversations and afternoons drifting into sunset tones."
+s8.p3: "At <b>Bloody Mary's Hotel,</b> Bora Bora is experienced with presence - not just as a backdrop, but as a place to step fully in and <b>feel.</b>"
+s8.sub_beyond: Beyond the
+s8.sub_postcard: Postcard
+s8.subcontent: <span>Meet us</span> just a short flight from <span class="shape">Tahiti Faa'a</span> International Airport.
+s8.title: Bora Bora

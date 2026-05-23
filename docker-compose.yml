@@ -1,0 +1,85 @@
+version: "3.8"
+services:
+  db:
+    container_name: bloody_api_database
+    image: percona/percona-server
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: builder
+      MYSQL_USER: builder
+      MYSQL_PASSWORD: builder
+    ports:
+      - "3307:3306"
+    volumes:
+      - bloody_api_data:/var/lib/mysql
+    command: mysqld --sql_mode=""
+    restart: on-failure
+    networks:
+      - bloody_project
+
+  www:
+    build:
+      context: docker/php
+      dockerfile: Dockerfile
+    container_name: bloody_api_www
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./docker/php/vhosts:/etc/apache2/sites-enabled
+      - ./:/var/www:rw
+      - ./docker/tmp:/var/www/var/tmp:rw
+      - ./docker/logs-apache:/var/log/apache2
+      - cache:/var/www/var/cache:rw
+      - ./docker/log-symfony:/var/www/var/log:rw
+      - ./docker/php/conf.ini/custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini:delegated
+    command: >-
+      bash -lc "mkdir -p var/cache var/log && chown -R www-data:www-data var && if command -v docker-php-entrypoint >/dev/null 2>&1; then docker-php-entrypoint apache2-foreground; else apache2-foreground; fi"
+    restart: on-failure
+    networks:
+      - bloody_project
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    networks:
+      - bloody_project
+  encore:
+    image: node:18-alpine
+    container_name: bloody_encore
+    volumes:
+      - .:/app
+    ports:
+      - "${DEV_SERVER_PORT:-8085}:8080"
+    working_dir: /app
+    stdin_open: true
+    networks:
+      - bloody_project
+
+  mailer:
+    container_name: bloody_mailer
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    networks:
+      - bloody_project
+
+volumes:
+  bloody_api_data:
+    driver: local
+  vendor:
+    name: bloody_api_vendor
+  cache:
+    name: bloody_api_cache
+  log:
+    name: api_log
+
+networks:
+  bloody_project:

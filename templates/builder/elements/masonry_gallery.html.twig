@@ -1,0 +1,23 @@
+
+
+<section class="masonry-gallery py-5 {{ element.fullwidth ? 'container-fluid' : 'container' }}">
+    <div class="masonry-grid">
+        {% for item in element.images|default([]) %}
+            {% set imagePath = item.path_url|default(item.path|default(null)) %}
+            {% set caption = item.caption|default(null) %}
+
+            {% if imagePath %}
+                <div class="card border-0 mb-3">
+                    <a href="{{ imagePath }}" data-toggle="lightbox" data-gallery="gallery-{{ element.id|default('masonry') }}">
+                        <img src="{{ imagePath }}" class="card-img-top rounded shadow-sm hover-zoom" alt="{{ caption }}" style="transition: transform 0.3s;">
+                    </a>
+                    {% if caption %}
+                        <div class="card-body p-2 text-center bg-white rounded-bottom shadow-sm">
+                            <small class="text-muted">{{ caption }}</small>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

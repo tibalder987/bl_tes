@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% set bodyClass = 'contactpage' %}
+
+{% block title %}
+	{{ app.request.attributes.get('seo').metaTitle }}
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% set contactInfo = app.request.attributes.get('contact') %}
+
+	<main class="contact-page">
+		<section class="contact-page__intro">
+			<div class="contact-page__intro-inner">
+				<h1 class="contact-page__title">
+					{{ 'contact.page.title_line1'|trans({}, 'contact') }}
+					<span class="shape">{{ 'contact.page.title_span'|trans({}, 'contact') }}</span>
+				</h1>
+				<p class="contact-page__lead">
+					{{ 'contact.page.lead'|trans({}, 'contact')|raw }}
+				</p>
+			</div>
+			<div class="contact-page__grid">
+				<aside class="contact-page__details" aria-label="{{ 'contact.page.details_aria'|trans({}, 'contact') }}">
+					{% if contactInfo.email %}
+						<div class="contact-page__detail">
+							<span class="contact-page__detail-label">{{ 'contact.page.label_write'|trans({}, 'contact') }}</span>
+							<a class="contact-page__detail-link" href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a>
+						</div>
+					{% endif %}
+
+					{% if contactInfo.phone %}
+						<div class="contact-page__detail">
+							<span class="contact-page__detail-label">{{ 'contact.page.label_call'|trans({}, 'contact') }}</span>
+							<a class="contact-page__detail-link" href="tel:{{ contactInfo.phone|replace({' ': '', '.': '', '-': ''}) }}">{{ contactInfo.phone }}</a>
+						</div>
+					{% endif %}
+
+					{% if contactInfo.address %}
+						<div class="contact-page__detail">
+							<span class="contact-page__detail-label">{{ 'contact.page.label_visit'|trans({}, 'contact') }}</span>
+							<p class="contact-page__detail-address">
+								{{ 'contact.page.address_line1'|trans({}, 'contact') }}<br>{{ 'contact.page.address_line2'|trans({}, 'contact') }}
+							</p>
+						</div>
+					{% endif %}
+				</aside>
+
+				<div class="contact-page__form-wrap">
+					{% set contact_flashes = app.flashes %}
+					{% if contact_flashes is not empty %}
+						<div class="contact-page__alerts">
+							{% for label, messages in contact_flashes %}
+								{% for message in messages %}
+									<div class="contact-page__alert contact-page__alert--{{ label in ['error', 'danger'] ? 'error' : 'success' }}" role="alert">
+										{{ message }}
+									</div>
+								{% endfor %}
+							{% endfor %}
+						</div>
+					{% endif %}
+
+					{{ form_start(form, { attr: { class: 'contact-page__form', novalidate: 'novalidate' } }) }}
+					{{ form_errors(form) }}
+
+					<div class="contact-page__row contact-page__row--full">
+						{{ form_row(form.service) }}
+					</div>
+
+					<div class="contact-page__row">
+						{{ form_row(form.firstname) }}
+						{{ form_row(form.lastname) }}
+					</div>
+
+					<div class="contact-page__row">
+						{{ form_row(form.email) }}
+						{{ form_row(form.phone) }}
+					</div>
+
+					<div class="contact-page__row contact-page__row--full">
+						{{ form_row(form.message) }}
+					</div>
+					{{ form_row(form.captcha) }}
+
+					<div class="contact-page__submit-wrap">
+						<button type="submit" class="btn-secondary contact-page__submit">
+							{{ 'contact.page.submit'|trans({}, 'contact') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</button>
+					</div>
+
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div id="popup" class="ol-popup">
+		<a href="#" id="popup-closer" class="ol-popup-closer" aria-label="{{ 'contact.page.popup_close'|trans({}, 'contact') }}"></a>
+		<div id="popup-content"></div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+{% endblock %}

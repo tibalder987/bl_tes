@@ -1,0 +1,42 @@
+stay_close.title: Au Plus Près.
+stay_close.description: "Histoires, instants et nouvelles... à mesure que le <span>Bloody Mary's</span> Hotel prend vie à Bora Bora, en Polynésie française."
+stay_close.cta: Entrez dans le rythme
+reach_out.title: Nous Joindre
+stay_connected.title: Restez Connectés
+social.facebook: Facebook
+social.instagram: Instagram
+social.linkedin: LinkedIn
+social.tiktok: TikTok
+find_us.title: Nous trouver
+find_us.address: "Bloody Mary's Hotel<br>BP 515 - 98730 Bora Bora<br>Polynésie française"
+logo.alt: "Bloody Mary's"
+bottom.line1: Pas de bruit,
+bottom.line2: "juste l'essentiel."
+legal.aria: Informations légales
+legal.copyright: "Copyright Bloody Mary's © 2026"
+legal.created_by: "Créé par #Prox-i"
+legal.terms: Mentions légales
+legal.privacy: Politique de confidentialité
+legal.terms.link: mentions-legales
+legal.privacy.link: politique-de-confidentialite
+
+newsletter.modal.title: Suivez le mouvement
+newsletter.modal.lead: "Du lagon à votre boîte mail : histoires, nouvelles et quelques bonnes raisons de revenir."
+newsletter.modal.tagline: Pas de bruit. Juste l'essentiel.
+newsletter.modal.signup_heading: "Inscrivez-vous ici :"
+newsletter.modal.label.last_name: Nom
+newsletter.modal.label.first_name: Prénom
+newsletter.modal.label.country: Pays
+newsletter.modal.country.placeholder: "Rechercher un pays…"
+newsletter.modal.label.email: E-mail
+newsletter.modal.email_placeholder: vous@exemple.com
+newsletter.modal.submit: J'embarque!
+newsletter.modal.close: Fermer
+newsletter.modal.privacy_1: Nous respectons votre temps, votre énergie et votre vie privée. Nous ne vendons pas vos informations.
+newsletter.modal.privacy_2: Et bien entendu, vous pourrez vous désinscrire à tout moment.
+newsletter.success.subscribed: Merci — votre inscription est bien enregistrée.
+newsletter.success.already: Cette adresse est déjà inscrite.
+newsletter.error.invalid_email: Veuillez saisir une adresse courriel valide.
+newsletter.error.incomplete: Veuillez remplir tous les champs correctement.
+newsletter.error.generic: Une erreur s'est produite, veuillez réessayer plus tard.
+newsletter.error.captcha: Vérification anti-robot invalide, veuillez réessayer.

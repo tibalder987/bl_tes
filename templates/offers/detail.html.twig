@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ offer.title }}{% endblock %}
+
+{% block body %}
+    <div class="wysiwyg_content">
+        <div class="text-center pt-5">
+            <h1 class="builder_size2 fw-semibold builder_title_font2 builder_color2 line-height1 mb-4">
+                Offre d'emploi : {{ offer.title }}
+            </h1>
+        </div>
+        <div class="container pt-5 pb-5 px-0 position-relative">
+            <div class="px-4 px-xxl-5">
+                <div class="pt-3 pt-xl-5 pb-0 px-xl-5">
+                    <div class="row">
+                        <div class="col-xl-6 pb-4">
+                            <span class="mb-3 d-block letter-spacing1 text-uppercase">
+                                <strong>Poste :</strong> {{ offer.title }} ({{ offer.jobType.title }})
+                            </span>
+                        </div>
+                        <div class="col-xl-6 pb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="d-block letter-spacing1 text-uppercase">
+                                    <strong>Date limite de candidature :</strong> {{ offer.dateLimitOffer|format_datetime('long', 'none', locale='fr') }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 pb-4">
+                            <span class="mb-3 d-block letter-spacing1 text-uppercase">
+                                <strong>Description du poste</strong>
+                            </span>
+                            <div class="">
+                                {{ offer.presentation | raw }}
+                            </div>
+                        </div>
+                        <div class="col-xl-6 pb-4">
+                            <span class="mb-3 d-block letter-spacing1 text-uppercase">
+                                <strong>Missions</strong>
+                            </span>
+                            <div class="">
+                                {{ offer.missions | raw }}
+                            </div>
+                        </div>
+                        <div class="col-xl-6 pb-4">
+                            <span class="mb-3 d-block letter-spacing1 text-uppercase">
+                                <strong>Compétences</strong>
+                            </span>
+                            <div class="">
+                                {{ offer.competences | raw }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

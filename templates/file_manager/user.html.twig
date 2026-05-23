@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestionnaire de fichiers{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="file-manager-container" style="padding: 2rem; min-height: calc(100vh - 200px);">
+            <div id="file-manager-app" data-csrf-token="{{ csrf_token }}"></div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('file-manager') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        // Inject CSRF token for Vue.js application
+        window.FILE_MANAGER_CSRF_TOKEN = "{{ csrf_token }}";
+    </script>
+    {{ encore_entry_script_tags('file-manager') }}
+{% endblock %}
+

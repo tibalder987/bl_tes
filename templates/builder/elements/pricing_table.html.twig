@@ -1,0 +1,37 @@
+<section class="pricing-table py-5 {{ element.fullwidth ? 'container-fluid' : 'container' }}">
+    {% if element.mainTitle %}
+        <h2 class="text-center mb-5 font-weight-bold">{{ element.mainTitle }}</h2>
+    {% endif %}
+    <div class="row justify-content-center">
+        {% for item in element.plans|default([]) %}
+            {% set name = item.name|default(null) %}
+            {% if name %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 {{ item.highlight|default(false) ? 'shadow-lg transform-scale' : 'shadow-sm' }}">
+                        {% if item.highlight|default(false) %}
+                            <div class="card-header bg-primary text-white text-center font-weight-bold py-3">RECOMMANDÉ</div>
+                        {% endif %}
+                        <div class="card-body text-center p-5">
+                            <h3 class="card-title text-uppercase text-muted mb-4">{{ name }}</h3>
+                            <h4 class="card-price display-4 font-weight-bold mb-4">
+                                {{ item.price|default('') }}
+                                <span class="period text-muted h6">{{ item.currency|default('') }}{{ item.period|default('') }}</span>
+                            </h4>
+                            <hr>
+                            <ul class="list-unstyled mt-4 mb-5 text-left">
+                                {% for feature in item.features|default('')|split('\n') %}
+                                    <li class="mb-2"><i class="fa fa-check text-success mr-2"></i> {{ feature }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% if item.btn_text|default(null) %}
+                                <a href="{{ item.btn_url|default('#') }}" class="btn btn-block btn-lg {{ item.highlight|default(false) ? 'btn-primary' : 'btn-outline-primary' }}">
+                                    {{ item.btn_text }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

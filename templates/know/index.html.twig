@@ -1,0 +1,210 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'page_title'|trans({}, 'know') }}
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+{% set bodyClass = 'knowpage' %}
+
+{% block body %}
+	<main class="know-page">
+		<section class="know-page__hero">
+			<div class="know-page__hero-inner">
+				<h1 class="know-page__title">
+					{{ 'hero.title'|trans({}, 'know')|raw }}
+				</h1>
+				<p class="know-page__lead">
+					{{ 'hero.lead'|trans({}, 'know')|raw }}
+				</p>
+			</div>
+		</section>
+
+		{# ====================================================================
+				   How to get to French Polynesia ?
+				==================================================================== #}
+		<section class="know-page__section know-page__section--getting">
+			<h2 class="know-page__section-title">
+				{{ 'getting.title'|trans({}, 'know')|raw }}
+			</h2>
+
+			<div class="know-page__section-content">
+				<div class="know-page__section-text">
+					<p>{{ 'getting.p1'|trans({}, 'know')|raw }}</p>
+					<p>{{ 'getting.p2'|trans({}, 'know')|raw }}</p>
+					<p>{{ 'getting.p3'|trans({}, 'know')|raw }}</p>
+
+					<h6 class="know-page__list-heading">{{ 'getting.list_heading'|trans({}, 'know') }}</h6>
+					<ul class="know-page__list">
+						<li>{{ 'getting.li1'|trans({}, 'know')|raw }}</li>
+						<li>{{ 'getting.li2'|trans({}, 'know')|raw }}</li>
+						<li>{{ 'getting.li3'|trans({}, 'know')|raw }}</li>
+						<li>{{ 'getting.li4'|trans({}, 'know')|raw }}</li>
+						<li>{{ 'getting.li5'|trans({}, 'know')|raw }}</li>
+						<li>{{ 'getting.li6'|trans({}, 'know')|raw }}</li>
+						<li>{{ 'getting.li7'|trans({}, 'know')|raw }}</li>
+					</ul>
+
+					<div class="section-1__subcontent-content">
+						<p class="section-1__subcontent-text">
+							{{ 'getting.cta'|trans({}, 'know')|raw }}
+						</p>
+					</div>
+				</div>
+
+				<div class="know-page__section-image">
+					<img src="{{ asset('images/home/section-3/stay.jpg') }}" loading="lazy" alt="{{ 'img.stay'|trans({}, 'know')|e('html_attr') }}">
+				</div>
+			</div>
+		</section>
+
+		{# ====================================================================
+				   Where it starts to feel real…
+				==================================================================== #}
+		<section class="know-page__section know-page__section--feel">
+			<h2 class="know-page__section-title-red">
+				{{ 'feel.title'|trans({}, 'know')|raw }}
+			</h2>
+
+			<div class="know-page__section-content know-page__section-content--stack">
+				<div class="know-page__section-text">
+					<p>{{ 'feel.p1'|trans({}, 'know')|raw }}</p>
+					<p>{{ 'feel.p2'|trans({}, 'know')|raw }}</p>
+					<p>{{ 'feel.p3'|trans({}, 'know')|raw }}</p>
+					<p>{{ 'feel.p4'|trans({}, 'know')|raw }}</p>
+					<p>{{ 'feel.p5'|trans({}, 'know')|raw }}</p>
+					<p>{{ 'feel.p6_open'|trans({}, 'know')|raw }}</p>
+					<div class="section-3__subcontent-content">
+						<p class="section-3__subcontent-text">
+							{{ 'feel.cta'|trans({}, 'know')|raw }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{# ====================================================================
+				   Practical info — Check-in, currency, weather, wifi, tipping…
+				==================================================================== #}
+		<section class="know-page__section know-page__section--practical">
+			<div class="know-page__qa">
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.checkin.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.checkin.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.checkin.p2'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.checkin.p3'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.checkin.p4'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.checkin.p5'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.checkin.p6'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.currency.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.currency.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.currency.p2'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.currency.p3'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.currency.p4'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.currency.p5'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.weather.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.weather.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.weather.p2'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.weather.p3'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.weather.p4'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.weather.p5'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.wifi.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.wifi.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.wifi.p2'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.wifi.p3'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.tipping.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.tipping.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.tipping.p2'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.tipping.p3'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.whattobring.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.whattobring.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.whattobring.p2'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.whattobring.p3'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.whattobring.p4'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.parking.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.parking.p1'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.languages.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.languages.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.languages.p2'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.electricity.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.electricity.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.electricity.p2'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.water.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.water.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.water.p2'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.water.p3'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.water.p4'|trans({}, 'know')|raw }}</p>
+					</div>
+				</article>
+
+				<article class="know-page__qa-item">
+					<h3 class="icon-title-custom know-page__sub-title">{{ 'qa.forget.title'|trans({}, 'know')|raw }}</h3>
+					<div class="know-page__qa-text">
+						<p>{{ 'qa.forget.p1'|trans({}, 'know')|raw }}</p>
+						<p>{{ 'qa.forget.p2'|trans({}, 'know')|raw }}</p>
+						<ul class="know-page__list">
+							<li>{{ 'qa.forget.li1_intro'|trans({}, 'know')|raw }}{{ 'qa.forget.li1_rest'|trans({'%stay_url%': path('app_stay')}, 'know')|raw }}</li>
+							<li>{{ 'qa.forget.li2_intro'|trans({}, 'know')|raw }}{{ 'qa.forget.li2_rest'|trans({'%dine_url%': path('app_dine')}, 'know')|raw }}</li>
+						</ul>
+						<div class="section-3__subcontent-content">
+							<p class="section-3__subcontent-text">
+								{{ 'qa.forget.closing'|trans({}, 'know')|raw }}
+							</p>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</section>
+	</main>
+{% endblock %}

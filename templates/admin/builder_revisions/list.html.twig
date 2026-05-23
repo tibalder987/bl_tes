@@ -1,0 +1,51 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title %}Historique des révisions{% endblock %}
+
+{% block page_actions %}
+    <a class="btn btn-secondary" href="{{ backUrl }}">
+        <i class="fa fa-arrow-left"></i> Retour
+    </a>
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-12">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+            <table class="table datagrid">
+                <thead>
+                    <tr>
+                        <th>Date de la révision</th>
+                        <th>Auteur</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for revision in revisions %}
+                    <tr>
+                        <td>{{ revision.createdAt|date('d/m/Y H:i:s') }}</td>
+                        <td>{{ revision.author ? revision.author.fullname : 'Système/Auto' }}</td>
+                        <td>
+                            <form action="{{ path('admin_builder_revision_restore', {'id': revision.id}) }}" method="post" onsubmit="return confirm('Êtes-vous sûr de vouloir restaurer cette révision ? Les éléments actuels seront écrasés.');">
+                                <input type="hidden" name="crudControllerFqcn" value="{{ app.request.query.get('crudControllerFqcn') }}">
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fa fa-history"></i> Restaurer cette version
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3" class="text-center">Aucune révision trouvée pour ce contenu.</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

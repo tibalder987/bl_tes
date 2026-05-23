@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}" data-locale="{{ app.request.locale }}">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+		<meta name="robots" content="index,follow"/>
+		<meta name="owner" content=""/>
+		<meta name="copyright" content="#PROX-I"/>
+		<meta name="language" content="{{ app.request.locale }}"/>
+		{% if app.request.attributes.get('favicon') != null %}
+			<link rel="shortcut icon" type="image/x-icon" href="{{ absolute_url(app.request.attributes.get('favicon')) }}"/>
+		{% endif %}
+		<link rel="canonical" href="{{ app.request.schemeAndHttpHost ~ app.request.pathInfo }}"/>
+		<base href="{{ absolute_url('/') }}" target="_self"/>
+
+		<meta property="og:site_name" content="{{ app.request.attributes.get('seo').metaTitle }}"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}"/>
+
+		{% block meta %}
+			<meta name="description" content="{{ app.request.attributes.get('seo').metaDescription }}"/>
+			<meta name="keywords" content=""/>
+			<meta property="og:title" content="{{ app.request.attributes.get('seo').metaTitle }}"/>
+			<meta property="og:description" content="{{ app.request.attributes.get('seo').metaDescription }}"/>
+			{% if app.request.attributes.get('seo').metaImageName != null %}
+				<meta property="og:image" content="{{ absolute_url(app.request.attributes.get('seo').metaImageName) }}"/>
+			{% endif %}
+		{% endblock %}
+
+		{% block stylesheets %}
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+			{{ encore_entry_link_tags('default') }}
+		{% endblock %}
+	</head>
+	<body class="{% if bodyClass is defined %}{{ bodyClass }} {% endif %}is-locale-{{ app.request.locale }} is-loading" data-locale="{{ app.request.locale }}">
+		<div class="main-loader"><img src="{{ asset('images/loader/logo.svg') }}" alt="Chargement…"></div>
+		{% block menu %}
+			{% set menu_params = { homepage: false } %}
+			{% if app.request.attributes.get('_route') == 'app_content_page' and app.request.attributes.get('slug') %}
+				{% set menu_params = menu_params|merge({ page_slug: app.request.attributes.get('slug'), page_route: 'app_content_page' }) %}
+			{% endif %}
+			{{ render(path('app_menu', menu_params)) }}
+		{% endblock %}
+
+		{% block body %}{% endblock %}
+
+		{% block footer %}
+			{{ render(path('app_footer')) }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+
+		{% if app.request.attributes.get('googleAnalyticsId') %}
+			{% set gaId = app.request.attributes.get('googleAnalyticsId') %}
+			{% if gaId starts with 'G-' %}
+				{# Google Analytics 4 (GA4) #}
+				<script async src="https://www.googletagmanager.com/gtag/js?id={{ gaId }}"></script>
+				<script>
+					window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', '{{ gaId }}');
+				</script>
+			{% elseif gaId starts with 'UA-' %}
+				{# Universal Analytics (Legacy) #}
+				<script>
+					(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+},
+i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+ga('create', '{{ gaId }}', 'auto');
+ga('send', 'pageview');
+				</script>
+			{% endif %}
+		{% endif %}
+	</body>
+</html>

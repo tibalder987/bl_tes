@@ -1,0 +1,332 @@
+[Thu Mar 19 19:27:55.772722 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Mar 19 19:27:55.773891 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Mar 19 19:27:55.775251 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Thu Mar 19 19:27:55.775271 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Mar 19 19:27:55.850269 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Mar 19 19:27:55.850536 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Mar 19 19:27:55.850766 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Thu Mar 19 19:27:55.850777 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Mar 20 19:31:59.840721 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Mar 20 19:31:59.842868 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Mar 20 19:31:59.844610 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Fri Mar 20 19:31:59.844618 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Mar 20 19:31:59.924535 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Mar 20 19:31:59.924730 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Mar 20 19:31:59.924879 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Fri Mar 20 19:31:59.924881 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Mar 20 19:32:17.315013 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Mar 20 19:32:17.315649 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Mar 20 19:32:17.316269 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Fri Mar 20 19:32:17.316279 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Mar 20 19:32:17.337568 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Mar 20 19:32:17.337797 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Mar 20 19:32:17.338009 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Fri Mar 20 19:32:17.338012 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon Mar 23 18:46:54.985653 2026] [ssl:info] [pid 10:tid 10] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon Mar 23 18:46:54.988258 2026] [ssl:debug] [pid 10:tid 10] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon Mar 23 18:46:54.989277 2026] [ssl:debug] [pid 10:tid 10] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Mon Mar 23 18:46:54.989284 2026] [ssl:info] [pid 10:tid 10] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon Mar 23 18:46:55.055872 2026] [ssl:info] [pid 10:tid 10] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon Mar 23 18:46:55.056051 2026] [ssl:debug] [pid 10:tid 10] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon Mar 23 18:46:55.056189 2026] [ssl:debug] [pid 10:tid 10] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Mon Mar 23 18:46:55.056191 2026] [ssl:info] [pid 10:tid 10] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Tue Mar 24 02:23:51.782101 2026] [ssl:info] [pid 153:tid 153] [client 172.23.0.1:60646] AH01964: Connection to child 9 established (server localhost:443)
+[Tue Mar 24 02:23:51.789286 2026] [ssl:debug] [pid 153:tid 153] ssl_engine_kernel.c(2228): [client 172.23.0.1:60646] AH02044: No matching SSL virtual host for servername farm.plista.com found (using default/first virtual host)
+[Tue Mar 24 02:23:51.790865 2026] [core:debug] [pid 153:tid 153] protocol.c(2460): [client 172.23.0.1:60646] AH03155: select protocol from , choices=h2,http/1.1 for server localhost
+[Tue Mar 24 02:23:51.799314 2026] [ssl:info] [pid 153:tid 153] [client 172.23.0.1:60646] AH02008: SSL library error 1 in handshake (server localhost:443)
+[Tue Mar 24 02:23:51.799432 2026] [ssl:info] [pid 153:tid 153] SSL Library Error: error:0A000416:SSL routines::ssl/tls alert certificate unknown (SSL alert number 46)
+[Tue Mar 24 02:23:51.799841 2026] [ssl:info] [pid 153:tid 153] [client 172.23.0.1:60646] AH01998: Connection closed to child 9 with abortive shutdown (server localhost:443)
+[Tue Mar 24 19:49:40.886664 2026] [ssl:info] [pid 219:tid 219] [client 172.23.0.1:54210] AH01964: Connection to child 8 established (server localhost:443)
+[Tue Mar 24 19:49:40.893375 2026] [ssl:debug] [pid 219:tid 219] ssl_engine_kernel.c(2228): [client 172.23.0.1:54210] AH02044: No matching SSL virtual host for servername farm.plista.com found (using default/first virtual host)
+[Tue Mar 24 19:49:40.894872 2026] [core:debug] [pid 219:tid 219] protocol.c(2460): [client 172.23.0.1:54210] AH03155: select protocol from , choices=h2,http/1.1 for server localhost
+[Tue Mar 24 19:49:40.901343 2026] [ssl:info] [pid 219:tid 219] [client 172.23.0.1:54210] AH02008: SSL library error 1 in handshake (server localhost:443)
+[Tue Mar 24 19:49:40.901431 2026] [ssl:info] [pid 219:tid 219] SSL Library Error: error:0A000416:SSL routines::ssl/tls alert certificate unknown (SSL alert number 46)
+[Tue Mar 24 19:49:40.901464 2026] [ssl:info] [pid 219:tid 219] [client 172.23.0.1:54210] AH01998: Connection closed to child 8 with abortive shutdown (server localhost:443)
+[Thu Mar 26 21:52:21.368947 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Mar 26 21:52:21.370591 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Mar 26 21:52:21.372843 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Thu Mar 26 21:52:21.372906 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Mar 26 21:52:21.455198 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Mar 26 21:52:21.455433 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Mar 26 21:52:21.455625 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Thu Mar 26 21:52:21.455628 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Mar 26 21:54:57.579967 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Mar 26 21:54:57.580726 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Mar 26 21:54:57.581298 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Thu Mar 26 21:54:57.581305 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Mar 26 21:54:57.614403 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Mar 26 21:54:57.614867 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Mar 26 21:54:57.615195 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Thu Mar 26 21:54:57.615214 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Mar 27 23:43:00.242340 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Mar 27 23:43:00.243660 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Mar 27 23:43:00.244960 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Fri Mar 27 23:43:00.244973 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Mar 27 23:43:00.320047 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Mar 27 23:43:00.320328 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Mar 27 23:43:00.320550 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Fri Mar 27 23:43:00.320553 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon Mar 30 19:57:15.950064 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon Mar 30 19:57:15.950947 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon Mar 30 19:57:15.952076 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Mon Mar 30 19:57:15.952089 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon Mar 30 19:57:16.019486 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon Mar 30 19:57:16.019820 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon Mar 30 19:57:16.020039 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Mon Mar 30 19:57:16.020043 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 08 18:24:56.606963 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 08 18:24:56.615341 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 08 18:24:56.617313 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Wed Apr 08 18:24:56.617344 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 08 18:24:56.767884 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 08 18:24:56.768813 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 08 18:24:56.769040 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Wed Apr 08 18:24:56.769061 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 08 18:25:20.863974 2026] [ssl:info] [pid 12:tid 12] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 08 18:25:20.864620 2026] [ssl:debug] [pid 12:tid 12] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 08 18:25:20.865184 2026] [ssl:debug] [pid 12:tid 12] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Wed Apr 08 18:25:20.865212 2026] [ssl:info] [pid 12:tid 12] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 08 18:25:20.904684 2026] [ssl:info] [pid 12:tid 12] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 08 18:25:20.904937 2026] [ssl:debug] [pid 12:tid 12] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 08 18:25:20.905148 2026] [ssl:debug] [pid 12:tid 12] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 5A8208BC25215C0506808997B6C378385F047A75 / notbefore: Mar 18 01:51:34 2026 GMT / notafter: Mar 15 01:51:34 2036 GMT]
+[Wed Apr 08 18:25:20.905155 2026] [ssl:info] [pid 12:tid 12] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 08 18:29:32.443746 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 08 18:29:32.444423 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 08 18:29:32.445666 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Wed Apr 08 18:29:32.445687 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 08 18:29:32.472590 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 08 18:29:32.472938 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 08 18:29:32.473194 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Wed Apr 08 18:29:32.473208 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Sat Apr 11 01:02:00.875260 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Sat Apr 11 01:02:00.878406 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Sat Apr 11 01:02:00.881180 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Sat Apr 11 01:02:00.881191 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Sat Apr 11 01:02:00.945891 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Sat Apr 11 01:02:00.946156 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Sat Apr 11 01:02:00.946383 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Sat Apr 11 01:02:00.946399 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 15 18:20:37.368429 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 15 18:20:37.369794 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 15 18:20:37.370481 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Wed Apr 15 18:20:37.370500 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 15 18:20:37.389911 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 15 18:20:37.390127 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 15 18:20:37.390335 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Wed Apr 15 18:20:37.390343 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 16 18:56:54.069770 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 16 18:56:54.071584 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 16 18:56:54.072652 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 16 18:56:54.072658 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 16 18:56:54.140621 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 16 18:56:54.141016 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 16 18:56:54.141280 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 16 18:56:54.141287 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon Apr 20 23:52:02.905080 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon Apr 20 23:52:02.907981 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon Apr 20 23:52:02.909703 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Mon Apr 20 23:52:02.909713 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon Apr 20 23:52:02.994409 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon Apr 20 23:52:02.994742 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon Apr 20 23:52:02.995030 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Mon Apr 20 23:52:02.995033 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Tue Apr 21 17:59:27.763878 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Tue Apr 21 17:59:27.767598 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Tue Apr 21 17:59:27.769319 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Tue Apr 21 17:59:27.769331 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Tue Apr 21 17:59:27.869934 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Tue Apr 21 17:59:27.870154 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Tue Apr 21 17:59:27.870322 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Tue Apr 21 17:59:27.870325 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 22 21:22:32.508210 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 22 21:22:32.509291 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 22 21:22:32.511020 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Wed Apr 22 21:22:32.511032 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed Apr 22 21:22:32.570034 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed Apr 22 21:22:32.570269 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed Apr 22 21:22:32.570477 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Wed Apr 22 21:22:32.570481 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 17:52:13.082793 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 17:52:13.085570 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 17:52:13.088713 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 23 17:52:13.088733 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 17:52:13.178764 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 17:52:13.179008 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 17:52:13.179189 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 23 17:52:13.179190 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 21:23:48.707976 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 21:23:48.711045 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 21:23:48.713003 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 23 21:23:48.713023 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 21:23:48.819908 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 21:23:48.820132 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 21:23:48.820323 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 23 21:23:48.820330 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 21:23:57.023692 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 21:23:57.024654 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 21:23:57.025478 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 23 21:23:57.025492 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 21:23:57.061490 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 21:23:57.061821 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 21:23:57.062040 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 7562CD5FF5EA7C8D1222EEFAE69645E877B23C1F / notbefore: Apr  8 18:26:55 2026 GMT / notafter: Apr  5 18:26:55 2036 GMT]
+[Thu Apr 23 21:23:57.062071 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 21:27:51.619472 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 21:27:51.620297 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 21:27:51.620984 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Thu Apr 23 21:27:51.620998 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 23 21:27:51.649853 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 23 21:27:51.650074 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 23 21:27:51.650276 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Thu Apr 23 21:27:51.650288 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Apr 24 19:03:48.115961 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Apr 24 19:03:48.117374 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Apr 24 19:03:48.118628 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Fri Apr 24 19:03:48.118647 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Apr 24 19:03:48.173525 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Apr 24 19:03:48.173724 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Apr 24 19:03:48.173896 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Fri Apr 24 19:03:48.173900 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Apr 24 19:04:14.241877 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Apr 24 19:04:14.242338 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Apr 24 19:04:14.242784 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Fri Apr 24 19:04:14.242788 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri Apr 24 19:04:14.259018 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri Apr 24 19:04:14.259238 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri Apr 24 19:04:14.259390 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Fri Apr 24 19:04:14.259392 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 30 21:33:10.281507 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 30 21:33:10.283743 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 30 21:33:10.285373 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Thu Apr 30 21:33:10.285379 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 30 21:33:10.373906 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 30 21:33:10.374103 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 30 21:33:10.374290 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Thu Apr 30 21:33:10.374294 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 30 21:33:26.840379 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 30 21:33:26.841099 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 30 21:33:26.841504 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Thu Apr 30 21:33:26.841507 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Thu Apr 30 21:33:26.859034 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Thu Apr 30 21:33:26.859263 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Thu Apr 30 21:33:26.859420 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Thu Apr 30 21:33:26.859424 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 18:21:06.884853 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 18:21:06.889558 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 18:21:06.891511 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 18:21:06.891529 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 18:21:06.996596 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 18:21:06.997183 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 18:21:06.997408 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 18:21:06.997411 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 18:21:33.340419 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 18:21:33.340947 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 18:21:33.341385 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 18:21:33.341389 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 18:21:33.360368 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 18:21:33.360584 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 18:21:33.360758 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 18:21:33.360761 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 18:21:55.374273 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 18:21:55.374936 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 18:21:55.375486 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 18:21:55.375492 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 18:21:55.396125 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 18:21:55.396339 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 18:21:55.396511 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 18:21:55.396521 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 23:39:10.929556 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 23:39:10.932939 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 23:39:10.935319 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 23:39:10.935340 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Mon May 04 23:39:11.011953 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Mon May 04 23:39:11.012228 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Mon May 04 23:39:11.012459 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Mon May 04 23:39:11.012470 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 00:50:56.206341 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 00:50:56.209012 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 00:50:56.210468 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 00:50:56.210482 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 00:50:56.306870 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 00:50:56.307119 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 00:50:56.307316 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 00:50:56.307319 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 00:53:11.100917 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 00:53:11.101500 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 00:53:11.101997 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 00:53:11.102023 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 00:53:11.120314 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 00:53:11.120550 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 00:53:11.120754 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 00:53:11.120766 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 18:23:26.242615 2026] [ssl:info] [pid 10:tid 10] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 18:23:26.245991 2026] [ssl:debug] [pid 10:tid 10] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 18:23:26.247514 2026] [ssl:debug] [pid 10:tid 10] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 18:23:26.247528 2026] [ssl:info] [pid 10:tid 10] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 18:23:26.338606 2026] [ssl:info] [pid 10:tid 10] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 18:23:26.338978 2026] [ssl:debug] [pid 10:tid 10] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 18:23:26.339202 2026] [ssl:debug] [pid 10:tid 10] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 18:23:26.339211 2026] [ssl:info] [pid 10:tid 10] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 18:23:59.016502 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 18:23:59.017076 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 18:23:59.017513 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 18:23:59.017526 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 18:23:59.035057 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 18:23:59.035353 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 18:23:59.035588 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 18:23:59.035598 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 23:38:45.892249 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 23:38:45.893391 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 23:38:45.894572 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 23:38:45.894587 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 06 23:38:45.941769 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 06 23:38:45.942009 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 06 23:38:45.942189 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Wed May 06 23:38:45.942192 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Tue May 12 02:03:33.525438 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Tue May 12 02:03:33.530852 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Tue May 12 02:03:33.533963 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Tue May 12 02:03:33.533999 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Tue May 12 02:03:33.662055 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Tue May 12 02:03:33.662444 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Tue May 12 02:03:33.662723 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 27621BAD0108910EA4FABEA7082FD26BD2228996 / notbefore: Apr 23 21:25:09 2026 GMT / notafter: Apr 20 21:25:09 2036 GMT]
+[Tue May 12 02:03:33.662735 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Tue May 12 02:07:42.377124 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Tue May 12 02:07:42.378015 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Tue May 12 02:07:42.378684 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Tue May 12 02:07:42.378701 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Tue May 12 02:07:42.415423 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Tue May 12 02:07:42.415667 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Tue May 12 02:07:42.415885 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Tue May 12 02:07:42.415894 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 13 18:20:14.069367 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 13 18:20:14.072958 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 13 18:20:14.074606 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Wed May 13 18:20:14.074625 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 13 18:20:14.192485 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 13 18:20:14.193122 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 13 18:20:14.193855 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Wed May 13 18:20:14.193893 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 13 18:20:34.553425 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 13 18:20:34.554068 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 13 18:20:34.554569 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Wed May 13 18:20:34.554578 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Wed May 13 18:20:34.572718 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Wed May 13 18:20:34.572944 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Wed May 13 18:20:34.573110 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Wed May 13 18:20:34.573116 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri May 15 18:16:06.976913 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri May 15 18:16:06.978850 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri May 15 18:16:06.980381 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Fri May 15 18:16:06.980426 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri May 15 18:16:07.088101 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri May 15 18:16:07.088420 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri May 15 18:16:07.088691 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Fri May 15 18:16:07.088694 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri May 15 20:02:02.198950 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri May 15 20:02:02.202763 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri May 15 20:02:02.205876 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Fri May 15 20:02:02.205891 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key
+[Fri May 15 20:02:02.290171 2026] [ssl:info] [pid 11:tid 11] AH01914: Configuring server localhost:443 for SSL protocol
+[Fri May 15 20:02:02.290384 2026] [ssl:debug] [pid 11:tid 11] ssl_engine_init.c(644): AH01893: Configuring TLS extension handling
+[Fri May 15 20:02:02.290678 2026] [ssl:debug] [pid 11:tid 11] ssl_util_ssl.c(451): AH02412: [localhost:443] Cert matches for name 'localhost' [subject: CN=localhost / issuer: CN=localhost / serial: 60406AE4BB90D692DAA6744DF9248B38BCB2D90C / notbefore: May 12 02:05:06 2026 GMT / notafter: May  9 02:05:06 2036 GMT]
+[Fri May 15 20:02:02.290686 2026] [ssl:info] [pid 11:tid 11] AH02568: Certificate and private key localhost:443:0 configured from /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key

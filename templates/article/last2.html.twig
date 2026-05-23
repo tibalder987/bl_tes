@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-12 pb-3">
+        <div class="prefix_line">Rester informé</div>
+    </div>
+    <div class="col-7">
+        <h2 class="h1 builder_title_font2 fw-semibold builder_title_size builder_color2 line-height1">Actualités <span class="builder_color3">récentes</span></h2>
+    </div>
+    <div class="col-5 d-flex align-items-center justify-content-end">
+        <a class="text-decoration-none fw-bold d-flex align-items-center" href="{{ path('app_article_actualites') }}">
+            <span class="pe-2">Voir plus d'actualités</span>
+            <span class="p-1 bg-primary rounded-circle">
+                <i class="p-2 line-height1 builder_color1 fa-solid icon-arrowright"></i>
+            </span>
+
+        </a>
+    </div>
+</div>
+<div class="block_articles pt-3 mt-3">
+    <div class="slider_articles">
+        {% for article in articles %}
+            <div class="px-3">
+                {% set imageActu = asset('img/shop/ico-visuel-produit.jpeg') %}
+                {% if article.imageName is not null %}
+                    {% set imageActu = vich_uploader_asset(article,"image") %}
+                {% endif %}
+                <div class="article_item article_item2 rounded-3 overflow-hidden">
+                    <div class="actu_image overflow-hidden">
+                        <img class="scale_hover" src="{{ imageActu | imagine_filter('list_news2') }}" alt="{{ article.title }}" />
+                    </div>
+                    <div class="actu_info2 px-4 pt-4">
+                        <div class="p-0 p-md-2 px-md-2">
+                            <div class="d-flex align-items-center">
+                                <span class="bg-secondary rounded-circle p-2"><i class="p-1 icon-calendar"></i></span>
+                                <span class="ps-2 d-block actu_date letter-spacing1 text-uppercase">
+                                    {{ article.dateSchedule|format_datetime('long', 'none', locale='fr') }}
+                                </span>
+                            </div>
+
+                            <span class="pt-3 d-block letter-spacing1 fw-semibold builder_title_font2 actu_title line-height1">
+                                {% set actu_title = article.title %}
+                                {% if article.title|length > 45 %}
+                                    {% set actu_title = article.title|slice(0, 45) ~ '...' %}
+                                {% endif %}
+                                {{ actu_title | raw }}
+                            </span>
+
+                            <div class="pt-3 pt-md-0 actu_description overflow-hidden">
+                                <p class="fw-light d-xxl-block mb-0">
+                                    {% set actu_description = article.description | striptags | raw | slice(0, 150) ~ '...' %}
+                                    {{ actu_description | raw }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="full_hover" href="{{ path('app_article_actualite_detail', {'slug' : article.path}) }}"></a>
+                    <div class="actu_btn px-4 pb-4 pt-3 pt-md-0">
+                        <div class="p-0 px-md-2 pb-md-2">
+                            <a href="{{ path('app_article_actualite_detail', {'slug' : article.path}) }}" class="border-bottom border-2 text-decoration-none fw-bold d-inline-flex align-items-center">
+                                <span class="d-inline-block">Voir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

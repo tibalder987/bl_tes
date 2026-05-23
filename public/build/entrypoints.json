@@ -1,0 +1,125 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
+        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
+        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
+        "/build/vendors-node_modules_core-js_internals_delete-property-or-throw_js-node_modules_core-js_inter-6a42c7.js",
+        "/build/vendors-node_modules_core-js_modules_es_date_now_js-node_modules_selectize_dist_js_standalone-e52ce2.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_sort_js-node_modules_core-js_modules_es_set_js--e8dfb7.js",
+        "/build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-a71edf.js",
+        "/build/app.js"
+      ]
+    },
+    "app-article": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
+        "/build/app-article.js"
+      ]
+    },
+    "app-mediatheque": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
+        "/build/app-mediatheque.js"
+      ]
+    },
+    "app-admin": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
+        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
+        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
+        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
+        "/build/vendors-node_modules_core-js_internals_delete-property-or-throw_js-node_modules_core-js_inter-6a42c7.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-088580.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_sort_js-node_modules_core-js_modules_es_set_js--e8dfb7.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_find-index_js-node_modules_core-js_modules_es_a-74108a.js",
+        "/build/app-admin.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_core-js_modules_es_array_find-index_js-node_modules_core-js_modules_es_a-74108a.css",
+        "/build/assets_fonts_fontawesome_css_all_min_css.css",
+        "/build/app-admin.css"
+      ]
+    },
+    "app-map": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
+        "/build/app-map.js"
+      ]
+    },
+    "file-manager": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
+        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
+        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
+        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
+        "/build/vendors-node_modules_core-js_internals_delete-property-or-throw_js-node_modules_core-js_inter-6a42c7.js",
+        "/build/vendors-node_modules_core-js_modules_es_date_now_js-node_modules_selectize_dist_js_standalone-e52ce2.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_some_js-node_modules_core-js_modules_es_object_-ef25d7.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-0bfbc8.js",
+        "/build/file-manager.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-0bfbc8.css",
+        "/build/file-manager.css"
+      ]
+    },
+    "file-selector": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
+        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
+        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_some_js-node_modules_core-js_modules_es_object_-ef25d7.js",
+        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-d9423f.js",
+        "/build/file-selector.js"
+      ],
+      "css": [
+        "/build/file-selector.css"
+      ]
+    },
+    "form-builder": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
+        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
+        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
+        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-088580.js",
+        "/build/form-builder.js"
+      ],
+      "css": [
+        "/build/form-builder.css"
+      ]
+    },
+    "default": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_aos_dist_aos_css-node_modules_flatpickr_dist_flatpickr_min_css-node_modu-3c79af.css",
+        "/build/assets_fonts_fontawesome_css_all_min_css.css",
+        "/build/default.css"
+      ]
+    }
+  }
+}

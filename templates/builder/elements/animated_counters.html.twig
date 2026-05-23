@@ -1,0 +1,23 @@
+<section class="animated-counters py-5 position-relative {{ element.fullwidth ? 'container-fluid' : 'container' }}" style="background-image: url('{{ element.backgroundImage_url }}');">
+    {% if element.backgroundImage_url %}
+        <div class="overlay position-absolute w-100 h-100 bg-dark"></div>
+    {% endif %}
+    <div class="row position-relative text-center justify-content-center {{ element.backgroundImage_url ? 'text-white' : '' }}">
+        {% for item in element.counters|default([]) %}
+            {% set number = item.number|default(null) %}
+            {% if number is not null %}
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <div class="counter-item p-3">
+                        {% if item.icon|default(null) %}
+                            <i class="{{ item.icon }} fa-3x mb-3 {{ element.backgroundImage_url ? 'text-white' : 'text-primary' }} opacity-75"></i>
+                        {% endif %}
+                        <div class="display-4 font-weight-bold counter-value mb-2" data-target="{{ number }}">
+                            {{ number }}{{ item.suffix|default('') }}
+                        </div>
+                        <div class="h6 text-uppercase letter-spacing-1 opacity-75">{{ item.label|default('') }}</div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

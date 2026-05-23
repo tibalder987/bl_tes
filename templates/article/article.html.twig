@@ -1,0 +1,106 @@
+{% if article.typeArticle == constant('App\\Utilities\\GlobalConstants::ARTICLE_ACTUALITE') %}
+    <div class="d-flex col-md-6 col-lg-4 col-xl-4 col-xxl-3 pt-4 pt-lg-5">
+        {% set imageActu = asset('img/shop/ico-visuel-produit.jpeg') %}
+        {% if article.imageName is not null %}
+            {% set imageActu = vich_uploader_asset(article,"image") %}
+        {% endif %}
+        <div class="article_item article_item2 rounded-3 overflow-hidden">
+            <div class="actu_image overflow-hidden">
+                <img class="scale_hover" src="{{ imageActu | imagine_filter('list_news2') }}" alt="{{ article.title }}" />
+            </div>
+            <div class="actu_info2 px-4 pt-4">
+                <div class="p-0 p-md-2">
+                    <div class="d-flex align-items-center">
+                        <span class="bg-secondary rounded-circle p-2"><i class="fa-solid p-1 fa-calendar-day"></i></span>
+                        <span class="ps-2 d-block actu_date letter-spacing1 text-uppercase">
+                            {{ article.dateSchedule|format_datetime('long', 'none', locale='fr') }}
+                        </span>
+                    </div>
+
+                    <span class="pt-3 d-block h-auto fw-semibold mb-2 letter-spacing1 builder_title_font2 actu_title line-height1">
+                        {% set actu_title = article.title %}
+                            {% if article.title|length > 45 %}
+                                {% set actu_title = article.title|slice(0, 45) ~ '...' %}
+                            {% endif %}
+                        {{ actu_title | raw }}
+                    </span>
+
+                    <div class="pt-3 pt-md-0 actu_description overflow-hidden">
+                        <p class="fw-light d-xxl-block mb-0">
+                            {% set actu_description = article.description | striptags | raw | slice(0, 100) ~ '...' %}
+                            {{ actu_description | raw }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="full_hover" href="{{ path('app_article_actualite_detail', {'slug' : article.path}) }}"></a>
+            <div class="actu_btn px-4 pb-4 pt-3 pt-md-0">
+                <div class="p-0 px-md-2 pb-md-2">
+                    <a href="{{ path('app_article_actualite_detail', {'slug' : article.path}) }}" class="border-bottom border-2 text-decoration-none fw-bold d-inline-flex align-items-center">
+                        <span class="d-inline-block">Voir plus</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% elseif article.typeArticle == constant('App\\Utilities\\GlobalConstants::ARTICLE_COMMUNIQUE_PRESSE') %}
+    <div class="col-12">
+        <div class="event_item border-1 border-bottom pt-4 pb-4">
+            <div class="row">
+                <div class="col-4 col-lg-2">
+                    <div class="event_date rounded-3 overflow-hidden bg-primary line-height1 text-center p-3 p-lg-4 p-xl-4 p-xxl-5">
+                        <span class="event_day fw-bold text-white letter-spacing1">{{ article.dateSchedule|date('d') }}</span><br>
+                        <span class="event_month fw-bold text-white text-uppercase letter-spacing2">{{ article.dateSchedule|date('M') }}</span><br>
+                        <span class="event_year fw-bold text-white letter-spacing2">{{ article.dateSchedule|date('Y') }}</span>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-10">
+                    <div class="ps-lg-5 pt-md-3 pt-lg-4">
+                        <h3 class="builder_size5 text-uppercase fw-semibold builder_title_font2 letter-spacing1">{{ article.title | raw }}</h3>
+                        {% set articleDescription = article.description %}
+                        {% if article.description|length > 300 %}
+                            {% set articleDescription = article.description | slice(0, 300) ~ '...' %}
+                        {% endif %}
+                        <p class="card-text">{{ articleDescription | raw }}</p>
+
+                        <div class="pt-2">
+                            <a href="{{ absolute_url(path('app_article_communique_detail', {'slug' : article.path})) }}" class="text-decoration-none">
+                                <span class="d-inline-block">Voir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% elseif article.typeArticle == constant('App\\Utilities\\GlobalConstants::ARTICLE_EVENEMENT') %}
+    <div class="col-12">
+        <div class="event_item border-1 border-bottom pt-4 pb-4">
+            <div class="row">
+                <div class="col-4 col-lg-2">
+                    <div class="event_date rounded-3 overflow-hidden bg-primary line-height1 text-center p-3 p-lg-4 p-xl-5">
+                        <span class="event_day fw-bold text-white letter-spacing1">{{ article.dateSchedule|date('d') }}</span><br>
+                        <span class="event_month fw-bold text-white text-uppercase letter-spacing2">{{ article.dateSchedule|date('M') }}</span><br>
+                        <span class="event_year fw-bold text-white letter-spacing2">{{ article.dateSchedule|date('Y') }}</span>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-10">
+                    <div class="ps-lg-5 pt-md-3 pt-lg-4">
+                        <h3 class="builder_size5 text-uppercase fw-semibold builder_title_font2 letter-spacing1">{{ article.title | raw }}</h3>
+                        {% set articleDescription = article.description %}
+                        {% if article.description|length > 300 %}
+                            {% set articleDescription = article.description | slice(0, 300) ~ '...' %}
+                        {% endif %}
+                        <p class="card-text">{{ articleDescription | raw }}</p>
+
+                        <div class="pt-2">
+                            <a href="{{ absolute_url(path('app_article_evenement_detail', {'slug' : article.path})) }}" class="text-decoration-none">
+                                <span class="d-inline-block">Voir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

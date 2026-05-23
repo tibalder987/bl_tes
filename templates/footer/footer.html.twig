@@ -1,0 +1,159 @@
+<footer class="footer">
+	<div class="footer__content">
+		<div class="footer__content-items">
+			<div class="footer__content-item">
+				<div class="footer__content-item-title">{{ 'stay_close.title'|trans({}, 'footer') }}</div>
+				<p class="footer__content-item-description">
+					{{ 'stay_close.description'|trans({}, 'footer')|raw }}
+				</p>
+				<a href="#newsletter" class="btn-primary footer__content-item-button" data-newsletter-trigger>{{ 'stay_close.cta'|trans({}, 'footer') }}
+					<i class="fa-solid fa-arrow-right"></i>
+				</a>
+			</div>
+			<div class="footer__content-item">
+				<div class="footer__content-item-title">{{ 'reach_out.title'|trans({}, 'footer') }}</div>
+				<a class="footer__content-item-link" href="mailto:stay@bloodymarys.com">stay@bloodymarys.com</a>
+			</div>
+			<div class="footer__content-item">
+				<div class="footer__content-item-title">{{ 'stay_connected.title'|trans({}, 'footer') }}</div>
+				<div class="footer__content-item-socials">
+					<a class="footer__content-item-social" href="https://www.facebook.com/bloodymarys" aria-label="{{ 'social.facebook'|trans({}, 'footer') }}">
+						<img src="{{ asset('images/socials/fb.svg') }}" class="footer__content-item-social-icon" alt="">
+					</a>
+					<a class="footer__content-item-social" href="https://www.instagram.com/bloodymarys" aria-label="{{ 'social.instagram'|trans({}, 'footer') }}">
+						<img src="{{ asset('images/socials/ig.svg') }}" class="footer__content-item-social-icon" alt="">
+					</a>
+					<a class="footer__content-item-social" href="https://www.twitter.com/bloodymarys" aria-label="{{ 'social.linkedin'|trans({}, 'footer') }}">
+						<img src="{{ asset('images/socials/in.svg') }}" class="footer__content-item-social-icon" alt="">
+					</a>
+					<a class="footer__content-item-social" href="https://www.tiktok.com/bloodymarys" aria-label="{{ 'social.tiktok'|trans({}, 'footer') }}">
+						<img src="{{ asset('images/socials/tk.svg') }}" class="footer__content-item-social-icon" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="footer__content-item">
+				<div class="footer__content-item-title">{{ 'find_us.title'|trans({}, 'footer') }}</div>
+				<p class="footer__content-item-description footer__content-item-description--address">
+					{{ 'find_us.address'|trans({}, 'footer')|raw }}
+				</p>
+			</div>
+
+			<div class="footer__content-item footer__content-item--logo">
+				<img src="{{ asset('images/footer-logo.svg') }}" class="footer__content-item-logo" alt="{{ 'logo.alt'|trans({}, 'footer') }}">
+			</div>
+		</div>
+	</div>
+
+	<div class="footer__bottom">
+		<div class="footer__bottom-text">
+			<p>{{ 'bottom.line1'|trans({}, 'footer') }}<span>{{ 'bottom.line2'|trans({}, 'footer') }}</span>
+			</p>
+		</div>
+	</div>
+
+	<nav class="footer__legal" aria-label="{{ 'legal.aria'|trans({}, 'footer') }}">
+		<ul class="footer__legal-list">
+			<li class="footer__legal-item">
+				{{ 'legal.copyright'|trans({}, 'footer') }}
+			</li>
+			<li class="footer__legal-item">
+				<a href="https://prox-i.pf" target="_blank" class="footer__legal-item-link underline">{{ 'legal.created_by'|trans({}, 'footer') }}</a>
+			</li>
+			<li class="footer__legal-item">
+				<a href="/{{ app.request.locale }}/p/{{ 'legal.terms.link'|trans({}, 'footer') }}" class="footer__legal-item-link">{{ 'legal.terms'|trans({}, 'footer') }}</a>
+			</li>
+			<li class="footer__legal-item">
+				<a href="/{{ app.request.locale }}/p/{{ 'legal.privacy.link'|trans({}, 'footer') }}" class="footer__legal-item-link">{{ 'legal.privacy'|trans({}, 'footer') }}</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="newsletter-modal" data-newsletter-modal aria-hidden="true" hidden>
+		<div class="newsletter-modal__backdrop" data-newsletter-close></div>
+		<div class="newsletter-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="newsletter-modal-title" aria-describedby="newsletter-modal-lead newsletter-modal-tagline">
+			<button type="button" class="newsletter-modal__close" data-newsletter-close aria-label="{{ 'newsletter.modal.close'|trans({}, 'footer') }}">
+				<i class="fa-solid fa-xmark" aria-hidden="true"></i>
+			</button>
+
+			<form class="newsletter-modal__form"
+				  data-newsletter-form
+				  data-page-locale="{{ app.request.locale }}"
+				  data-suggested-country="{{ newsletter_suggested_country() }}"
+				  data-country-placeholder="{{ 'newsletter.modal.country.placeholder'|trans({}, 'footer')|e('html_attr') }}"
+				  data-recaptcha-enabled="{{ recaptcha_enabled ? '1' : '0' }}"
+				  data-recaptcha-site-key="{{ recaptcha_site_key|default('') }}"
+				  data-generic-error="{{ 'newsletter.error.generic'|trans({}, 'footer')|e('html_attr') }}"
+				  data-incomplete-error="{{ 'newsletter.error.incomplete'|trans({}, 'footer')|e('html_attr') }}"
+				  action="{{ path('api_newsletter_subscribe') }}"
+				  method="post"
+				  >
+
+				<div class="newsletter-modal__main-block" data-newsletter-main>
+					<h2 id="newsletter-modal-title" class="newsletter-modal__title">{{ 'newsletter.modal.title'|trans({}, 'footer') }}</h2>
+					<p id="newsletter-modal-lead" class="newsletter-modal__lead">{{ 'newsletter.modal.lead'|trans({}, 'footer') }}</p>
+					<p id="newsletter-modal-tagline" class="newsletter-modal__tagline">{{ 'newsletter.modal.tagline'|trans({}, 'footer') }}</p>
+
+					<p class="newsletter-modal__signup-heading">{{ 'newsletter.modal.signup_heading'|trans({}, 'footer') }}</p>
+
+					<div class="newsletter-modal__field-row newsletter-modal__field-row--split">
+						{% if app.request.locale == 'fr' %}
+							<div class="newsletter-modal__field-group">
+								<label class="newsletter-modal__label" for="newsletter-lastname">{{ 'newsletter.modal.label.last_name'|trans({}, 'footer') }}</label>
+								<input type="text" id="newsletter-lastname" name="lastName" class="newsletter-modal__input" maxlength="100" autocomplete="family-name" required>
+							</div>
+							<div class="newsletter-modal__field-group">
+								<label class="newsletter-modal__label" for="newsletter-firstname">{{ 'newsletter.modal.label.first_name'|trans({}, 'footer') }}</label>
+								<input type="text" id="newsletter-firstname" name="firstName" class="newsletter-modal__input" maxlength="100" autocomplete="given-name" required>
+							</div>
+						{% else %}
+							<div class="newsletter-modal__field-group">
+								<label class="newsletter-modal__label" for="newsletter-firstname">{{ 'newsletter.modal.label.first_name'|trans({}, 'footer') }}</label>
+								<input type="text" id="newsletter-firstname" name="firstName" class="newsletter-modal__input" maxlength="100" autocomplete="given-name" required>
+							</div>
+							<div class="newsletter-modal__field-group">
+								<label class="newsletter-modal__label" for="newsletter-lastname">{{ 'newsletter.modal.label.last_name'|trans({}, 'footer') }}</label>
+								<input type="text" id="newsletter-lastname" name="lastName" class="newsletter-modal__input" maxlength="100" autocomplete="family-name" required>
+							</div>
+						{% endif %}
+					</div>
+
+					<div class="newsletter-modal__field-row newsletter-modal__field-row--full">
+						<div class="newsletter-modal__field-group newsletter-modal__field-group--grow newsletter-modal__field-group--country">
+							<label class="newsletter-modal__label" for="newsletter-country">{{ 'newsletter.modal.label.country'|trans({}, 'footer') }}</label>
+							<select id="newsletter-country"
+									name="country"
+									class="newsletter-modal__country-select"
+									data-newsletter-country
+									autocomplete="country"
+									required></select>
+						</div>
+					</div>
+
+					<div class="newsletter-modal__field-row newsletter-modal__field-row--full">
+						<div class="newsletter-modal__field-group newsletter-modal__field-group--grow">
+							<label class="newsletter-modal__label" for="newsletter-email">{{ 'newsletter.modal.label.email'|trans({}, 'footer') }}</label>
+							<input type="email" id="newsletter-email" name="email" class="newsletter-modal__input" placeholder="{{ 'newsletter.modal.email_placeholder'|trans({}, 'footer') }}" maxlength="180" autocomplete="email" required>
+						</div>
+					</div>
+
+					<div class="newsletter-modal__submit-wrap">
+						<button type="submit" class="btn-primary newsletter-modal__submit">
+							{{ 'newsletter.modal.submit'|trans({}, 'footer') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</button>
+					</div>
+
+					<p class="newsletter-modal__privacy newsletter-modal__privacy--first">{{ 'newsletter.modal.privacy_1'|trans({}, 'footer') }}</p>
+					<p class="newsletter-modal__privacy">{{ 'newsletter.modal.privacy_2'|trans({}, 'footer') }}</p>
+
+					<input type="hidden" name="captcha" value="" data-newsletter-captcha>
+				</div>
+
+				<p class="newsletter-modal__feedback" data-newsletter-feedback role="status" aria-live="polite"></p>
+			</form>
+		</div>
+	</div>
+	{% if recaptcha_enabled and recaptcha_site_key is not empty %}
+		<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}&hl={{ app.request.locale }}" async defer></script>
+	{% endif %}
+</footer>

@@ -1,0 +1,22 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title %}Gestionnaire de fichiers
+{% endblock %}
+
+{% block main %}
+	<div id="file-manager-app" data-csrf-token="{{ csrf_token }}"></div>
+{% endblock %}
+
+{% block configured_stylesheets %}
+	{{ parent() }}
+	{{ encore_entry_link_tags('file-manager') }}
+{% endblock %}
+
+{% block configured_javascripts %}
+	{{ parent() }}
+	<script>
+		// Inject CSRF token for Vue.js application
+		window.FILE_MANAGER_CSRF_TOKEN = "{{ csrf_token }}";
+	</script>
+	{{ encore_entry_script_tags('file-manager') }}
+{% endblock %}

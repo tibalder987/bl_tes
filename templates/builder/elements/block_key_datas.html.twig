@@ -1,0 +1,34 @@
+
+<div class="px-3 px-xl-0 data_bg backdrop_overlay" data-bg="{{ absolute_url(element['imagePath_url']) }}">
+    <div class="px-xl-5">
+        <div class="container-xl">
+            <div class="builder_key_datas pb-5 position-relative px-4 px-xl-5" data-aos="fade-up">
+                <div class="py-5">
+                    <div class="py-lg-5 mt-lg-5">
+                        <{{ element.typetitle }} class="mb-2 mb-lg-4 text-center {{ element.styletitle }} fw-bold builder_line_height1 builder_color1">
+                            {{ element.title | raw }}
+                        </{{ element.typetitle }}>
+
+                        <div class="row mt-4 justify-content-center">
+                            {% for item in element.keys|default([]) %}
+                                {% set key = item.key|default(null) %}
+                                {% set data = item.data|default(null) %}
+
+                                {% if key %}
+                                    <div class="col-6 col-md-4 col-lg-3 py-3 px-4 text-center">
+                                        <div class="underline-bottom-center">
+                                            <div class="fs-0 fw-bold builder_line_height1 builder_color4">{{ key }}</div>
+                                            <div class="mt-1">
+                                                <p class="text-white line-height2 small fw-regular">{{ data }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

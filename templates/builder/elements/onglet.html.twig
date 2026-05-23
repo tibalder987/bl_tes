@@ -1,0 +1,25 @@
+<div class="builder_onglet bg-light">
+    <div class="bg-secondary container-fluid px-0 mb-3">
+        <ul class="nav nav-tabs mx-auto row justify-content-center" id="myTabx" role="tablist">
+            {% for item in element.onglets|default([]) %}
+                {% if item.contenu|default(null) and item.libelle|default(null) %}
+                    <li class="nav-item pb-0 px-0 col-4 col-xl-3 text-center" role="presentation">
+                        <button class="mx-auto h-100 bg-transparent text-white nav-link letter-spacing2 {% if loop.first %}active{% endif %} px-lg-3 px-2 py-lg-5 py-4 text-uppercase fw-bold" id="onglet-{{ loop.index }}-tab" data-bs-toggle="tab" data-bs-target="#ongletbis-{{ loop.index }}" type="button" role="tab" aria-controls="ongletbis-{{ loop.index }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}">{{ item.libelle }}</button>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="tab-content" id="myTabContent">
+        {% for item in element.onglets|default([]) %}
+            {% if item.contenu|default(null) and item.libelle|default(null) %}
+                <div class="tab-pane fade show {% if loop.first %}active{% endif %}" id="ongletbis-{{ loop.index }}" role="tabpanel" aria-labelledby="ongletbis-{{ loop.index }}">
+                    {% set path = path('app_page_onglet', {'onglet': item.contenu}) %}
+                    {{ render(path) }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ article.description }}" />
+    <meta name="keywords" content="" />
+    <meta property="og:title" content="{{ article.title }}" />
+    <meta property="og:description" content="{{ article.description }}" />
+    {% if app.request.attributes.get('seo').metaImageName != null %}
+        <meta property="og:image" content="{{ absolute_url(app.request.attributes.get('seo').metaImageName) }}" />
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="container py-5 px-xl-5 position-relative">
+        <div class="builder_title px-4 px-xxl-5">
+            <h1 class="letter-spacing1 text-center builder_color2 fw-semibold builder_title_font2">
+                {{ article.title }}
+            </h1>
+
+            <span class="d-block text-center text-uppercase letter-spacing1">
+                {{ article.dateSchedule | format_datetime('long', 'short', locale='fr') }}{% if article.dateEndSchedule %} - {{ article.dateEndSchedule | format_datetime('long', 'short', locale='fr') }}{% endif %}
+            </span>
+        </div>
+    </div>
+
+    {% import 'builder/_builder.html.twig' as builder %}
+    {{ builder.buildElements(article.elements) }}
+{% endblock %}

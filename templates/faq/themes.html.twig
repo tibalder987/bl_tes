@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block body %}
+    <div class="wysiwyg_content">
+        <div class="text-center pt-5">
+            <h1 class="builder_size2 fw-semibold builder_title_font2 builder_color2 line-height1 mb-4">
+                Bonjour,
+            </h1>
+            <h4>Comment pouvons-nous vous aider ?</h4>
+        </div>
+        <div class="container px-0 position-relative">
+            <div class="px-4 px-xxl-5">
+                <div>Choisissez votre thématique</div>
+                <div class="pt-3 pt-xl-5 pb-0 px-xl-5">
+                    <div class="result d-inline-block p-2 w-100">
+                        {% for theme in themes %}
+                            <div class="px-3">
+                                <div class="faq_theme_item rounded-3 overflow-hidden bg-white">
+                                    <a href="{{ path('app_faq_theme', {'slug': theme.path}) }}">{{ theme.title }}</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

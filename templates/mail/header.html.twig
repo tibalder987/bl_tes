@@ -1,0 +1,18 @@
+<tbody>
+<tr>
+    <td valign="top" align="center" bgcolor="#213ea6">
+        <table width="90%" style="width:90% !important;" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
+            <tr>
+                <td align="left" width="50%" valign="top">
+                    <img src="{{ absolute_url }}/images/logo.png" alt="Logo" style="max-width: 42px; height: auto; border: 0; line-height: 100%; outline: 0; -ms-interpolation-mode: bicubic; display: block;" width="42">
+                </td>
+                <td width="50%" align="right" valign="middle">
+                    {% if user is defined %}
+                        <span style="color: #ffffff;">Bonjour <br /><b>{{ user.firstName }} {{ user.lastName }}</b></span>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</tbody>

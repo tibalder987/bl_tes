@@ -1,0 +1,15 @@
+<div class="container-xl position-relative">
+    <div class="px-3 px-xl-0">
+        <div class="builder_block_title_text pt-3 pb-4 px-xl-5">
+            {% if element.title %}
+                <{{ element.type }} class="letter-spacing1 builder_color2 {{ element.type }} text-center text-lg-{{ element.alignment }}">
+                {{ element.title }}
+            </{{ element.type }}>
+            {% endif %}
+
+            <div class="pt-4 wysiwyg_content">
+                {{ element.contenu1 | raw }}
+            </div>
+        </div>
+    </div>
+</div>

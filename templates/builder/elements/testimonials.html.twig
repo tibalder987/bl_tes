@@ -1,0 +1,30 @@
+<section class="testimonials py-5 bg-light {{ element.fullwidth ? 'container-fluid' : 'container' }}">
+    {% if element.title %}
+        <h2 class="text-center mb-5 font-weight-bold">{{ element.title }}</h2>
+    {% endif %}
+    <div class="row">
+        {% for item in element.reviews|default([]) %}
+            {% set name = item.name|default(null) %}
+            {% if name %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="card-body text-center">
+                            {% set avatar = item.avatar_url|default(item.avatar|default(null)) %}
+                            {% if avatar %}
+                                <img src="{{ avatar }}" class="rounded-circle mb-3 shadow-sm" width="80" height="80" alt="Avatar">
+                            {% endif %}
+                            <div class="text-warning mb-3">
+                                {% for k in 1..item.stars|default(5) %}
+                                    <i class="fa fa-star"></i>
+                                {% endfor %}
+                            </div>
+                            <p class="card-text font-italic mb-4 text-muted">"{{ item.quote|default('') }}"</p>
+                            <h5 class="card-title font-weight-bold mb-0">{{ name }}</h5>
+                            <small class="text-primary font-weight-bold">{{ item.position|default('') }}</small>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

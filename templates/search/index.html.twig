@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ app.request.attributes.get('seo').title }} | Recherche{% endblock %}
+
+{% block body %}
+    <div class="wysiwyg_content">
+        <div class="text-center pt-5">
+            <h1 class="builder_size2 fw-semibold builder_title_font2 builder_color2 line-height1 mb-4">
+                Résultat de votre recherche "{{ q }}"
+            </h1>
+        </div>
+        <div class="container pb-5 px-0 position-relative">
+            <div class="px-4 px-xxl-5">
+                <div class="pt-3 pt-xl-5 pb-0 px-xl-5">
+                    {% for label, messages in app.flashes %}
+                        {% for message in messages %}
+                            <div class="p-3 alert alert-{{ label }} my-4">
+                                <div class="container text-center">
+                                    {{ message }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+
+                    {% if news is not empty %}
+                        <h2 class="mt-5 mb-0 fw-semibold builder_title_font2">Les actualités</h2>
+                        <div class="row">
+                            {% for article in news %}
+                                <div class="d-flex">
+                                    <a class="" href="{{ path('app_article_actualite_detail', {'slug' : article.path}) }}">
+                                        <span class="pt-3 d-block fw-light mb-2 letter-spacing1 builder_title_font1 line-height1">
+                                            {{ article.title | raw }}
+                                        </span>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if communiques is not empty %}
+                        <h2 class="mt-5 mb-0 fw-semibold builder_title_font2">Les communiqués de presse</h2>
+                        <div class="row">
+                            {% for communique in communiques %}
+                                <div class="d-flex">
+                                    <a class="" href="{{ path('app_article_communique_detail', {'slug' : communique.path}) }}">
+                                        <span class="pt-3 d-block fw-light mb-2 letter-spacing1 builder_title_font1 line-height1">
+                                            {{ communique.title | raw }}
+                                        </span>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if events is not empty %}
+                        <h2 class="mt-5 mb-0 fw-semibold builder_title_font2">Les évènements</h2>
+                        <div class="row">
+                            {% for event in events %}
+                                <div class="d-flex">
+                                    <a class="" href="{{ path('app_article_evenement_detail', {'slug' : event.path}) }}">
+                                        <span class="pt-3 d-block fw-light mb-2 letter-spacing1 builder_title_font1 line-height1">
+                                            {{ event.title | raw }}
+                                        </span>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if pages is not empty %}
+                        <h2 class="mt-5 mb-0 fw-semibold builder_title_font2">Les pages de contenu</h2>
+                        <div class="row">
+                            {% for page in pages %}
+                                <div class="d-flex">
+                                    <a class="" href="{{ path('app_content_page', {'slug' : page.path}) }}">
+                                        <span class="pt-3 d-block fw-light mb-2 letter-spacing1 builder_title_font1 line-height1">
+                                            {{ page.title | raw }}
+                                        </span>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if jobs is not empty %}
+                        <h2 class="mt-5 mb-0 fw-semibold builder_title_font2">Les offres d'emploi</h2>
+                        <div class="row">
+                            {% for job in jobs %}
+                                <div class="d-flex">
+                                    <a class="" href="{{ path('app_job_offer', {'offer' : job.id}) }}">
+                                        <span class="pt-3 d-block fw-light mb-2 letter-spacing1 builder_title_font1 line-height1">
+                                            {{ job.title | raw }}
+                                        </span>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

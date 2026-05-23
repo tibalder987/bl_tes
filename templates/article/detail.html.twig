@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ article.description }}" />
+    <meta name="keywords" content="" />
+    <meta property="og:title" content="{{ article.title }}" />
+    <meta property="og:description" content="{{ article.description }}" />
+    {% if article.imageName %}
+        <meta property="og:image" content="{{ absolute_url(vich_uploader_asset(article,"image")) }}" />
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="container px-xl-5 position-relative">
+        <div class="builder_title px-4 px-xxl-5">
+            {% if article.imageName %}
+                <div class="builder_image position-relative">
+                    <div class="py-4">
+                        <img class="w-100 maxwidth-none" src="{{ absolute_url(vich_uploader_asset(article,"image")) }}" alt="{{ article.title }}" />
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="container pb-5 px-xl-5 position-relative">
+        <div class="builder_title px-4 px-xxl-5">
+            {% for categorie in article.categories %}
+                <a href="{{ path('app_article_actualites_filter_category', {'path': categorie.path}) }}" class="mb-2 btn btn-dark btn-sm letter-spacing1 text-uppercase fw-light">
+                    {{ categorie.title }}
+                </a>
+            {% endfor %}
+
+            <h1 class="letter-spacing1 builder_color2 fw-semibold builder_title_font2">
+                {{ article.title }}
+            </h1>
+
+            <span class="d-block text-uppercase letter-spacing1">
+                {{ article.dateSchedule | format_datetime('long', 'none', locale='fr') }}
+            </span>
+        </div>
+    </div>
+
+    {% import 'builder/_builder.html.twig' as builder %}
+    {{ builder.buildElements(article.elements) }}
+{% endblock %}

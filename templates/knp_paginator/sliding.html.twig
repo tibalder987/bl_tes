@@ -1,0 +1,66 @@
+{% if pageCount > 1 %}
+    <nav aria-label="Navigation actualités" class="py-4 py-lg-5 d-flex justify-content-center">
+        <ul class="pagination">
+            {% if first is defined and current != first %}
+                <li class="page-item">
+                    <span class="page-link p-2 d-inline-block mx-1 text-center position-relative page pt-1" data-page="1"
+                          {% if category is not null %}data-category="{{ category.id }}"{% endif %}
+                            {#                {% if mediaDocumentType is not null %}data-mediaDocumentType="{{ mediaDocumentType.id }}"{% endif %}#}
+                    >
+                        <i class="fas fa-angle-double-left"></i>
+                    </span>
+                </li>
+            {% endif %}
+
+            {% if previous is defined %}
+                <li class="page-item">
+                    <span class="page-link p-2 d-inline-block mx-1 text-center position-relative page pt-1" data-page="{{ previous }}"
+                          {% if category is not null %}data-category="{{ category.id }}"{% endif %}
+                            {#                    {% if mediaDocumentType is not null %}data-mediaDocumentType="{{ mediaDocumentType.id }}"{% endif %}#}
+                    >
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                </li>
+            {% endif %}
+
+            {% for page in pagesInRange %}
+                {% if page != current %}
+                    <li class="page-item">
+                            <span class="page-link p-2 d-inline-block mx-1 text-center position-relative page pt-1" data-page="{{ page }}"
+                                  {% if category is not null %}data-category="{{ category.id }}"{% endif %}
+                                    {#                        {% if mediaDocumentType is not null %}data-mediaDocumentType="{{ mediaDocumentType.id }}"{% endif %}#}
+                            >
+                                {{ page }}
+                            </span>
+                    </li>
+                {% else %}
+                    <li class="page-item active">
+                        <span class="page-link p-2 d-inline-block mx-1 text-center position-relative current pt-1">{{ page }}</span>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if next is defined %}
+                <li class="page-item">
+                    <span class="page-link p-2 d-inline-block mx-1 text-center position-relative page pt-1" data-page="{{ next }}"
+                          {% if category is not null %}data-category="{{ category.id }}"{% endif %}
+                            {#                    {% if mediaDocumentType is not null %}data-mediaDocumentType="{{ mediaDocumentType.id }}"{% endif %}#}
+                    >
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </li>
+            {% endif %}
+
+            {% if last is defined and current != last %}
+                <li class="page-item">
+                    <span class="page-link p-2 d-inline-block mx-1 text-center position-relative page pt-1" data-page="{{ last }}"
+                          {% if category is not null %}data-category="{{ category.id }}"{% endif %}
+                            {#                    {% if mediaDocumentType is not null %}data-mediaDocumentType="{{ mediaDocumentType.id }}"{% endif %}#}
+                    >
+                        <i class="fas fa-angle-double-right"></i>
+                    </span>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}

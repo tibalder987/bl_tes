@@ -1,0 +1,37 @@
+<div class="bg-light">
+    {% if element.fullwidth == 'false' %}<div class="container-xl position-relative"><div class="px-3 px-xl-5">{% endif %}
+    <div class="container-onglet-faq">
+        <div class="bg-secondary">
+            <div class="container-xxl">
+                <ul class="nav nav-tabs mx-auto row justify-content-center" id="myTab" role="tablist">
+                    {% for item in element.onglets|default([]) %}
+                        {% if item.libelle|default(null) %}
+                            <li class="nav-item pb-0 px-0 col-4 text-center" role="presentation">
+                                <button class="mx-auto h-100 bg-transparent text-white nav-link letter-spacing2 {% if loop.first %}active{% endif %} px-lg-3 px-2 py-lg-5 py-4 text-uppercase fw-bold" id="accordeon-{{ loop.index }}-tab" data-bs-toggle="tab" data-bs-target="#onglet-{{ loop.index }}" type="button" role="tab" aria-controls="onglet-{{ loop.index }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}">{{ item.libelle }}</button>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-content container-xxl py-md-5 py-2" id="myTabContent">
+            {% for item in element.onglets|default([]) %}
+                {% if item.libelle|default(null) %}
+                    <div class="tab-pane px-3 fade pt-4 {% if loop.first %}show active{% endif %}" id="onglet-{{ loop.index }}" role="tabpanel" aria-labelledby="onglet-{{ loop.index }}-tab">
+                        <div class="px-3 px-xl-0">
+                            <div class="builder_text bg-white pt-3 pb-4 px-xl-5">
+                                <div class="wysiwyg_content">
+                                    {% if item.contenu|default(null) %}
+                                        {{ item.contenu | raw }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% if element.fullwidth == 'false' %}</div></div>{% endif %}
+</div>

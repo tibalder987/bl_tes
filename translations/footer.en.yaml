@@ -1,0 +1,42 @@
+stay_close.title: Stay Close
+stay_close.description: "Stories, moments, and updates as <span>Bloody Mary's</span> Hotel comes to life in Bora Bora, French Polynesia…"
+stay_close.cta: step into the rhythm
+reach_out.title: "Reach\u00a0Out"
+stay_connected.title: Stay Connected
+social.facebook: Facebook
+social.instagram: Instagram
+social.linkedin: LinkedIn
+social.tiktok: TikTok
+find_us.title: Find Us
+find_us.address: "Bloody Mary's Hotel<br>BP 515 - 98730 Bora Bora<br>French Polynesia"
+logo.alt: "Bloody Mary's"
+bottom.line1: No noise,
+bottom.line2: just what matters.
+legal.aria: Legal information
+legal.copyright: "Copyright Bloody Mary's © 2026"
+legal.created_by: "Created by #Prox-i"
+legal.terms: Terms & Conditions
+legal.privacy: Privacy Policy
+legal.terms.link: terms-conditions
+legal.privacy.link: privacy-policy
+
+newsletter.modal.title: Follow the rhythm
+newsletter.modal.lead: "From the lagoon to your inbox – stories, updates, and a few good reasons to come back."
+newsletter.modal.tagline: No noise. Just what matters.
+newsletter.modal.signup_heading: "Sign up here:"
+newsletter.modal.label.last_name: Last Name
+newsletter.modal.label.first_name: First Name
+newsletter.modal.label.country: Country
+newsletter.modal.country.placeholder: "Search for a country…"
+newsletter.modal.label.email: E-mail
+newsletter.modal.email_placeholder: your@email.com
+newsletter.modal.submit: Yes to Flow!
+newsletter.modal.close: Close
+newsletter.modal.privacy_1: We respect your time, your energy and your privacy. We do not sell your information.
+newsletter.modal.privacy_2: And of course, you may unsubscribe at any time.
+newsletter.success.subscribed: Thanks — you're on the list.
+newsletter.success.already: This email is already subscribed.
+newsletter.error.invalid_email: Please enter a valid email address.
+newsletter.error.incomplete: Please fill in all fields correctly.
+newsletter.error.generic: Something went wrong, please try again later.
+newsletter.error.captcha: Invalid anti-bot verification, please try again.

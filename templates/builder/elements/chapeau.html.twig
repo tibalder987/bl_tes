@@ -1,0 +1,12 @@
+{% if element.fullwidth == 'false' %}<div class="container px-xl-5 position-relative">{% endif %}
+    <div class="px-4 px-xxl-5">
+        <div class="builder_chapeau pt-3 pb-4">
+            {% if element.text %}
+                <div class="builder_color2 fw-medium wysiwyg_content">
+                    {{ element.text | raw }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% if element.fullwidth == 'false' %}</div>{% endif %}

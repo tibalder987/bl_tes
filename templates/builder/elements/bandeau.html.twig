@@ -1,0 +1,43 @@
+{% set classHeight = "builder_minheight350" %}
+{% if element.height == 'true' %}
+    {% set classHeight = "builder_minheight600 vh-95" %}
+{% endif %}
+{% if element.height == 'entete' %}
+    {% set classHeight = "vh-95 builder_minheight600" %}
+{% endif %}
+
+
+{% if element.fullwidth == 'false' %}
+    <div class="container-xl position-relative">
+    {% endif %}
+    <div class="builder_bandeau position-relative data_bg d-flex align-items-center justify-content-{% if element.alignment %}{{ element.alignment }}{% endif %} {{ classHeight }}" data-bg="{% if element.imagePath_url %}{{ absolute_url(element.imagePath_url) }}{% endif %}">
+        {% if element.fullwidth == 'true' %}
+        <div class="container">
+        {% endif %}
+            <div class="px-3 px-xl-0 pt-5">
+                <div class="px-xl-5">
+                    <div class="text-{{ element.alignment }} py-5">
+                        {% if element.toptitle %}
+                            <div class="builder_color1 fw-light pb-3">{{ element.toptitle | raw }}</div>
+                        {% endif %}
+                        {% if element.title %}
+                        <{{ element.type }} class="{{ element.styletitle }} builder_color1 line-height2 fw-semibold text-shadow mb-4 text-uppercase">
+                            {{ element.title | raw }}
+                        </{{ element.type }}>
+                        {% endif %}
+                        {% if element.description %}
+                            <div class="builder_color1">{{ element.description | raw }}</div>
+                        {% endif %}
+                        {% if element.buttonTitle %}
+                            <a class="btn btn-light btn-lg rounded-5 fw-normal fs-6 text-uppercase" target="{{ element.target }}" href="{{ element.buttonPath }}">{{ element.buttonTitle }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% if element.fullwidth == 'true' %}
+        </div>
+        {% endif %}
+    </div>
+    {% if element.fullwidth == 'false' %}
+    </div>
+{% endif %}

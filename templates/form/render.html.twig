@@ -1,0 +1,239 @@
+<div class="dynamic-form-wrapper" id="form-wrapper-{{ formEntity.id }}">
+    {{ form_start(form, {'attr': {'class': 'needs-validation dynamic-form', 'novalidate': 'novalidate', 'id': 'dynamic-form-' ~ formEntity.id}}) }}
+        
+        {% set schema = formEntity.schemaData %}
+        {% set config = formEntity.configuration %}
+        
+        <!-- ProgressBar -->
+        {% if schema.steps|length > 1 %}
+            <div class="form-progress mb-4">
+                <div class="progress" style="height: 5px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: {{ 100 / schema.steps|length }}%" aria-valuenow="1" aria-valuemin="1" aria-valuemax="{{ schema.steps|length }}"></div>
+                </div>
+                <div class="d-flex justify-content-between mt-2 small text-muted font-weight-bold">
+                    {% for stepIndex, step in schema.steps %}
+                        <span class="step-label text-center" style="flex:1" id="label-step-{{ formEntity.id }}-{{ stepIndex }}" {% if stepIndex > 0 %}style="opacity: 0.5;"{% endif %}>{{ step.title }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% for stepIndex, step in schema.steps %}
+            <div class="form-step" id="step-{{ formEntity.id }}-{{ stepIndex }}" data-step-index="{{ stepIndex }}" data-step-id="{{ step.id }}" {% if stepIndex > 0 %}style="display:none;"{% endif %}>
+                
+                <div class="row">
+                    {% for field in step.fields %}
+                        {% if field.type == 'paragraph' %}
+                            <div class="col-{% if field.width is defined %}{{ field.width }}{% else %}12{% endif %} mb-3 field-container" data-field-id="{{ field.id }}">
+                                {{ field.content|raw }}
+                            </div>
+                        {% else %}
+                            <div class="col-{% if field.width is defined %}{{ field.width }}{% else %}12{% endif %} mb-3 field-container" data-field-id="{{ field.id }}">
+                                {{ form_row(form[field.id]) }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                
+                <div class="form-navigation mt-4 d-flex justify-content-between">
+                    {% if stepIndex > 0 %}
+                        <button type="button" class="btn btn-secondary btn-prev-step">{{ config.prevText|default('Précédent') }}</button>
+                    {% else %}
+                        <div></div>
+                    {% endif %}
+
+                    {% if stepIndex < schema.steps|length - 1 %}
+                        <button type="button" class="btn btn-primary btn-next-step">{{ config.nextText|default('Suivant') }}</button>
+                    {% else %}
+                        {{ form_widget(form.submit, {'attr': {'class': 'btn btn-success px-5 py-2 btn-submit-form'}, 'label': config.submitText|default('Envoyer') }) }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Hidden submit logic & tokens -->
+        <div style="display:none;">
+            {{ form_rest(form) }}
+        </div>
+        
+    {{ form_end(form, {'render_rest': false}) }}
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formId = '{{ formEntity.id }}';
+            const formEl = document.getElementById('dynamic-form-' + formId);
+            if (!formEl) return;
+
+            const schema = {{ schema|json_encode|raw }};
+            const wrapper = document.getElementById('form-wrapper-' + formId);
+            
+            const steps = wrapper.querySelectorAll('.form-step');
+            const progressBars = wrapper.querySelectorAll('.progress-bar');
+            const stepLabels = wrapper.querySelectorAll('.step-label');
+
+            wrapper.addEventListener('click', function(e) {
+                if (e.target.classList.contains('btn-next-step')) {
+                    const currentStep = e.target.closest('.form-step');
+                    const currentIndex = parseInt(currentStep.getAttribute('data-step-index'));
+                    
+                    // Basic HTML5 validation before next step (only visible non-disabled)
+                    const inputs = currentStep.querySelectorAll('input:not([disabled]), select:not([disabled]), textarea:not([disabled])');
+                    let isValid = true;
+                    inputs.forEach(input => {
+                        if (!input.checkValidity()) {
+                            input.reportValidity();
+                            isValid = false;
+                        }
+                    });
+
+                    if (isValid) {
+                        let targetIndex = currentIndex + 1;
+                        let nextStep = wrapper.querySelector('#step-' + formId + '-' + targetIndex);
+                        while (nextStep && nextStep.getAttribute('data-logic-hidden') === 'true') {
+                            targetIndex++;
+                            nextStep = wrapper.querySelector('#step-' + formId + '-' + targetIndex);
+                        }
+
+                        if (nextStep) {
+                            currentStep.style.display = 'none';
+                            nextStep.style.display = 'block';
+                            updateProgress(targetIndex);
+                        }
+                    }
+                } else if (e.target.classList.contains('btn-prev-step')) {
+                    const currentStep = e.target.closest('.form-step');
+                    const currentIndex = parseInt(currentStep.getAttribute('data-step-index'));
+                    
+                    let targetIndex = currentIndex - 1;
+                    let prevStep = wrapper.querySelector('#step-' + formId + '-' + targetIndex);
+                    while (prevStep && prevStep.getAttribute('data-logic-hidden') === 'true') {
+                        targetIndex--;
+                        prevStep = wrapper.querySelector('#step-' + formId + '-' + targetIndex);
+                    }
+
+                    if (prevStep) {
+                        currentStep.style.display = 'none';
+                        prevStep.style.display = 'block';
+                        updateProgress(targetIndex);
+                    }
+                }
+            });
+
+            function updateProgress(index) {
+                if (progressBars.length > 0) {
+                    const pct = ((index + 1) / steps.length) * 100;
+                    progressBars[0].style.width = pct + '%';
+                    
+                    stepLabels.forEach((lbl, i) => {
+                        if (i === index) {
+                            lbl.style.opacity = '1';
+                        } else {
+                            lbl.style.opacity = '0.5';
+                        }
+                    });
+                }
+            }
+
+            // Conditional Logic Parsing
+            function evaluateLogic() {
+                let formValues = {};
+                const allInputs = formEl.querySelectorAll('input, select, textarea');
+                allInputs.forEach(input => {
+                    const container = input.closest('.field-container');
+                    if (!container) return;
+                    const fieldId = container.getAttribute('data-field-id');
+                    
+                    if (input.type === 'checkbox' || input.type === 'radio') {
+                        if (input.checked) {
+                            if (!formValues[fieldId]) formValues[fieldId] = [];
+                            formValues[fieldId].push(input.value);
+                        }
+                    } else {
+                        formValues[fieldId] = input.value;
+                    }
+                });
+
+                function checkRule(rule) {
+                    const val = formValues[rule.fieldId];
+                    const expected = rule.value;
+                    
+                    if (Array.isArray(val)) {
+                        if (rule.operator === 'equals') return val.includes(expected);
+                        if (rule.operator === 'not_equals') return !val.includes(expected);
+                        if (rule.operator === 'contains') return val.some(v => v.includes(expected));
+                    } else {
+                        const strVal = val ? val.toString() : '';
+                        if (rule.operator === 'equals') return strVal === expected;
+                        if (rule.operator === 'not_equals') return strVal !== expected;
+                        if (rule.operator === 'contains') return strVal.includes(expected);
+                    }
+                    return false;
+                }
+
+                function evaluateCondition(cond) {
+                    if (!cond || !cond.enabled || !cond.rules || cond.rules.length === 0) return true;
+                    
+                    let result = cond.matchType === 'all' ? true : false;
+                    for (let rule of cond.rules) {
+                        const ruleRes = checkRule(rule);
+                        if (cond.matchType === 'all') {
+                            if (!ruleRes) return false;
+                        } else {
+                            if (ruleRes) return true;
+                        }
+                    }
+                    return result;
+                }
+
+                if(schema && schema.steps) {
+                    // Check Step logic
+                    schema.steps.forEach((step, index) => {
+                        const stepWrapper = wrapper.querySelector('#step-' + formId + '-' + index);
+                        if (stepWrapper && step.conditionalLogic && step.conditionalLogic.enabled) {
+                            const isMatch = evaluateCondition(step.conditionalLogic);
+                            const shouldShow = step.conditionalLogic.actionType === 'show' ? isMatch : !isMatch;
+                            stepWrapper.setAttribute('data-logic-hidden', !shouldShow ? 'true' : 'false');
+                        }
+                    });
+
+                    // Check Field logic
+                    schema.steps.forEach(step => {
+                        step.fields.forEach(field => {
+                            const fieldContainer = wrapper.querySelector('.field-container[data-field-id="' + field.id + '"]');
+                            if (fieldContainer && field.conditionalLogic && field.conditionalLogic.enabled) {
+                                const isMatch = evaluateCondition(field.conditionalLogic);
+                                const shouldShow = field.conditionalLogic.actionType === 'show' ? isMatch : !isMatch;
+                                
+                                if (shouldShow) {
+                                    fieldContainer.style.display = '';
+                                    const inputs = fieldContainer.querySelectorAll('input, select, textarea');
+                                    inputs.forEach(i => {
+                                        if(i.hasAttribute('data-required')) i.setAttribute('required', 'required');
+                                        if(i.hasAttribute('data-was-disabled')) i.disabled = false;
+                                    });
+                                } else {
+                                    fieldContainer.style.display = 'none';
+                                    const inputs = fieldContainer.querySelectorAll('input, select, textarea');
+                                    inputs.forEach(i => {
+                                        if(i.hasAttribute('required')) {
+                                            i.setAttribute('data-required', 'true');
+                                            i.removeAttribute('required');
+                                        }
+                                        if(!i.disabled) {
+                                            i.setAttribute('data-was-disabled', 'true');
+                                            i.disabled = true;
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    });
+                }
+            }
+
+            formEl.addEventListener('input', evaluateLogic);
+            formEl.addEventListener('change', evaluateLogic);
+            evaluateLogic();
+        });
+    </script>
+</div>

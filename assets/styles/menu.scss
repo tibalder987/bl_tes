@@ -1,0 +1,589 @@
+.header {
+  --header-bar-height: 108px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1002;
+
+  @media (max-width: 1280px) {
+    --header-bar-height: 90px;
+  }
+
+  @media (max-width: 991px) {
+    --header-bar-height: 70px;
+  }
+
+  .header__content {
+    height: 108px;
+    background-color: $color-red;
+    padding: 0px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1280px) {
+      padding: 0px 70px;
+      height: 90px;
+    }
+
+    @media (max-width: 991px) {
+      padding: 0px 50px;
+      height: 70px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0px 30px;
+    }
+
+    .header__menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: transparent;
+      font: inherit;
+      color: inherit;
+      text-align: left;
+      // Réduit la latence tactile iOS (évite d’attendre le geste « double-tap zoom »).
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+
+      &:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 4px;
+      }
+
+      .header__menu-icon {
+        position: relative;
+        width: 33px;
+        height: 22px;
+        flex-shrink: 0;
+
+        span {
+          position: absolute;
+          left: 0;
+          border-radius: 7px;
+          height: 3px;
+          background-color: #ffffff;
+          transform-origin: center;
+          transition:
+            transform 0.28s ease,
+            opacity 0.2s ease,
+            width 0.28s ease,
+            top 0.28s ease,
+            bottom 0.28s ease;
+        }
+
+        .header__menu-line--top {
+          top: 0;
+          width: 33px;
+        }
+
+        .header__menu-line--middle {
+          top: 10px;
+          width: 33px;
+        }
+
+        // 3ᵉ barre plus courte au repos ; au clic elle est masquée.
+        .header__menu-line--bottom {
+          bottom: 0;
+          width: 18px;
+        }
+
+        // Copie de la barre du milieu : cachée au repos, visible uniquement menu ouvert.
+        .header__menu-line--middle-clone {
+          top: 10px;
+          width: 33px;
+          opacity: 0;
+        }
+      }
+
+      .header__menu-label {
+        color: #fff;
+        font-family: $font-epilogue;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        padding-top: 4px;
+        letter-spacing: 1.75px;
+        text-transform: uppercase;
+
+        @media (max-width: 1280px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+
+    .header__button-switch {
+      color: #fff;
+      font-family: $font-epilogue;
+      font-size: 20px;
+      font-weight: 400;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding-top: 2px;
+      display: none;
+
+      @media (max-width: 500px) {
+        display: block;
+      }
+    }
+
+    .header__button {
+      @media (max-width: 500px) {
+        display: none;
+      }
+      .header__button-image {
+        height: 67px;
+        object-fit: contain;
+
+        @media (max-width: 1280px) {
+          height: 50px;
+        }
+
+        @media (max-width: 991px) {
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .header__subcontent {
+    position: relative;
+
+    .header__logo {
+      width: 209px;
+      height: 209px;
+      object-fit: contain;
+      position: absolute;
+      top: -86px;
+      left: calc(50% - 104px);
+
+      @media (max-width: 1280px) {
+        width: 180px;
+        height: 180px;
+        top: -70px;
+        left: calc(50% - 90px);
+      }
+
+      @media (max-width: 991px) {
+        width: 120px;
+        height: 120px;
+        top: -45px;
+        left: calc(50% - 60px);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      height: 31px;
+      background-image: url("../images/header-frise.svg");
+      background-position-x: center;
+      background-size: contain;
+
+      @media (max-width: 991px) {
+        height: 20px;
+        top: 6px;
+      }
+    }
+  }
+}
+
+// Pastille flottante : même animation burger → croix que le header (sélecteurs doublonnés ci-dessous).
+.header__menu-fab {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right, 0px));
+  bottom: max(24px, env(safe-area-inset-bottom, 0px));
+  z-index: 1003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 999px;
+  background-color: $color-red;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.96);
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    visibility 0.28s ease;
+
+  &.header__menu-fab--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  .header__menu-icon {
+    position: relative;
+    width: 33px;
+    height: 22px;
+    flex-shrink: 0;
+
+    span {
+      position: absolute;
+      left: 0;
+      border-radius: 7px;
+      height: 3px;
+      background-color: #ffffff;
+      transform-origin: center;
+      transition:
+        transform 0.28s ease,
+        opacity 0.2s ease,
+        width 0.28s ease,
+        top 0.28s ease,
+        bottom 0.28s ease;
+    }
+
+    .header__menu-line--top {
+      top: 0;
+      width: 33px;
+    }
+
+    .header__menu-line--middle {
+      top: 10px;
+      width: 33px;
+    }
+
+    .header__menu-line--bottom {
+      bottom: 0;
+      width: 18px;
+    }
+
+    .header__menu-line--middle-clone {
+      top: 10px;
+      width: 33px;
+      opacity: 0;
+    }
+  }
+}
+
+// Burger → croix : spécificité alignée avec les règles imbriquées du burger fermé.
+.header.header--drawer-open .header__content .header__menu .header__menu-icon .header__menu-line--top,
+body.menu-drawer-open .header__menu-fab .header__menu-icon .header__menu-line--top {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.header.header--drawer-open .header__content .header__menu .header__menu-icon .header__menu-line--middle,
+body.menu-drawer-open .header__menu-fab .header__menu-icon .header__menu-line--middle {
+  top: 50%;
+  opacity: 1;
+  width: 33px;
+  transform: translateY(-50%) rotate(45deg);
+
+  @media (max-width: 1280px) {
+    width: 25px;
+  }
+}
+
+.header.header--drawer-open .header__content .header__menu .header__menu-icon .header__menu-line--bottom,
+body.menu-drawer-open .header__menu-fab .header__menu-icon .header__menu-line--bottom {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.header.header--drawer-open .header__content .header__menu .header__menu-icon .header__menu-line--middle-clone,
+body.menu-drawer-open .header__menu-fab .header__menu-icon .header__menu-line--middle-clone {
+  bottom: auto;
+  top: 50%;
+  opacity: 1;
+  width: 33px;
+  transform: translateY(-50%) rotate(-45deg);
+
+  @media (max-width: 1280px) {
+    width: 25px;
+  }
+}
+
+// Backdrop léger sur toute la page (sous le header, au-dessus du contenu)
+.header__drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s ease-out,
+    visibility 0.5s ease-out;
+  pointer-events: none;
+}
+
+body.menu-drawer-open .header__drawer-backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+// Panneau latéral rouge, sous la barre du header (hauteur responsive — mêmes seuils que .header, car le tiroir est hors du header dans le DOM)
+.header__drawer {
+  --header-bar-height: 108px;
+  position: fixed;
+  padding-top: var(--header-bar-height);
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  width: min(100%, 360px);
+  height: 100dvh;
+  max-height: 100vh;
+
+  @media (max-width: 1280px) {
+    --header-bar-height: 90px;
+  }
+
+  @media (max-width: 991px) {
+    --header-bar-height: 70px;
+  }
+
+  background: $color-red;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @media (max-width: 500px) {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+body.menu-drawer-open .header__drawer {
+  transform: translateX(0);
+}
+
+.header__drawer-list {
+  list-style: none;
+  margin: 0;
+  padding: 70px 60px 40px;
+
+  @media (max-width: 991px) {
+    padding: 90px 60px 32px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 90px 60px 28px;
+  }
+}
+
+.header__drawer-link {
+  display: block;
+  padding: 16px 0;
+  color: #fff;
+  font-family: $font-epilogue;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition:
+    color 0.5s ease-out,
+    padding-left 0.5s ease-out;
+  position: relative;
+  @media (max-width: 576px) {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../shapes/menu-arrow.svg");
+    height: 15px;
+    width: 33px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 100000000;
+    left: -34px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: #e3cca3;
+
+    @media (min-width: 577px) {
+      padding-left: 20px;
+      &::before {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.header__drawer-link--planning {
+  padding: 25px 0 8px;
+  display: none;
+
+  @media (max-width: 500px) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+
+  &:hover,
+  &:focus-visible {
+    padding-left: 0;
+  }
+
+  &:hover .header__drawer-planning-img,
+  &:focus-visible .header__drawer-planning-img {
+    opacity: 0.85;
+    filter: brightness(1.1);
+  }
+}
+
+.header__drawer-planning-img {
+  display: block;
+  height: 52px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  transition:
+    opacity 0.2s ease,
+    filter 0.2s ease;
+
+  @media (max-width: 991px) {
+    height: 44px;
+  }
+
+  @media (max-width: 576px) {
+    height: 40px;
+  }
+}
+
+html.menu-drawer-open,
+body.menu-drawer-open {
+  overflow: hidden;
+}
+
+.header__drawer-content {
+  display: none;
+}
+.header__drawer-button {
+  padding: 70px 60px 28px 60px;
+
+  @media (max-width: 991px) {
+    padding: 90px 60px 34px 60px;
+  }
+}
+.header__drawer-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - var(--header-bar-height));
+  justify-content: space-between;
+}
+body.menu-fab--visible {
+  .header__drawer-container {
+    height: calc(100% - 208px);
+    @media (max-width: 769px) {
+      height: calc(100% - 149px);
+    }
+  }
+  .header__drawer {
+    padding-top: 50px;
+    .header__drawer-list {
+      padding-top: 40px;
+    }
+    .header__drawer-content {
+      display: block;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 12px);
+        left: 0;
+        width: 100%;
+        height: 24px;
+        background-image: url("../images/header-frise.svg");
+        background-position-x: center;
+        background-size: contain;
+        z-index: -1;
+      }
+      .header__subcontent {
+        text-align: center;
+        .header__logo {
+          width: 155px;
+          height: 155px;
+        }
+      }
+    }
+
+    @media (max-width: 991px) {
+      padding-top: 25px;
+      .header__drawer-list {
+        padding-top: 15px;
+      }
+      .header__drawer-content {
+        &::before {
+          top: calc(50% - 10px);
+          height: 20px;
+        }
+        .header__subcontent {
+          .header__logo {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Téléphones / tablettes tactiles : animations plus courtes pour un retour visuel immédiat
+// (évite l’impression de lag + double tap sur le burger qui ferme tout de suite).
+@media (pointer: coarse) {
+  .header .header__content .header__menu .header__menu-icon span,
+  .header__menu-fab .header__menu-icon span {
+    transition:
+      transform 0.12s ease,
+      opacity 0.1s ease,
+      width 0.12s ease,
+      top 0.12s ease,
+      bottom 0.12s ease;
+  }
+
+  .header__drawer {
+    transition: transform 0.28s ease-out;
+  }
+
+  .header__drawer-backdrop {
+    transition:
+      opacity 0.28s ease-out,
+      visibility 0.28s ease-out;
+  }
+}

@@ -1,0 +1,63 @@
+<div class="container-onglet-faq bg-light">
+    <div class="bg-secondary">
+        <div class="container-xxl">
+            <ul class="nav nav-tabs mx-auto row justify-content-center slider_nav" id="myTab" role="tablist">
+                {% for item in element.onglets|default([]) %}
+                    {% if item.libelle|default(null) %}
+                        <li class="nav-item pb-0 px-0 col-4 text-center" role="presentation">
+                            <button class="mx-auto h-100 bg-transparent text-white nav-link letter-spacing2 {% if loop.first %}active{% endif %} px-lg-3 px-2 py-lg-5 py-4 text-uppercase fw-bold" id="accordeon-{{ loop.index }}-tab" data-bs-toggle="tab" data-bs-target="#accordeon-{{ loop.index }}" type="button" role="tab" aria-controls="accordeon-{{ loop.index }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}">{{ item.libelle }}</button>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content container-xxl py-md-5 py-2" id="myTabContent">
+        {% for item in element.onglets|default([]) %}
+            {% set outer_index = loop.index %}
+            {% if item.libelle|default(null) %}
+                <div class="tab-pane px-3 fade pt-4 text-center {% if loop.first %}show active{% endif %}" id="accordeon-{{ outer_index }}" role="tabpanel" aria-labelledby="accordeon-{{ outer_index }}-tab">
+
+                    {% if item.title|default(null) %}
+                        <h2 class="text-primary fw-bold fs-30 mb-3">{{ item.title }}</h2>
+                    {% endif %}
+
+                    {% if item.subtitle|default(null) %}
+                        <p class="fw-light mb-5">{{ item.subtitle }}</p>
+                    {% endif %}
+
+                    {% set randomId = random() %}
+                    {% set accordeons = [] %}
+                    {% for subItem in item.faqs|default([]) %}
+                        {% if subItem.question|default(null) is not empty %}
+                            {% set accordeon = {
+                                'ordre': subItem.order|default(0),
+                                'question': subItem.question,
+                                'answer': subItem.answer|default(null)
+                            } %}
+                            {% set accordeons = accordeons|merge([accordeon]) %}
+                        {% endif %}
+                    {% endfor %}
+                    {% set accordeons_tries = accordeons|sort((a, b) => a.ordre <=> b.ordre) %}
+                    <div class="accordion mt-3" id="accordion-{{ randomId }}">
+                        {% for faq in accordeons_tries %}
+                            <div class="accordion-item border-1 border-top border-primary rounded-0 mb-4 overflow-auto">
+                                <h2 class="accordion-header">
+                                    <button class="fw-bold fs-20 letter-spacing1 text-primary shadow-none bg-white accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{ outer_index }}-{{ loop.index }}" aria-expanded="false" aria-controls="flush-collapse-{{ outer_index }}-{{ loop.index }}">
+                                        {{ faq.question }}
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse-{{ outer_index }}-{{ loop.index }}" class="accordion-collapse collapse" data-bs-parent="#accordion-{{ randomId }}">
+                                    <div class="accordion-body text-start">
+                                        {{ faq.answer | raw }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

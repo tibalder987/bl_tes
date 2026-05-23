@@ -1,0 +1,18 @@
+{# templates/form/fields.html.twig #}
+{% block _survey_form_star_widget %}
+    <div class="rating ms-3" id="{{ name }}" data-target="{{ name }}">
+        <!-- Les étoiles seront générées par JavaScript -->
+    </div>
+    <input type="hidden" id="{{ name }}" name="survey[{{ name }}]" value="{% if value %}{{ value }}{% else %}0{% endif %}" required>
+{% endblock %}
+
+{% block _survey_form_radio_widget %}
+    {% for choice in choices %}
+        <div class="form-check">
+            <input class="form-check-input" {% if value == choice.value %}checked{% endif%} required type="radio" name="{{ full_name }}" value="{{ choice.value }}" id="survey_question-answer-{{ choice.value }}">
+            <label class="form-check-label" for="survey_question-answer-{{ choice.value }}">
+                {{ choice.label }}
+            </label>
+        </div>
+    {% endfor %}
+{% endblock %}

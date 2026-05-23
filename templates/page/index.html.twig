@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block body %}
+    {% import 'builder/_builder.html.twig' as builder %}
+    <div class="page-container">
+        {{ builder.buildElements(page.elements) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('app-article') }}
+{% endblock %}

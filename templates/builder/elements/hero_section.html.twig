@@ -1,0 +1,17 @@
+<section class="hero-section position-relative {{ element.fullwidth ? 'container-fluid' : 'container' }}" style="background-image: url('{{ element.backgroundImage_url }}');">
+    <div class="overlay" style="background-color: rgba(0,0,0, {{ element.overlayOpacity }});"></div>
+    <div class="content position-relative text-center text-white w-100 py-5">
+        <h1 class="display-3 font-weight-bold">{{ element.title }}</h1>
+        {% if element.subtitle %}
+            <p class="lead mb-4">{{ element.subtitle }}</p>
+        {% endif %}
+        <div class="mt-5">
+            {% if element.btn1_text and element.btn1_url %}
+                <a href="{{ element.btn1_url }}" class="btn btn-primary btn-lg mr-3 px-4 py-3">{{ element.btn1_text }}</a>
+            {% endif %}
+            {% if element.btn2_text and element.btn2_url %}
+                <a href="{{ element.btn2_url }}" class="btn btn-outline-light btn-lg px-4 py-3">{{ element.btn2_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>

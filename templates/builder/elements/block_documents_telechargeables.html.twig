@@ -1,0 +1,21 @@
+<div class="container-xl position-relative">
+    <div class="px-3 px-xl-0">
+        <div class="builder_block_documents_telechargeables gradient_white bg_hide_mobile my-4 px-xl-5">
+            <div class="row justify-content-end">
+                {% for item in element.documents|default([]) %}
+                    {% set imagePath = item.imagePath_url|default(item.imagePath|default(null)) %}
+                    {% set title = item.title|default(null) %}
+                    {% if imagePath %}
+                        <div class="col-lg-6 flex-column flex-lg-row d-flex align-items-center justify-content-end">
+                            <a href="{{ absolute_url(imagePath) }}" class="border border-1 border-primary px-3 mb-2 mb-lg-0 rounded-4 py-2 gradient_white bg_show_mobile d-flex justify-content-start d-lg-inline-flex align-items-center doc_link text-decoration-none" download="{{ absolute_url(imagePath) }}">
+                                {{ title }}
+                                <i class="ps-3 builder_size5 builder_color3 fa-solid fa-file-arrow-down"></i>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+

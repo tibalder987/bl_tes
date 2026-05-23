@@ -1,0 +1,71 @@
+<header class="header" id="site-header">
+	<div class="header__content">
+		<a href="{{ path('app_contact') }}" class="header__button">
+			<img src="{{ asset('images/start-planning.svg') }}" class="header__button-image" alt="{{ 'alt.start_planning'|trans({}, 'menu') }}">
+		</a>
+		<a href="{{ locale_switch_url }}" class="header__button-switch" hreflang="{{ locale_switch_target }}" lang="{{ locale_switch_target }}">
+			{{ locale_switch_target == 'en' ? 'EN' : 'FR' }}
+		</a>
+		<button type="button" class="header__menu" id="header-menu-toggle" aria-expanded="false" aria-controls="header-drawer" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}">
+			<div class="header__menu-label">{{ 'label.menu'|trans({}, 'menu') }}</div>
+			<div class="header__menu-icon" aria-hidden="true">
+				<span class="header__menu-line header__menu-line--top"></span>
+				<span class="header__menu-line header__menu-line--middle"></span>
+				<span class="header__menu-line header__menu-line--bottom"></span>
+				<span class="header__menu-line header__menu-line--middle-clone"></span>
+			</div>
+		</button>
+	</div>
+	<div class="header__subcontent">
+		<a href="{{ path('app_home_page') }}"><img src="{{ asset('images/logo.svg') }}" class="header__logo" alt=""></a>
+	</div>
+</header>
+<div class="header__drawer-backdrop js-header-drawer-backdrop" aria-hidden="true"></div>
+<nav class="header__drawer js-header-drawer" id="header-drawer" aria-label="{{ 'aria.main_nav'|trans({}, 'menu') }}" aria-hidden="true">
+
+	<div class="header__drawer-content">
+		<div class="header__subcontent">
+			<img src="{{ asset('images/logo.svg') }}" class="header__logo" alt="">
+		</div>
+	</div>
+	<div class="header__drawer-container">
+		<ul class="header__drawer-list">
+			<li class="header__drawer-item">
+				<a href="{{ path('app_home_page') }}" class="header__drawer-link">{{ 'nav.welcome'|trans({}, 'menu') }}</a>
+			</li>
+			<li class="header__drawer-item">
+				<a href="{{ path('app_stay') }}" class="header__drawer-link">{{ 'nav.stay'|trans({}, 'menu') }}</a>
+			</li>
+			<li class="header__drawer-item">
+				<a href="{{ path('app_dine') }}" class="header__drawer-link">{{ 'nav.dine'|trans({}, 'menu') }}</a>
+			</li>
+			<li class="header__drawer-item">
+				<a href="{{ path('app_flow') }}" class="header__drawer-link">{{ 'nav.flow'|trans({}, 'menu') }}</a>
+			</li>
+			<li class="header__drawer-item">
+				<a href="{{ path('app_our_story') }}" class="header__drawer-link">{{ 'nav.our_story'|trans({}, 'menu') }}</a>
+			</li>
+			<li class="header__drawer-item">
+				<a href="{{ path('app_know') }}" class="header__drawer-link">{{ 'nav.know'|trans({}, 'menu') }}</a>
+			</li>
+			<li class="header__drawer-item">
+				<a href="{{ path('app_contact') }}" class="header__drawer-link header__drawer-link--planning">
+					<img src="{{ asset('images/start-planning.svg') }}" class="header__drawer-planning-img" alt="{{ 'alt.start_planning'|trans({}, 'menu') }}">
+				</a>
+			</li>
+		</ul>
+		<div class="header__drawer-button">
+			<a href="{{ locale_switch_url }}" class="btn btn-outline" hreflang="{{ locale_switch_target }}" lang="{{ locale_switch_target }}">{{ (locale_switch_target == 'en' ? 'lang.switch_en' : 'lang.switch_fr')|trans({}, 'menu') }}
+				<i class="fa-solid fa-arrow-right"></i>
+			</a>
+		</div>
+	</div>
+</nav>
+<button type="button" class="header__menu-fab js-header-menu-fab" id="header-menu-fab" aria-controls="header-drawer" aria-expanded="false" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}" aria-hidden="true" tabindex="-1">
+	<span class="header__menu-icon" aria-hidden="true">
+		<span class="header__menu-line header__menu-line--top"></span>
+		<span class="header__menu-line header__menu-line--middle"></span>
+		<span class="header__menu-line header__menu-line--bottom"></span>
+		<span class="header__menu-line header__menu-line--middle-clone"></span>
+	</span>
+</button>

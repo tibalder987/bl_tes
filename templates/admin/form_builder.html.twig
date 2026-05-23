@@ -1,0 +1,33 @@
+{# templates/admin/form_builder.html.twig #}
+{% extends pageName == 'edit' ? '@EasyAdmin/crud/edit.html.twig' : '@EasyAdmin/crud/new.html.twig' %}
+
+{% block head_javascript %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('form-builder') }}
+{% endblock %}
+
+{% block head_stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('form-builder') }}
+    <style>
+        .content-header-title { margin-bottom: 0 !important; }
+        /* Hide native submit buttons, we will trigger them from Vue */
+        .ea-new-form .form-actions, .ea-edit-form .form-actions { display: none; }
+    </style>
+{% endblock %}
+
+{% block content_footer %}
+    {{ parent() }}
+    
+    {% set current_form = pageName == 'edit' ? edit_form : new_form %}
+    
+    <div class="card m-0 p-0">
+        <div class="card-body p-0">
+            {# Builder wrapper #}
+            <div id="form-builder-app" 
+                 data-schema="{{ current_form.vars.data.schemaData|default([])|json_encode(constant('JSON_HEX_TAG')) }}" 
+                 data-config="{{ current_form.vars.data.configuration|default([])|json_encode(constant('JSON_HEX_TAG')) }}">
+            </div>
+        </div>
+    </div>
+{% endblock %}

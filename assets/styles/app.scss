@@ -1,0 +1,24 @@
+@import "../fonts/fontawesome/css/all.min.css";
+// AOS : doit être dans ce fichier (entrée « default »), sinon le CSS reste dans app.css non chargé par le layout.
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+@import "~aos/dist/aos.css";
+// Flatpickr : idem — importé depuis reservation-hero.js il irait dans l’entrée « app », non liée dans base.html.twig.
+@import "~flatpickr/dist/flatpickr.min.css";
+@import "~selectize/dist/css/selectize.css";
+@import "~select2/dist/css/select2.css";
+
+@import "variables";
+@import "main";
+@import "menu";
+@import "footer";
+@import "reservation";
+@import "home-landing";
+@import "flow";
+@import "stay";
+@import "know";
+@import "dine";
+@import "our-story";
+@import "contact";
+@import "login";
+@import "error-pages";

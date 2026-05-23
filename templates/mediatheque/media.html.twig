@@ -1,0 +1,36 @@
+{% if media.mediaType == constant('App\\Utilities\\GlobalConstants::MEDIA_TYPE_PHOTO') %}
+    <div class="col-md-6 col-xl-4 col-xxl-3 pb-4">
+        <div class="media_item">
+            <a target="_blank" class="d-block position-relative" href="{{ vich_uploader_asset(media,"file") }}">
+                <img class="media_image" src="{{ absolute_url(vich_uploader_asset(media,"file")) | imagine_filter('list_media') }}" alt="{{ media.title }}">
+                <div class="hover bg-secondary bg-opacity-75 position-absolute d-flex align-items-center justify-content-center p-3">
+                    <span class="d-block text-center text-uppercase fw-light">
+                        <span class="d-block mb-3">{{ media.title }}</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+{% elseif media.mediaType == constant('App\\Utilities\\GlobalConstants::MEDIA_TYPE_DOCUMENT') %}
+    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 pb-4 d-flex justify-content-center">
+        <a href="{{ vich_uploader_asset(media,"file") }}" target="_blank" class="border-bottom border-2 border-white text-decoration-none pt-2 pb-5 px-4 color_deep_gray document_item bg-white d-flex flex-column align-items-center justify-content-center position-relative">
+            <span class="d-inline-block mb-3">
+                <div class="text-center m-1 bg_gray py-2 px-3 smaller_text letter-spacing1 color_gray text-uppercase fw-light">
+                    {{ media.mediaDocumentType.title }}
+                </div>
+            </span>
+
+            <span class="icon-picto15 bigger_text"></span>
+
+            <div class="doc_info text-center bg-white position-relative">
+                <span class="d-inline-block py-2 text-uppercase smaller_text">{{ media.getUpdatedAt() | format_datetime('long', 'none', locale='fr') }}</span>
+                <div class="text-uppercase color_deep_red letter-spacing1 line-height2">
+                    {{ media.title }}
+                </div>
+            </div>
+
+            <span class="icon-picto16 see_more_link color_deep_red"></span>
+        </a>
+    </div>
+{% endif %}

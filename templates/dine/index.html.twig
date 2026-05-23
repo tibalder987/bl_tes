@@ -1,0 +1,173 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'page_title'|trans({}, 'dine') }}
+{% endblock %}
+
+{% block meta %}
+	<meta name="description" content="{{ 'meta_description'|trans({}, 'dine')|e('html_attr') }}"/>
+	<meta name="keywords" content="{{ 'meta_keywords'|trans({}, 'dine')|e('html_attr') }}"/>
+	<meta property="og:title" content="{{ 'og_title'|trans({}, 'dine')|e('html_attr') }}"/>
+	<meta property="og:description" content="{{ 'og_description'|trans({}, 'dine')|e('html_attr') }}"/>
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+{% set bodyClass = 'dinepage' %}
+
+{% block body %}
+	<main class="dine-page">
+		<section class="hero-section">
+			<div class="hero-section__content">
+				<div class="hero-section__title">{{ 'hero.title'|trans({}, 'dine') }}</div>
+				<div class="hero-section__subtitle">
+					<span>{{ 'hero.flavors'|trans({}, 'dine') }}</span>
+					{{ 'hero.to'|trans({}, 'dine') }}
+					<span class="section__subtitle-2">{{ 'hero.share'|trans({}, 'dine') }}</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-1 have-animation">
+			<div class="section-1__content">
+				<div class="section-1__left">
+					<div class="section-1__images">
+						<img data-aos="fade-up" src="{{ asset('images/dine/section-1/manuia.png') }}" class="section-1__toast" alt="{{ 'img.manuia'|trans({}, 'dine')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-1__right">
+					<h3 class="section-1__title">{{ 's1.title'|trans({}, 'dine') }}
+						<span>{{ 's1.title_span'|trans({}, 'dine') }}</span>
+					</h3>
+					<div class="section-1__text">
+						<p>{{ 's1.p1'|trans({}, 'dine')|raw }}</p>
+						<p>{{ 's1.p2'|trans({}, 'dine')|raw }}</p>
+						<p>{{ 's1.p3'|trans({}, 'dine') }}</p>
+					</div>
+					<div class="section-1__subcontent-content">
+						<p class="section-1__subcontent-text">
+							{{ 's1.sub'|trans({}, 'dine') }}<br>
+							<span class="shape">{{ 's1.sub_span'|trans({}, 'dine') }}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-2">
+			<div class="section-2__content">
+				<div class="section-2__left">
+					<h3 class="section-2__title icon-title-red">
+						<div>{{ 's2.title'|trans({}, 'dine') }}
+							<br>
+							<span>{{ 's2.title_br'|trans({}, 'dine') }}</span>
+						</div>
+					</h3>
+					<div class="section-2__left-content">
+						<div>
+							<p>{{ 's2.p1'|trans({}, 'dine')|raw }}</p>
+							<p>{{ 's2.p2'|trans({}, 'dine') }}</p>
+							<p>{{ 's2.p3'|trans({}, 'dine')|raw }}</p>
+
+							<div class="section-2__left-content-btn">
+								<a href="{{ path('app_contact', { service: 'dine' }) }}" class="btn-primary">{{ 's2.btn'|trans({}, 'dine') }}
+									<i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+
+						</div>
+						<div class="section-2__right">
+							<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/dine/section-2/bmr_the_original.jpg') }}" class="section-2__bmr-entrance" alt="{{ 'img.terrace'|trans({}, 'dine')|e('html_attr') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-3">
+			<div class="section-3__content">
+				<div class="section-3__left">
+					<div class="section-3__images">
+						<img data-aos="fade-down" data-aos-delay="200" src="{{ asset('images/dine/section-3/glass.png') }}" class="section-3__wine-glass" alt="{{ 'img.glass'|trans({}, 'dine')|e('html_attr') }}">
+						<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/dine/section-3/marina.jpg') }}" class="section-3__overwater-bistro" alt="{{ 'img.fire'|trans({}, 'dine')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-3__right">
+					<h3 class="section-3__title icon-title-red">{{ 's3.title'|trans({}, 'dine') }}<br>
+						<span>{{ 's3.title_span'|trans({}, 'dine') }}</span>
+					</h3>
+					<div class="section-3__text">
+						<p>{{ 's3.p1'|trans({}, 'dine') }}</p>
+						<p>{{ 's3.p2'|trans({}, 'dine')|raw }}</p>
+					</div>
+					<div class="section-3__subcontent-content">
+						<p class="section-3__subcontent-text">
+							{{ 's3.sub1'|trans({}, 'dine') }}<br>
+							<span class="shape">{{ 's3.sub_span'|trans({}, 'dine') }}</span>
+							<br><a href="{{ path('app_contact', { service: 'dine' }) }}" class="btn-secondary section-3__subcontent-btn">{{ 's3.btn'|trans({}, 'dine') }}
+								<i class="fa-solid fa-arrow-right"></i>
+							</a>
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-4 have-animation">
+			<div class="section-4__content">
+				<div class="section-4__left">
+					<h3 class="section-4__title icon-title">
+						<div>{{ 's4.title'|trans({}, 'dine') }}<br>
+							<span>{{ 's4.title_span'|trans({}, 'dine') }}</span>
+						</div>
+					</h3>
+					<div class="section-4__left-content">
+						<div class="section-4__left-content-text">
+							<p>{{ 's4.p1'|trans({}, 'dine') }}</p>
+							<p>{{ 's4.p2'|trans({}, 'dine') }}</p>
+							<p>{{ 's4.p3'|trans({}, 'dine') }}</p>
+							<a href="{{ path('app_contact', { service: 'dine' }) }}" class="btn-secondary section-4__left-content-btn">{{ 's4.btn'|trans({}, 'dine') }}
+								<i class="fa-solid fa-arrow-right"></i>
+							</a>
+						</div>
+						<div class="section-4__right">
+							<img data-aos="fade-down" data-aos-delay="200" src="{{ asset('images/dine/section-4/food.jpg') }}" class="section-4__seaside-plate" alt="{{ 'img.pergola'|trans({}, 'dine')|e('html_attr') }}">
+							<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/dine/section-4/la_belle_matira.jpg') }}" class="section-4__matira-view" alt="{{ 'img.tiki'|trans({}, 'dine')|e('html_attr') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-6">
+			<div class="section-6__content">
+				<div class="section-6__left">
+					<h3 class="section-6__title icon-title-red">
+						<div>{{ 's6.title'|trans({}, 'dine') }}<br>
+							<span>{{ 's6.span1'|trans({}, 'dine') }}</span><br>
+							<span>{{ 's6.span2'|trans({}, 'dine') }}</span>
+						</div>
+					</h3>
+					<div class="section-6__left-content">
+						<div>
+							<p>
+								{{ 's6.p1'|trans({}, 'dine')|raw }}
+							</p>
+							<p>
+								{{ 's6.p2'|trans({}, 'dine') }}
+							</p>
+						</div>
+						<div class="section-6__right">
+							<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/dine/section-6/tiki.png') }}" class="section-6__tiki-mug" alt="{{ 'img.tiki_mug'|trans({}, 'dine')|e('html_attr') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+{% endblock %}

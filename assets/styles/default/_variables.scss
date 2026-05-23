@@ -1,0 +1,233 @@
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px
+) !default;
+// scss-docs-end container-max-widths
+
+
+$body-color-dark : #002043;
+$body-color : #002043;
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dde4ee !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #707070 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #002043 !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary :      #002043 !default;
+$secondary :    #FFCB00 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "gray":       $gray-300
+  ),
+  $theme-colors
+);
+
+$navbar-light-active-color:   #C32921 !default;
+
+$input-btn-padding-y:         .475rem !default;
+$input-btn-padding-x:         1rem !default;
+
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
+
+$input-btn-padding-y-lg:      .6rem !default;
+$input-btn-padding-x-lg:      1.5rem !default;
+
+$input-border-color:          $gray-300 !default;
+
+// Buttons
+$btn-font-weight:             400 !default;
+$btn-border-width:            1px;
+
+
+// scss-docs-start border-radius-variables
+//$border-radius:               0 !default;
+//$border-radius-sm:            0 !default;
+//$border-radius-lg:            0 !default;
+//$border-radius-xl:            0 !default;
+//$border-radius-2xl:           0 !default;
+//$border-radius-pill:          50rem !default;
+// scss-docs-end border-radius-variables
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+$h1-font-size:                $font-size-base * 3.25 !default;
+$h2-font-size:                $font-size-base * 2.5 !default;
+$h3-font-size:                $font-size-base * 1.625 !default;
+$h4-font-size:                $font-size-base * 1.313 !default;
+$h5-font-size:                $font-size-base * 1.125 !default;
+$h6-font-size:                $font-size-base !default;
+
+
+
+
+/* Default color */
+$text-color: #002043;
+$link-color: #002043;
+$link-hover-color: #162f49;
+$title-font: 'Muller', sans-serif;
+$title-font-weight: 400;
+$subtitle-font: 'Muller', sans-serif;
+$subtitle-font-weight: 600;
+//$text-font: 'Readex Pro', sans-serif;
+$text-font: 'Muller';
+$text-font-weight: 300;
+
+/* Builder */
+$builder_color1: #ffffff;
+$builder_color2: #002043;
+$builder_color3: #FFCB00;
+$builder_color4: #FFCB00;
+$builder_color5: #888888;
+$builder_color6: #c5c5c5;
+$builder_color7: #fafafa;
+$builder_color8: #eeeeee;
+$builder_font: 'Muller', sans-serif;
+$builder_font2: 'Muller', sans-serif;
+$builder_color_shadow: #000000;
+$builder_title_size_xxl: 3.25rem;
+$builder_title_size_xl: 2.5rem;
+$builder_title_size_lg: 1.625rem;
+$builder_title_size_md: 1.5rem;
+$builder_title_size_sm: 1.313rem;
+$builder_title_size_xs: 1.125rem;
+$builder_title_size_xxs: 1.06rem;
+$builder_title_size_xxs2: 1rem;
+$builder_small_text_size: 0.875rem;
+
+/* Header */
+$header_background: #1C410F;
+$header_background_scroll: #1C410F;
+
+/* Menu */
+//$nav-link-color: #ffffff;
+$nav-link-color: #002043;
+$nav-link-color-hover: #000000;
+$nav-link-background-hover: #ffffff;
+$sub_menu_background: #ffffff;
+$sub_menu_background_hover: #fafafa;
+$sub_menu_font_size: 0.813rem;
+$menu_background_mobile: #1C410F;
+$sub_menu_background_mobile: #fff;
+$nav-link-color_mobile: #000000;
+$nav-link-color-hover_mobile: #002043;
+$menu_link_transform: uppercase;
+$menu_font_weight: 500;
+$menu_toggle_bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%280, 0, 0, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
+
+/* Menu Homepage */
+//$nav-link-color_homepage: #000000;
+$nav-link-color_homepage: #002043;
+$nav-link-color-hover_homepage: #000000;
+$menu_toggle_bg_homepage: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
+
+/* Actualités */
+//$article_bg_gradient: transparent linear-gradient(0deg, rgba(91,14,12, 1) 0%, rgba(91,14,12, 1) 30%, rgba(91,14,12, 0) 60%, rgba(91,14,12, 0) 100%) 0% 0% no-repeat;
+//$article_gradient_hover: transparent linear-gradient(0deg, rgba(214,0,13, 1) 0%, rgba(214,0,13, 1) 20%, rgba(214,0,13, 0.8) 60%, rgba(214,0,13, 0.9) 100%) 0% 0% no-repeat;
+$article_bg_gradient: transparent;
+$article_gradient_hover: transparent;
+$article_bg_item : #F1FFEB;
+
+/* Button custom */
+$btn_bg: #ddd;
+$btn_color: #444;
+$btn_border_color: #ddd;
+
+$btn_bg_hover: #002043;
+$btn_color_hover: #fff;
+$btn_border_color_hover: #002043;
+
+/* Form */
+$form_font_weight : 300;
+
+$theme_color_custom1: #ffcb00;
+$theme_color_custom2: #0b2a4c;
+$theme_color_custom3: #f8f9fa;
+$theme_color_custom4: #0b2a4c;
+$theme_bg_custom1: transparent;
+$theme_bg_custom2: transparent;
+$theme_bg_custom3: transparent;
+$theme_bg_custom4: transparent;
+$theme_bg_header: transparent;

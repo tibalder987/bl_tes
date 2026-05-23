@@ -1,0 +1,20 @@
+<section class="logo-bar py-5 {{ element.fullwidth ? 'container-fluid' : 'container' }}">
+    <div class="d-flex justify-content-center align-items-center flex-wrap">
+        {% for item in element.logos|default([]) %}
+            {% set imageUrl = item.image_url|default(item.image|default(null)) %}
+            {% if imageUrl %}
+                <div class="p-4">
+                    {% if item.url|default(null) %}
+                        <a href="{{ item.url }}" target="_blank" class="logo-link">
+                            <img src="{{ imageUrl }}" alt="Partner Logo" class="logo-image">
+                        </a>
+                    {% else %}
+                        <div class="logo-image-wrapper">
+                            <img src="{{ imageUrl }}" alt="Partner Logo" class="logo-image">
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

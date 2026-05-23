@@ -1,0 +1,23 @@
+<section class="before-after py-5 {{ element.fullwidth ? 'container-fluid' : 'container' }}">
+    <div class="before-after-container mx-auto rounded shadow-lg">
+        <img src="{{ element.image_before_url }}" class="img-fluid w-100" alt="Before">
+        <div class="resize-image">
+            <img src="{{ element.image_after_url }}" class="img-fluid" style="height: 100%; max-width: none; width: auto;" alt="After"> <!-- Note: width needs to match container width via JS usually, or use object-fit -->
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" oninput="this.previousElementSibling.style.width = this.value + '%'">
+        <div class="labels d-flex justify-content-between position-absolute w-100 px-4">
+            <span class="badge badge-dark p-2 opacity-75 shadow">{{ element.label_before }}</span>
+            <span class="badge badge-light p-2 opacity-75 shadow">{{ element.label_after }}</span>
+        </div>
+        <div class="handle bg-white rounded-circle shadow d-flex align-items-center justify-content-center">
+            <i class="fa fa-arrows-h text-dark"></i>
+        </div>
+    </div>
+    <script>
+        // Simple script to sync handle position if needed, but CSS approach above relies on range input
+        // The handle centering needs JS to follow the slider value if we want it on the line
+        document.currentScript.previousElementSibling.querySelector('.slider').addEventListener('input', function() {
+            this.nextElementSibling.nextElementSibling.style.left = this.value + '%';
+        });
+    </script>
+</section>

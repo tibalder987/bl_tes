@@ -1,0 +1,176 @@
+MIGRATION GUIDE: Builder Nested Repeatable Refactoring
+======================================================
+
+Overview
+--------
+This document details the refactoring process to convert flat-key repeatable elements (e.g., `item1_title`, `item2_title`) into nested repeatable structures (e.g., `items[0][title]`, `items[1][title]`) within the custom builder. This change addresses issues with dynamic item counts, missing keys errors in Twig, and complex hydration logic.
+
+Files Affected
+--------------
+1.  **Frontend Configuration**: `assets/back/js/builder/elements/StylesheetElements.js`
+2.  **Frontend Logic**: `assets/back/js/builder/elements/ElementFormMounter.js`
+3.  **Backend Saver**: `src/Builder/EntityWithBuilderElementsSaver.php`
+4.  **Twig Templates**: `templates/builder/elements/*.html.twig`
+
+Step-by-Step Changes
+--------------------
+
+### 1. StylesheetElements.js (Frontend Config)
+
+**Goal**: Change field naming convention to use nested array syntax `parent][${idx}][field`.
+**Key Fix**: Introduce `_MINUS_1` placeholder for 1-based initial rendering vs 0-based JS indexing.
+
+**Pattern**:
+Before:
+```javascript
+.addRepeatable('slides', {
+    // ...
+    template: (i, builder) => builder
+        .addImage(`imagePath${i}`, 'Image')
+        .addText(`title${i}`, 'Titre')
+})
+```
+
+After:
+```javascript
+.addRepeatable('slides', {
+    // ...
+    template: (i, builder) => {
+        // Handle "string" i (placeholder) vs "number" i (JavaScript iteration)
+        const idx = typeof i === 'string' ? i + '_MINUS_1' : i - 1;
+        return builder
+            .addImage(`slides][${idx}][imagePath`, 'Image')
+            .addText(`slides][${idx}][title`, 'Titre');
+    }
+})
+```
+
+**Note**: The `_MINUS_1` string is critical. `ElementFormMounter.js` detects this suffix in placeholders (e.g., `slides][__INDEX___MINUS_1][title`) and calculates the correct integer index (e.g., `slides][0][title`) when adding new rows dynamically.
+
+### 2. ElementFormMounter.js (Frontend Logic)
+
+**Goal**: Support nested field hydration and auto-expansion of repeatables.
+
+**Changes (Snippet)**:
+In `_getValueFromPath`, add recursive lookup support:
+```javascript
+_getValueFromPath(obj, path) {
+    // ... logic to parse "columns][0][title" ...
+    // Split by '][' or '[' or ']', clean up tokens, traverse object
+}
+```
+
+In `_initRepeatables`, add auto-expansion logic:
+```javascript
+const savedCount = element[repeatableName] ? element[repeatableName].length : 0;
+// If saved items > initial items, click "Add" button automatically
+for (let k = currentCount; k < savedCount; k++) {
+    addButton.click();
+}
+```
+
+### 3. EntityWithBuilderElementsSaver.php (Backend)
+
+**Goal**: Recursively clean and save nested arrays without flattening them incorrectly.
+
+**Changes (Snippet)**:
+```php
+private function cleanElements(array $elements): array
+{
+    foreach ($elements as $key => $value) {
+        if (is_array($value)) {
+            // Check if it's an array of scalars (checkboxes) simply to implode
+            // OR if it's a nested structure (repeatable rows) to recurse
+            $isNested = false;
+            foreach ($value as $subItem) {
+                if (is_array($subItem)) {
+                    $isNested = true;
+                    break;
+                }
+            }
+
+            if ($isNested) {
+                // Recursive call for nested repeatable structures
+                $elements[$key] = $this->cleanElements($value);
+            } else {
+                // Simple implode for multi-selects/checkboxes
+                $elements[$key] = implode(',', $value);
+            }
+        }
+    }
+    return $elements;
+}
+```
+
+### 4. Twig Templates
+
+**Goal**: Iterate over the nested array instead of fixed range `1..N`.
+
+**Pattern**:
+Before:
+```twig
+{% for i in 1..4 %}
+    {% if element['title' ~ i] %}
+        <h3>{{ element['title' ~ i] }}</h3>
+    {% endif %}
+{% endfor %}
+```
+
+After:
+```twig
+{% for item in element.items|default([]) %}
+    {% if item.title %}
+        <h3>{{ item.title }}</h3>
+    {% endif %}
+{% endfor %}
+```
+
+**Nested Repeatable Example (FAQ)**:
+```twig
+{% for onglet in element.onglets|default([]) %}
+    {# ... #}
+    {% for faq in onglet.faqs|default([]) %}
+        <div>{{ faq.question }}</div>
+    {% endfor %}
+{% endfor %}
+```
+
+**Image Paths (`_url` suffix)**:
+When retrieving file fields in the nested structure, the saver/hydrator might append `_url`. Use this fallback pattern:
+```twig
+{% set imagePath = item.imagePath_url|default(item.imagePath|default(null)) %}
+<img src="{{ imagePath }}">
+```
+
+Summary of Components Refactored
+--------------------------------
+1.  Slider (`slides`)
+2.  Carousel (`images`)
+3.  Block Image 2/3/4 Cols (`columns`)
+4.  Block Onglet (`onglets`)
+5.  Block Onglet FAQ (`onglets` -> `faqs`)
+6.  Block Documents (`documents`)
+7.  Onglet Page (`onglets`)
+8.  Accordion (`items`)
+9.  Key Datas (`keys`)
+10. 4 Cards (`cards`)
+11. Steps (`steps`)
+12. Pricing Table (`plans`)
+13. Testimonials (`reviews`)
+14. Logo Bar (`logos`)
+15. Masonry Gallery (`images`)
+16. Timeline (`events`)
+17. Team Members (`members`)
+18. Animated Counters (`counters`)
+
+Exceptions
+----------
+- `Google Maps`: Not repeatable.
+- `Hero Section`: Not repeatable.
+
+Checking for Completion
+-----------------------
+To verify, go to the Builder, add each element, save, reload, and ensure:
+1.  Data persists.
+2.  Adding/removing rows works and saves correct count.
+3.  Frontend renders correct number of items.

@@ -1,0 +1,13 @@
+<div class="builder_header position-relative data_bg d-flex align-items-center justify-content-center" data-bg="{{ absolute_url(element.imagePath_url) }}">
+    <div class="px-4 text-center py-5">
+        {% if element.title is not null %}
+            <h1 class="builder_title_font builder_color1 builder_text_shadow">{{ element.title }}</h1>
+        {% endif %}
+        {% if element.description is not null %}
+            <div class="builder_text_shadow builder_color1 fw-light">{{ element.description | raw }}</div>
+        {% endif %}
+        {% if element.buttonTitle is not null %}
+            <a class="mt-3 btn btn-primary builder_color1" target="{{ element.target }} href="{{ element.buttonPath }}">{{ element.buttonTitle }}</a>
+        {% endif %}
+    </div>
+</div>

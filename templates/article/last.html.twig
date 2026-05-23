@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-6 fs-2">
+        <h2 class="h1 builder_title_font2 builder_title_size builder_color2 line-height1 mb-4">Actualités</h2>
+    </div>
+    <div class="col-6 fs-2 text-end">
+        <a class="fs-6 text-uppercase" href="{{ path('app_article_actualites') }}">Voir toutes les actualités</a>
+    </div>
+</div>
+<div class="block_articles pt-3 mt-3">
+    <div class="slider_articles">
+        {% for article in articles %}
+            <div class="px-3">
+                {% set imageActu = asset('img/shop/ico-visuel-produit.jpeg') %}
+                {% if article.imageName is not null %}
+                    {% set imageActu = vich_uploader_asset(article,"image") %}
+                {% endif %}
+                <div class="article_item overflow-hidden" style="background-image: url('{{ imageActu }}')">
+                    <div class="actu_info p-4">
+                        <div class="p-0 p-md-2">
+                            <span class="d-inline-block letter-spacing1 actu_categorie border border-1 border-white py-1 px-2 py-xxl-2 px-xxl-3 text-uppercase">
+                                {% for categorie in article.categories %}
+                                    {{ categorie.title }}
+                                {% endfor %}
+                            </span>
+                            <span class="pt-3 d-block letter-spacing1 fs-5 actu_title text-white text-uppercase">
+                                {{ article.title | slice(0, 25) ~ '...' }}
+                            </span>
+                            <span class="pt-2 d-block actu_date letter-spacing1 text-uppercase">
+                                {{ article.dateSchedule|format_datetime('long', 'none', locale='fr') }}
+                            </span>
+                            <div class="actu_description overflow-hidden">
+                                <p class="d-none d-xxl-block pt-3 mb-0">{{ article.description | striptags | raw | slice(0, 90) ~ '...' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="full_hover" href="{{ path('app_article_actualite_detail', {'slug' : article.path}) }}"></a>
+                    <div class="actu_btn p-4">
+                        <div class="p-0 p-md-2">
+                            <a href="{{ path('app_article_actualite_detail', {'slug' : article.path}) }}" class="px-0 py-1 text-white see_more_link text-decoration-none d-inline-flex align-items-center">
+                                <span class="icon-picto10 white_hover"></span>
+                                <span class="d-none d-lg-inline-block text-uppercase link_hover">
+                                    <span class="ps-2 d-inline-block">En savoir plus</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

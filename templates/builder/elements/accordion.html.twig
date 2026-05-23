@@ -1,0 +1,40 @@
+{% set randomId = random() %}
+
+<div class="container-xl position-relative">
+    <div class="px-3 px-xl-0">
+        <div class="builder_accordion pt-3 pb-4 px-xl-5">
+            <div class="accordion" id="accordion{{ randomId }}">
+                {% for item in element.items|default([]) %}
+                    {% set title = item.title|default(null) %}
+                    {% set imagePath = item.imagePath_url|default(item.imagePath|default(null)) %}
+                    {% set paragraph = item.paragraph|default(null) %}
+
+                    {% if title is not empty %}
+                        <div class="accordion-item rounded-0 border-primary">
+                            <h2 class="accordion-header">
+                                <button class="fw-bold text-primary letter-spacing1 shadow-none bg-white accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{ randomId }}-{{ loop.index }}" aria-expanded="false" aria-controls="flush-collapse-{{ randomId }}-{{ loop.index }}">
+                                    {{ title }}
+                                </button>
+                            </h2>
+                            <div id="flush-collapse-{{ randomId }}-{{ loop.index }}" class="accordion-collapse collapse" data-bs-parent="#accordion{{ randomId }}">
+                                <div class="accordion-body">
+                                    {% if imagePath is not empty %}
+                                        <div class="accordion_image mb-4">
+                                            <img src="{{ absolute_url(imagePath) }}" alt="{{ title }}" />
+                                        </div>
+                                    {% endif %}
+                                    <div class="wysiwyg_content">
+                                        {{ paragraph | raw }}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+

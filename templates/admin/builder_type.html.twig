@@ -1,0 +1,27 @@
+{% block builder_row %}
+    <!-- add a fake trix editor to force trix to load even when no trix inside builder elements -->
+    {{ form_errors(form) }}
+
+    <div style="display: none;">
+        <trix-editor data-js-url="/bundles/easyadmin/form-type-text-editor.js"
+                     data-css-url="/bundles/easyadmin/form-type-text-editor.css"></trix-editor>
+    </div>
+
+    <div class="">
+        <div class="mb-1 text-start form-group">
+            <label for="Article_translations_fr_description" class="form-control-label">Builder</label>
+        </div>
+    </div>
+    <div class="builder-root" id="builder-root-{{ random() }}" data-locale="{{ app.request.locale }}">
+        <builder basename="{{ form.vars.full_name }}"
+                 :builder-data="{{ builderData | json_encode() }}"
+                 :elements="{{ form.vars.value | json_encode() }}"
+                 preview-url="{{ path('builder_preview_window') }}"
+        ></builder>
+    </div>
+    
+    <script>
+        // Injecter la locale pour le File Manager Integration
+        window.BUILDER_LOCALE = "{{ app.request.locale }}";
+    </script>
+{% endblock %}

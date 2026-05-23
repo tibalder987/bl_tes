@@ -1,0 +1,33 @@
+<div class="builder_block_picto_column234 py-4 theme1">
+    <div class="container-xl">
+        <div class="d-flex flex-wrap justify-content-center px-xl-5 {% if element.alignment %}text-{{ element.alignment }}{% endif %}">
+            {% for item in element.columns|default([]) %}
+                {% set title = item.title|default(null) %}
+                {% if title %}
+                    <div class="p-3 p-md-4 item">
+                        <div class="bg-white mx-auto position-relative">
+                            {% if item.iconPath|default(null) %}
+                                <div class="mb-4">
+                                    <span class="{{ item.iconPath }} text-primary size-icon"></span>
+                                </div>
+                            {% endif %}
+                            <div class="container-wording">
+                                <h3 class="h2 mb-4 text-primary fw-bold">{{ title }}</h3>
+                                {% if item.contenu|default(null) %}
+                                    <div class="wysiwyg_content mb-5">
+                                        {{ item.contenu | raw }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            {% if item.buttonPath|default(null) %}
+                                <a href="{{ item.buttonPath }}" class="btn btn-dark btn-lg rounded-5 fw-normal fs-6 text-uppercase mt-2">{{ 'decouvrir'|trans }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+

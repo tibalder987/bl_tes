@@ -1,0 +1,16 @@
+{% for participationDetail in field.value %}
+    {% if participationDetail.surveyQuestion.active %}
+        <div class="mb-4">
+            <h6 class="mb-1">{{ participationDetail.surveyQuestion.title }}</h6>
+            <div class="fs-6 ps-4">
+                {% if participationDetail.surveyQuestion.type == constant('App\\Utilities\\GlobalConstants::SURVEY_QUESTION_TYPE_ETOILE') %}
+                    {{ participationDetail.valueInt }}/5
+                {% elseif participationDetail.surveyQuestion.type == constant('App\\Utilities\\GlobalConstants::SURVEY_QUESTION_TYPE_TEXT') %}
+                    {{ participationDetail.valueTxt }}
+                {% elseif participationDetail.surveyQuestion.type == constant('App\\Utilities\\GlobalConstants::SURVEY_QUESTION_TYPE_RADIO') %}
+                    {{ participationDetail.surveyQuestionAnswer.title }}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

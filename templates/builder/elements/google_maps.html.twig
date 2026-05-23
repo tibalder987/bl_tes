@@ -1,0 +1,18 @@
+<section class="google-maps position-relative {{ element.fullwidth ? 'container-fluid p-0' : 'container' }}">
+    <iframe
+        frameborder="0"
+        class="{{ element.mapStyle == 'dark' ? 'map-filter-dark' : '' }}"
+        src="https://maps.google.com/maps?q={{ element.latitude ? element.latitude : element.address }}&z={{ element.zoom }}&output=embed&t={{ element.mapStyle == 'satellite' ? 'k' : '' }}"
+        allowfullscreen>
+    </iframe>
+    {% if element.markerTitle %}
+        <div class="map-card position-absolute bg-white p-4 rounded shadow-lg">
+            <h5 class="font-weight-bold mb-2">{{ element.markerTitle }}</h5>
+            <p class="mb-0 text-muted">{{ element.markerDesc }}</p>
+            {% if element.address %}
+                <hr class="my-3">
+                <small class="text-muted"><i class="fa fa-map-marker mr-1"></i> {{ element.address }}</small>
+            {% endif %}
+        </div>
+    {% endif %}
+</section>

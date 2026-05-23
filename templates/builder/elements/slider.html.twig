@@ -1,0 +1,60 @@
+{% set sliders = [] %}
+
+{% for item in element.slides|default([]) %}
+    {% set imagePath = item.imagePath_url|default(item.imagePath|default(null)) %}
+    {% if imagePath %}
+        {% set slider = {
+            'imagePath': imagePath,
+            'title': item.title|default(null),
+            'ordre': item.order|default(0),
+            'subTitle': item.subTitle|default(null),
+            'buttonPath': item.buttonPath|default(null),
+            'buttonTitle': item.buttonTitle|default(null)
+        } %}
+        {% set sliders = sliders|merge([slider]) %}
+    {% endif %}
+{% endfor %}
+{% set sliders_tries = sliders|sort((a, b) => a.ordre <=> b.ordre) %}
+
+{% if element.fullwidth == 'false' %}
+    <div class="container-xxl position-relative">
+        <div class="px-3 px-xl-0">
+            <div class="px-xl-5">
+{% endif %}
+    <div class="builder_slider">
+        <div class="position-relative">
+            <div class="slider_gallery overflow-hidden bg-primary height440 height-md-auto">
+                {% for slider in sliders_tries %}
+                        <div>
+                            <div class="row mx-0">
+                                <div class="col-md-7 col-12 px-0 height440">
+                                    <div class="h-100 content_slide_img data_bg" data-bg="{{ slider.imagePath }}">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-12 p-md-5 p-3 d-flex">
+                                    <div class="align-self-center content_slide_txt text-md-start text-center mx-md-0 mx-auto mb-3 mb-md-5">
+                                        {% if slider.title %}
+                                            <div class="mt-0 mb-3 mb-md-4 fw-bold fs-2 builder_color_custom3 line-height3">{{ slider.title }}</div>
+                                        {% endif %}
+                                        {% if slider.subTitle %}
+                                            <div class="mb-3 builder_color_custom3">{{ slider.subTitle }}</div>
+                                        {% endif %}
+                                        {% if slider.buttonPath %}
+                                            <a class="mt-md-3 btn btn-light btn-lg rounded-5 fw-normal fs-6 text-uppercase" href="{{ slider.buttonPath }}">
+                                                {{ slider.buttonTitle }}
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% if element.fullwidth == 'false' %}
+            </div>
+        </div>
+    </div>
+{% endif %}

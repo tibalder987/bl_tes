@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Preview - Builder{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        #preview-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #0366d6;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            z-index: 9999;
+            display: none;
+        }
+        
+        #preview-content {
+            min-height: 100vh;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div id="preview-loading">Mise à jour...</div>
+    
+    <div id="preview-container">
+        <div id="preview-content">
+            <div style="text-align: center; padding: 60px 20px; color: #6c757d;">
+                <i class="fa fa-eye fa-3x mb-3"></i>
+                <p>L'aperçu s'affichera ici...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const previewContent = document.getElementById('preview-content');
+        const previewLoading = document.getElementById('preview-loading');
+        
+        let isUpdating = false;
+        
+        // Listen for messages from parent window
+        window.addEventListener('message', async function(event) {
+            // Security: In production, check event.origin
+            if (event.data.type === 'UPDATE_PREVIEW') {
+                await updatePreview(event.data.elements);
+            }
+        });
+        
+        async function updatePreview(elements) {
+            if (isUpdating) return;
+            isUpdating = true;
+            
+            try {
+                previewLoading.style.display = 'block';
+                
+                // Construct the preview URL based on current location
+                const currentPath = window.location.pathname;
+                const previewEndpoint = currentPath.replace('preview-window', 'preview');
+                
+                const response = await fetch(previewEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(elements)
+                });
+                
+                if (response.ok) {
+                    const html = await response.text();
+                    previewContent.innerHTML = html;
+                    
+                    // Re-initialize scripts that run on page load
+                    // Handle data-bg using Vanilla JS to avoid jQuery issues
+                    const bgElements = previewContent.querySelectorAll('.data_bg');
+                    bgElements.forEach(el => {
+                        const bgUrl = el.getAttribute('data-bg');
+                        if (bgUrl) {
+                            el.style.background = `url(${bgUrl}) no-repeat center center/cover`;
+                        }
+                    });
+                    
+                    // Re-initialize AOS if present (animations)
+                    if (typeof AOS !== 'undefined') {
+                        AOS.refresh();
+                    }
+                } else {
+                    previewContent.innerHTML = '<div class="alert alert-danger">Erreur lors du chargement de l\'aperçu</div>';
+                }
+            } catch (error) {
+                console.error('Preview update error:', error);
+                previewContent.innerHTML = '<div class="alert alert-danger">Erreur de connexion</div>';
+            } finally {
+                setTimeout(() => {
+                    previewLoading.style.display = 'none';
+                    isUpdating = false;
+                }, 300);
+            }
+        }
+        
+        // Notify parent that preview window is ready
+        if (window.opener) {
+            window.opener.postMessage({ type: 'PREVIEW_READY' }, '*');
+        }
+    </script>
+{% endblock %}

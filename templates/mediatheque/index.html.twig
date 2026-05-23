@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ app.request.attributes.get('seo').metaTitle }}{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('app-mediatheque') }}
+{% endblock %}
+
+{% block body %}
+    <div class="wysiwyg_content">
+        <div class="text-center pt-5">
+            <h1 class="builder_size2 fw-semibold builder_title_font2 builder_color2 line-height1 mb-4">
+                {{ app.request.attributes.get('seo').metaTitle }}
+            </h1>
+        </div>
+    </div>
+
+    <div class="container px-4 pt-3 pt-lg-5">
+        <ul class="nav nav-tabs border-0">
+            <li class="nav-item w-50 text-center">
+                <a href="{{ path('app_mediatheque_photo') }}" class="text-uppercase fw-semibold letter-spacing2 nav-link {% if mediaType == constant('App\\Utilities\\GlobalConstants::MEDIA_TYPE_PHOTO') %}active{% endif %}">Photographies</a>
+            </li>
+            <li class="nav-item w-50 text-center">
+                <a href="{{ path('app_mediatheque_document') }}" class="text-uppercase fw-semibold letter-spacing2 nav-link {% if mediaType == constant('App\\Utilities\\GlobalConstants::MEDIA_TYPE_DOCUMENT') %}active{% endif %}">Documents</a>
+            </li>
+        </ul>
+    </div>
+    <div class="pt-3 pt-lg-5">
+        <div class="container px-4 pt-4 pb-5">
+            {% if documentTypes is defined %}
+                <div class="filters mb-5">
+                    <div class="d-inline-block">
+                        <select id="filter-document-type" class="form-select-sm form-select letter-spacing1">
+                            <option value="">Sélectionner un type de document</option>
+                            {% for documentType in documentTypes %}
+                                <option value="{{ documentType.id }}">{{ documentType.title }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="result w-100" data-path="{{ path('app_mediatheque_list_result') }}" data-mediaType="{{ mediaType }}">
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

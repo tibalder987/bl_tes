@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ app.request.attributes.get('seo').metaTitle }}{% endblock %}
+
+{% block body %}
+    <div class="wysiwyg_content">
+        <div class="text-center pt-5">
+            <h1 class="builder_size2 fw-semibold builder_title_font2 builder_color2 line-height1 mb-4">
+                {{ app.request.attributes.get('seo').metaTitle }}
+            </h1>
+        </div>
+        <div class="container pb-5 px-0 position-relative">
+            <div class="px-4 px-xxl-5">
+                <div class="pt-3 pt-xl-5 pb-0 px-xl-5">
+                    <div class="row">
+                        {% for offer in offers %}
+                            <div class="d-flex col-lg-6 col-xl-4 pb-4">
+                                <div class="article_item article_item2 rounded-3 overflow-hidden">
+                                    <div class="actu_info2 px-4 pt-4">
+                                        <div class="p-0 p-md-2">
+                                            <div class="d-flex align-items-center">
+                                                <span class="d-block actu_date letter-spacing1 text-uppercase">
+                                                    <strong>Date limite de candidature :</strong> <br>{{ offer.dateLimitOffer|format_datetime('long', 'none', locale='fr') }}
+                                                </span>
+                                            </div>
+
+                                            <span class="pt-3 d-block h-auto fw-bold mb-2 letter-spacing1 builder_title_font2 actu_title line-height1">
+                                                {{ offer.title }} {{ offer.jobType.title }}
+                                            </span>
+
+                                            <div class="pt-3 pt-md-0 actu_description overflow-hidden">
+                                                <p class="fw-light d-xxl-block mb-0">
+                                                    {% set offer_presentation = offer.presentation | striptags | raw | slice(0, 130) ~ '...' %}
+                                                    {{ offer_presentation | raw }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="full_hover" href="{{ path('app_job_offer', {'offer': offer.id}) }}"></a>
+                                    <div class="actu_btn px-4 pb-4 pt-3 pt-md-0">
+                                        <div class="p-0 px-md-2 pb-md-2">
+                                            <a href="{{ path('app_job_offer', {'offer': offer.id}) }}" class="border-bottom border-2 text-decoration-none fw-bold d-inline-flex align-items-center">
+                                                <span class="d-inline-block">Voir plus</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

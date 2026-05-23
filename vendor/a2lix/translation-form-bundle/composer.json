@@ -1,0 +1,82 @@
+{
+    "name": "a2lix/translation-form-bundle",
+    "type": "symfony-bundle",
+    "description": "Translate your doctrine objects easily with some helpers",
+    "keywords": [
+        "symfony",
+        "doctrine2",
+        "i18n",
+        "internationalization",
+        "translation",
+        "translatable",
+        "form",
+        "knplabs",
+        "prezent"
+    ],
+    "homepage": "https://github.com/a2lix/TranslationFormBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David ALLIX",
+            "homepage": "http://a2lix.fr"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/a2lix/TranslationFormBundle/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "a2lix/auto-form-bundle": "^0.4",
+        "symfony/config": "^5.4.30|^6.3|^7.0",
+        "symfony/dependency-injection": "^5.4.30|^6.3|^7.0",
+        "symfony/doctrine-bridge": "^5.4.30|^6.3|^7.0",
+        "symfony/event-dispatcher": "^5.4.30|^6.3|^7.0",
+        "symfony/form": "^5.4.30|^6.3|^7.0",
+        "symfony/http-foundation": "^5.4.30|^6.3|^7.0",
+        "symfony/http-kernel": "^5.4.30|^6.3|^7.0",
+        "symfony/options-resolver": "^5.4.30|^6.3|^7.0"
+    },
+    "require-dev": {
+        "doctrine/orm": "^2.15",
+        "friendsofphp/php-cs-fixer": "^3.45",
+        "knplabs/doctrine-behaviors": "^2.3",
+        "kubawerlos/php-cs-fixer-custom-fixers": "^3.18",
+        "matthiasnoback/symfony-dependency-injection-test": "^5.0",
+        "phpstan/phpstan": "^1.10",
+        "rector/rector": "^0.18",
+        "symfony/cache": "^5.4.30|^6.3|^7.0",
+        "symfony/phpunit-bridge": "^5.4.30|^6.3|^7.0",
+        "symfony/validator": "^5.4.30|^6.3|^7.0",
+        "vimeo/psalm": "^5.18"
+    },
+    "suggest": {
+        "knplabs/doctrine-behaviors": "For Knp strategy",
+        "prezent/doctrine-translatable-bundle": "For Prezent strategy"
+    },
+    "scripts": {
+        "cs-fixer": [
+            "php-cs-fixer fix --verbose"
+        ],
+        "psalm": [
+            "psalm"
+        ],
+        "phpunit": [
+            "SYMFONY_DEPRECATIONS_HELPER=max[self]=0 simple-phpunit"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": { "A2lix\\TranslationFormBundle\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "A2lix\\TranslationFormBundle\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        }
+    }
+}

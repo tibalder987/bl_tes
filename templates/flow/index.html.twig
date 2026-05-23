@@ -1,0 +1,256 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'page_title'|trans({}, 'flow') }}
+{% endblock %}
+
+{% block meta %}
+	<meta name="description" content="{{ 'meta_description'|trans({}, 'flow')|e('html_attr') }}"/>
+	<meta name="keywords" content="{{ 'meta_keywords'|trans({}, 'flow')|e('html_attr') }}"/>
+	<meta property="og:title" content="{{ 'og_title'|trans({}, 'flow')|e('html_attr') }}"/>
+	<meta property="og:description" content="{{ 'og_description'|trans({}, 'flow')|e('html_attr') }}"/>
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+{% set bodyClass = 'flowpage' %}
+
+{% block body %}
+	<main class="flow-page">
+		<section class="hero-section">
+			<div class="hero-section__content">
+				<div class="hero-section__title">{{ 'hero.title'|trans({}, 'flow') }}
+				</div>
+				<div class="hero-section__subtitle">
+					{{ 'hero.spaceto'|trans({}, 'flow')|raw }}
+					<span class="section__subtitle-2">{{ 'hero.flow'|trans({}, 'flow') }}</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-1 have-animation">
+			<div class="section-1__content">
+				<div class="section-1__left">
+					<div class="section-1__images">
+						<img data-aos="fade-up" src="{{ asset('images/flow/section-1/water.jpg') }}" class="section-1__lagoon-snorkel" alt="{{ 'img.water'|trans({}, 'flow')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-1__right">
+					<h3 class="section-1__title">{{ 's1.title_p1'|trans({}, 'flow') }}
+						<span>{{ 's1.title_nothing'|trans({}, 'flow') }}</span>
+						{{ 's1.title_mid'|trans({}, 'flow') }}
+						<span>{{ 's1.title_fixed'|trans({}, 'flow') }}</span>
+					</h3>
+					<div class="section-1__text">
+						<p>{{ 's1.p1'|trans({}, 'flow')|raw }}</p>
+						<p>{{ 's1.p2'|trans({}, 'flow')|raw }}</p>
+					</div>
+					<div class="section-1__subcontent-content">
+						<p class="section-1__subcontent-text">
+							{{ 's1.sub'|trans({}, 'flow')|raw }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-2">
+			<div class="vertical-arrow"><img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true"><p>{{ 'arrow.flow'|trans({}, 'flow') }}</p>
+			</div>
+			<div class="section-2__content">
+				<div class="section-2__left">
+					<h3 class="section-2__title icon-title-red">
+						<div>{{ 's2.title'|trans({}, 'flow')|raw }}
+						</div>
+					</h3>
+					<div class="section-2__left-content">
+						<div>
+							<p>{{ 's2.p1'|trans({}, 'flow')|raw }}
+							</p>
+							<p>{{ 's2.p2'|trans({}, 'flow')|raw }}</p>
+							<p>{{ 's2.p3'|trans({}, 'flow') }}
+								<span class="shape">{{ 's2.shape'|trans({}, 'flow') }}</span>
+							</p>
+						</div>
+						<div class="section-2__right">
+							<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/flow/section-2/boat.jpg') }}" class="section-2__aerial-resort" alt="{{ 'img.boat'|trans({}, 'flow')|e('html_attr') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-3">
+			<div class="section-3__content">
+				<div class="section-3__left">
+					<div class="section-3__images">
+						<img data-aos="fade-down" data-aos-delay="200" src="{{ asset('images/flow/section-3/sunset.jpg') }}" class="section-3__sunset" alt="{{ 'img.sunset'|trans({}, 'flow')|e('html_attr') }}">
+						<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/flow/section-3/beach.jpg') }}" class="section-3__lagoon-walk" alt="{{ 'img.beach'|trans({}, 'flow')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-3__right">
+					<h3 class="section-3__title icon-title-red">{{ 's3.title'|trans({}, 'flow') }}
+						<span>{{ 's3.sun'|trans({}, 'flow') }}</span>
+					</h3>
+					<div class="section-3__text">
+						<p>{{ 's3.p1'|trans({}, 'flow') }}</p>
+						<p>{{ 's3.p2'|trans({}, 'flow') }}</p>
+					</div>
+					<div class="section-3__subcontent-content">
+						<p class="section-3__subcontent-text">
+							{{ 's3.sub'|trans({}, 'flow')|raw }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-4 have-animation">
+			<div class="vertical-arrow"><img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true"><p>{{ 'arrow.rhythm'|trans({}, 'flow') }}</p>
+			</div>
+			<div class="section-4__content">
+				<div class="section-4__left">
+					<h3 class="section-4__title icon-title">
+						<div>{{ 's4.title_at'|trans({}, 'flow') }}
+							<span>{{ 's4.table'|trans({}, 'flow') }}</span>
+						</div>
+					</h3>
+					<div class="section-4__left-content">
+						<div class="section-4__left-content-text">
+							<p>{{ 's4.p1'|trans({}, 'flow')|raw }}
+							</p>
+							<div class="section-4__left-content-text-subtext">
+								<p>
+									{{ 's4.sub'|trans({}, 'flow')|raw }}
+								</p>
+							</div>
+						</div>
+						<div class="section-4__right">
+							<img data-aos="fade-down" data-aos-delay="200" src="{{ asset('images/flow/section-4/group.jpg') }}" class="section-4__vintage-feast" alt="{{ 'img.group'|trans({}, 'flow')|e('html_attr') }}">
+							<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/flow/section-4/table.jpg') }}" class="section-4__sand-dining" alt="{{ 'img.table'|trans({}, 'flow')|e('html_attr') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-5">
+			<div class="section-5__content">
+				<div class="section-5__left">
+					<div class="section-5__images">
+						<img data-aos="fade-up" data-aos-delay="200" src="{{ asset('images/flow/section-5/restaurant.jpg') }}" class="section-5__deck-beach-view" alt="{{ 'img.restaurant'|trans({}, 'flow')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-5__right">
+					<p>
+						{{ 's5.p1'|trans({}, 'flow') }}
+					</p>
+					<p>
+						{{ 's5.p2'|trans({}, 'flow') }}
+					</p>
+					<p>
+						{{ 's5.p3'|trans({}, 'flow')|raw }}
+					</p>
+				</div>
+			</div>
+			<div class="section-5__subcontent-container">
+				<div class="section-5__subcontent">
+					<p class="section-5__subcontent-text">
+						{{ 's5.sub'|trans({}, 'flow')|raw }}
+					</p>
+					<div>
+						<a href="{{ path('app_dine') }}" class="btn-secondary">{{ 's5.btn'|trans({}, 'flow') }}
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-6">
+			<div class="vertical-arrow"><img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true"><p>{{ 'arrow.pulse'|trans({}, 'flow') }}</p>
+			</div>
+			<div class="section-6__content">
+				<div class="section-6__left">
+					<h3 class="section-6__title icon-title-red">
+						<div>{{ 's6.title1'|trans({}, 'flow') }}
+							<span>{{ 's6.fitness'|trans({}, 'flow') }}</span>
+						</div>
+					</h3>
+					<div class="section-6__left-content">
+						<div>
+							<p>
+								{{ 's6.p1'|trans({}, 'flow')|raw }}
+							</p>
+							<p>
+								{{ 's6.p2'|trans({}, 'flow')|raw }}
+							</p>
+						</div>
+						<div class="section-6__right">
+							<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/flow/section-6/fitness.png') }}" class="section-6__treadmill" alt="{{ 'img.fitness'|trans({}, 'flow')|e('html_attr') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-7">
+			<h3 class="section-7__title">
+				<div class="section-7__subtitle-1">
+					<span>{{ 's7.l1'|trans({}, 'flow') }}</span><br>
+					{{ 's7.l2'|trans({}, 'flow') }}
+				</div>
+				<div class="section-7__subtitle-2">{{ 's7.l3'|trans({}, 'flow') }}</div>
+				<div class="section-7__subtitle-3">{{ 's7.l4'|trans({}, 'flow') }}</div>
+			</h3>
+		</section>
+
+		<section class="section-8">
+			<div class="section-8__content">
+				<div class="section-8__left">
+					<div class="section-8__images">
+						<img data-aos="fade-down" data-aos-delay="200" src="{{ asset('images/flow/section-8/lagoon_picnic.jpg') }}" class="section-8__lagoon-picnic" alt="{{ 'img.show'|trans({}, 'flow')|e('html_attr') }}">
+						<img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/flow/section-8/welcome.jpg') }}" class="section-8__lobby-reception" alt="{{ 'img.welcome'|trans({}, 'flow')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-8__right">
+					<h3 class="section-8__title">
+						<div class="section-8__title-container">
+							<div class="section-8__title-1">{{ 's8.t1'|trans({}, 'flow') }}
+								<b>{{ 's8.play'|trans({}, 'flow') }}</b>
+							</div>
+							<div>
+								<div class="section-8__title-2">{{ 's8.t2'|trans({}, 'flow') }}</div>
+								<div class="section-8__title-3">
+									<span class="shape">{{ 's8.stay'|trans({}, 'flow') }}</span>
+								</div>
+							</div>
+						</div>
+					</h3>
+					<div class="section-8__text">
+						<p>{{ 's8.p1'|trans({}, 'flow')|raw }}</p>
+						<p>{{ 's8.p2'|trans({}, 'flow') }}</p>
+					</div>
+					<div class="section-8__subcontent-content">
+						<p class="section-8__subcontent-text">
+							{{ 's8.sub1'|trans({}, 'flow') }}
+							<span>{{ 's8.sub_rhythm'|trans({}, 'flow') }}</span>
+							{{ 's8.sub2'|trans({}, 'flow')|raw }}
+						</p>
+					</div>
+					<div>
+						<a href="{{ path('app_contact', { service: 'play' }) }}" class="btn-secondary">{{ 's8.btn'|trans({}, 'flow') }}
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+{% endblock %}

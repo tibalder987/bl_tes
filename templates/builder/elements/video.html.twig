@@ -1,0 +1,12 @@
+{% set videoUrl = element.videoPAth | split('/') %}
+
+{% if element.fullwidth == 'false' %}<div class="container px-xl-5 position-relative"><div class="px-4 px-xxl-5">{% endif %}
+    <div class="builder_video position-relative">
+        <div class="py-4">
+            <a target="_blank" href="{{ element.videoPAth }}" class="d-block mask_video position-relative">
+                <img class="w-100 maxwidth-none" src="https://i3.ytimg.com/vi/{{ videoUrl[3] }}/maxresdefault.jpg" alt="Video" />
+            </a>
+        </div>
+    </div>
+{% if element.fullwidth == 'false' %}</div></div>{% endif %}
+

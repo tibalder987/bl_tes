@@ -1,0 +1,295 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'page_title'|trans({}, 'home') }}
+{% endblock %}
+
+{% block meta %}
+	<meta name="description" content="{{ 'meta_description'|trans({}, 'home')|e('html_attr') }}"/>
+	<meta name="keywords" content="{{ 'meta_keywords'|trans({}, 'home')|e('html_attr') }}"/>
+	<meta property="og:title" content="{{ 'og_title'|trans({}, 'home')|e('html_attr') }}"/>
+	<meta property="og:description" content="{{ 'og_description'|trans({}, 'home')|e('html_attr') }}"/>
+{% endblock %}
+
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+
+{% set bodyClass = 'homepage' %}
+
+
+{% block body %}
+	<main>
+
+		<section class="hero-section">
+			<div class="reservation-module">
+				<div id="reservation-calendar-mount" class="reservation-module__calendar-mount">
+					<input type="text" id="reservation-flatpickr-anchor" class="reservation-module__flatpickr-anchor" tabindex="-1" readonly aria-hidden="true">
+				</div>
+				<div id="reservation-guests-popover-mount" class="reservation-module__guests-popover-mount" aria-hidden="true">
+					<div id="reservation-guests-popover" class="reservation-module__guests-popover" role="dialog" aria-modal="true" aria-labelledby="reservation-guests-popover-heading">
+						<h2 id="reservation-guests-popover-heading" class="reservation-module__guests-popover-heading">{{ 'reservation.popover.title'|trans({}, 'home') }}</h2>
+						<div class="reservation-module__guests-row">
+							<div class="reservation-module__guests-row-text">
+								<span class="reservation-module__guests-row-label">{{ 'reservation.popover.adults'|trans({}, 'home') }}</span>
+								<span class="reservation-module__guests-row-hint">{{ 'reservation.popover.adults_hint'|trans({}, 'home') }}</span>
+							</div>
+							<div class="reservation-module__guests-stepper" data-guest-stepper="adults" data-min="1" data-max="12">
+								<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="down" aria-label="{{ 'reservation.popover.adults_decrease_aria'|trans({}, 'home')|e('html_attr') }}">−</button>
+								<span class="reservation-module__guests-stepper-value" data-guest-stepper-value>2</span>
+								<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="up" aria-label="{{ 'reservation.popover.adults_increase_aria'|trans({}, 'home')|e('html_attr') }}">+</button>
+							</div>
+						</div>
+						<div class="reservation-module__guests-row">
+							<div class="reservation-module__guests-row-text">
+								<span class="reservation-module__guests-row-label">{{ 'reservation.popover.kids'|trans({}, 'home') }}</span>
+								<span class="reservation-module__guests-row-hint">{{ 'reservation.popover.kids_hint'|trans({}, 'home') }}</span>
+							</div>
+							<div class="reservation-module__guests-stepper" data-guest-stepper="kids" data-min="0" data-max="10">
+								<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="down" aria-label="{{ 'reservation.popover.kids_decrease_aria'|trans({}, 'home')|e('html_attr') }}">−</button>
+								<span class="reservation-module__guests-stepper-value" data-guest-stepper-value>0</span>
+								<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="up" aria-label="{{ 'reservation.popover.kids_increase_aria'|trans({}, 'home')|e('html_attr') }}">+</button>
+							</div>
+						</div>
+						<button type="button" class="reservation-module__guests-done" id="reservation-guests-done">{{ 'reservation.popover.done'|trans({}, 'home') }}</button>
+					</div>
+				</div>
+				<form id="hero-reservation-form" class="reservation-module__form" action="https://booking.prox-i.pf" method="get" accept-charset="utf-8" data-guests-summary-i18n="{{ { adults_one: 'reservation.guests_summary.adults_one'|trans({}, 'home'), adults: 'reservation.guests_summary.adults'|trans({}, 'home'), kid_one: 'reservation.guests_summary.kid_one'|trans({}, 'home'), kids: 'reservation.guests_summary.kids'|trans({}, 'home'), sep: 'reservation.guests_summary.sep'|trans({}, 'home'), }|json_encode|e('html_attr') }}">
+					<div class="reservation-module__content">
+						<div class="reservation-module__items">
+							<div class="reservation-module__dates" data-reservation-dates role="group" aria-label="{{ 'reservation.dates_aria'|trans({}, 'home')|e('html_attr') }}" aria-expanded="false">
+								<div class="reservation-module__dates-row">
+									<div class="reservation-module__item" data-reservation-field="checkin">
+										<i class="reservation-module__item-icon fa-regular fa-calendar" aria-hidden="true"></i>
+										<div class="reservation-module__item-body">
+											<div class="reservation-module__item-select">
+												<span>{{ 'reservation.checkin'|trans({}, 'home') }}</span>
+											</div>
+											<div class="reservation-module__item-value">
+												<input type="hidden" name="checkin" id="reservation-checkin" value="" required>
+												<input type="text" id="reservation-checkin-display" class="reservation-module__fp-alt" placeholder="{{ 'reservation.add_date'|trans({}, 'home')|e('html_attr') }}" autocomplete="off" readonly inputmode="none" tabindex="-1" aria-hidden="true" aria-label="{{ 'reservation.checkin_date_aria'|trans({}, 'home')|e('html_attr') }}">
+											</div>
+										</div>
+									</div>
+									<div class="reservation-module__sperator reservation-module__sperator--in-dates"></div>
+									<div class="reservation-module__item" data-reservation-field="checkout">
+										<i class="reservation-module__item-icon fa-regular fa-calendar" aria-hidden="true"></i>
+										<div class="reservation-module__item-body">
+											<div class="reservation-module__item-select">
+												<span>{{ 'reservation.checkout'|trans({}, 'home') }}</span>
+											</div>
+											<div class="reservation-module__item-value">
+												<input type="hidden" name="checkout" id="reservation-checkout" value="" required>
+												<input type="text" id="reservation-checkout-display" class="reservation-module__fp-alt" placeholder="{{ 'reservation.add_date'|trans({}, 'home')|e('html_attr') }}" autocomplete="off" readonly inputmode="none" tabindex="-1" aria-hidden="true" aria-label="{{ 'reservation.checkout_date_aria'|trans({}, 'home')|e('html_attr') }}">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="reservation-module__sperator"></div>
+							<div class="reservation-module__item reservation-module__item--guests" data-reservation-field="guests" role="button" tabindex="0" aria-expanded="false" aria-controls="reservation-guests-popover">
+								<i class="reservation-module__item-icon fa-regular fa-user-group" aria-hidden="true"></i>
+								<div class="reservation-module__item-body">
+									<div class="reservation-module__item-select">
+										<span>{{ 'reservation.guests'|trans({}, 'home') }}</span>
+									</div>
+									<div class="reservation-module__item-value">
+										<span id="reservation-guests-summary" class="reservation-module__guests-summary">{{ 'reservation.guests_summary_default'|trans({}, 'home') }}</span>
+										<input type="hidden" name="adults" id="reservation-adults" value="2" required>
+										<input type="hidden" name="kids" id="reservation-kids" value="0" required>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="btn-search">
+							<span>{{ 'reservation.explore'|trans({}, 'home') }}</span>
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+			<img
+			src="{{ asset('images/home/hero-section/background.jpg') }}" class="hero-section__background" alt="{{ 'hero.background'|trans({}, 'home')|e('html_attr') }}" loading="eager" fetchpriority="high">
+			{#<video class="hero-section__video" autoplay muted loop playsinline><source src="{{ asset('video/home.mp4') }}" type="video/mp4"></video>#}
+			<div class="hero-section__content">
+				<div class="hero-section__title">{{ 'hero.opening'|trans({}, 'home') }}</div>
+				<div class="hero-section__subtitle">{{ 'hero.summer'|trans({}, 'home') }}</div>
+			</div>
+		</section>
+
+		<section class="section-1">
+			<h1 class="section-1__titles">
+				<span class="section-1__title">{{ 's1.title'|trans({}, 'home') }}</span>
+				<span class="section-1__subtitle">
+					{{ 's1.subtitle_lived'|trans({}, 'home') }}
+					<span class="section-1__subtitle-2">
+						{{ 's1.subtitle_diff'|trans({}, 'home') }}
+					</span>
+				</span>
+			</h1>
+			<div class="section-1__content">
+				<div class="section-1__left">
+					<div class="section-1__images">
+						<img data-aos="fade-up" data-aos-delay="200" src="{{ asset('images/home/section-1/tiki_jardin.jpg') }}" class="section-1__totem-sign" alt="{{ 'img.tiki'|trans({}, 'home')|e('html_attr') }}">
+						<img data-aos="fade-down" data-aos-delay="600" src="{{ asset('images/home/section-1/chicago_1999.jpg') }}" class="section-1__chicago-band" alt="{{ 'img.orchestre'|trans({}, 'home')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-1__right">
+					<p>{{ 's1.p1'|trans({}, 'home')|raw }}</p>
+					<p>{{ 's1.p2'|trans({}, 'home')|raw }}</p>
+					<p>{{ 's1.p3'|trans({}, 'home')|raw }}</p>
+					<div>
+						<a href="{{ path('app_our_story') }}" class="btn-primary">{{ 's1.btn'|trans({}, 'home') }}
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="section-1__subcontent-container">
+				<div class="vertical-arrow"><img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true"><p>{{ 's1.arrow_flow'|trans({}, 'home') }}</p>
+				</div>
+				<div class="section-1__subcontent">
+					<p class="section-1__subcontent-text">
+						{{ 's1.sub.no_scripts'|trans({}, 'home') }}<br>
+						<span class="balney-text">{{ 's1.sub.just_you'|trans({}, 'home') }}</span>
+						{{ 's1.sub.island'|trans({}, 'home') }}<br>
+						<span class="hide-fr">{{ 's1.sub.thanks_prefix'|trans({}, 'home') }}
+							<span class="shape balney-text">{{ 's1.sub.thanks'|trans({}, 'home') }}</span>
+						</span>
+					</p>
+					<img data-aos="fade-up" data-aos-delay="200" src="{{ asset('images/home/section-1/vahine.jpg') }}" class="section-1__vahine" alt="{{ 'img.flower_s1'|trans({}, 'home')|e('html_attr') }}">
+				</div>
+			</div>
+		</section>
+
+		<section class="section-2">
+			<h2 class="section-2__titles">
+				<span class="section-2__title">{{ 's2.title'|trans({}, 'home') }}</span>
+				<span class="section-2__subtitle">{{ 's2.subtitle'|trans({}, 'home') }}</span>
+				<span class="section-2__subtitle-2">{{ 's2.subtitle2'|trans({}, 'home') }}
+					<span>{{ 's2.pulse'|trans({}, 'home') }}</span>
+				</span>
+			</h2>
+		</section>
+
+		<section class="section-3 have-animation">
+			<div class="section-3__content">
+				<img data-aos="fade-down" data-aos-delay="200" src="{{ asset('images/home/section-3/sunset.jpg') }}" class="section-3__sunset" alt="{{ 'img.sunset'|trans({}, 'home')|e('html_attr') }}">
+				<div class="section-3__left">
+					<div class="section-3__images">
+						<img data-aos="fade-up" data-aos-delay="200" src="{{ asset('images/home/section-3/stay.jpg') }}" class="section-3__fare-peaks" alt="{{ 'img.stay'|trans({}, 'home')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-3__right">
+					<h3 class="section-3__title icon-title">{{ 's3.title'|trans({}, 'home') }}</h3>
+					<p>{{ 's3.p'|trans({}, 'home')|raw }}</p>
+					<div>
+						<a href="{{ path('app_stay') }}" class="btn-secondary">{{ 's3.btn'|trans({}, 'home') }}
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-4 have-animation">
+			<div class="vertical-arrow"><img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true"><p>{{ 's4.arrow'|trans({}, 'home') }}</p>
+			</div>
+			<img src="{{ asset('images/home/section-4/bm_restaurant.jpg') }}" data-aos="fade-down" data-aos-delay="200" class="section-4__table" alt="{{ 'img.table'|trans({}, 'home')|e('html_attr') }}">
+			<img src="{{ asset('images/home/section-4/fire.jpg') }}" data-aos="fade-up" data-aos-delay="400" class="section-4__fire-mobile" alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}">
+			<div class="section-4__image-mobile">
+				<img src="{{ asset('images/home/section-4/bm_restaurant.jpg') }}" data-aos="fade-down" data-aos-delay="200" class="section-4__table-mobile" alt="{{ 'img.table'|trans({}, 'home')|e('html_attr') }}">
+			</div>
+			<div class="section-4__content">
+				<div class="section-4__left">
+					<h3 class="section-4__title icon-title">{{ 's4.title'|trans({}, 'home') }}</h3>
+					<p>{{ 's4.p'|trans({}, 'home')|raw }}</p>
+					<div>
+						<a href="{{ path('app_dine') }}" class="btn-secondary">{{ 's4.btn'|trans({}, 'home') }}
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+					<div class="section-4__image">
+						<img src="{{ asset('images/home/section-4/fire.jpg') }}" data-aos="fade-up" data-aos-delay="400" class="section-4__fire" alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-5 have-animation">
+			<img src="{{ asset('images/home/section-5/water.jpg') }}" data-aos="fade-down" data-aos-delay="200" class="section-5__eagle-rays" alt="{{ 'img.water'|trans({}, 'home')|e('html_attr') }}">
+			<div class="section-5__content">
+				<div class="section-5__left">
+					<div class="section-5__images">
+						<img src="{{ asset('images/home/section-5/borabora_sunset.jpg') }}" data-aos="fade-up" data-aos-delay="400" class="section-5__sunset-sailboat" alt="{{ 'img.flow'|trans({}, 'home')|e('html_attr') }}">
+					</div>
+				</div>
+				<div class="section-5__right">
+					<h3 class="section-5__title icon-title">{{ 's5.title'|trans({}, 'home') }}</h3>
+					<p>{{ 's5.p'|trans({}, 'home')|raw }}</p>
+					<div>
+						<a href="{{ path('app_flow') }}" class="btn-secondary">{{ 's5.btn'|trans({}, 'home') }}
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-6 have-animation">
+			<div class="vertical-arrow"><img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true"><p>{{ 's6.arrow'|trans({}, 'home') }}</p>
+			</div>
+			<div class="section-6__content">
+				<div class="section-6__left">
+					<h3 class="section-6__title icon-title">{{ 's6.title'|trans({}, 'home') }}</h3>
+					<p>{{ 's6.p'|trans({}, 'home')|raw }}</p>
+					<div>
+						<a href="{{ path('app_stay') }}" class="btn-secondary">{{ 's6.btn'|trans({}, 'home') }}
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-7">
+			<div class="section-7__content-container">
+				<img src="{{ asset('images/home/section-7/wild.jpg') }}" class="section-7__otemanu-view" data-aos="fade-down" data-aos-delay="200" alt="{{ 'img.wild'|trans({}, 'home')|e('html_attr') }}">
+				<div class="section-7__images">
+					<img src="{{ asset('images/home/section-7/flower.jpg') }}" class="section-7__hibiscus" data-aos="fade-up" data-aos-delay="400" alt="{{ 'img.flower_s7'|trans({}, 'home')|e('html_attr') }}">
+					<img src="{{ asset('images/home/section-7/guitar.jpg') }}" class="section-7__musician" data-aos="fade-up" data-aos-delay="600" alt="{{ 'img.guitar'|trans({}, 'home')|e('html_attr') }}">
+				</div>
+			</div>
+			<section class="section-7__content">
+				<video class="section-7__video" autoplay muted loop playsinline>
+					<source src="{{ asset('video/section-7.mp4') }}" type="video/mp4">
+				</video>
+			</section>
+		</section>
+
+		<section class="section-8">
+			<div class="section-8__content">
+				<div class="section-8__left">
+					<div class="section-8__title">{{ 's8.title'|trans({}, 'home') }}</div>
+					<div class="section-8__subtitle">
+						{{ 's8.sub_beyond'|trans({}, 'home') }}
+						<div class="section-8__subtitle-2">{{ 's8.sub_postcard'|trans({}, 'home') }}</div>
+					</div>
+					<div class="section-8__text">
+						<p>{{ 's8.p1'|trans({}, 'home')|raw }}</p>
+						<p>{{ 's8.p2'|trans({}, 'home')|raw }}</p>
+						<p>{{ 's8.p3'|trans({}, 'home')|raw }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="section-8__subcontent">
+				<p class="section-8__subcontent-text">
+					{{ 's8.subcontent'|trans({}, 'home')|raw }}
+				</p>
+				<img src="{{ asset('images/home/section-8/sunset.jpg') }}" data-aos="fade-up" data-aos-delay="400" class="section-8__sunset-islands" alt="{{ 'img.boat'|trans({}, 'home')|e('html_attr') }}">
+			</div>
+		</section>
+	</main>
+{% endblock %}

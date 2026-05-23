@@ -1,0 +1,33 @@
+<div class="container-xl container-block-rejoindre-team">
+    <div class="mb-2 text-center px-3">
+        <h2 class="fs-1 fw-bold text-primary ff-muller my-5">
+            {{ element.title is defined and element.title is not null ? element.title  : '' }}
+        </h2>
+    </div>
+
+    <div class="row mx-xl-0 justify-content-md-end justify-content-center align-items-md-center align-items-end" style="background-image: url('{{ asset('images/builder/bg_block_rejoindre.png') }}')">
+        <div class="col-xxl-7 col-xl-7 col-md-10 col-11 pe-0 content-block-rejoindre-team">
+            <div class="bg-secondary px-3 py-4 row mx-0">
+                <div class="col-md-7 px-0 fs-3 b-r-team_title text-md-start text-center pb-2 pb-md-0">
+                    {{ element.title1 is defined and element.title1 is not null ? element.title1  : '' }}
+                </div>
+                <div class="col-md-5 text-md-end text-center pt-2">
+                    <a href="{{ path('app_job_offers') }}" class="bg-white px-5 py-2 text-uppercase rounded-custom text-decoration-none farerata_texte_equipe-btn">
+                        {{ element.text1 is defined and element.text1 is not null ? element.text1  : '' }}
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-secondary px-3 py-4 row mt-4 mx-0">
+                <div class="col-md-7 px-0 fs-3 b-r-team_title text-md-start text-center pb-2 pb-md-0">
+                    {{ element.title2 is defined and element.title2 is not null ? element.title2  : '' }}
+                </div>
+                <div class="col-md-5 text-md-end text-center pt-2">
+                    <a href="{{ path('app_job_offers', {'target': 'spontanee-tab'}) }}" class="bg-white px-5 py-2 text-uppercase rounded-custom text-decoration-none farerata_texte_equipe-btn">
+                        {{ element.text2 is defined and element.text2 is not null ? element.text2  : '' }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

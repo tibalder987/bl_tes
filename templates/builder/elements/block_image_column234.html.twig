@@ -1,0 +1,46 @@
+{% set colCustom = '4'%}
+
+{% if element.columns|default([])|length >= 4 %} {% set colCustom = '3'%} {% endif %}
+
+{% if element.fullwidth == 'false' %}<div class="container-xl position-relative">{% endif %}
+    <div class="px-3 px-xxl-5">
+        <div class="builder_block_image_column234 pt-3 pb-4">
+            <div class="wysiwyg_content">
+                <div class="row justify-content-center {% if element.alignment %}text-{{ element.alignment }}{% endif %}">
+                    {% for item in element.columns|default([]) %}
+                        {% set title = item.title|default(null) %}
+                        {% set imagePath = item.imagePath_url|default(item.imagePath|default(null)) %}
+                        {% set buttonPath = item.buttonPath|default(null) %}
+
+                        {% if title and imagePath %}
+                            <div class="col-md-6 col-lg-4 pt-3 col-xl-{{ colCustom}}">
+                                {% if buttonPath %}
+                                    <a href="{{ buttonPath }}" class="btn-redirection text-white mt-2 text-decoration-none">
+                                    {% endif %}
+                                        <div class="spacing{{ loop.index }} position-relative w-100 itemblock overflow-hidden data_bg" data-bg="{{ absolute_url(imagePath) }}">
+                                            <div class="position-absolute bottom-0 left-0 w-100">
+                                                <div class="p-4 text-start">
+                                                    <h3 class="mb-4 fw-semibold fs-3 text-white">{{ title }}</h3>
+
+                                                    {% if buttonPath %}
+                                                        <div class="d-flex align-items-center text-uppercase">
+                                                            <span class="small fw-semibold show_hover">{{ 'decouvrir'|trans }}</span>
+                                                            <i class="icon-arrowleft rotate180 d-inline-block"></i>
+                                                        </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% if buttonPath %}
+                                    </a>
+                                {% endif %}
+
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% if element.fullwidth == 'false' %}</div>{% endif %}
+

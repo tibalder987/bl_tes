@@ -1,0 +1,9 @@
+{# templates/admin/field/mail_content.html.twig #}
+{% if field.value is empty %}
+    <span class="badge badge-secondary">Aucun contenu</span>
+{% else %}
+    <div class="mail-content-container" style="border: 1px solid #dee2e6; border-radius: 4px; padding: 15px; background: #fff;">
+        {# On utilise un iframe srcdoc avec un petit script onload pour ajuster automatiquement sa hauteur au contenu #}
+        <iframe srcdoc="{{ field.value|e('html_attr') }}" onload="this.style.height = this.contentWindow.document.documentElement.scrollHeight + 'px';" style="width: 100%; min-height: 500px; border: none; overflow: hidden;"></iframe>
+    </div>
+{% endif %}

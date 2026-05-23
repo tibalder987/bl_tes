@@ -1,0 +1,7 @@
+{% macro buildElements(elements) %}
+    {% for element in elements %}
+        {% if element.visible %}
+            {% include 'builder/elements/' ~ element.template ~ '.html.twig' ignore missing with element %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

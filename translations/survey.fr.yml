@@ -1,0 +1,4 @@
+notFound: "Aucune enquête idenfiée"
+answered: "Vous avez déjà répondu à l’enquête de satisfaction"
+success: "Merci, votre avis a bien été pris en compte !"
+errorEmpty: "Merci de sélectionner une valeur pour la question : "

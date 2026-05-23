@@ -1,0 +1,32 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block main %}
+    <div class="row">
+        <div class="row px-5 pb-4">
+            <div class="col-md-3">
+                <div class="card w-100">
+                    <div class="card-body bg-primary bg-opacity-25 text-center">
+                        <h5 class="card-title fs-1">{{ admins }}</h5>
+                        <p class="card-text">administrateur{% if admins > 1 %}s{% endif %}</p>
+                        {% set url = ea_url().setController('App\\Controller\\Admin\\AdminCrudController').setAction('index') %}
+
+                        <a href="{{ url }}" class="card-link btn btn-primary">Voir les administrateurs</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card w-100">
+                    <div class="card-body bg-primary bg-opacity-25 text-center">
+                        <h5 class="card-title fs-1">{{ users }}</h5>
+                        <p class="card-text">utilisateur{% if users > 1 %}s{% endif %}</p>
+                        {% set url = ea_url().setController('App\\Controller\\Admin\\UserCrudController').setAction('index') %}
+
+                        <a href="{{ url }}" class="card-link btn btn-primary">Voir les utilisateurs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

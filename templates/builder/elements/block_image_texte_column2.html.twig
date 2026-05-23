@@ -1,0 +1,54 @@
+{% if element.type == "12" %}
+    {% set col1 = "col-xl-6" %}
+    {% set col2 = "col-xl-6" %}
+{% endif %}
+{% if element.type == "13" %}
+    {% set col1 = "col-xl-4" %}
+    {% set col2 = "col-xl-8" %}
+{% endif %}
+{% if element.type == "23" %}
+    {% set col1 = "col-xl-8" %}
+    {% set col2 = "col-xl-4" %}
+{% endif %}
+
+{% if element.position == "text_image" %}
+    {% set first_element = 'order-0 order-xl-1' %}
+    {% set second_element = 'order-1 order-xl-0' %}
+{% endif %}
+
+<div class="container-xl position-relative">
+    <div class="px-3 px-xl-0">
+        <div class="builder_block_image_texte_column2 position-relative pb-5 px-xl-5">
+            <div class="wysiwyg_content">
+                <div class="row">
+                    <div class="{{ col1 }} d-flex align-items-start justify-content-center pt-4 {% if first_element is defined %}{{ first_element }}{% endif %}">
+                        {% if element.imagePath_url %}
+                            <img src="{{ absolute_url(element.imagePath_url) }}" alt="{{ element.title }}" />
+                        {% endif %}
+                    </div>
+                    <div class="{{ col2 }} d-flex align-items-start pt-4 {% if second_element is defined %}{{ second_element }}{% endif %}">
+                        <div class="ps-xl-4">
+                            {% if element.toptitle %}
+                                <div class="prefix_line mb-3">{{ element.toptitle }}</div>
+                            {% endif %}
+
+                            {% if element.title %}
+                                <{{ element.typetitle }} class="mb-2 mb-lg-4 builder_line_height1 {{ element.styletitle }} letter-spacing1 builder_color2 builder_title_font2">
+                                    {{ element.title | raw }}
+                                </{{ element.typetitle }}>
+                            {% endif %}
+
+                            {% if element.subtitle %}
+                                <div class="builder_color2 mb-3 pb-3 text-{{ element.subtitle_class }} fw-semibold builder_line_height1 builder_size6 border-bottom border-2 border-{{ element.subtitle_class }}">{{ element.subtitle }}</div>
+                            {% endif %}
+                            <div class="wysiwyg_content">
+                                {{ element.contenu | raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

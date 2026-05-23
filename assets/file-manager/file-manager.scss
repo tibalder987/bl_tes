@@ -1,0 +1,1925 @@
+@import "../styles/default/variables";
+@import "../styles/mixin";
+
+// File Manager Variables - Modern Design inspired by OneDrive/Dropbox
+$file-manager-primary: $primary !default;
+$file-manager-secondary: $secondary !default;
+$file-manager-bg: #ffffff !default;
+$file-manager-sidebar-bg: #fafbfc !default;
+$file-manager-border-color: #e1e5e9 !default;
+$file-manager-hover-bg: #f3f4f6 !default;
+$file-manager-selected-bg: #e8f0fe !default;
+$file-manager-text-color: #202124 !default;
+$file-manager-text-muted: #5f6368 !default;
+$file-manager-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15) !default;
+$file-manager-shadow-hover: 0 2px 4px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15) !default;
+
+// Spacing
+$file-manager-spacing-xs: 0.25rem;
+$file-manager-spacing-sm: 0.5rem;
+$file-manager-spacing-md: 1rem;
+$file-manager-spacing-lg: 1.5rem;
+$file-manager-spacing-xl: 2rem;
+
+// File Manager Container
+.file-manager {
+    display: flex;
+    //min-height: calc(100vh - 200px);
+    height: auto;
+    background: $file-manager-bg;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: $file-manager-shadow;
+    margin: 0;
+
+    &__sidebar {
+        width: 280px;
+        background: $file-manager-sidebar-bg;
+        border-right: 1px solid $file-manager-border-color;
+        padding: $file-manager-spacing-lg 0;
+        overflow-y: auto;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: $file-manager-bg;
+    }
+
+    &__toolbar {
+        padding: 1rem;
+        border-bottom: 1px solid $file-manager-border-color;
+        display: flex;
+        align-items: center;
+        gap: $file-manager-spacing-md;
+        background: $file-manager-bg;
+        min-height: 64px;
+    }
+
+    &__breadcrumb {
+        padding: $file-manager-spacing-sm $file-manager-spacing-lg;
+        border-bottom: 1px solid $file-manager-border-color;
+        background: $file-manager-bg;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__view {
+        flex: 1;
+        padding: $file-manager-spacing-lg;
+        overflow: hidden;
+        position: relative;
+        background: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        min-height: 0; // Important for flex children to respect overflow
+    }
+
+    &__empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: $file-manager-text-muted;
+        min-height: 300px;
+        transition: all 0.2s ease;
+        
+        &.drag-over {
+            background: rgba($file-manager-primary, 0.05);
+            border: 2px dashed $file-manager-primary;
+            border-radius: 12px;
+            padding: $file-manager-spacing-xl;
+        }
+        
+        i {
+            font-size: 5rem;
+            opacity: 0.2;
+            margin-bottom: $file-manager-spacing-lg;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            color: $file-manager-text-muted;
+        }
+    }
+}
+
+// Modern Sidebar
+.file-sidebar {
+    &__section {
+        margin-bottom: $file-manager-spacing-xl;
+        padding: 0 $file-manager-spacing-md;
+        padding-top: 1rem;
+    }
+
+    &__title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $file-manager-text-muted;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: $file-manager-spacing-sm;
+        padding: 0 $file-manager-spacing-md;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: $file-manager-spacing-sm $file-manager-spacing-md;
+        border-radius: 8px;
+        cursor: pointer;
+        color: $file-manager-text-color;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        margin: 2px $file-manager-spacing-sm;
+        font-size: 0.9375rem;
+        font-weight: 400;
+
+        &:hover {
+            background: $file-manager-hover-bg;
+        }
+
+        &.active {
+            background: $file-manager-selected-bg;
+            color: $file-manager-primary;
+            font-weight: 500;
+            
+            i {
+                color: $file-manager-primary;
+            }
+        }
+
+        i {
+            margin-right: $file-manager-spacing-md;
+            width: 24px;
+            text-align: center;
+            font-size: 1.125rem;
+            color: $file-manager-text-muted;
+            transition: color 0.2s ease;
+        }
+    }
+}
+
+// Modern Toolbar
+.file-toolbar {
+    display: flex;
+    align-items: center;
+    gap: $file-manager-spacing-sm;
+    padding: 1rem;
+    
+    &__button {
+        padding: 0.625rem 1.25rem;
+        border: none;
+        background: transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $file-manager-text-color;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        
+        i {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            background: $file-manager-hover-bg;
+        }
+
+        &.primary {
+            background: $file-manager-primary;
+            color: white;
+            box-shadow: 0 1px 3px rgba(0, 32, 67, 0.3);
+
+            &:hover {
+                background: darken($file-manager-primary, 5%);
+                box-shadow: 0 2px 6px rgba(0, 32, 67, 0.4);
+                transform: translateY(-1px);
+            }
+        }
+        
+        &.active {
+            background: $file-manager-selected-bg;
+            color: $file-manager-primary;
+        }
+    }
+
+    &__separator {
+        width: 1px;
+        height: 32px;
+        background: $file-manager-border-color;
+        margin: 0 $file-manager-spacing-sm;
+    }
+
+    &__search {
+        flex: 1;
+        max-width: 500px;
+        margin-left: auto;
+        
+        input {
+            width: 100%;
+            padding: 0.625rem 1rem;
+            border: 1px solid $file-manager-border-color;
+            border-radius: 24px;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            
+            &:focus {
+                outline: none;
+                border-color: $file-manager-primary;
+                box-shadow: 0 0 0 3px rgba($file-manager-primary, 0.1);
+            }
+        }
+    }
+}
+
+// Modern Breadcrumb
+.file-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        color: $file-manager-text-muted;
+        text-decoration: none;
+        padding: 0.375rem 0.75rem;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        
+        i {
+            margin-right: 0.375rem;
+        }
+
+        &:hover {
+            background: $file-manager-hover-bg;
+            color: $file-manager-text-color;
+        }
+
+        &.active {
+            color: $file-manager-text-color;
+            font-weight: 500;
+        }
+        
+        &.drag-over {
+            background: rgba($file-manager-primary, 0.1);
+            color: $file-manager-primary;
+            border: 2px solid $file-manager-primary;
+            font-weight: 500;
+        }
+    }
+
+    &__separator {
+        color: $file-manager-text-muted;
+        font-size: 0.75rem;
+    }
+}
+
+// Modern Grid View
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    max-height: 500px;
+    min-height: 300px;
+    gap: $file-manager-spacing-lg;
+    padding: $file-manager-spacing-md 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-content: start;
+
+    &__item {
+        position: relative;
+        
+        &.drag-over {
+            .file-item {
+                border-color: $file-manager-primary;
+                background: rgba($file-manager-primary, 0.05);
+                box-shadow: 0 0 0 3px rgba($file-manager-primary, 0.2);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+// Modern List View
+.file-list {
+    background: $file-manager-bg;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: $file-manager-shadow;
+    display: flex;
+    max-height: 500px;
+    min-height: 300px;
+    flex-direction: column;
+    height: 100%;
+    
+    &.drag-over {
+        background: rgba($file-manager-primary, 0.05);
+        border: 2px dashed $file-manager-primary;
+    }
+    
+    &__header {
+        display: grid;
+        grid-template-columns: 3fr 1.5fr 1.5fr 1.5fr 100px;
+        gap: $file-manager-spacing-md;
+        padding: $file-manager-spacing-md $file-manager-spacing-lg;
+        background: $file-manager-sidebar-bg;
+        border-bottom: 1px solid $file-manager-border-color;
+        font-weight: 600;
+        font-size: 0.8125rem;
+        color: $file-manager-text-muted;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        flex-shrink: 0;
+    }
+
+    &__body {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 3fr 1.5fr 1.5fr 1.5fr 100px;
+        gap: $file-manager-spacing-md;
+        padding: $file-manager-spacing-md $file-manager-spacing-lg;
+        border-bottom: 1px solid $file-manager-border-color;
+        cursor: grab;
+        transition: all 0.15s ease;
+        align-items: center;
+
+        &:hover {
+            background: $file-manager-hover-bg;
+        }
+
+        &.selected {
+            background: $file-manager-selected-bg;
+        }
+        
+        &.drag-over {
+            background: rgba($file-manager-primary, 0.1);
+            border-left: 3px solid $file-manager-primary;
+        }
+        
+        &.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
+        }
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: $file-manager-spacing-sm;
+    }
+    
+    &__action-btn {
+        background: transparent;
+        border: none;
+        padding: 0.375rem 0.5rem;
+        cursor: pointer;
+        color: $file-manager-text-muted;
+        transition: all 0.2s ease;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            background: $file-manager-hover-bg;
+            color: $file-manager-primary;
+        }
+        
+        i {
+            font-size: 0.875rem;
+            
+            &.fa-star {
+                color: #FFCB00;
+            }
+        }
+    }
+}
+
+// Modern File Item Card
+.file-item {
+    cursor: grab;
+    border-radius: 12px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: $file-manager-bg;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+
+    padding: $file-manager-spacing-md;
+    border: 1px solid $file-manager-border-color;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        background: $file-manager-bg;
+        transform: translateY(-4px);
+        box-shadow: $file-manager-shadow-hover;
+        border-color: $file-manager-border-color;
+    }
+
+    &.selected {
+        background: $file-manager-selected-bg;
+        border-color: $file-manager-primary;
+        box-shadow: 0 0 0 3px rgba($file-manager-primary, 0.1);
+    }
+    
+    &.dragging {
+        opacity: 0.5;
+        transform: scale(0.95);
+        cursor: grabbing;
+    }
+
+    &__icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto $file-manager-spacing-md;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: $file-manager-text-muted;
+        transition: transform 0.2s ease;
+        
+        // Dossier
+        &--folder {
+            color: #FFCB00;
+        }
+        
+        // Images
+        &--image {
+            color: #4285f4;
+        }
+        
+        // Vidéos
+        &--video {
+            color: #ea4335;
+        }
+        
+        // PDF
+        &--pdf {
+            color: #ea4335;
+        }
+        
+        // Archives
+        &--archive {
+            color: #FFCB00;
+        }
+        
+        // Documents Word
+        &--word {
+            color: #4285f4;
+        }
+        
+        // Feuilles de calcul Excel
+        &--excel {
+            color: #2e7d32;
+        }
+        
+        // Présentations PowerPoint
+        &--powerpoint {
+            color: #d14124;
+        }
+        
+        // Fichiers texte
+        &--text {
+            color: $file-manager-text-muted;
+        }
+        
+        // Audio
+        &--audio {
+            color: #9c27b0;
+        }
+        
+        // Code
+        &--code {
+            color: #00acc1;
+        }
+        
+        // Fichier générique
+        &--file {
+            color: $file-manager-text-muted;
+        }   
+    }
+    
+    &:hover &__icon {
+        transform: scale(1.1);
+    }
+
+    &__name {
+        font-size: 0.875rem;
+        text-align: center;
+        word-break: break-word;
+        color: $file-manager-text-color;
+        margin-bottom: $file-manager-spacing-xs;
+        font-weight: 500;
+        line-height: 1.4;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    &__meta {
+        font-size: 0.75rem;
+        color: $file-manager-text-muted;
+        text-align: center;
+    }
+
+    &__actions {
+        position: absolute;
+        top: $file-manager-spacing-sm;
+        right: $file-manager-spacing-sm;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        display: flex;
+        gap: 0.25rem;
+        
+        button {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                background: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &:hover &__actions {
+        opacity: 1;
+    }
+
+    &__star {
+        position: absolute;
+        top: $file-manager-spacing-sm;
+        left: $file-manager-spacing-sm;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        &--starred {
+            opacity: 1!important;
+        }
+    }
+    &:hover &__actions,
+    &:hover &__star {
+        opacity: 1;
+    }
+}
+
+
+// Modern Modal
+.file-modal {
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000 !important;
+        backdrop-filter: blur(4px);
+        animation: fadeIn 0.2s ease;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    &__content {
+        background: $file-manager-bg;
+        border-radius: 16px;
+        max-width: 90vw;
+        max-height: 90vh;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        // Fixed widths for different modal types to prevent layout shifts
+        &--permissions {
+            width: 800px;
+            max-width: 90vw;
+        }
+        
+        &--upload {
+            width: 800px;
+            max-width: 90vw;
+        }
+        
+        &--folder {
+            width: 700px;
+            max-width: 90vw;
+        }
+        
+        &--rename {
+            width: 500px;
+            max-width: 90vw;
+        }
+        
+        &--confirm {
+            width: 450px;
+            max-width: 90vw;
+        }
+        
+        &--uploader {
+            width: 600px;
+            max-width: 90vw;
+        }
+    }
+    
+    @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    &__header {
+        padding: $file-manager-spacing-lg;
+        border-bottom: 1px solid $file-manager-border-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $file-manager-sidebar-bg;
+        
+        h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: $file-manager-text-color;
+        }
+        
+        button.btn-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            padding: 0;
+            
+            &:hover {
+                background: $file-manager-hover-bg;
+            }
+        }
+    }
+
+    &__body {
+        padding: $file-manager-spacing-lg;
+        overflow: auto;
+        flex: 1;
+        
+        h4, h5 {
+            color: $file-manager-text-color;
+            font-weight: 500;
+            margin-bottom: $file-manager-spacing-md;
+        }
+        
+        .form-group {
+            margin-bottom: $file-manager-spacing-lg;
+            
+            label {
+                display: block;
+                margin-bottom: $file-manager-spacing-sm;
+                font-weight: 500;
+                color: $file-manager-text-color;
+                font-size: 0.875rem;
+            }
+            
+            .form-control {
+                border: 1px solid $file-manager-border-color;
+                border-radius: 6px;
+                padding: 0.5rem 0.75rem;
+                transition: all 0.2s ease;
+                
+                &:focus {
+                    outline: none;
+                    border-color: $file-manager-primary;
+                    box-shadow: 0 0 0 3px rgba($file-manager-primary, 0.1);
+                }
+            }
+        }
+    }
+
+    &__footer {
+        padding: $file-manager-spacing-lg;
+        border-top: 1px solid $file-manager-border-color;
+        display: flex;
+        justify-content: flex-end;
+        gap: $file-manager-spacing-md;
+        background: $file-manager-sidebar-bg;
+        
+        .btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+            cursor: pointer;
+            
+            // Override global button hover styles to prevent size changes
+            &:hover {
+                box-shadow: none !important;
+                transform: none !important;
+            }
+            
+            &.btn-primary {
+                background: $file-manager-primary;
+                color: white;
+                border: none;
+                
+                &:hover:not(:disabled) {
+                    background: darken($file-manager-primary, 5%);
+                    /* Removed transform and box-shadow to prevent size changes */
+                }
+                
+                &:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}
+
+// Upload Modal Styles
+.file-uploader {
+    &__dropzone {
+        border: 2px dashed $file-manager-border-color;
+        border-radius: 12px;
+        padding: $file-manager-spacing-xl * 2;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, rgba($file-manager-primary, 0.02) 0%, rgba($file-manager-primary, 0.05) 100%);
+        
+        &:hover, &.dragover {
+            border-color: $file-manager-primary;
+            background: linear-gradient(135deg, rgba($file-manager-primary, 0.05) 0%, rgba($file-manager-primary, 0.1) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba($file-manager-primary, 0.15);
+        }
+        
+        i.fa-cloud-upload {
+            color: $file-manager-primary;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        &:hover i.fa-cloud-upload, &.dragover i.fa-cloud-upload {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        p {
+            margin: $file-manager-spacing-sm 0;
+            color: $file-manager-text-color;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            margin-top: $file-manager-spacing-md;
+            padding: 0.625rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba($file-manager-primary, 0.2);
+            transition: all 0.2s ease;
+            
+            &:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba($file-manager-primary, 0.3);
+            }
+        }
+
+        &.has-files {
+            padding: 1rem;
+            .btn-primary{
+                margin-top: 0;
+            }
+            i.fa-cloud-upload {
+                display: none;
+            }
+        }
+    }
+    
+    &__progress {
+        margin-top: $file-manager-spacing-lg;
+        
+        h5 {
+            margin-bottom: $file-manager-spacing-md;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $file-manager-text-color;
+        }
+    }
+    
+    &__file {
+        display: flex;
+        align-items: center;
+        gap: $file-manager-spacing-md;
+        padding: $file-manager-spacing-md;
+        background: $file-manager-bg;
+        border-radius: 10px;
+        margin-bottom: $file-manager-spacing-sm;
+        border: 1px solid $file-manager-border-color;
+        transition: all 0.2s ease;
+        
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-color: darken($file-manager-border-color, 5%);
+        }
+        
+        > div:first-child {
+            flex: 1;
+            
+            > div:first-child {
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: $file-manager-text-color;
+                margin-bottom: 0.375rem;
+            }
+        }
+        
+        .progress {
+            height: 6px;
+            border-radius: 3px;
+            background: lighten($file-manager-border-color, 5%);
+            overflow: hidden;
+            
+            .progress-bar {
+                height: 100%;
+                background: linear-gradient(90deg, $file-manager-primary 0%, lighten($file-manager-primary, 10%) 100%);
+                border-radius: 3px;
+                transition: width 0.3s ease;
+            }
+        }
+    }
+}
+
+// Selected Files List
+.selected-files {
+    margin-top: $file-manager-spacing-xl;
+    
+    h5 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $file-manager-text-color;
+        margin-bottom: $file-manager-spacing-md;
+    }
+}
+
+.file-upload-list {
+    display: flex;
+    flex-direction: column;
+    gap: $file-manager-spacing-sm;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+    
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $file-manager-border-color;
+        border-radius: 3px;
+        
+        &:hover {
+            background: darken($file-manager-border-color, 10%);
+        }
+    }
+}
+
+.file-upload-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $file-manager-spacing-md;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid $file-manager-border-color;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    gap: 0.5rem;
+    
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-color: darken($file-manager-border-color, 10%);
+    }
+
+    &__progress {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        
+    }
+    
+    &__info {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 0rem;
+        
+        i {
+            color: $file-manager-primary;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+        
+        span:first-of-type {
+            font-weight: 500;
+            color: $file-manager-text-color;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    
+    .file-size {
+        color: $file-manager-text-muted;
+        font-size: 0.8125rem;
+        flex-shrink: 0;
+    }
+    
+    .btn-danger {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.2s ease;
+        
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+        }
+    }
+}
+
+// Permissions Section
+.permissions-section {
+    margin-top: $file-manager-spacing-xl;
+    
+    h5 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $file-manager-text-color;
+        margin-bottom: $file-manager-spacing-sm;
+    }
+    
+    > p {
+        font-size: 0.875rem;
+        color: $file-manager-text-muted;
+        margin-bottom: $file-manager-spacing-md;
+    }
+}
+
+.permissions-list {
+    margin-top: $file-manager-spacing-md;
+    
+    .btn-outline-primary {
+        margin-top: $file-manager-spacing-md;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: opacity 0.2s ease, background-color 0.2s ease;
+        
+        &:hover {
+            opacity: 0.9;
+            // Removed transform and box-shadow to prevent size changes
+        }
+    }
+}
+
+// Permissions current list styles
+.permissions-current-list {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.permission-current-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #e1e5e9;
+    transition: all 0.2s ease;
+    
+    &:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    
+    &:last-child {
+        border-bottom: none;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    
+    &:hover {
+        background: #f8f9fa;
+    }
+}
+
+.permission-current-item__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    
+    i {
+        font-size: 0.875rem;
+        opacity: 0.8;
+    }
+    
+    &--user {
+        background-color: #e8f0fe;
+        color: #1967d2;
+        
+        i {
+            color: #1967d2;
+        }
+    }
+    
+    &--role {
+        background-color: #fef7e0;
+        color: #ea8600;
+        
+        i {
+            color: #ea8600;
+        }
+    }
+
+        
+    &--group {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+        
+        i {
+            color: #2e7d32;
+        }
+    }
+}
+
+.permission-current-item__granted-by {
+    font-size: 0.875rem;
+    color: #5f6368;
+    flex: 1;
+    min-width: 0;
+    text-align: right;
+}
+
+.permission-current-item__delete {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 6px !important;
+    border: 1px solid #e1e5e9 !important;
+    background-color: #fff !important;
+    color: #dc3545 !important;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0 !important;
+    flex-shrink: 0;
+    margin: 0 !important;
+    
+    i {
+        font-size: 0.875rem;
+    }
+    
+    &:hover {
+        background-color: #dc3545 !important;
+        color: #fff !important;
+        border-color: #dc3545 !important;
+    }
+    
+    &:active {
+        background-color: #c82333 !important;
+        border-color: #c82333 !important;
+    }
+}
+
+.permission-item {
+    margin-bottom: $file-manager-spacing-md;
+    padding: $file-manager-spacing-md;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid $file-manager-border-color;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        border-color: $file-manager-primary;
+        box-shadow: 0 2px 8px rgba($file-manager-primary, 0.1);
+    }
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: 140px 1fr auto;
+        gap: 1rem;
+        align-items: start;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+    }
+    
+    &__type {
+        min-width: 140px;
+    }
+    
+    &__value {
+        flex: 1;
+        min-width: 0; // Important pour éviter le débordement
+    }
+    
+    &__action {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 1.5rem; // Aligne avec les inputs
+        
+        @media (max-width: 768px) {
+            padding-top: 0;
+            justify-content: flex-end;
+        }
+    }
+    
+    .permission-label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $file-manager-text-muted;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.375rem;
+    }
+    
+    .permission-select {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid $file-manager-border-color;
+        transition: all 0.2s ease;
+        
+        &:focus {
+            border-color: $file-manager-primary;
+            box-shadow: 0 0 0 3px rgba($file-manager-primary, 0.1);
+        }
+    }
+    
+    .permission-input-wrapper {
+        width: 100%;
+    }
+    
+    .permission-remove-btn {
+        padding: 0.375rem 0.625rem;
+        border-radius: 6px;
+        transition: opacity 0.2s ease, background-color 0.2s ease;
+        min-width: 36px;
+        
+        &:hover {
+            opacity: 0.9;
+            // Removed transform and box-shadow to prevent size changes
+        }
+    }
+}
+
+.user-results {
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    border: 1px solid $file-manager-border-color;
+    border-radius: 10px;
+    margin-top: 0.25rem;
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    animation: slideDown 0.2s ease;
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $file-manager-border-color;
+        border-radius: 3px;
+        
+        &:hover {
+            background: darken($file-manager-border-color, 10%);
+        }
+    }
+}
+
+.user-result-item {
+    display: flex;
+    align-items: center;
+    gap: $file-manager-spacing-sm;
+    padding: $file-manager-spacing-md;
+    color: $file-manager-text-color;
+    text-decoration: none;
+    border-bottom: 1px solid lighten($file-manager-border-color, 5%);
+    transition: all 0.15s ease;
+    
+    &:hover {
+        background: linear-gradient(135deg, rgba($file-manager-primary, 0.05) 0%, rgba($file-manager-primary, 0.1) 100%);
+        color: $file-manager-primary;
+    }
+    
+    &:last-child {
+        border-bottom: none;
+    }
+    
+    i {
+        color: $file-manager-primary;
+        opacity: 0.7;
+    }
+}
+
+// Permission Manager Modal Styles
+.file-modal__body {
+    .table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-bottom: $file-manager-spacing-lg;
+        
+        thead {
+            background: linear-gradient(135deg, rgba($file-manager-primary, 0.05) 0%, rgba($file-manager-primary, 0.1) 100%);
+            
+            th {
+                padding: $file-manager-spacing-md;
+                text-align: left;
+                font-weight: 600;
+                font-size: 0.875rem;
+                color: $file-manager-text-color;
+                border-bottom: 2px solid $file-manager-border-color;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+        }
+        
+        tbody {
+            tr {
+                transition: all 0.15s ease;
+                
+                &:hover {
+                    background: rgba($file-manager-primary, 0.02);
+                }
+                
+                td {
+                    padding: $file-manager-spacing-md;
+                    border-bottom: 1px solid lighten($file-manager-border-color, 5%);
+                    color: $file-manager-text-color;
+                    font-size: 0.875rem;
+                    
+                    i {
+                        margin-right: $file-manager-spacing-sm;
+                        color: $file-manager-primary;
+                        opacity: 0.7;
+                    }
+                    
+                    .btn-danger {
+                        padding: 0.375rem 0.625rem;
+                        border-radius: 6px;
+                        transition: opacity 0.2s ease, background-color 0.2s ease;
+                        
+                        &:hover {
+                            opacity: 0.9;
+                            /* Removed transform and box-shadow to prevent size changes */
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .list-group {
+        margin-top: $file-manager-spacing-sm;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid $file-manager-border-color;
+        
+        &-item {
+            padding: $file-manager-spacing-md;
+            border-bottom: 1px solid lighten($file-manager-border-color, 5%);
+            transition: all 0.15s ease;
+            
+            &:hover {
+                background: linear-gradient(135deg, rgba($file-manager-primary, 0.05) 0%, rgba($file-manager-primary, 0.1) 100%);
+                color: $file-manager-primary;
+            }
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+// Loading States
+.file-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $file-manager-spacing-xl * 2;
+    color: $file-manager-text-muted;
+    flex-direction: column;
+    gap: $file-manager-spacing-md;
+    
+    i {
+        font-size: 2rem;
+        color: $file-manager-primary;
+        opacity: 0.7;
+    }
+}
+
+.file-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 8px;
+    height: 140px;
+    margin-bottom: $file-manager-spacing-lg;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+// File Preview Styles
+.file-preview-overlay {
+    z-index: 2000; // Higher than regular modals
+}
+
+.file-preview-content {
+    max-width: 95vw !important;
+    max-height: 95vh !important;
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    
+    &.fullscreen {
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+.file-preview-header {
+    padding: $file-manager-spacing-lg $file-manager-spacing-xl;
+    flex-shrink: 0;
+    
+    .file-preview-title {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+        
+        i {
+            color: $file-manager-primary;
+            flex-shrink: 0;
+        }
+        
+        h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    
+    .file-preview-actions {
+        display: flex;
+        align-items: center;
+        gap: $file-manager-spacing-sm;
+    }
+}
+
+.file-preview-body {
+    flex: 1;
+    padding: 0 !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+// Image Preview
+.file-preview-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $file-manager-spacing-xl;
+    overflow: auto;
+    background: #2a2a2a;
+    
+    .preview-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+    }
+}
+
+// Video Preview
+.file-preview-video {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $file-manager-spacing-xl;
+    background: #000;
+    
+    .preview-video {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 4px;
+    }
+}
+
+// PDF Preview
+.file-preview-pdf {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #525252;
+    
+    .pdf-toolbar {
+        display: flex;
+        align-items: center;
+        gap: $file-manager-spacing-sm;
+        padding: $file-manager-spacing-md $file-manager-spacing-lg;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        flex-shrink: 0;
+        
+        .pdf-toolbar-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: translateY(-1px);
+            }
+            
+            i {
+                font-size: 1rem;
+            }
+        }
+    }
+    
+    .pdf-viewer-container {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+        }
+    }
+}
+
+// Text Preview
+.file-preview-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+    
+    .text-toolbar {
+        padding: $file-manager-spacing-md $file-manager-spacing-lg;
+        background: $file-manager-sidebar-bg;
+        border-bottom: 1px solid $file-manager-border-color;
+        flex-shrink: 0;
+        
+        .text-toolbar-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            color: $file-manager-text-color;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            
+            &:hover {
+                background: $file-manager-hover-bg;
+            }
+        }
+    }
+    
+    .text-content {
+        flex: 1;
+        margin: 0;
+        padding: $file-manager-spacing-lg;
+        overflow: auto;
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 0.875rem;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        background: white;
+        color: $file-manager-text-color;
+    }
+}
+
+// Unsupported File Type
+.file-preview-unsupported {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $file-manager-spacing-xl * 2;
+    background: white;
+}
+
+// Preview Footer
+.file-preview-footer {
+    padding: $file-manager-spacing-md $file-manager-spacing-xl;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .file-preview-metadata {
+        display: flex;
+        align-items: center;
+        gap: $file-manager-spacing-xl;
+        flex-wrap: wrap;
+        
+        .metadata-item {
+            display: flex;
+            align-items: center;
+            gap: $file-manager-spacing-sm;
+            font-size: 0.875rem;
+            color: $file-manager-text-muted;
+            
+            i {
+                color: $file-manager-primary;
+                opacity: 0.7;
+            }
+            
+            strong {
+                color: $file-manager-text-color;
+                margin-right: 0.25rem;
+            }
+        }
+    }
+}
+
+// Toast de confirmation
+.file-preview-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 3000;
+    
+    i {
+        font-size: 1.25rem;
+    }
+}
+
+// Animations du toast
+.toast-enter-active, .toast-leave-active {
+    transition: all 0.3s ease;
+}
+
+.toast-enter-from, .toast-leave-to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(1rem);
+}
+
+.toast-enter-to, .toast-leave-from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .file-preview-content {
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    .file-preview-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $file-manager-spacing-md;
+        
+        .file-preview-metadata {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $file-manager-spacing-sm;
+        }
+    }
+    
+    .file-manager {
+        flex-direction: column;
+        height: auto;
+
+        &__sidebar {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid $file-manager-border-color;
+            max-height: 200px;
+        }
+    }
+
+    .file-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: $file-manager-spacing-md;
+    }
+}
+
+// Context Menu
+.context-menu {
+    position: fixed;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: 3000;
+    border: 1px solid $file-manager-border-color;
+    
+    &__item {
+        padding: 0.625rem 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: $file-manager-text-color;
+        font-size: 0.875rem;
+        transition: all 0.15s ease;
+        
+        i {
+            width: 16px;
+            text-align: center;
+            color: $file-manager-text-muted;
+        }
+        
+        &:hover {
+            background: $file-manager-hover-bg;
+            color: $file-manager-primary;
+            
+            i {
+                color: $file-manager-primary;
+            }
+        }
+        
+        &.danger {
+            color: #dc3545;
+            
+            &:hover {
+                background: rgba(220, 53, 69, 0.1);
+                color: #dc3545;
+                
+                i {
+                    color: #dc3545;
+                }
+            }
+        }
+    }
+    
+    &__separator {
+        height: 1px;
+        background: $file-manager-border-color;
+        margin: 0.5rem 0;
+    }
+}
+
+// SelectizeJS styles - Improved for better integration
+.user-selectize {
+    min-height: 38px;
+    width: 100%;
+    
+    .selectize-input {
+        min-height: 38px;
+        padding: 6px 8px;
+        border: 1px solid $file-manager-border-color;
+        border-radius: 6px;
+        background-color: #fff;
+        transition: all 0.2s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+        
+        &.focus {
+            border-color: $file-manager-primary;
+            box-shadow: 0 0 0 3px rgba($file-manager-primary, 0.1);
+        }
+        
+        .item {
+            background-color: $file-manager-primary;
+            color: #fff;
+            padding: 4px 8px;
+            margin: 0;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.8125rem;
+            line-height: 1.2;
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+            .remove {
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+                padding-left: 6px;
+                margin-left: 6px;
+                cursor: pointer;
+                opacity: 0.8;
+                transition: opacity 0.2s ease;
+                
+                &:hover {
+                    opacity: 1;
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+        
+        input {
+            font-size: 0.875rem;
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            background: transparent;
+            box-shadow: none;
+            min-width: 120px;
+            flex: 1;
+        }
+        
+        &.has-items {
+            padding: 4px 8px;
+        }
+    }
+    
+    .selectize-dropdown,
+    &.selectize-dropdown {
+        border: 1px solid $file-manager-border-color;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-top: 4px;
+        z-index: 10000; // Above modal footer and other elements
+        
+        .option {
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+            font-size: 0.875rem;
+        }
+    }
+    
+    // Style pour le placeholder
+    .selectize-input.has-items::before {
+        display: none;
+    }
+    
+    .selectize-input:not(.has-items)::before {
+        content: attr(placeholder);
+        color: #999;
+        font-size: 0.875rem;
+    }
+}

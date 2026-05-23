@@ -1,0 +1,33 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-weight: 300;
+}
+.rating {
+    display: flex;
+    direction: rtl; /* Pour que l'étoile 5 soit la première à gauche */
+    font-size: 25px;
+    color: #ddd;
+    cursor: pointer;
+    width: 110px;
+}
+.rating .star:hover,
+.rating .star:hover ~ .star {
+    color: orange;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}

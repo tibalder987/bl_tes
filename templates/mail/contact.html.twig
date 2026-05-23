@@ -1,0 +1,43 @@
+{% extends 'mail/base.html.twig' %}
+
+{% block title %}Demande de contact{% endblock %}
+
+{% block content %}
+    <div style="background-color: #FCFCFC; padding: 40px 15px 20px 15px">
+        <b class="fw-bold text-center">
+            Une nouvelle demande de contact vient d'être effectuée sur le site !
+        </b>
+        <br>
+        <br>
+        <br>
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+            <tr>
+                <td class="fw-bold" style="width: 25%">Service : </td>
+                <td class="w-75" style="width: 75%">{{ contact.service.title }}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold w-25">Prénom</td>
+                <td class="w-75">{{ contact.firstname }}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold w-25">Nom</td>
+                <td class="w-75">{{ contact.lastname }}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold w-25">Email</td>
+                <td class="w-75"><a style="color: #232323 !important;" href="mailto:{{ contact.email }}">{{ contact.email }}</a></td>
+            </tr>
+            <tr>
+                <td class="fw-bold w-25">Téléphone</td>
+                <td class="w-75">{{ contact.phone }}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold w-25">Message</td>
+                <td class="w-75">{{ contact.message }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br>
+    </div>
+{% endblock %}

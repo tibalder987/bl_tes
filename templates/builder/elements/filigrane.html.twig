@@ -1,0 +1,21 @@
+<div class="container-xl position-relative">
+    <div class="px-3 px-xl-0">
+        <div class="row pt-2 builder_filigrane">
+            <div class="col-m-12 text-start">
+                {{ 'builder.filariane'|trans }} :
+                <span>
+                {% set path = path('app_home_page') %}
+                    {% set pageTitle = 'Accueil' %}
+                    {% if page is defined and page is not instanceof('App\\Entity\\HomePage') %}
+                        {% if page.path is defined %}
+                            {% set path = page.path %}
+                            {% set pageTitle = page.title %}
+                        {% endif %}
+                    {% endif %}
+                 <a href="{{ path }}">{{ pageTitle }}</a>
+            </span>
+            </div>
+        </div>
+    </div>
+
+</div>

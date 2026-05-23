@@ -1,0 +1,6 @@
+<div class="row">
+    {% for media in medias %}
+        {% include 'mediatheque/media.html.twig' with {'media': media} %}
+    {% endfor %}
+    {{ knp_pagination_render(medias, 'knp_paginator/sliding.html.twig', {}, {'mediaDocumentType': mediaDocumentType}) }}
+</div>

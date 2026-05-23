@@ -1,0 +1,11 @@
+{% set vUrl = element.imagePath1_url %}
+
+{% if element.fullwidth == 'false' %}<div class="container-xl position-relative"><div class="px-3 px-xl-0">{% endif %}
+    {% if element.imagePath1_url %}
+        <div class="builder_image position-relative {% if element.fullwidth == 'false' %}px-xl-5{% endif %}">
+            <div class="py-4">
+                <img class="w-100 maxwidth-none" src="{{ absolute_url(element.imagePath1_url) }}" alt="Image" />
+            </div>
+        </div>
+    {% endif %}
+{% if element.fullwidth == 'false' %}</div></div>{% endif %}

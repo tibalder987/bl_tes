@@ -1,0 +1,18 @@
+{% set videoId = "" %}
+{% if element.videoPath %}
+    {# On enlève les paramètres éventuels (#, ?, etc.) pour isoler uniquement l'ID #}
+    {% set cleanPath = element.videoPath | split('?') | first %}
+    {% set cleanPathLast = element.videoPath | split('?') | last %}
+    {% set pathParts = cleanPath | split('/') %}
+    {% set videoId = pathParts | last %}
+{% endif %}
+
+<div class="container-xl position-relative">
+    <div class="px-3 px-xl-0">
+        <div class="builder_block_youtube px-xl-5">
+            {% if videoId %}
+                <iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/{{ videoId }}?{{ cleanPathLast }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            {% endif %}
+        </div>
+    </div>
+</div>

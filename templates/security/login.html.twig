@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% set bodyClass = 'auth-page' %}
+
+{% block title %}Connexion | Administration
+{% endblock %}
+
+{% block body %}
+	<main class="auth-shell" role="main">
+		<div class="auth-shell__inner">
+			<div class="auth-card">
+				<header class="auth-card__header">
+					<h1 class="auth-card__title">Connexion</h1>
+					<p class="auth-card__subtitle">Accès réservé à l’équipe</p>
+				</header>
+
+				{{ form_start(form, { attr: { class: 'auth-card__form', novalidate: 'novalidate' } }) }}
+				{{ form_widget(form._token) }}
+
+				{% set formErrors = form.vars.errors.form.getErrors(true) %}
+				{% if formErrors|length %}
+					<div class="auth-alert auth-alert--danger" role="alert">
+						{% for error in formErrors %}
+							<p>{{ error.message }}</p>
+						{% endfor %}
+					</div>
+				{% endif %}
+				{% if error %}
+					<div class="auth-alert auth-alert--danger" role="alert">
+						<p>{{ error.messageKey|trans(error.messageData, 'security') }}</p>
+					</div>
+				{% endif %}
+
+				{% for label, messages in app.flashes %}
+					{% for message in messages %}
+						<div class="auth-alert auth-alert-{{ label == 'error' ? 'danger' : label }}" role="status">
+							<p>{{ message }}</p>
+						</div>
+					{% endfor %}
+				{% endfor %}
+
+				<div class="auth-field">
+					{{ form_label(form.email) }}
+					{{ form_widget(form.email, { attr: { class: 'form-control auth-field__input', autocomplete: 'username', autofocus: true } }) }}
+					{{ form_errors(form.email) }}
+				</div>
+
+				<div class="auth-field">
+					{{ form_label(form.password) }}
+					{{ form_widget(form.password, { attr: { class: 'form-control auth-field__input', autocomplete: 'current-password' } }) }}
+					{{ form_errors(form.password) }}
+				</div>
+
+				<div class="auth-field auth-field--actions">
+					<a href="{{ path('app_password_forget') }}" class="auth-link">Mot de passe oublié ?</a>
+				</div>
+
+				<div class="auth-captcha">
+					{{ form_row(form.captcha, { row_attr: { class: 'mb-0' } }) }}
+				</div>
+
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+				<button class="auth-submit" type="submit">Se connecter</button>
+				{{ form_end(form, { render_rest: false }) }}
+
+				<p class="auth-card__footer">
+					<a href="{{ path('app_home_page') }}" class="auth-link auth-link--muted">← Retour au site</a>
+				</p>
+			</div>
+		</div>
+	</main>
+{% endblock %}

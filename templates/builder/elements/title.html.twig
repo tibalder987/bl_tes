@@ -1,0 +1,32 @@
+{% set subline = '' %}
+{% if element.subline == "true" %}
+    {% set subline = 'subline' %}
+{% endif %}
+{% set element_type = 'div' %}
+{% if element.type is defined %}
+    {% set element_type = element.type %}
+{% endif %}
+{% set element_styletitle = 'h1' %}
+{% if element.styletitle is defined %}
+    {% set element_styletitle = element.styletitle %}
+{% endif %}
+{% set element_color = 'black' %}
+{% if element.color is defined and element.color == 'primary' %}
+    {% set element_color = element.color %}
+{% endif %}
+{% set element_alignment = 'left' %}
+{% if element.alignment is defined %}
+    {% set element_alignment = element.alignment %}
+{% endif %}
+
+{% if element.fullwidth == 'false' %}<div class="container-xl position-relative">{% endif %}
+    <div class="builder_title px-3 px-xl-0">
+        <div class="px-xl-5">
+            {% if element.title %}
+            <{{ element_type }} class="{{ subline }} {{ element_styletitle }} text-{{ element_color }} text-{{ element_alignment }}">
+                {{ element.title }}
+            </{{ element.type }}>
+            {% endif %}
+        </div>
+    </div>
+{% if element.fullwidth == 'false' %}</div>{% endif %}
