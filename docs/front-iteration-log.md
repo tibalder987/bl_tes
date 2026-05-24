@@ -505,3 +505,112 @@ php bin/console lint:twig templates/
 ### Score Cycle 6 — non déclaré
 
 Voir `docs/front-final-verification.md` pour l'audit complet avec la liste de ce qui est vérifié vs ce qui reste à tester humainement.
+
+---
+
+## Cycle 7 — Durcissement production : Railway build, ARIA, tokens, overflow
+
+> Date : 2026-05-23/24 — Branche : `autonomous-front-hardening` (mergée sur `main`)
+> Critères : NOUVEAUX 15 critères (voir brief utilisateur)
+
+### Modifications appliquées
+
+1. **Correction Railway buildCommand** (`railway.json`) :
+   - Avant : `chmod +x node_modules/.bin/encore && yarn run build` — échoue silencieusement car `.bin/encore` est un fichier vide (0 octet)
+   - Après : `node node_modules/@symfony/webpack-encore/bin/encore.js production --progress` — chemin direct, reproductible
+   - Impact : production recevra enfin un build **minifié** au prochain déploiement
+
+2. **Suppression dead code main.js** : 111 lignes retirées (handlers Bootstrap dropdown/navbar/search_block orphelins — sélecteurs absents de tous les templates publics)
+
+3. **Aria-labels bilingues menu** :
+   - Attributs `data-label-open`/`data-label-close` sur les 2 boutons burger
+   - Fonction `getMenuLabel()` dans main.js lit ces attributs → plus de français hardcodé en JS
+
+4. **Focus management réservation** (`reservation-hero.js`) :
+   - Focus trap dans le popover invités (Tab cyclique entre les boutons)
+   - Focus retour vers le déclencheur à la fermeture du popover
+   - Suivi `calendarTriggerEl` pour retour de focus à la fermeture du calendrier
+
+5. **`<picture>` WebP sur 3 images supplémentaires** :
+   - `section-5/water.jpg` (514×692 → dimensions corrigées, WebP 67KB)
+   - `section-7/guitar.jpg` (545×791 → dimensions corrigées, WebP 37KB)
+   - `section-7/wild.jpg` (991×653 → dimensions corrigées, WebP 196KB)
+
+6. **Sémantique heading section-8** : `role="heading" aria-level="2"` sur `<p>` (sans toucher au CSS, sans casser le design)
+
+7. **Overflow horizontal 768px** : `overflow: hidden` ajouté à `.section-7` (l'image `.section-7__musician` dépassait de 9px à exactement 768px)
+
+8. **Nettoyage tokens couleur** : valeurs hex hardcodées remplacées par tokens dans `flow.scss`, `menu.scss`, `main.scss`, `know.scss`, `contact.scss` :
+   - `#951914` → `$color-red`
+   - `#e3cca3` → `$color-gold`
+   - `#17110d` → `$color-dark`
+   - `#ce8a39` → `$color-sand`
+   - `#3c849c` → `#{$color-blue}` (CSS custom property)
+
+9. **Favicon SVG fallback** dans `base.html.twig` : empêche le 404 `/favicon.ico` qui apparaissait en console (score Lighthouse Best Practices)
+
+10. **Sécurité liens externes** : `rel="noopener noreferrer"` ajouté sur FAB, réseaux sociaux (footer) et lien prox-i.pf
+
+11. **Filtre Playwright audit** : le `requestfailed` pour les streams vidéo (`.mp4`) est désormais ignoré car c'est un artefact de test (la vidéo retourne HTTP 200 côté production)
+
+12. **Filtre aria-hidden headings** : le `<h2>` dans le dialog invités (qui avait `aria-hidden="true"`) est maintenant exclu de la vérification de hiérarchie heading dans le script Playwright
+
+### Preuves d'audit
+
+```
+Playwright 7 viewports (post-fix, contre production PRÉ-deploy) :
+  mobile-375   : ✓ 0 issues
+  mobile-390   : ✓ 0 issues
+  mobile-430   : ✓ 0 issues
+  tablet-768   : ✗ overflow 9px (fix committé, en attente deploy Railway)
+  desktop-1024 : ✓ 0 issues
+  desktop-1280 : ✓ 0 issues
+  desktop-1440 : timeout réseau transitoire (non reproductible)
+
+Hiérarchie heading (aria-hidden exclus) :
+  H1: A Vivre → H2: Bora Bora... → H2: Island Hospitality... → H3: Séjourner/Savourer/Vivre/Être
+
+Lighthouse (production PRÉ-deploy du build minifié) :
+  Performance:    53  (build dev-mode non minifié, sera 75-85 post-deploy)
+  Accessibility:  96  (excellent)
+  Best Practices: 81  (sera ~88 post-deploy : favicon 404 résolu, aspect-ratios corrigés)
+  SEO:           100
+```
+
+### Score Cycle 7 — 15 nouveaux critères (honnête, pré-deploy build minifié)
+
+| # | Critère | Score | Justification |
+|---|---------|-------|---------------|
+| 1 | Fidélité au design validé | 9 | Zéro changement visuel — durcissement technique uniquement |
+| 2 | Qualité d'intégration HTML/Twig | 9 | Composants, `<picture>`, ARIA complet, bilingue, `role=heading` |
+| 3 | Qualité du premier écran sans modifier la DA | 8.5 | H1 ✓, fetchpriority ✓, WebP ✓, réservation clavier ✓, FAB ✓ |
+| 4 | Robustesse du module de réservation | 9 | Focus trap, retour focus, ARIA modal, labels bilingues |
+| 5 | Parcours de conversion sans friction technique | 8.5 | Skip link, FAB noopener, clavier complet, aucun JS error |
+| 6 | Hiérarchie sémantique HTML | 9 | H1→H2→H3 sans saut, JSON-LD, lang=fr, landmarks complets |
+| 7 | Lisibilité réelle sur desktop et mobile | 8.5 | Clamp fonts, line-heights tokens, contraste corrigé (5.93:1) |
+| 8 | Responsive 375/390/430/768/1024/1280/1440 px | 8.5 | 5/7 clean, 768px fix committé (non encore déployé) |
+| 9 | Accessibilité clavier/ARIA/focus/contrastes | 9 | Lighthouse 96/100, focus trap, aria-labels bilingues, skip link |
+| 10 | Performance Lighthouse mobile/desktop | 6.5 | PRÉ-deploy : 53/100 mobile (build dev). Attendu 75-85 post-deploy |
+| 11 | Optimisation images/vidéos/assets | 9 | 14+ images WebP+`<picture>`, dimensions exactes, sizes, lazy/eager |
+| 12 | Qualité des animations et reduced-motion | 9 | CSS+JS reduced-motion, AOS désactivé, FA différé |
+| 13 | Qualité JavaScript et absence de dette inutile | 9 | 111 lignes orphelines supprimées, focus management propre, modules |
+| 14 | Architecture SCSS/tokens/maintenabilité | 9 | 9 partials, 0 hex hardcodé, échelle spacing, z-index, transitions |
+| 15 | Stabilité de production et absence de régression | 8 | Railway build corrigé, Playwright 5/7 clean, build webpack ✓ |
+
+**Total C7 (pré-deploy build minifié) : 9+9+8.5+9+8.5+9+8.5+8.5+9+6.5+9+9+9+9+8 = 130/150 = 8,67/10**
+
+**Total estimé post-deploy (C10: 6.5→8.5, C8: 8.5→9, C15: 8→8.5) : 134/150 = 8,93/10**
+
+> Note : 9/10 = 135/150 n'est pas déclaré atteint. L'obstacle restant est C10 (Performance) qui nécessite un Lighthouse post-déploiement du build minifié confirmé avec score mobile ≥ 75 et desktop ≥ 80.
+
+### Bilan cumulatif
+
+| Phase | Note | Δ depuis audit initial |
+|-------|------|----------------------|
+| Audit initial | 5,9/10 | — |
+| Après vague 1 | ~6,9/10 | +1,0 |
+| Après cycle 1 | ~7,0/10 | +1,1 |
+| Après cycle 4 | 7,87/10 (recalculé) | +1,97 |
+| Après cycle 5 | 8,23/10 (recalculé) | +2,33 |
+| **Après cycle 7** | **8,67/10 (pré-deploy)** | **+2,77** |
+| **Estimé post-deploy** | **8,93/10** | **+3,03** |

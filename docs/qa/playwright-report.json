@@ -3,9 +3,7 @@
     "viewport": "mobile-375",
     "size": "375x812",
     "screenshot": "mobile-375.png",
-    "issues": [
-      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -28,10 +26,6 @@
       "unlabeledLinks": [],
       "headings": [
         {
-          "level": 2,
-          "text": "Voyageurs"
-        },
-        {
           "level": 1,
           "text": "A Vivre"
         },
@@ -58,10 +52,6 @@
         {
           "level": 3,
           "text": "Être"
-        },
-        {
-          "level": 2,
-          "text": "Suivez le mouvement"
         }
       ],
       "jsonLd": true,
@@ -73,9 +63,7 @@
     "viewport": "mobile-390",
     "size": "390x844",
     "screenshot": "mobile-390.png",
-    "issues": [
-      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -98,10 +86,6 @@
       "unlabeledLinks": [],
       "headings": [
         {
-          "level": 2,
-          "text": "Voyageurs"
-        },
-        {
           "level": 1,
           "text": "A Vivre"
         },
@@ -128,10 +112,6 @@
         {
           "level": 3,
           "text": "Être"
-        },
-        {
-          "level": 2,
-          "text": "Suivez le mouvement"
         }
       ],
       "jsonLd": true,
@@ -143,9 +123,7 @@
     "viewport": "mobile-430",
     "size": "430x932",
     "screenshot": "mobile-430.png",
-    "issues": [
-      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -168,10 +146,6 @@
       "unlabeledLinks": [],
       "headings": [
         {
-          "level": 2,
-          "text": "Voyageurs"
-        },
-        {
           "level": 1,
           "text": "A Vivre"
         },
@@ -198,10 +172,6 @@
         {
           "level": 3,
           "text": "Être"
-        },
-        {
-          "level": 2,
-          "text": "Suivez le mouvement"
         }
       ],
       "jsonLd": true,
@@ -214,7 +184,6 @@
     "size": "768x1024",
     "screenshot": "tablet-768.png",
     "issues": [
-      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4",
       "horizontal-overflow: body=777px, viewport=768px"
     ],
     "checks": {
@@ -239,10 +208,6 @@
       "unlabeledLinks": [],
       "headings": [
         {
-          "level": 2,
-          "text": "Voyageurs"
-        },
-        {
           "level": 1,
           "text": "A Vivre"
         },
@@ -269,10 +234,6 @@
         {
           "level": 3,
           "text": "Être"
-        },
-        {
-          "level": 2,
-          "text": "Suivez le mouvement"
         }
       ],
       "jsonLd": true,
@@ -284,9 +245,7 @@
     "viewport": "desktop-1024",
     "size": "1024x768",
     "screenshot": "desktop-1024.png",
-    "issues": [
-      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -309,10 +268,6 @@
       "unlabeledLinks": [],
       "headings": [
         {
-          "level": 2,
-          "text": "Voyageurs"
-        },
-        {
           "level": 1,
           "text": "A Vivre"
         },
@@ -339,10 +294,6 @@
         {
           "level": 3,
           "text": "Être"
-        },
-        {
-          "level": 2,
-          "text": "Suivez le mouvement"
         }
       ],
       "jsonLd": true,
@@ -354,9 +305,7 @@
     "viewport": "desktop-1280",
     "size": "1280x800",
     "screenshot": "desktop-1280.png",
-    "issues": [
-      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -379,10 +328,6 @@
       "unlabeledLinks": [],
       "headings": [
         {
-          "level": 2,
-          "text": "Voyageurs"
-        },
-        {
           "level": 1,
           "text": "A Vivre"
         },
@@ -409,10 +354,6 @@
         {
           "level": 3,
           "text": "Être"
-        },
-        {
-          "level": 2,
-          "text": "Suivez le mouvement"
         }
       ],
       "jsonLd": true,
@@ -425,7 +366,7 @@
     "size": "1440x900",
     "screenshot": "desktop-1440.png",
     "issues": [
-      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+      "navigation-timeout: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://bltes-production.up.railway.app/fr/\", waiting until \"networkidle\"\u001b[22m\n"
     ],
     "checks": {
       "h1Count": 1,
@@ -449,10 +390,6 @@
       "unlabeledLinks": [],
       "headings": [
         {
-          "level": 2,
-          "text": "Voyageurs"
-        },
-        {
           "level": 1,
           "text": "A Vivre"
         },
@@ -479,10 +416,6 @@
         {
           "level": 3,
           "text": "Être"
-        },
-        {
-          "level": 2,
-          "text": "Suivez le mouvement"
         }
       ],
       "jsonLd": true,

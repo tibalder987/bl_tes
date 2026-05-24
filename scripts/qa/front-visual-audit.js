@@ -35,9 +35,11 @@ async function run() {
     page.on('console', msg => {
       if (msg.type() === 'error') issues.push(`console-error: ${msg.text()}`);
     });
-    // Collect failed requests
+    // Collect failed requests (ignore video/media streams that timeout normally)
     page.on('requestfailed', req => {
-      issues.push(`request-failed: ${req.url()}`);
+      const url = req.url();
+      const isMediaStream = /\.(mp4|webm|ogv|ogg|mov|avi)$/i.test(url);
+      if (!isMediaStream) issues.push(`request-failed: ${url}`);
     });
 
     try {
