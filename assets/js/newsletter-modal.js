@@ -332,6 +332,7 @@ async function handleSubmit(event, modal) {
         form.reset();
         refreshCountryFieldAfterReset(form);
     } catch (error) {
+        console.error('[newsletter] Erreur réseau ou inattendue lors de la soumission', error);
         if (feedback) {
             feedback.textContent = genericErrorMessage;
             feedback.classList.add('is-error');

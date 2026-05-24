@@ -117,8 +117,16 @@
       ],
       "css": [
         "/build/vendors-node_modules_aos_dist_aos_css-node_modules_flatpickr_dist_flatpickr_min_css-node_modu-fd4718.css",
-        "/build/assets_fonts_fontawesome_css_all_min_css.css",
         "/build/default.css"
+      ]
+    },
+    "icons": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/assets_fonts_fontawesome_css_all_min_css.css",
+        "/build/icons.css"
       ]
     }
   }

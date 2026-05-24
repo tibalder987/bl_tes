@@ -1,4 +1,4 @@
-@import "../fonts/fontawesome/css/all.min.css";
+// FontAwesome déplacé dans l'entrée « icons » chargée en différé (media=print/onload) — voir webpack.config.js et base.html.twig.
 // AOS : doit être dans ce fichier (entrée « default »), sinon le CSS reste dans app.css non chargé par le layout.
 @import "~slick-carousel/slick/slick.scss";
 @import "~slick-carousel/slick/slick-theme.scss";

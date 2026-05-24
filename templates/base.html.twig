@@ -42,7 +42,30 @@
 			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-solid-900.woff2') }}" crossorigin="anonymous" type="font/woff2">
 			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-regular-400.woff2') }}" crossorigin="anonymous" type="font/woff2">
 			{{ encore_entry_link_tags('default') }}
+			{# FontAwesome chargé en différé : non bloquant pour le rendu critique #}
+			{% for css_file in encore_entry_css_files('icons') %}
+				<link rel="stylesheet" href="{{ css_file }}" media="print" onload="this.media='all'">
+				<noscript><link rel="stylesheet" href="{{ css_file }}"></noscript>
+			{% endfor %}
 		{% endblock %}
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LodgingBusiness",
+			"name": "Bloody Mary's Bora Bora",
+			"url": "{{ app.request.schemeAndHttpHost }}",
+			"telephone": "+689 40 67 74 55",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Motu Piti A'au",
+				"addressLocality": "Bora Bora",
+				"addressCountry": "PF"
+			},
+			"image": "{{ absolute_url(asset('images/home/hero-section/background.jpg')) }}",
+			"priceRange": "$$$$",
+			"servesCuisine": "Polynesian"
+		}
+		</script>
 	</head>
 	<body class="{% if bodyClass is defined %}{{ bodyClass }} {% endif %}is-locale-{{ app.request.locale }} is-loading" data-locale="{{ app.request.locale }}">
 		<a href="#main-content" class="skip-to-content">{{ 'nav.skip_to_content'|trans({}, 'menu') }}</a>

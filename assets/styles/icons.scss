@@ -1,0 +1,3 @@
+// Entrée CSS dédiée à FontAwesome — chargée en différé via media=print/onload dans base.html.twig.
+// Séparée de « default » pour ne pas bloquer le rendu critique.
+@import "../fonts/fontawesome/css/all.min.css";

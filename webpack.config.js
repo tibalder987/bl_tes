@@ -30,6 +30,7 @@ Encore
     .addEntry('file-selector', './assets/file-selector/file-selector.js')
     .addEntry('form-builder', './assets/form-builder/form-builder.js')
     .addStyleEntry('default', './assets/styles/app.scss')
+    .addStyleEntry('icons', './assets/styles/icons.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
