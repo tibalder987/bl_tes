@@ -14,41 +14,13 @@ import './js/reservation-hero';
 import './js/newsletter-modal';
 import './builder';
 import AOS from 'aos';
+import { isMobileAosViewport, scaleDownAosDelaysForMobile } from './js/aos-utils';
 
 // any CSS you import will output into a single css file (app.css in this case)
-// AOS : styles dans assets/styles/app.scss (entrée default), pas ici — sinon app.css n’est pas lié dans base.html.twig.
+// AOS : styles dans assets/styles/app.scss (entrée default), pas ici — sinon app.css n'est pas lié dans base.html.twig.
 import './images/deco.png';
 
 const pageLoadStart = Date.now();
-
-/** Largeur max. (px) : même ordre de grandeur que les breakpoints SCSS du site. */
-const MOBILE_AOS_MAX_WIDTH = 991;
-
-function isMobileAosViewport() {
-    return window.matchMedia(`(max-width: ${MOBILE_AOS_MAX_WIDTH}px)`).matches;
-}
-
-/**
- * Sur mobile, les data-aos-delay (200–600 ms) allongent trop la séquence.
- * On les réduit avant AOS.init pour garder un léger décalage sans empiler les attentes.
- */
-function scaleDownAosDelaysForMobile() {
-    if (!isMobileAosViewport()) {
-        return;
-    }
-    document.querySelectorAll('[data-aos-delay]').forEach((el) => {
-        const raw = el.getAttribute('data-aos-delay');
-        if (raw === null || raw === '') {
-            return;
-        }
-        const v = parseInt(raw, 10);
-        if (!Number.isFinite(v) || v <= 0) {
-            return;
-        }
-        const scaled = Math.min(90, Math.round(v * 0.22));
-        el.setAttribute('data-aos-delay', String(Math.max(0, scaled)));
-    });
-}
 
 $(window).on('load', function() {
     const body = document.body;
@@ -73,13 +45,15 @@ $(window).on('load', function() {
             mainLoader.remove();
             scaleDownAosDelaysForMobile();
             const mobile = isMobileAosViewport();
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             AOS.init({
                 once: true,
                 easing: 'ease-out',
                 // Mobile : déclenchement plus tôt (offset plus bas), animation plus courte.
-                duration: mobile ? 500 : 1000,
+                duration: reducedMotion ? 0 : (mobile ? 500 : 1000),
                 offset: mobile ? 24 : 120,
                 throttleDelay: mobile ? 40 : 99,
+                disable: reducedMotion,
             });
         };
 

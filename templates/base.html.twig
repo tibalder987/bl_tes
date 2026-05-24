@@ -8,7 +8,7 @@
 		</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<meta name="robots" content="index,follow"/>
 		<meta name="owner" content=""/>
 		<meta name="copyright" content="#PROX-I"/>
@@ -41,6 +41,10 @@
 			<link rel="preload" as="font" href="{{ asset('build/fonts/Balney.otf') }}" crossorigin="anonymous" type="font/otf">
 			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-solid-900.woff2') }}" crossorigin="anonymous" type="font/woff2">
 			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-regular-400.woff2') }}" crossorigin="anonymous" type="font/woff2">
+			{% if app.request.attributes.get('_route') == 'app_home_page' %}
+				{# Preload hero image LCP — homepage uniquement #}
+				<link rel="preload" as="image" href="{{ asset('images/home/hero-section/background.jpg') }}" fetchpriority="high">
+			{% endif %}
 			{{ encore_entry_link_tags('default') }}
 			{# FontAwesome chargé en différé : non bloquant pour le rendu critique #}
 			{% for css_file in encore_entry_css_files('icons') %}
