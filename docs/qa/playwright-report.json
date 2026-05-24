@@ -11,12 +11,12 @@
       "duplicateIds": [],
       "imgsWithoutAlt": [],
       "imgsWithoutDimensions": [],
-      "pictureCount": 6,
-      "webpSourceCount": 6,
+      "pictureCount": 16,
+      "webpSourceCount": 16,
       "reservationForm": true,
       "reservationCheckin": true,
       "reservationCheckout": true,
-      "dateItemsTabindex": false,
+      "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "block",
       "horizontalOverflow": false,
@@ -52,6 +52,10 @@
         {
           "level": 3,
           "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora"
         }
       ],
       "jsonLd": true,
@@ -71,12 +75,12 @@
       "duplicateIds": [],
       "imgsWithoutAlt": [],
       "imgsWithoutDimensions": [],
-      "pictureCount": 6,
-      "webpSourceCount": 6,
+      "pictureCount": 16,
+      "webpSourceCount": 16,
       "reservationForm": true,
       "reservationCheckin": true,
       "reservationCheckout": true,
-      "dateItemsTabindex": false,
+      "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "block",
       "horizontalOverflow": false,
@@ -112,6 +116,10 @@
         {
           "level": 3,
           "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora"
         }
       ],
       "jsonLd": true,
@@ -131,12 +139,12 @@
       "duplicateIds": [],
       "imgsWithoutAlt": [],
       "imgsWithoutDimensions": [],
-      "pictureCount": 6,
-      "webpSourceCount": 6,
+      "pictureCount": 16,
+      "webpSourceCount": 16,
       "reservationForm": true,
       "reservationCheckin": true,
       "reservationCheckout": true,
-      "dateItemsTabindex": false,
+      "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "block",
       "horizontalOverflow": false,
@@ -172,6 +180,10 @@
         {
           "level": 3,
           "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora"
         }
       ],
       "jsonLd": true,
@@ -183,9 +195,7 @@
     "viewport": "tablet-768",
     "size": "768x1024",
     "screenshot": "tablet-768.png",
-    "issues": [
-      "horizontal-overflow: body=777px, viewport=768px"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -193,16 +203,16 @@
       "duplicateIds": [],
       "imgsWithoutAlt": [],
       "imgsWithoutDimensions": [],
-      "pictureCount": 6,
-      "webpSourceCount": 6,
+      "pictureCount": 16,
+      "webpSourceCount": 16,
       "reservationForm": true,
       "reservationCheckin": true,
       "reservationCheckout": true,
-      "dateItemsTabindex": false,
+      "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
-      "horizontalOverflow": true,
-      "bodyScrollWidth": 777,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 768,
       "viewportWidth": 768,
       "unlabeledButtons": [],
       "unlabeledLinks": [],
@@ -234,6 +244,10 @@
         {
           "level": 3,
           "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora"
         }
       ],
       "jsonLd": true,
@@ -245,7 +259,9 @@
     "viewport": "desktop-1024",
     "size": "1024x768",
     "screenshot": "desktop-1024.png",
-    "issues": [],
+    "issues": [
+      "horizontal-overflow: body=1063px, viewport=1024px"
+    ],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -253,16 +269,16 @@
       "duplicateIds": [],
       "imgsWithoutAlt": [],
       "imgsWithoutDimensions": [],
-      "pictureCount": 6,
-      "webpSourceCount": 6,
+      "pictureCount": 16,
+      "webpSourceCount": 16,
       "reservationForm": true,
       "reservationCheckin": true,
       "reservationCheckout": true,
-      "dateItemsTabindex": false,
+      "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
-      "horizontalOverflow": false,
-      "bodyScrollWidth": 1024,
+      "horizontalOverflow": true,
+      "bodyScrollWidth": 1063,
       "viewportWidth": 1024,
       "unlabeledButtons": [],
       "unlabeledLinks": [],
@@ -294,6 +310,10 @@
         {
           "level": 3,
           "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora"
         }
       ],
       "jsonLd": true,
@@ -313,12 +333,12 @@
       "duplicateIds": [],
       "imgsWithoutAlt": [],
       "imgsWithoutDimensions": [],
-      "pictureCount": 6,
-      "webpSourceCount": 6,
+      "pictureCount": 16,
+      "webpSourceCount": 16,
       "reservationForm": true,
       "reservationCheckin": true,
       "reservationCheckout": true,
-      "dateItemsTabindex": false,
+      "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
       "horizontalOverflow": false,
@@ -354,6 +374,10 @@
         {
           "level": 3,
           "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora"
         }
       ],
       "jsonLd": true,
@@ -365,9 +389,7 @@
     "viewport": "desktop-1440",
     "size": "1440x900",
     "screenshot": "desktop-1440.png",
-    "issues": [
-      "navigation-timeout: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://bltes-production.up.railway.app/fr/\", waiting until \"networkidle\"\u001b[22m\n"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -375,12 +397,12 @@
       "duplicateIds": [],
       "imgsWithoutAlt": [],
       "imgsWithoutDimensions": [],
-      "pictureCount": 6,
-      "webpSourceCount": 6,
+      "pictureCount": 16,
+      "webpSourceCount": 16,
       "reservationForm": true,
       "reservationCheckin": true,
       "reservationCheckout": true,
-      "dateItemsTabindex": false,
+      "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
       "horizontalOverflow": false,
@@ -416,6 +438,10 @@
         {
           "level": 3,
           "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora"
         }
       ],
       "jsonLd": true,

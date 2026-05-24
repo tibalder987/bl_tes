@@ -2,6 +2,7 @@
   .section-1 {
     background-color: $color-white;
     padding-top: 120px;
+    overflow-x: clip;
 
     @media (max-width: 768px) {
       padding-top: 70px;
