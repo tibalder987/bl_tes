@@ -174,6 +174,15 @@ function initCountrySelectize(form) {
 
     const inst = $select[0].selectize;
     form._newsletterCountrySelectize = inst;
+
+    // Prevent Selectize's internal paste handler from calling preventDefault (Lighthouse BP audit).
+    const inp = inst && inst.$control_input && inst.$control_input[0];
+    if (inp) {
+        inp.addEventListener('paste', function(e) {
+            e.stopImmediatePropagation();
+            setTimeout(() => { if (inp.value) inst.search(inp.value); }, 1);
+        }, { capture: true });
+    }
 }
 
 /**
