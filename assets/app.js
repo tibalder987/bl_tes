@@ -105,15 +105,14 @@ $(window).on('load', function() {
         return;
     }
 
+    const bookFab = document.querySelector('.book-fab');
     const moduleHeight = 145;
     let initialTop = window.innerHeight - moduleHeight;
 
     const updateReservationState = () => {
-        if (window.scrollY >= initialTop) {
-            reservationModule.classList.add('is-sticky');
-        } else {
-            reservationModule.classList.remove('is-sticky');
-        }
+        const isPast = window.scrollY >= initialTop;
+        reservationModule.classList.toggle('is-sticky', isPast);
+        if (bookFab) bookFab.classList.toggle('is-visible', isPast);
     };
 
     updateReservationState();

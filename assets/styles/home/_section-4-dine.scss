@@ -1,8 +1,8 @@
 // Section 4 : défaut = 3 arrêts, animé = 2 arrêts (couleurs différentes) → fondu entre deux calques, sans couleur inventée.
 .homepage {
   .section-4 {
-    background-color: #787a55;
-    background-image: linear-gradient(90deg, #787a55 38.94%, #a38247 75.96%, #ce8a39 100%);
+    background-color: $color-green;
+    background-image: linear-gradient(90deg, $color-green 38.94%, #a38247 75.96%, $color-sand 100%);
     position: relative;
 
     &::before {
@@ -10,7 +10,7 @@
       position: absolute;
       inset: 0;
       z-index: 0;
-      background-image: linear-gradient(90deg, #951914 0%, #ce8a39 100%);
+      background-image: linear-gradient(90deg, $color-red 0%, $color-sand 100%);
       opacity: 0;
       transition: opacity var(--gradient-transition-duration, 0.5s) ease;
       pointer-events: none;
@@ -95,7 +95,12 @@
       top: unset;
 
       @media (max-width: 500px) {
-        width: 200px;
+        width: 180px;
+        bottom: 290px;
+      }
+      @media (max-width: 375px) {
+        width: 150px;
+        bottom: 240px;
       }
     }
 

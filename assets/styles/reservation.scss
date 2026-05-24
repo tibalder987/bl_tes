@@ -4,6 +4,40 @@
 // inchangés côté comportement).
 // ============================================================================
 
+// Mobile floating "Réserver" button — visible on ≤500px after scrolling past the hero.
+.book-fab {
+  display: none;
+
+  @media (max-width: 500px) {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 16px;
+    z-index: $z-reservation + 1;
+    background: $color-cta;
+    color: $color-white;
+    padding: 14px 24px;
+    border-radius: $radius-btn;
+    font-family: $font-epilogue;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 18px rgba($color-dark, 0.35);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    pointer-events: none;
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}
+
 .reservation-module {
   position: absolute;
   bottom: 56px;

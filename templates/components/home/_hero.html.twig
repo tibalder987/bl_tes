@@ -93,9 +93,13 @@
 		loading="eager"
 		fetchpriority="high"
 		width="1920"
-		height="1080">
+		height="1080"
+		sizes="100vw">
 	<div class="hero-section__content">
 		<h1 class="hero-section__title">{{ 'hero.opening'|trans({}, 'home') }}</h1>
 		<p class="hero-section__subtitle">{{ 'hero.summer'|trans({}, 'home') }}</p>
 	</div>
+	<a href="https://booking.prox-i.pf" class="book-fab" aria-label="{{ 'reservation.book_mobile'|trans({}, 'home')|e('html_attr') }}">
+		{{ 'reservation.book_mobile'|trans({}, 'home') }}
+	</a>
 </section>
