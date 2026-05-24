@@ -9,13 +9,16 @@
 	<div class="section-1__content">
 		<div class="section-1__left">
 			<div class="section-1__images">
-				<img
-					data-aos="fade-up" data-aos-delay="200"
-					src="{{ asset('images/home/section-1/tiki_jardin.jpg') }}"
-					class="section-1__totem-sign"
-					alt="{{ 'img.tiki'|trans({}, 'home')|e('html_attr') }}"
-					sizes="(max-width: 768px) 50vw, 25vw"
-					loading="lazy" decoding="async" width="480" height="640">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/home/section-1/tiki_jardin.webp') }}" sizes="(max-width: 768px) 50vw, 25vw">
+					<img
+						data-aos="fade-up" data-aos-delay="200"
+						src="{{ asset('images/home/section-1/tiki_jardin.jpg') }}"
+						class="section-1__totem-sign"
+						alt="{{ 'img.tiki'|trans({}, 'home')|e('html_attr') }}"
+						sizes="(max-width: 768px) 50vw, 25vw"
+						loading="lazy" decoding="async" width="480" height="640">
+				</picture>
 				<img
 					data-aos="fade-down" data-aos-delay="400"
 					src="{{ asset('images/home/section-1/chicago_1999.jpg') }}"
@@ -51,13 +54,16 @@
 					<span class="shape balney-text">{{ 's1.sub.thanks'|trans({}, 'home') }}</span>
 				</span>
 			</p>
-			<img
-				data-aos="fade-up" data-aos-delay="200"
-				src="{{ asset('images/home/section-1/vahine.jpg') }}"
-				class="section-1__vahine"
-				alt="{{ 'img.flower_s1'|trans({}, 'home')|e('html_attr') }}"
-				sizes="(max-width: 768px) 60vw, 20vw"
-				loading="lazy" decoding="async" width="320" height="480">
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/home/section-1/vahine.webp') }}" sizes="(max-width: 768px) 60vw, 20vw">
+				<img
+					data-aos="fade-up" data-aos-delay="200"
+					src="{{ asset('images/home/section-1/vahine.jpg') }}"
+					class="section-1__vahine"
+					alt="{{ 'img.flower_s1'|trans({}, 'home')|e('html_attr') }}"
+					sizes="(max-width: 768px) 60vw, 20vw"
+					loading="lazy" decoding="async" width="320" height="480">
+			</picture>
 		</div>
 	</div>
 </section>

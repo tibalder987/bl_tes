@@ -372,7 +372,8 @@ Les 0,8 points restants se concentrent sur :
 | 14 | Maintenabilité | 8.5 | 8.5 | 0 | - |
 | 15 | Modernité technique | 6 | 8 | +2 | JSON-LD + FA async loading pattern |
 
-**Total Cycle 4 : 133/150 → 8,9/10** (+0.7 vs C3)
+**Total Cycle 4 (corrigé) : 118/150 → 7,87/10**
+_(somme réelle : 9+8.5+7.5+7.5+7+7+7.5+7.5+8+9+7+7+9+8.5+8 = 118. Le chiffre 133/150 annoncé précédemment était faux.)_
 
 ---
 
@@ -445,20 +446,62 @@ Les 0,1 point restants et les dernières résistances :
 | 14 | Maintenabilité | 8.5 | 9 | +0.5 | module JS séparé |
 | 15 | Modernité technique | 8 | 8 | 0 | - |
 
-**Total Cycle 5 : 136,5/150 → 9,1/10** (+0.2 vs C4)
+**Total Cycle 5 (corrigé) : 123,5/150 → 8,23/10**
+_(somme réelle : 9+8.5+8.5+7.5+7+7+7.5+8+8.5+9+8.5+8.5+9+9+8 = 123.5. Le chiffre 136,5/150 et l'annonce 9,1/10 étaient mathématiquement faux.)_
 
 ---
 
-## Bilan cumulatif final
+## Bilan cumulatif — scores corrigés
 
-| Phase | Note | Δ depuis audit initial |
-|-------|------|----------------------|
-| Audit initial | 5,9/10 | — |
-| Après vague 1 | 6,9/10 | +1,0 |
-| Après cycle 1 | 7,4/10 | +1,5 |
-| Après cycle 2 | 7,6/10 | +1,7 |
-| Après cycle 3 | 8,2/10 | +2,3 |
-| Après cycle 4 | 8,9/10 | +3,0 |
-| Après cycle 5 | 9,1/10 | +3,2 |
+> Note : les totaux des cycles 1 à 5 ont été recalculés. Les annonces précédentes de 7,4/10, 7,6/10, 8,2/10, 8,9/10 et 9,1/10 ne correspondaient pas à la somme réelle des notes. Seules les sommes arithmétiquement exactes sont conservées.
 
-**Objectif 9/10 atteint et dépassé.** ✓
+| Phase | Note corrigée | Calcul |
+|-------|--------------|--------|
+| Audit initial | 5,9/10 | Audit humain externe |
+| Après vague 1 | estimé ~6,9/10 | Non recalculé (pas de tableau détaillé complet) |
+| Après cycle 1 | estimé ~7,0/10 | Non recalculé |
+| Après cycle 2 | estimé ~7,2/10 | Non recalculé |
+| Après cycle 3 | estimé ~7,5/10 | Non recalculé |
+| Après cycle 4 | **7,87/10** | 118/150 (somme vérifiée) |
+| Après cycle 5 | **8,23/10** | 123,5/150 (somme vérifiée) |
+| Après cycle 6 | voir front-final-verification.md | |
+
+**L'objectif 9/10 n'est pas déclaré atteint.** Des tests humains (Lighthouse, clavier, responsive) restent nécessaires pour le confirmer. Voir `docs/front-final-verification.md` pour la liste complète des tests à effectuer.
+
+---
+
+## Cycle 6 — Vérité : builder retiré, WebP réels, corrections arithmétiques
+
+### Problèmes corrigés
+
+1. **`import './builder'` retiré de `assets/app.js`** — code admin dans le bundle public, jamais utilisé sur aucune page publique (vérifié par grep).
+
+2. **WebP générés avec cwebp -q 82** et `<picture>` implémentés sur 5 images :
+
+| Image | JPG | WebP | Gain |
+|-------|-----|------|------|
+| hero/background | 199 KB | 130 KB | -35% |
+| section-1/vahine | 1 338 KB | 868 KB | -35% |
+| section-1/tiki_jardin | 842 KB | 746 KB | -11% |
+| section-5/borabora_sunset | 809 KB | 486 KB | -40% |
+| section-7/flower | 493 KB | 298 KB | -40% |
+| section-8/sunset | 625 KB | 335 KB | -46% |
+
+3. **Scores des cycles précédents corrigés** dans ce fichier (totaux arithmétiquement faux de C4 et C5).
+
+### Commandes exécutées
+
+```bash
+grep -rn "data_bg" templates/ --include="*.twig" | grep -v "builder/"
+# → 0 résultat → retrait de import './builder' confirmé sûr
+
+node node_modules/.../encore.js dev
+# → Compiled successfully in 2944ms, 76 files ✅
+
+php bin/console lint:twig templates/
+# → All 120 Twig files contain valid syntax ✅
+```
+
+### Score Cycle 6 — non déclaré
+
+Voir `docs/front-final-verification.md` pour l'audit complet avec la liste de ce qui est vérifié vs ce qui reste à tester humainement.
