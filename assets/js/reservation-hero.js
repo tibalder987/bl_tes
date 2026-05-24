@@ -217,6 +217,7 @@ function initReservationHero() {
     let calendarOpen = false;
     let guestsOpen = false;
     let suppressNextDocClick = false;
+    let calendarTriggerEl = null;
 
     function isStickyModule() {
         const module = document.querySelector('.reservation-module');
@@ -287,10 +288,11 @@ function initReservationHero() {
         { passive: true },
     );
 
-    function openCalendar() {
+    function openCalendar(triggerEl) {
         if (guestsOpen) {
-            closeGuests();
+            closeGuests(false);
         }
+        calendarTriggerEl = triggerEl || document.activeElement || null;
         setCalendarMountPlacementClass();
         calendarMount.classList.add('is-open');
         datesBlock.setAttribute('aria-expanded', 'true');
@@ -302,13 +304,17 @@ function initReservationHero() {
         });
     }
 
-    function closeCalendar() {
+    function closeCalendar(returnFocus) {
         calendarMount.classList.remove('is-open');
         datesBlock.setAttribute('aria-expanded', 'false');
         calendarOpen = false;
+        if (returnFocus !== false && calendarTriggerEl) {
+            calendarTriggerEl.focus();
+            calendarTriggerEl = null;
+        }
     }
 
-    datesBlock.addEventListener('click', function (e) {
+    function handleDatesInteraction(e) {
         if (e.target.closest('.flatpickr-calendar')) {
             return;
         }
@@ -318,11 +324,20 @@ function initReservationHero() {
         e.preventDefault();
 
         if (calendarOpen) {
-            closeCalendar();
+            closeCalendar(true);
             return;
         }
 
-        openCalendar();
+        openCalendar(e.currentTarget || e.target);
+    }
+
+    datesBlock.addEventListener('click', handleDatesInteraction);
+
+    datesBlock.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') {
+            return;
+        }
+        handleDatesInteraction(e);
     });
 
     // -------------------------------------------------------------------------
@@ -389,10 +404,13 @@ function initReservationHero() {
         syncGuestStepperUi();
         requestAnimationFrame(function () {
             syncGuestsPopoverPosition();
+            // Move focus to the first stepper button or Done when popover opens
+            const firstBtn = guestsMount.querySelector('button:not([disabled])');
+            if (firstBtn) firstBtn.focus();
         });
     }
 
-    function closeGuests() {
+    function closeGuests(returnFocus) {
         if (!guestsMount || !guestsTrigger) {
             return;
         }
@@ -402,6 +420,9 @@ function initReservationHero() {
         guestsTrigger.classList.remove('is-active');
         guestsTrigger.setAttribute('aria-expanded', 'false');
         guestsOpen = false;
+        if (returnFocus !== false && guestsTrigger) {
+            guestsTrigger.focus();
+        }
     }
 
     function toggleGuests() {
@@ -492,16 +513,34 @@ function initReservationHero() {
         true,
     );
 
+    // Focus trap inside guests popover
+    if (guestsMount) {
+        guestsMount.addEventListener('keydown', function (e) {
+            if (!guestsOpen || e.key !== 'Tab') return;
+            const focusable = Array.from(guestsMount.querySelectorAll('button:not([disabled])'));
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        });
+    }
+
     document.addEventListener('keydown', function (e) {
         if (e.key !== 'Escape') {
             return;
         }
         if (guestsOpen) {
-            closeGuests();
+            closeGuests(true);
             return;
         }
         if (calendarOpen) {
-            closeCalendar();
+            closeCalendar(true);
         }
     });
 }

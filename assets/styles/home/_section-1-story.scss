@@ -181,6 +181,9 @@
     }
     .section-1__subcontent-container {
       position: relative;
+      .vertical-arrow p {
+        color: $color-light-brown;
+      }
     }
     .section-1__subcontent {
       padding: 230px 180px 0px 180px;

@@ -351,11 +351,11 @@ p {
 
     .wysiwyg_content {
         p {
-            color: #17110d;
+            color: $color-dark;
             margin-bottom: 15px;
         }
         a {
-            color: #951914;
+            color: $color-red;
         }
     }
 }
@@ -364,11 +364,11 @@ h1.h1 {
     text-align: center;
     margin-bottom: 50px;
     font-size: 50px;
-    color: #951914;
+    color: $color-red;
 }
 
 .builder_hr {
-    border-bottom: 1px solid #951914;
+    border-bottom: 1px solid $color-red;
 }
 
 body.is-locale-fr {

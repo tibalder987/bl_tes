@@ -19,12 +19,16 @@
 
 <section class="section-7" aria-label="{{ 'img.wild'|trans({}, 'home')|e('html_attr') }}">
 	<div class="section-7__content-container">
-		<img
-			src="{{ asset('images/home/section-7/wild.jpg') }}"
-			class="section-7__otemanu-view"
-			data-aos="fade-down" data-aos-delay="200"
-			alt="{{ 'img.wild'|trans({}, 'home')|e('html_attr') }}"
-			loading="lazy" decoding="async" width="800" height="600">
+		<picture>
+			<source type="image/webp" srcset="{{ asset('images/home/section-7/wild.webp') }}" sizes="(max-width: 768px) 100vw, 70vw">
+			<img
+				src="{{ asset('images/home/section-7/wild.jpg') }}"
+				class="section-7__otemanu-view"
+				data-aos="fade-down" data-aos-delay="200"
+				alt="{{ 'img.wild'|trans({}, 'home')|e('html_attr') }}"
+				sizes="(max-width: 768px) 100vw, 70vw"
+				loading="lazy" decoding="async" width="991" height="653">
+		</picture>
 		<div class="section-7__images">
 			<picture>
 				<source type="image/webp" srcset="{{ asset('images/home/section-7/flower.webp') }}" sizes="(max-width: 540px) 220px, (max-width: 768px) 35vw, 20vw">
@@ -36,12 +40,16 @@
 					sizes="(max-width: 540px) 220px, (max-width: 768px) 35vw, 20vw"
 					loading="lazy" decoding="async" width="400" height="600">
 			</picture>
-			<img
-				src="{{ asset('images/home/section-7/guitar.jpg') }}"
-				class="section-7__musician"
-				data-aos="fade-up" data-aos-delay="600"
-				alt="{{ 'img.guitar'|trans({}, 'home')|e('html_attr') }}"
-				loading="lazy" decoding="async" width="400" height="600">
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/home/section-7/guitar.webp') }}" sizes="(max-width: 540px) 220px, (max-width: 768px) 35vw, 20vw">
+				<img
+					src="{{ asset('images/home/section-7/guitar.jpg') }}"
+					class="section-7__musician"
+					data-aos="fade-up" data-aos-delay="600"
+					alt="{{ 'img.guitar'|trans({}, 'home')|e('html_attr') }}"
+					sizes="(max-width: 540px) 220px, (max-width: 768px) 35vw, 20vw"
+					loading="lazy" decoding="async" width="545" height="791">
+			</picture>
 		</div>
 	</div>
 	<div class="section-7__content">
@@ -49,6 +57,7 @@
 			class="section-7__video"
 			autoplay muted loop playsinline
 			preload="none"
+			poster="{{ asset('images/home/section-7/wild.jpg') }}"
 			aria-hidden="true">
 			<source src="{{ asset('video/section-7.mp4') }}" type="video/mp4">
 		</video>

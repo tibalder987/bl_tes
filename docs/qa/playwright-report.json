@@ -1,0 +1,493 @@
+[
+  {
+    "viewport": "mobile-375",
+    "size": "375x812",
+    "screenshot": "mobile-375.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 6,
+      "webpSourceCount": 6,
+      "reservationForm": true,
+      "reservationCheckin": true,
+      "reservationCheckout": true,
+      "dateItemsTabindex": false,
+      "guestButtonType": "button[type=button]",
+      "fabDisplay": "block",
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 375,
+      "viewportWidth": 375,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "Voyageurs"
+        },
+        {
+          "level": 1,
+          "text": "A Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora\n\t\t\n\t\t\tLived\n\t\t\tDifferently"
+        },
+        {
+          "level": 2,
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+        },
+        {
+          "level": 3,
+          "text": "Séjourner"
+        },
+        {
+          "level": 3,
+          "text": "Savourer"
+        },
+        {
+          "level": 3,
+          "text": "Vivre"
+        },
+        {
+          "level": 3,
+          "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Suivez le mouvement"
+        }
+      ],
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/",
+      "htmlLang": "fr"
+    }
+  },
+  {
+    "viewport": "mobile-390",
+    "size": "390x844",
+    "screenshot": "mobile-390.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 6,
+      "webpSourceCount": 6,
+      "reservationForm": true,
+      "reservationCheckin": true,
+      "reservationCheckout": true,
+      "dateItemsTabindex": false,
+      "guestButtonType": "button[type=button]",
+      "fabDisplay": "block",
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 390,
+      "viewportWidth": 390,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "Voyageurs"
+        },
+        {
+          "level": 1,
+          "text": "A Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora\n\t\t\n\t\t\tLived\n\t\t\tDifferently"
+        },
+        {
+          "level": 2,
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+        },
+        {
+          "level": 3,
+          "text": "Séjourner"
+        },
+        {
+          "level": 3,
+          "text": "Savourer"
+        },
+        {
+          "level": 3,
+          "text": "Vivre"
+        },
+        {
+          "level": 3,
+          "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Suivez le mouvement"
+        }
+      ],
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/",
+      "htmlLang": "fr"
+    }
+  },
+  {
+    "viewport": "mobile-430",
+    "size": "430x932",
+    "screenshot": "mobile-430.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 6,
+      "webpSourceCount": 6,
+      "reservationForm": true,
+      "reservationCheckin": true,
+      "reservationCheckout": true,
+      "dateItemsTabindex": false,
+      "guestButtonType": "button[type=button]",
+      "fabDisplay": "block",
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 430,
+      "viewportWidth": 430,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "Voyageurs"
+        },
+        {
+          "level": 1,
+          "text": "A Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora\n\t\t\n\t\t\tLived\n\t\t\tDifferently"
+        },
+        {
+          "level": 2,
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+        },
+        {
+          "level": 3,
+          "text": "Séjourner"
+        },
+        {
+          "level": 3,
+          "text": "Savourer"
+        },
+        {
+          "level": 3,
+          "text": "Vivre"
+        },
+        {
+          "level": 3,
+          "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Suivez le mouvement"
+        }
+      ],
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/",
+      "htmlLang": "fr"
+    }
+  },
+  {
+    "viewport": "tablet-768",
+    "size": "768x1024",
+    "screenshot": "tablet-768.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4",
+      "horizontal-overflow: body=777px, viewport=768px"
+    ],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 6,
+      "webpSourceCount": 6,
+      "reservationForm": true,
+      "reservationCheckin": true,
+      "reservationCheckout": true,
+      "dateItemsTabindex": false,
+      "guestButtonType": "button[type=button]",
+      "fabDisplay": "none",
+      "horizontalOverflow": true,
+      "bodyScrollWidth": 777,
+      "viewportWidth": 768,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "Voyageurs"
+        },
+        {
+          "level": 1,
+          "text": "A Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora\n\t\t\n\t\t\tLived\n\t\t\tDifferently"
+        },
+        {
+          "level": 2,
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+        },
+        {
+          "level": 3,
+          "text": "Séjourner"
+        },
+        {
+          "level": 3,
+          "text": "Savourer"
+        },
+        {
+          "level": 3,
+          "text": "Vivre"
+        },
+        {
+          "level": 3,
+          "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Suivez le mouvement"
+        }
+      ],
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/",
+      "htmlLang": "fr"
+    }
+  },
+  {
+    "viewport": "desktop-1024",
+    "size": "1024x768",
+    "screenshot": "desktop-1024.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 6,
+      "webpSourceCount": 6,
+      "reservationForm": true,
+      "reservationCheckin": true,
+      "reservationCheckout": true,
+      "dateItemsTabindex": false,
+      "guestButtonType": "button[type=button]",
+      "fabDisplay": "none",
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1024,
+      "viewportWidth": 1024,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "Voyageurs"
+        },
+        {
+          "level": 1,
+          "text": "A Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora\n\t\t\n\t\t\tLived\n\t\t\tDifferently"
+        },
+        {
+          "level": 2,
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+        },
+        {
+          "level": 3,
+          "text": "Séjourner"
+        },
+        {
+          "level": 3,
+          "text": "Savourer"
+        },
+        {
+          "level": 3,
+          "text": "Vivre"
+        },
+        {
+          "level": 3,
+          "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Suivez le mouvement"
+        }
+      ],
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/",
+      "htmlLang": "fr"
+    }
+  },
+  {
+    "viewport": "desktop-1280",
+    "size": "1280x800",
+    "screenshot": "desktop-1280.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 6,
+      "webpSourceCount": 6,
+      "reservationForm": true,
+      "reservationCheckin": true,
+      "reservationCheckout": true,
+      "dateItemsTabindex": false,
+      "guestButtonType": "button[type=button]",
+      "fabDisplay": "none",
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1280,
+      "viewportWidth": 1280,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "Voyageurs"
+        },
+        {
+          "level": 1,
+          "text": "A Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora\n\t\t\n\t\t\tLived\n\t\t\tDifferently"
+        },
+        {
+          "level": 2,
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+        },
+        {
+          "level": 3,
+          "text": "Séjourner"
+        },
+        {
+          "level": 3,
+          "text": "Savourer"
+        },
+        {
+          "level": 3,
+          "text": "Vivre"
+        },
+        {
+          "level": 3,
+          "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Suivez le mouvement"
+        }
+      ],
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/",
+      "htmlLang": "fr"
+    }
+  },
+  {
+    "viewport": "desktop-1440",
+    "size": "1440x900",
+    "screenshot": "desktop-1440.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 6,
+      "webpSourceCount": 6,
+      "reservationForm": true,
+      "reservationCheckin": true,
+      "reservationCheckout": true,
+      "dateItemsTabindex": false,
+      "guestButtonType": "button[type=button]",
+      "fabDisplay": "none",
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1440,
+      "viewportWidth": 1440,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "Voyageurs"
+        },
+        {
+          "level": 1,
+          "text": "A Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Bora Bora\n\t\t\n\t\t\tLived\n\t\t\tDifferently"
+        },
+        {
+          "level": 2,
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+        },
+        {
+          "level": 3,
+          "text": "Séjourner"
+        },
+        {
+          "level": 3,
+          "text": "Savourer"
+        },
+        {
+          "level": 3,
+          "text": "Vivre"
+        },
+        {
+          "level": 3,
+          "text": "Être"
+        },
+        {
+          "level": 2,
+          "text": "Suivez le mouvement"
+        }
+      ],
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/",
+      "htmlLang": "fr"
+    }
+  }
+]

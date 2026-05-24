@@ -431,7 +431,7 @@ body.menu-drawer-open .header__drawer {
 
   &:hover,
   &:focus-visible {
-    color: #e3cca3;
+    color: $color-gold;
 
     @media (min-width: 577px) {
       padding-left: 20px;

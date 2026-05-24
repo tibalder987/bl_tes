@@ -36,7 +36,7 @@
 				<div class="reservation-module__items">
 					<div class="reservation-module__dates" data-reservation-dates role="group" aria-label="{{ 'reservation.dates_aria'|trans({}, 'home')|e('html_attr') }}" aria-expanded="false">
 						<div class="reservation-module__dates-row">
-							<div class="reservation-module__item" data-reservation-field="checkin">
+							<div class="reservation-module__item" data-reservation-field="checkin" tabindex="0" role="button" aria-label="{{ 'reservation.checkin'|trans({}, 'home')|e('html_attr') }}">
 								<i class="reservation-module__item-icon fa-regular fa-calendar" aria-hidden="true"></i>
 								<div class="reservation-module__item-body">
 									<div class="reservation-module__item-select">
@@ -49,7 +49,7 @@
 								</div>
 							</div>
 							<div class="reservation-module__sperator reservation-module__sperator--in-dates"></div>
-							<div class="reservation-module__item" data-reservation-field="checkout">
+							<div class="reservation-module__item" data-reservation-field="checkout" tabindex="0" role="button" aria-label="{{ 'reservation.checkout'|trans({}, 'home')|e('html_attr') }}">
 								<i class="reservation-module__item-icon fa-regular fa-calendar" aria-hidden="true"></i>
 								<div class="reservation-module__item-body">
 									<div class="reservation-module__item-select">
@@ -65,7 +65,7 @@
 					</div>
 					<div class="reservation-module__sperator"></div>
 					{# Corrigé : div[role=button] → button natif pour accessibilité clavier #}
-					<button type="button" class="reservation-module__item reservation-module__item--guests" data-reservation-field="guests" aria-expanded="false" aria-controls="reservation-guests-popover" aria-label="{{ 'reservation.guests'|trans({}, 'home')|e('html_attr') }}">
+					<button type="button" class="reservation-module__item reservation-module__item--guests" data-reservation-field="guests" aria-expanded="false" aria-controls="reservation-guests-popover">
 						<i class="reservation-module__item-icon fa-regular fa-user-group" aria-hidden="true"></i>
 						<div class="reservation-module__item-body">
 							<div class="reservation-module__item-select">

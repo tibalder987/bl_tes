@@ -19,12 +19,16 @@
 						sizes="(max-width: 768px) 50vw, 25vw"
 						loading="lazy" decoding="async" width="480" height="640">
 				</picture>
-				<img
-					data-aos="fade-down" data-aos-delay="400"
-					src="{{ asset('images/home/section-1/chicago_1999.jpg') }}"
-					class="section-1__chicago-band"
-					alt="{{ 'img.orchestre'|trans({}, 'home')|e('html_attr') }}"
-					loading="lazy" decoding="async" width="480" height="360">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/home/section-1/chicago_1999.webp') }}" sizes="(max-width: 768px) 50vw, 25vw">
+					<img
+						data-aos="fade-down" data-aos-delay="400"
+						src="{{ asset('images/home/section-1/chicago_1999.jpg') }}"
+						class="section-1__chicago-band"
+						alt="{{ 'img.orchestre'|trans({}, 'home')|e('html_attr') }}"
+						sizes="(max-width: 768px) 50vw, 25vw"
+						loading="lazy" decoding="async" width="480" height="604">
+				</picture>
 			</div>
 		</div>
 		<div class="section-1__right">

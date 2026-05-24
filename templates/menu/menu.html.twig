@@ -1,12 +1,12 @@
 <header class="header" id="site-header">
 	<div class="header__content">
 		<a href="{{ path('app_contact') }}" class="header__button">
-			<img src="{{ asset('images/start-planning.svg') }}" class="header__button-image" alt="{{ 'alt.start_planning'|trans({}, 'menu') }}">
+			<img src="{{ asset('images/start-planning.svg') }}" class="header__button-image" alt="{{ 'alt.start_planning'|trans({}, 'menu') }}" width="40" height="40">
 		</a>
 		<a href="{{ locale_switch_url }}" class="header__button-switch" hreflang="{{ locale_switch_target }}" lang="{{ locale_switch_target }}">
 			{{ locale_switch_target == 'en' ? 'EN' : 'FR' }}
 		</a>
-		<button type="button" class="header__menu" id="header-menu-toggle" aria-expanded="false" aria-controls="header-drawer" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}">
+		<button type="button" class="header__menu" id="header-menu-toggle" aria-expanded="false" aria-controls="header-drawer" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}" data-label-open="{{ 'aria.open_menu'|trans({}, 'menu')|e('html_attr') }}" data-label-close="{{ 'aria.close_menu'|trans({}, 'menu')|e('html_attr') }}">
 			<div class="header__menu-label">{{ 'label.menu'|trans({}, 'menu') }}</div>
 			<div class="header__menu-icon" aria-hidden="true">
 				<span class="header__menu-line header__menu-line--top"></span>
@@ -17,7 +17,7 @@
 		</button>
 	</div>
 	<div class="header__subcontent">
-		<a href="{{ path('app_home_page') }}"><img src="{{ asset('images/logo.svg') }}" class="header__logo" alt=""></a>
+		<a href="{{ path('app_home_page') }}" aria-label="{{ 'aria.home'|trans({}, 'menu') }}"><img src="{{ asset('images/logo.svg') }}" class="header__logo" alt="" width="120" height="60"></a>
 	</div>
 </header>
 <div class="header__drawer-backdrop js-header-drawer-backdrop" aria-hidden="true"></div>
@@ -25,7 +25,7 @@
 
 	<div class="header__drawer-content">
 		<div class="header__subcontent">
-			<img src="{{ asset('images/logo.svg') }}" class="header__logo" alt="">
+			<img src="{{ asset('images/logo.svg') }}" class="header__logo" alt="" width="120" height="60">
 		</div>
 	</div>
 	<div class="header__drawer-container">
@@ -61,7 +61,7 @@
 		</div>
 	</div>
 </nav>
-<button type="button" class="header__menu-fab js-header-menu-fab" id="header-menu-fab" aria-controls="header-drawer" aria-expanded="false" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}" aria-hidden="true" tabindex="-1">
+<button type="button" class="header__menu-fab js-header-menu-fab" id="header-menu-fab" aria-controls="header-drawer" aria-expanded="false" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}" data-label-open="{{ 'aria.open_menu'|trans({}, 'menu')|e('html_attr') }}" data-label-close="{{ 'aria.close_menu'|trans({}, 'menu')|e('html_attr') }}" aria-hidden="true" tabindex="-1">
 	<span class="header__menu-icon" aria-hidden="true">
 		<span class="header__menu-line header__menu-line--top"></span>
 		<span class="header__menu-line header__menu-line--middle"></span>

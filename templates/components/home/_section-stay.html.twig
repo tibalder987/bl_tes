@@ -1,19 +1,27 @@
 <section class="section-3 have-animation" aria-labelledby="section-stay-heading">
 	<div class="section-3__content">
-		<img
-			data-aos="fade-down" data-aos-delay="200"
-			src="{{ asset('images/home/section-3/sunset.jpg') }}"
-			class="section-3__sunset"
-			alt="{{ 'img.sunset'|trans({}, 'home')|e('html_attr') }}"
-			loading="lazy" decoding="async" width="600" height="400">
+		<picture>
+			<source type="image/webp" srcset="{{ asset('images/home/section-3/sunset.webp') }}" sizes="(max-width: 768px) 100vw, 60vw">
+			<img
+				data-aos="fade-down" data-aos-delay="200"
+				src="{{ asset('images/home/section-3/sunset.jpg') }}"
+				class="section-3__sunset"
+				alt="{{ 'img.sunset'|trans({}, 'home')|e('html_attr') }}"
+				sizes="(max-width: 768px) 100vw, 60vw"
+				loading="lazy" decoding="async" width="323" height="434">
+		</picture>
 		<div class="section-3__left">
 			<div class="section-3__images">
-				<img
-					data-aos="fade-up" data-aos-delay="200"
-					src="{{ asset('images/home/section-3/stay.jpg') }}"
-					class="section-3__fare-peaks"
-					alt="{{ 'img.stay'|trans({}, 'home')|e('html_attr') }}"
-					loading="lazy" decoding="async" width="480" height="640">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/home/section-3/stay.webp') }}" sizes="(max-width: 768px) 80vw, 30vw">
+					<img
+						data-aos="fade-up" data-aos-delay="200"
+						src="{{ asset('images/home/section-3/stay.jpg') }}"
+						class="section-3__fare-peaks"
+						alt="{{ 'img.stay'|trans({}, 'home')|e('html_attr') }}"
+						sizes="(max-width: 768px) 80vw, 30vw"
+						loading="lazy" decoding="async" width="480" height="640">
+				</picture>
 			</div>
 		</div>
 		<div class="section-3__right">
