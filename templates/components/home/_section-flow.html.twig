@@ -8,13 +8,16 @@
 	<div class="section-5__content">
 		<div class="section-5__left">
 			<div class="section-5__images">
-				<img
-					src="{{ asset('images/home/section-5/borabora_sunset.jpg') }}"
-					data-aos="fade-up" data-aos-delay="400"
-					class="section-5__sunset-sailboat"
-					alt="{{ 'img.flow'|trans({}, 'home')|e('html_attr') }}"
-					sizes="(max-width: 768px) 80vw, 30vw"
-					loading="lazy" decoding="async" width="480" height="640">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/home/section-5/borabora_sunset.webp') }}" sizes="(max-width: 768px) 80vw, 30vw">
+					<img
+						src="{{ asset('images/home/section-5/borabora_sunset.jpg') }}"
+						data-aos="fade-up" data-aos-delay="400"
+						class="section-5__sunset-sailboat"
+						alt="{{ 'img.flow'|trans({}, 'home')|e('html_attr') }}"
+						sizes="(max-width: 768px) 80vw, 30vw"
+						loading="lazy" decoding="async" width="480" height="640">
+				</picture>
 			</div>
 		</div>
 		<div class="section-5__right">

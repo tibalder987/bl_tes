@@ -42,8 +42,12 @@
 			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-solid-900.woff2') }}" crossorigin="anonymous" type="font/woff2">
 			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-regular-400.woff2') }}" crossorigin="anonymous" type="font/woff2">
 			{% if app.request.attributes.get('_route') == 'app_home_page' %}
-				{# Preload hero image LCP — homepage uniquement #}
-				<link rel="preload" as="image" href="{{ asset('images/home/hero-section/background.jpg') }}" fetchpriority="high">
+				{# Preload hero image LCP — WebP pour les navigateurs compatibles, fallback JPG #}
+				<link rel="preload" as="image"
+					href="{{ asset('images/home/hero-section/background.webp') }}"
+					imagesrcset="{{ asset('images/home/hero-section/background.webp') }}"
+					type="image/webp"
+					fetchpriority="high">
 			{% endif %}
 			{{ encore_entry_link_tags('default') }}
 			{# FontAwesome chargé en différé : non bloquant pour le rendu critique #}

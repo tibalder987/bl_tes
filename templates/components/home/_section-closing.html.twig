@@ -15,12 +15,15 @@
 	</div>
 	<div class="section-8__subcontent">
 		<p class="section-8__subcontent-text">{{ 's8.subcontent'|trans({}, 'home')|raw }}</p>
-		<img
-			src="{{ asset('images/home/section-8/sunset.jpg') }}"
-			data-aos="fade-up" data-aos-delay="400"
-			class="section-8__sunset-islands"
-			alt="{{ 'img.boat'|trans({}, 'home')|e('html_attr') }}"
-			sizes="(max-width: 768px) 100vw, 60vw"
-			loading="lazy" decoding="async" width="800" height="600">
+		<picture>
+			<source type="image/webp" srcset="{{ asset('images/home/section-8/sunset.webp') }}" sizes="(max-width: 768px) 100vw, 60vw">
+			<img
+				src="{{ asset('images/home/section-8/sunset.jpg') }}"
+				data-aos="fade-up" data-aos-delay="400"
+				class="section-8__sunset-islands"
+				alt="{{ 'img.boat'|trans({}, 'home')|e('html_attr') }}"
+				sizes="(max-width: 768px) 100vw, 60vw"
+				loading="lazy" decoding="async" width="800" height="600">
+		</picture>
 	</div>
 </section>

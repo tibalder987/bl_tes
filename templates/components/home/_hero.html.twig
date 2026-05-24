@@ -86,15 +86,18 @@
 			</div>
 		</form>
 	</div>
-	<img
-		src="{{ asset('images/home/hero-section/background.jpg') }}"
-		class="hero-section__background"
-		alt="{{ 'hero.background'|trans({}, 'home')|e('html_attr') }}"
-		loading="eager"
-		fetchpriority="high"
-		width="1920"
-		height="1080"
-		sizes="100vw">
+	<picture>
+		<source type="image/webp" srcset="{{ asset('images/home/hero-section/background.webp') }}">
+		<img
+			src="{{ asset('images/home/hero-section/background.jpg') }}"
+			class="hero-section__background"
+			alt="{{ 'hero.background'|trans({}, 'home')|e('html_attr') }}"
+			loading="eager"
+			fetchpriority="high"
+			width="1920"
+			height="1080"
+			sizes="100vw">
+	</picture>
 	<div class="hero-section__content">
 		<h1 class="hero-section__title">{{ 'hero.opening'|trans({}, 'home') }}</h1>
 		<p class="hero-section__subtitle">{{ 'hero.summer'|trans({}, 'home') }}</p>

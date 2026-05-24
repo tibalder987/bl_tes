@@ -12,7 +12,6 @@ import 'slick-carousel';
 import './main';
 import './js/reservation-hero';
 import './js/newsletter-modal';
-import './builder';
 import AOS from 'aos';
 import { isMobileAosViewport, scaleDownAosDelaysForMobile } from './js/aos-utils';
 

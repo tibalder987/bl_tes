@@ -26,13 +26,16 @@
 			alt="{{ 'img.wild'|trans({}, 'home')|e('html_attr') }}"
 			loading="lazy" decoding="async" width="800" height="600">
 		<div class="section-7__images">
-			<img
-				src="{{ asset('images/home/section-7/flower.jpg') }}"
-				class="section-7__hibiscus"
-				data-aos="fade-up" data-aos-delay="400"
-				alt="{{ 'img.flower_s7'|trans({}, 'home')|e('html_attr') }}"
-				sizes="(max-width: 540px) 220px, (max-width: 768px) 35vw, 20vw"
-				loading="lazy" decoding="async" width="400" height="600">
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/home/section-7/flower.webp') }}" sizes="(max-width: 540px) 220px, (max-width: 768px) 35vw, 20vw">
+				<img
+					src="{{ asset('images/home/section-7/flower.jpg') }}"
+					class="section-7__hibiscus"
+					data-aos="fade-up" data-aos-delay="400"
+					alt="{{ 'img.flower_s7'|trans({}, 'home')|e('html_attr') }}"
+					sizes="(max-width: 540px) 220px, (max-width: 768px) 35vw, 20vw"
+					loading="lazy" decoding="async" width="400" height="600">
+			</picture>
 			<img
 				src="{{ asset('images/home/section-7/guitar.jpg') }}"
 				class="section-7__musician"
