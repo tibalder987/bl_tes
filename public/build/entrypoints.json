@@ -2,47 +2,36 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/7.05d6cdeb.js",
-        "/build/759.b3822804.js",
-        "/build/249.047bdf44.js",
-        "/build/848.b7e19f1f.js",
-        "/build/120.4af30373.js",
-        "/build/237.4ad2bd0a.js",
-        "/build/18.ad1b34b4.js",
-        "/build/app.1a41fab7.js"
+        "/build/runtime.b16de59f.js",
+        "/build/755.ff3a52bf.js",
+        "/build/879.6b257cce.js",
+        "/build/713.18d714b3.js",
+        "/build/app.1fd16358.js"
       ]
     },
     "app-article": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/7.05d6cdeb.js",
-        "/build/app-article.bedd9cf6.js"
+        "/build/runtime.b16de59f.js",
+        "/build/755.ff3a52bf.js",
+        "/build/app-article.d4e46f58.js"
       ]
     },
     "app-mediatheque": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/7.05d6cdeb.js",
-        "/build/app-mediatheque.b1c795d6.js"
+        "/build/runtime.b16de59f.js",
+        "/build/755.ff3a52bf.js",
+        "/build/app-mediatheque.d4e60ebd.js"
       ]
     },
     "app-admin": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/7.05d6cdeb.js",
-        "/build/759.b3822804.js",
-        "/build/249.047bdf44.js",
-        "/build/648.5b69016c.js",
-        "/build/848.b7e19f1f.js",
-        "/build/949.bad82513.js",
-        "/build/237.4ad2bd0a.js",
-        "/build/350.9a22b334.js",
-        "/build/app-admin.75fee072.js"
+        "/build/runtime.b16de59f.js",
+        "/build/755.ff3a52bf.js",
+        "/build/239.7d130d3a.js",
+        "/build/658.61566cd4.js",
+        "/build/980.3abf583b.js",
+        "/build/786.b86e5eec.js",
+        "/build/app-admin.03f38fc1.js"
       ],
       "css": [
         "/build/437.968ce4dc.css",
@@ -51,25 +40,18 @@
     },
     "app-map": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/759.b3822804.js",
-        "/build/app-map.deefde95.js"
+        "/build/runtime.b16de59f.js",
+        "/build/app-map.5e7a9a38.js"
       ]
     },
     "file-manager": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/7.05d6cdeb.js",
-        "/build/759.b3822804.js",
-        "/build/249.047bdf44.js",
-        "/build/648.5b69016c.js",
-        "/build/848.b7e19f1f.js",
-        "/build/120.4af30373.js",
-        "/build/731.ab8aa878.js",
-        "/build/340.a9416819.js",
-        "/build/file-manager.3058b397.js"
+        "/build/runtime.b16de59f.js",
+        "/build/755.ff3a52bf.js",
+        "/build/239.7d130d3a.js",
+        "/build/658.61566cd4.js",
+        "/build/879.6b257cce.js",
+        "/build/file-manager.1cff4233.js"
       ],
       "css": [
         "/build/file-manager.3006c411.css"
@@ -77,14 +59,9 @@
     },
     "file-selector": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/759.b3822804.js",
-        "/build/249.047bdf44.js",
-        "/build/648.5b69016c.js",
-        "/build/848.b7e19f1f.js",
-        "/build/731.ab8aa878.js",
-        "/build/file-selector.6f2b45da.js"
+        "/build/runtime.b16de59f.js",
+        "/build/239.7d130d3a.js",
+        "/build/file-selector.36089998.js"
       ],
       "css": [
         "/build/file-selector.1ff1d5cb.css"
@@ -92,14 +69,12 @@
     },
     "form-builder": {
       "js": [
-        "/build/runtime.2e07592d.js",
-        "/build/645.c1f32c6f.js",
-        "/build/7.05d6cdeb.js",
-        "/build/759.b3822804.js",
-        "/build/249.047bdf44.js",
-        "/build/648.5b69016c.js",
-        "/build/949.bad82513.js",
-        "/build/form-builder.dad1dec2.js"
+        "/build/runtime.b16de59f.js",
+        "/build/755.ff3a52bf.js",
+        "/build/239.7d130d3a.js",
+        "/build/658.61566cd4.js",
+        "/build/980.3abf583b.js",
+        "/build/form-builder.eb26fe3b.js"
       ],
       "css": [
         "/build/form-builder.aabca461.css"
@@ -107,16 +82,16 @@
     },
     "default": {
       "js": [
-        "/build/runtime.2e07592d.js"
+        "/build/runtime.b16de59f.js"
       ],
       "css": [
         "/build/341.a95ed0fe.css",
-        "/build/default.9ac734a8.css"
+        "/build/default.15b7c064.css"
       ]
     },
     "icons": {
       "js": [
-        "/build/runtime.2e07592d.js"
+        "/build/runtime.b16de59f.js"
       ],
       "css": [
         "/build/437.968ce4dc.css",
