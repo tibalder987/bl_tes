@@ -259,9 +259,7 @@
     "viewport": "desktop-1024",
     "size": "1024x768",
     "screenshot": "desktop-1024.png",
-    "issues": [
-      "horizontal-overflow: body=1063px, viewport=1024px"
-    ],
+    "issues": [],
     "checks": {
       "h1Count": 1,
       "skipLink": true,
@@ -277,8 +275,8 @@
       "dateItemsTabindex": true,
       "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
-      "horizontalOverflow": true,
-      "bodyScrollWidth": 1063,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1024,
       "viewportWidth": 1024,
       "unlabeledButtons": [],
       "unlabeledLinks": [],
