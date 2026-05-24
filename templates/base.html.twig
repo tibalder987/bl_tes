@@ -45,15 +45,14 @@
 			<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap">
 			<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 			<noscript><link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></noscript>
-			{# Preload critical fonts: Balney (custom) + FA woff2 subsets actually used (solid, regular) #}
+			{# Preload Balney (custom display font used in headings — critical) #}
 			<link rel="preload" as="font" href="{{ asset('build/fonts/Balney.otf') }}" crossorigin="anonymous" type="font/otf">
-			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-solid-900.woff2') }}" crossorigin="anonymous" type="font/woff2">
-			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-regular-400.woff2') }}" crossorigin="anonymous" type="font/woff2">
 			{% if app.request.attributes.get('_route') == 'app_home_page' %}
 				{# Preload hero image LCP — WebP pour les navigateurs compatibles, fallback JPG #}
 				<link rel="preload" as="image"
 					href="{{ asset('images/home/hero-section/background.webp') }}"
 					imagesrcset="{{ asset('images/home/hero-section/background.webp') }}"
+					imagesizes="100vw"
 					type="image/webp"
 					fetchpriority="high">
 			{% endif %}
