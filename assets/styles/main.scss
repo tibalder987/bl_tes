@@ -6,18 +6,25 @@
     font-display: swap;
 }
 
+// ─── Focus visible global ──────────────────────────────────────────────────
+:focus-visible {
+    outline: 2px solid $color-gold;
+    outline-offset: 3px;
+}
+
 body {
     font-family: $font-epilogue;
+    line-height: $line-height-body;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top: 108px;
+    padding-top: $header-height-desktop;
 
     @media (max-width: 1280px) {
-        padding-top: 90px;
+        padding-top: $header-height-tablet;
     }
     @media (max-width: 991px) {
-        padding-top: 70px;
+        padding-top: $header-height-mobile;
     }
 
     &.is-loading {
@@ -139,45 +146,42 @@ p {
     margin: 0px;
 }
 
-.btn-primary {
-    border-radius: 27px;
-    background: $color-red;
-    color: #fff;
+// ─── Mixin bouton de base ──────────────────────────────────────────────────
+@mixin btn-base {
+    border-radius: $radius-btn;
     font-family: $font-epilogue;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 16px 30px 13px 30px;
+    padding: 16px 30px 13px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     line-height: 1;
-
-    transition: all 0.4s ease-out;
     position: relative;
+    transition: $transition-btn;
+    cursor: pointer;
+    border: none;
+
     i {
         font-size: 15px;
         margin-bottom: 5px;
         position: absolute;
         right: 30px;
-
         opacity: 0;
-        transition: all 0.4s ease-out;
+        transition: $transition-btn;
     }
 
     &:hover {
         padding-right: 60px;
-        i {
-            opacity: 1;
-        }
+        i { opacity: 1; }
     }
 
     @media (max-width: 991px) {
-        padding: 10px 40px 8px 20px !important;
+        padding: 10px 40px 8px 20px;
         font-size: 16px;
-        gap: 10px;
         i {
             opacity: 1;
             font-size: 12px;
@@ -185,102 +189,25 @@ p {
             top: 11px;
         }
     }
+}
+
+.btn-primary {
+    @include btn-base;
+    background: $color-cta;
+    color: $color-text-light;
 }
 
 .btn-outline {
-    border-radius: 27px;
+    @include btn-base;
     background: transparent;
-    border: 1px solid #ffffff;
-    color: #fff;
-    font-family: $font-epilogue;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 16px 30px 13px 30px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-
-    transition: all 0.4s ease-out;
-    position: relative;
-    i {
-        font-size: 15px;
-        margin-bottom: 5px;
-        position: absolute;
-        right: 30px;
-
-        opacity: 0;
-        transition: all 0.4s ease-out;
-    }
-
-    &:hover {
-        padding-right: 60px;
-        i {
-            opacity: 1;
-        }
-    }
-
-    @media (max-width: 991px) {
-        padding: 10px 40px 8px 20px !important;
-        font-size: 16px;
-        gap: 10px;
-        i {
-            opacity: 1;
-            font-size: 12px;
-            right: 20px;
-            top: 11px;
-        }
-    }
+    border: 1px solid $color-text-light;
+    color: $color-text-light;
 }
 
 .btn-secondary {
-    appearance: none;
-    border-radius: 27px;
-    background: #ffffff;
-    color: #000000;
-    font-family: $font-epilogue;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 16px 30px 13px 30px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    line-height: 1;
-    position: relative;
-    transition: all 0.4s ease-out;
-    i {
-        font-size: 15px;
-        margin-bottom: 5px;
-        position: absolute;
-        right: 30px;
-        opacity: 0;
-        transition: all 0.4s ease-out;
-    }
-    &:hover {
-        padding-right: 60px !important;
-        i {
-            opacity: 1;
-        }
-    }
-
-    @media (max-width: 991px) {
-        padding: 10px 40px 8px 20px !important;
-        font-size: 16px;
-        gap: 10px;
-        i {
-            font-size: 12px;
-            right: 20px;
-            top: 11px;
-            opacity: 1;
-        }
-    }
+    @include btn-base;
+    background: $color-text-light;
+    color: $color-dark;
 }
 
 .vertical-arrow {

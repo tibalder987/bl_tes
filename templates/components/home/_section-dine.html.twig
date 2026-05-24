@@ -1,0 +1,46 @@
+<section class="section-4 have-animation" aria-labelledby="section-dine-heading">
+	<div class="vertical-arrow" aria-hidden="true">
+		<img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="">
+		<p>{{ 's4.arrow'|trans({}, 'home') }}</p>
+	</div>
+	<img
+		src="{{ asset('images/home/section-4/bm_restaurant.jpg') }}"
+		data-aos="fade-down" data-aos-delay="200"
+		class="section-4__table"
+		alt="{{ 'img.table'|trans({}, 'home')|e('html_attr') }}"
+		loading="lazy" width="800" height="600">
+	<img
+		src="{{ asset('images/home/section-4/fire.jpg') }}"
+		data-aos="fade-up" data-aos-delay="400"
+		class="section-4__fire-mobile"
+		alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}"
+		loading="lazy" width="480" height="640">
+	<div class="section-4__image-mobile">
+		<img
+			src="{{ asset('images/home/section-4/bm_restaurant.jpg') }}"
+			data-aos="fade-down" data-aos-delay="200"
+			class="section-4__table-mobile"
+			alt="{{ 'img.table'|trans({}, 'home')|e('html_attr') }}"
+			loading="lazy" width="800" height="600">
+	</div>
+	<div class="section-4__content">
+		<div class="section-4__left">
+			<h3 id="section-dine-heading" class="section-4__title icon-title">{{ 's4.title'|trans({}, 'home') }}</h3>
+			<p>{{ 's4.p'|trans({}, 'home')|raw }}</p>
+			<div>
+				<a href="{{ path('app_dine') }}" class="btn-secondary">
+					{{ 's4.btn'|trans({}, 'home') }}
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="section-4__image">
+				<img
+					src="{{ asset('images/home/section-4/fire.jpg') }}"
+					data-aos="fade-up" data-aos-delay="400"
+					class="section-4__fire"
+					alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}"
+					loading="lazy" width="480" height="640">
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,30 @@
+<section class="section-5 have-animation" aria-labelledby="section-flow-heading">
+	<img
+		src="{{ asset('images/home/section-5/water.jpg') }}"
+		data-aos="fade-down" data-aos-delay="200"
+		class="section-5__eagle-rays"
+		alt="{{ 'img.water'|trans({}, 'home')|e('html_attr') }}"
+		loading="lazy" width="800" height="600">
+	<div class="section-5__content">
+		<div class="section-5__left">
+			<div class="section-5__images">
+				<img
+					src="{{ asset('images/home/section-5/borabora_sunset.jpg') }}"
+					data-aos="fade-up" data-aos-delay="400"
+					class="section-5__sunset-sailboat"
+					alt="{{ 'img.flow'|trans({}, 'home')|e('html_attr') }}"
+					loading="lazy" width="480" height="640">
+			</div>
+		</div>
+		<div class="section-5__right">
+			<h3 id="section-flow-heading" class="section-5__title icon-title">{{ 's5.title'|trans({}, 'home') }}</h3>
+			<p>{{ 's5.p'|trans({}, 'home')|raw }}</p>
+			<div>
+				<a href="{{ path('app_flow') }}" class="btn-secondary">
+					{{ 's5.btn'|trans({}, 'home') }}
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

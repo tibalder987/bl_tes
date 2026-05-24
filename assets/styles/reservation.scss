@@ -409,6 +409,17 @@
   // ------------------------------------------------------------------
   // Champ
   // ------------------------------------------------------------------
+  // Reset navigateur quand l'item est un <button> (trigger voyageurs)
+  button.reservation-module__item {
+    appearance: none;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    text-align: left;
+  }
+
   .reservation-module__item {
     position: relative;
     display: flex;

@@ -1,0 +1,61 @@
+<section class="section-1" aria-labelledby="section-story-heading">
+	<h2 id="section-story-heading" class="section-1__titles">
+		<span class="section-1__title">{{ 's1.title'|trans({}, 'home') }}</span>
+		<span class="section-1__subtitle">
+			{{ 's1.subtitle_lived'|trans({}, 'home') }}
+			<span class="section-1__subtitle-2">{{ 's1.subtitle_diff'|trans({}, 'home') }}</span>
+		</span>
+	</h2>
+	<div class="section-1__content">
+		<div class="section-1__left">
+			<div class="section-1__images">
+				<img
+					data-aos="fade-up" data-aos-delay="200"
+					src="{{ asset('images/home/section-1/tiki_jardin.jpg') }}"
+					class="section-1__totem-sign"
+					alt="{{ 'img.tiki'|trans({}, 'home')|e('html_attr') }}"
+					loading="lazy" width="480" height="640">
+				<img
+					data-aos="fade-down" data-aos-delay="400"
+					src="{{ asset('images/home/section-1/chicago_1999.jpg') }}"
+					class="section-1__chicago-band"
+					alt="{{ 'img.orchestre'|trans({}, 'home')|e('html_attr') }}"
+					loading="lazy" width="480" height="360">
+			</div>
+		</div>
+		<div class="section-1__right">
+			<p>{{ 's1.p1'|trans({}, 'home')|raw }}</p>
+			<p>{{ 's1.p2'|trans({}, 'home')|raw }}</p>
+			<p>{{ 's1.p3'|trans({}, 'home')|raw }}</p>
+			<div>
+				<a href="{{ path('app_our_story') }}" class="btn-primary">
+					{{ 's1.btn'|trans({}, 'home') }}
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="section-1__subcontent-container">
+		<div class="vertical-arrow" aria-hidden="true">
+			<img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="">
+			<p>{{ 's1.arrow_flow'|trans({}, 'home') }}</p>
+		</div>
+		<div class="section-1__subcontent">
+			<p class="section-1__subcontent-text">
+				{{ 's1.sub.no_scripts'|trans({}, 'home') }}<br>
+				<span class="balney-text">{{ 's1.sub.just_you'|trans({}, 'home') }}</span>
+				{{ 's1.sub.island'|trans({}, 'home') }}<br>
+				<span class="hide-fr">
+					{{ 's1.sub.thanks_prefix'|trans({}, 'home') }}
+					<span class="shape balney-text">{{ 's1.sub.thanks'|trans({}, 'home') }}</span>
+				</span>
+			</p>
+			<img
+				data-aos="fade-up" data-aos-delay="200"
+				src="{{ asset('images/home/section-1/vahine.jpg') }}"
+				class="section-1__vahine"
+				alt="{{ 'img.flower_s1'|trans({}, 'home')|e('html_attr') }}"
+				loading="lazy" width="320" height="480">
+		</div>
+	</div>
+</section>

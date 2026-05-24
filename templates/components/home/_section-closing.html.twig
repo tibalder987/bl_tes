@@ -1,0 +1,25 @@
+<section class="section-8" aria-labelledby="section-closing-heading">
+	<div class="section-8__content">
+		<div class="section-8__left">
+			<p id="section-closing-heading" class="section-8__title">{{ 's8.title'|trans({}, 'home') }}</p>
+			<div class="section-8__subtitle">
+				{{ 's8.sub_beyond'|trans({}, 'home') }}
+				<div class="section-8__subtitle-2">{{ 's8.sub_postcard'|trans({}, 'home') }}</div>
+			</div>
+			<div class="section-8__text">
+				<p>{{ 's8.p1'|trans({}, 'home')|raw }}</p>
+				<p>{{ 's8.p2'|trans({}, 'home')|raw }}</p>
+				<p>{{ 's8.p3'|trans({}, 'home')|raw }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="section-8__subcontent">
+		<p class="section-8__subcontent-text">{{ 's8.subcontent'|trans({}, 'home')|raw }}</p>
+		<img
+			src="{{ asset('images/home/section-8/sunset.jpg') }}"
+			data-aos="fade-up" data-aos-delay="400"
+			class="section-8__sunset-islands"
+			alt="{{ 'img.boat'|trans({}, 'home')|e('html_attr') }}"
+			loading="lazy" width="800" height="600">
+	</div>
+</section>

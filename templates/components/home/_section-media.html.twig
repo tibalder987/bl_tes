@@ -1,0 +1,52 @@
+<section class="section-6 have-animation" aria-labelledby="section-experience-heading">
+	<div class="vertical-arrow" aria-hidden="true">
+		<img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="">
+		<p>{{ 's6.arrow'|trans({}, 'home') }}</p>
+	</div>
+	<div class="section-6__content">
+		<div class="section-6__left">
+			<h3 id="section-experience-heading" class="section-6__title icon-title">{{ 's6.title'|trans({}, 'home') }}</h3>
+			<p>{{ 's6.p'|trans({}, 'home')|raw }}</p>
+			<div>
+				<a href="{{ path('app_stay') }}" class="btn-secondary">
+					{{ 's6.btn'|trans({}, 'home') }}
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-7" aria-label="{{ 'img.wild'|trans({}, 'home')|e('html_attr') }}">
+	<div class="section-7__content-container">
+		<img
+			src="{{ asset('images/home/section-7/wild.jpg') }}"
+			class="section-7__otemanu-view"
+			data-aos="fade-down" data-aos-delay="200"
+			alt="{{ 'img.wild'|trans({}, 'home')|e('html_attr') }}"
+			loading="lazy" width="800" height="600">
+		<div class="section-7__images">
+			<img
+				src="{{ asset('images/home/section-7/flower.jpg') }}"
+				class="section-7__hibiscus"
+				data-aos="fade-up" data-aos-delay="400"
+				alt="{{ 'img.flower_s7'|trans({}, 'home')|e('html_attr') }}"
+				loading="lazy" width="400" height="600">
+			<img
+				src="{{ asset('images/home/section-7/guitar.jpg') }}"
+				class="section-7__musician"
+				data-aos="fade-up" data-aos-delay="600"
+				alt="{{ 'img.guitar'|trans({}, 'home')|e('html_attr') }}"
+				loading="lazy" width="400" height="600">
+		</div>
+	</div>
+	<div class="section-7__content">
+		<video
+			class="section-7__video"
+			autoplay muted loop playsinline
+			preload="none"
+			aria-hidden="true">
+			<source src="{{ asset('video/section-7.mp4') }}" type="video/mp4">
+		</video>
+	</div>
+</section>

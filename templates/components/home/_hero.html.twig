@@ -1,0 +1,101 @@
+<section class="hero-section">
+	<div class="reservation-module">
+		<div id="reservation-calendar-mount" class="reservation-module__calendar-mount">
+			<input type="text" id="reservation-flatpickr-anchor" class="reservation-module__flatpickr-anchor" tabindex="-1" readonly aria-hidden="true">
+		</div>
+		<div id="reservation-guests-popover-mount" class="reservation-module__guests-popover-mount" aria-hidden="true">
+			<div id="reservation-guests-popover" class="reservation-module__guests-popover" role="dialog" aria-modal="true" aria-labelledby="reservation-guests-popover-heading">
+				<h2 id="reservation-guests-popover-heading" class="reservation-module__guests-popover-heading">{{ 'reservation.popover.title'|trans({}, 'home') }}</h2>
+				<div class="reservation-module__guests-row">
+					<div class="reservation-module__guests-row-text">
+						<span class="reservation-module__guests-row-label">{{ 'reservation.popover.adults'|trans({}, 'home') }}</span>
+						<span class="reservation-module__guests-row-hint">{{ 'reservation.popover.adults_hint'|trans({}, 'home') }}</span>
+					</div>
+					<div class="reservation-module__guests-stepper" data-guest-stepper="adults" data-min="1" data-max="12">
+						<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="down" aria-label="{{ 'reservation.popover.adults_decrease_aria'|trans({}, 'home')|e('html_attr') }}">−</button>
+						<span class="reservation-module__guests-stepper-value" data-guest-stepper-value>2</span>
+						<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="up" aria-label="{{ 'reservation.popover.adults_increase_aria'|trans({}, 'home')|e('html_attr') }}">+</button>
+					</div>
+				</div>
+				<div class="reservation-module__guests-row">
+					<div class="reservation-module__guests-row-text">
+						<span class="reservation-module__guests-row-label">{{ 'reservation.popover.kids'|trans({}, 'home') }}</span>
+						<span class="reservation-module__guests-row-hint">{{ 'reservation.popover.kids_hint'|trans({}, 'home') }}</span>
+					</div>
+					<div class="reservation-module__guests-stepper" data-guest-stepper="kids" data-min="0" data-max="10">
+						<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="down" aria-label="{{ 'reservation.popover.kids_decrease_aria'|trans({}, 'home')|e('html_attr') }}">−</button>
+						<span class="reservation-module__guests-stepper-value" data-guest-stepper-value>0</span>
+						<button type="button" class="reservation-module__guests-stepper-btn" data-guest-step="up" aria-label="{{ 'reservation.popover.kids_increase_aria'|trans({}, 'home')|e('html_attr') }}">+</button>
+					</div>
+				</div>
+				<button type="button" class="reservation-module__guests-done" id="reservation-guests-done">{{ 'reservation.popover.done'|trans({}, 'home') }}</button>
+			</div>
+		</div>
+		<form id="hero-reservation-form" class="reservation-module__form" action="https://booking.prox-i.pf" method="get" accept-charset="utf-8" data-guests-summary-i18n="{{ { adults_one: 'reservation.guests_summary.adults_one'|trans({}, 'home'), adults: 'reservation.guests_summary.adults'|trans({}, 'home'), kid_one: 'reservation.guests_summary.kid_one'|trans({}, 'home'), kids: 'reservation.guests_summary.kids'|trans({}, 'home'), sep: 'reservation.guests_summary.sep'|trans({}, 'home'), }|json_encode|e('html_attr') }}">
+			<div class="reservation-module__content">
+				<div class="reservation-module__items">
+					<div class="reservation-module__dates" data-reservation-dates role="group" aria-label="{{ 'reservation.dates_aria'|trans({}, 'home')|e('html_attr') }}" aria-expanded="false">
+						<div class="reservation-module__dates-row">
+							<div class="reservation-module__item" data-reservation-field="checkin">
+								<i class="reservation-module__item-icon fa-regular fa-calendar" aria-hidden="true"></i>
+								<div class="reservation-module__item-body">
+									<div class="reservation-module__item-select">
+										<span>{{ 'reservation.checkin'|trans({}, 'home') }}</span>
+									</div>
+									<div class="reservation-module__item-value">
+										<input type="hidden" name="checkin" id="reservation-checkin" value="" required>
+										<input type="text" id="reservation-checkin-display" class="reservation-module__fp-alt" placeholder="{{ 'reservation.add_date'|trans({}, 'home')|e('html_attr') }}" autocomplete="off" readonly inputmode="none" tabindex="-1" aria-hidden="true" aria-label="{{ 'reservation.checkin_date_aria'|trans({}, 'home')|e('html_attr') }}">
+									</div>
+								</div>
+							</div>
+							<div class="reservation-module__sperator reservation-module__sperator--in-dates"></div>
+							<div class="reservation-module__item" data-reservation-field="checkout">
+								<i class="reservation-module__item-icon fa-regular fa-calendar" aria-hidden="true"></i>
+								<div class="reservation-module__item-body">
+									<div class="reservation-module__item-select">
+										<span>{{ 'reservation.checkout'|trans({}, 'home') }}</span>
+									</div>
+									<div class="reservation-module__item-value">
+										<input type="hidden" name="checkout" id="reservation-checkout" value="" required>
+										<input type="text" id="reservation-checkout-display" class="reservation-module__fp-alt" placeholder="{{ 'reservation.add_date'|trans({}, 'home')|e('html_attr') }}" autocomplete="off" readonly inputmode="none" tabindex="-1" aria-hidden="true" aria-label="{{ 'reservation.checkout_date_aria'|trans({}, 'home')|e('html_attr') }}">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="reservation-module__sperator"></div>
+					{# Corrigé : div[role=button] → button natif pour accessibilité clavier #}
+					<button type="button" class="reservation-module__item reservation-module__item--guests" data-reservation-field="guests" aria-expanded="false" aria-controls="reservation-guests-popover" aria-label="{{ 'reservation.guests'|trans({}, 'home')|e('html_attr') }}">
+						<i class="reservation-module__item-icon fa-regular fa-user-group" aria-hidden="true"></i>
+						<div class="reservation-module__item-body">
+							<div class="reservation-module__item-select">
+								<span>{{ 'reservation.guests'|trans({}, 'home') }}</span>
+							</div>
+							<div class="reservation-module__item-value">
+								<span id="reservation-guests-summary" class="reservation-module__guests-summary">{{ 'reservation.guests_summary_default'|trans({}, 'home') }}</span>
+								<input type="hidden" name="adults" id="reservation-adults" value="2" required>
+								<input type="hidden" name="kids" id="reservation-kids" value="0" required>
+							</div>
+						</div>
+					</button>
+				</div>
+				<button type="submit" class="btn-search">
+					<span>{{ 'reservation.explore'|trans({}, 'home') }}</span>
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</button>
+			</div>
+		</form>
+	</div>
+	<img
+		src="{{ asset('images/home/hero-section/background.jpg') }}"
+		class="hero-section__background"
+		alt="{{ 'hero.background'|trans({}, 'home')|e('html_attr') }}"
+		loading="eager"
+		fetchpriority="high"
+		width="1920"
+		height="1080">
+	<div class="hero-section__content">
+		<h1 class="hero-section__title">{{ 'hero.opening'|trans({}, 'home') }}</h1>
+		<p class="hero-section__subtitle">{{ 'hero.summer'|trans({}, 'home') }}</p>
+	</div>
+</section>
