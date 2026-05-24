@@ -99,6 +99,39 @@
 			{{ render(path('app_footer')) }}
 		{% endblock %}
 
+		<script>
+			/* Inline loader-hide: runs before app.js bundle downloads, catches hero preload. */
+			(function() {
+				var body = document.body;
+				var loader = document.querySelector('.main-loader');
+				if (!loader) return;
+				var hiding = false;
+				function hideLoader() {
+					if (hiding) return; hiding = true;
+					window.__loaderHiding = true;
+					loader.classList.add('is-hiding');
+					var done = false;
+					function cleanup() {
+						if (done) return; done = true;
+						body.classList.remove('is-loading');
+						loader.remove();
+						window.__loaderHidden = true;
+						if (typeof window.__onLoaderHidden === 'function') window.__onLoaderHidden();
+					}
+					loader.addEventListener('transitionend', cleanup, { once: true });
+					setTimeout(cleanup, 300);
+				}
+				var hero = document.querySelector('.hero-section__background');
+				if (hero) {
+					if (hero.complete && hero.naturalWidth > 0) { hideLoader(); }
+					else {
+						hero.addEventListener('load', hideLoader, { once: true });
+						hero.addEventListener('error', hideLoader, { once: true });
+					}
+				}
+				setTimeout(hideLoader, 2500);
+			})();
+		</script>
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}

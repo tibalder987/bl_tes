@@ -43,7 +43,7 @@ function runAosInit() {
 }
 
 const hideMainLoader = () => {
-    if (loaderHiding) return;
+    if (loaderHiding || window.__loaderHiding) return;
     loaderHiding = true;
 
     if (!mainLoader) {
@@ -67,7 +67,10 @@ const hideMainLoader = () => {
     window.setTimeout(cleanup, 300);
 };
 
-// Hide loader as soon as the hero LCP image is loaded, respecting 500ms minimum.
+// Register AOS callback for inline loader script, or run immediately if loader already gone.
+window.__onLoaderHidden = runAosInit;
+if (window.__loaderHidden) runAosInit();
+
 // Falls back to window.load (non-home pages) and 2500ms cap (slow connections).
 const scheduleHide = () => {
     const elapsed = Date.now() - pageLoadStart;
