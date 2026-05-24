@@ -64,7 +64,7 @@ const hideMainLoader = () => {
     };
 
     mainLoader.addEventListener('transitionend', cleanup, { once: true });
-    window.setTimeout(cleanup, 900);
+    window.setTimeout(cleanup, 500);
 };
 
 // Cap loader at 2500ms so LCP is never blocked beyond this threshold.
