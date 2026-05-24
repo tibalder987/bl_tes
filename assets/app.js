@@ -20,7 +20,7 @@ import { isMobileAosViewport, scaleDownAosDelaysForMobile } from './js/aos-utils
 import './images/deco.png';
 
 const pageLoadStart = Date.now();
-const minimumLoaderDuration = 500;
+const minimumLoaderDuration = 300;
 
 // Scripts are at end of <body> — DOM is fully parsed here.
 const body = document.body;
@@ -64,7 +64,7 @@ const hideMainLoader = () => {
     };
 
     mainLoader.addEventListener('transitionend', cleanup, { once: true });
-    window.setTimeout(cleanup, 500);
+    window.setTimeout(cleanup, 300);
 };
 
 // Hide loader as soon as the hero LCP image is loaded, respecting 500ms minimum.
