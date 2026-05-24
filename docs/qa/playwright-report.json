@@ -1,0 +1,149 @@
+[
+  {
+    "viewport": "mobile-375",
+    "size": "375x812",
+    "screenshot": "/Users/thibaultdereviere/Downloads/bloody-marys-v2/bl_tes/docs/qa/screenshots/mobile-375.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "a11y": {
+      "skipLink": true,
+      "htmlLang": "fr",
+      "imgsWithoutAlt": [],
+      "btnsWithoutLabel": [],
+      "h1Count": 1,
+      "reservationForm": true,
+      "checkinInput": true,
+      "checkoutInput": true,
+      "webpSourceCount": 6,
+      "pictureCount": 6
+    },
+    "faLoaded": "\"Font Awesome 7 Pro\""
+  },
+  {
+    "viewport": "mobile-390",
+    "size": "390x844",
+    "screenshot": "/Users/thibaultdereviere/Downloads/bloody-marys-v2/bl_tes/docs/qa/screenshots/mobile-390.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "a11y": {
+      "skipLink": true,
+      "htmlLang": "fr",
+      "imgsWithoutAlt": [],
+      "btnsWithoutLabel": [],
+      "h1Count": 1,
+      "reservationForm": true,
+      "checkinInput": true,
+      "checkoutInput": true,
+      "webpSourceCount": 6,
+      "pictureCount": 6
+    },
+    "faLoaded": "\"Font Awesome 7 Pro\""
+  },
+  {
+    "viewport": "mobile-430",
+    "size": "430x932",
+    "screenshot": "/Users/thibaultdereviere/Downloads/bloody-marys-v2/bl_tes/docs/qa/screenshots/mobile-430.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "a11y": {
+      "skipLink": true,
+      "htmlLang": "fr",
+      "imgsWithoutAlt": [],
+      "btnsWithoutLabel": [],
+      "h1Count": 1,
+      "reservationForm": true,
+      "checkinInput": true,
+      "checkoutInput": true,
+      "webpSourceCount": 6,
+      "pictureCount": 6
+    },
+    "faLoaded": "\"Font Awesome 7 Pro\""
+  },
+  {
+    "viewport": "tablet-768",
+    "size": "768x1024",
+    "screenshot": "/Users/thibaultdereviere/Downloads/bloody-marys-v2/bl_tes/docs/qa/screenshots/tablet-768.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "a11y": {
+      "skipLink": true,
+      "htmlLang": "fr",
+      "imgsWithoutAlt": [],
+      "btnsWithoutLabel": [],
+      "h1Count": 1,
+      "reservationForm": true,
+      "checkinInput": true,
+      "checkoutInput": true,
+      "webpSourceCount": 6,
+      "pictureCount": 6
+    },
+    "faLoaded": "\"Font Awesome 7 Pro\""
+  },
+  {
+    "viewport": "desktop-1024",
+    "size": "1024x768",
+    "screenshot": "/Users/thibaultdereviere/Downloads/bloody-marys-v2/bl_tes/docs/qa/screenshots/desktop-1024.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "a11y": {
+      "skipLink": true,
+      "htmlLang": "fr",
+      "imgsWithoutAlt": [],
+      "btnsWithoutLabel": [],
+      "h1Count": 1,
+      "reservationForm": true,
+      "checkinInput": true,
+      "checkoutInput": true,
+      "webpSourceCount": 6,
+      "pictureCount": 6
+    },
+    "faLoaded": "\"Font Awesome 7 Pro\""
+  },
+  {
+    "viewport": "desktop-1280",
+    "size": "1280x800",
+    "screenshot": "/Users/thibaultdereviere/Downloads/bloody-marys-v2/bl_tes/docs/qa/screenshots/desktop-1280.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "a11y": {
+      "skipLink": true,
+      "htmlLang": "fr",
+      "imgsWithoutAlt": [],
+      "btnsWithoutLabel": [],
+      "h1Count": 1,
+      "reservationForm": true,
+      "checkinInput": true,
+      "checkoutInput": true,
+      "webpSourceCount": 6,
+      "pictureCount": 6
+    },
+    "faLoaded": "\"Font Awesome 7 Pro\""
+  },
+  {
+    "viewport": "desktop-1440",
+    "size": "1440x900",
+    "screenshot": "/Users/thibaultdereviere/Downloads/bloody-marys-v2/bl_tes/docs/qa/screenshots/desktop-1440.png",
+    "issues": [
+      "request-failed: https://bltes-production.up.railway.app/video/section-7.mp4"
+    ],
+    "a11y": {
+      "skipLink": true,
+      "htmlLang": "fr",
+      "imgsWithoutAlt": [],
+      "btnsWithoutLabel": [],
+      "h1Count": 1,
+      "reservationForm": true,
+      "checkinInput": true,
+      "checkoutInput": true,
+      "webpSourceCount": 6,
+      "pictureCount": 6
+    },
+    "faLoaded": "\"Font Awesome 7 Pro\""
+  }
+]

@@ -308,7 +308,7 @@ function initReservationHero() {
         calendarOpen = false;
     }
 
-    datesBlock.addEventListener('click', function (e) {
+    function handleDatesInteraction(e) {
         if (e.target.closest('.flatpickr-calendar')) {
             return;
         }
@@ -323,6 +323,15 @@ function initReservationHero() {
         }
 
         openCalendar();
+    }
+
+    datesBlock.addEventListener('click', handleDatesInteraction);
+
+    datesBlock.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') {
+            return;
+        }
+        handleDatesInteraction(e);
     });
 
     // -------------------------------------------------------------------------

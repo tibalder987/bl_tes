@@ -2,131 +2,125 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
-        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
-        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
-        "/build/vendors-node_modules_core-js_internals_delete-property-or-throw_js-node_modules_core-js_inter-6a42c7.js",
-        "/build/vendors-node_modules_core-js_modules_es_date_now_js-node_modules_selectize_dist_js_standalone-e52ce2.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_sort_js-node_modules_core-js_modules_es_set_js--e8dfb7.js",
-        "/build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-a71edf.js",
-        "/build/app.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/7.05d6cdeb.js",
+        "/build/759.b3822804.js",
+        "/build/249.047bdf44.js",
+        "/build/848.b7e19f1f.js",
+        "/build/61.4bd317c8.js",
+        "/build/237.4ad2bd0a.js",
+        "/build/18.ad1b34b4.js",
+        "/build/app.7954e559.js"
       ]
     },
     "app-article": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
-        "/build/app-article.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/7.05d6cdeb.js",
+        "/build/app-article.bedd9cf6.js"
       ]
     },
     "app-mediatheque": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
-        "/build/app-mediatheque.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/7.05d6cdeb.js",
+        "/build/app-mediatheque.b1c795d6.js"
       ]
     },
     "app-admin": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
-        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
-        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
-        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
-        "/build/vendors-node_modules_core-js_internals_delete-property-or-throw_js-node_modules_core-js_inter-6a42c7.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-088580.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_sort_js-node_modules_core-js_modules_es_set_js--e8dfb7.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_find-index_js-node_modules_core-js_modules_es_a-74108a.js",
-        "/build/app-admin.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/7.05d6cdeb.js",
+        "/build/759.b3822804.js",
+        "/build/249.047bdf44.js",
+        "/build/648.5b69016c.js",
+        "/build/848.b7e19f1f.js",
+        "/build/949.bad82513.js",
+        "/build/237.4ad2bd0a.js",
+        "/build/350.9a22b334.js",
+        "/build/app-admin.75fee072.js"
       ],
       "css": [
-        "/build/vendors-node_modules_core-js_modules_es_array_find-index_js-node_modules_core-js_modules_es_a-74108a.css",
-        "/build/assets_fonts_fontawesome_css_all_min_css.css",
-        "/build/app-admin.css"
+        "/build/437.968ce4dc.css",
+        "/build/app-admin.f8454866.css"
       ]
     },
     "app-map": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
-        "/build/app-map.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/759.b3822804.js",
+        "/build/app-map.deefde95.js"
       ]
     },
     "file-manager": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
-        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
-        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
-        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
-        "/build/vendors-node_modules_core-js_internals_delete-property-or-throw_js-node_modules_core-js_inter-6a42c7.js",
-        "/build/vendors-node_modules_core-js_modules_es_date_now_js-node_modules_selectize_dist_js_standalone-e52ce2.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_some_js-node_modules_core-js_modules_es_object_-ef25d7.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-0bfbc8.js",
-        "/build/file-manager.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/7.05d6cdeb.js",
+        "/build/759.b3822804.js",
+        "/build/249.047bdf44.js",
+        "/build/648.5b69016c.js",
+        "/build/848.b7e19f1f.js",
+        "/build/61.4bd317c8.js",
+        "/build/731.ab8aa878.js",
+        "/build/162.ac8669be.js",
+        "/build/file-manager.11562ac0.js"
       ],
       "css": [
-        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-0bfbc8.css",
-        "/build/file-manager.css"
+        "/build/file-manager.3006c411.css"
       ]
     },
     "file-selector": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
-        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
-        "/build/vendors-node_modules_core-js_internals_advance-string-index_js-node_modules_core-js_internals-97c0f6.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_some_js-node_modules_core-js_modules_es_object_-ef25d7.js",
-        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-d9423f.js",
-        "/build/file-selector.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/759.b3822804.js",
+        "/build/249.047bdf44.js",
+        "/build/648.5b69016c.js",
+        "/build/848.b7e19f1f.js",
+        "/build/731.ab8aa878.js",
+        "/build/file-selector.6f2b45da.js"
       ],
       "css": [
-        "/build/file-selector.css"
+        "/build/file-selector.1ff1d5cb.css"
       ]
     },
     "form-builder": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_arra-7be1ba.js",
-        "/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_modules_es_-f8ad3e.js",
-        "/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--d2a0ee.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-dab795.js",
-        "/build/vendors-node_modules_core-js_internals_correct-is-regexp-logic_js-node_modules_core-js_intern-51ca73.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-088580.js",
-        "/build/form-builder.js"
+        "/build/runtime.2e07592d.js",
+        "/build/645.c1f32c6f.js",
+        "/build/7.05d6cdeb.js",
+        "/build/759.b3822804.js",
+        "/build/249.047bdf44.js",
+        "/build/648.5b69016c.js",
+        "/build/949.bad82513.js",
+        "/build/form-builder.dad1dec2.js"
       ],
       "css": [
-        "/build/form-builder.css"
+        "/build/form-builder.aabca461.css"
       ]
     },
     "default": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.2e07592d.js"
       ],
       "css": [
-        "/build/vendors-node_modules_aos_dist_aos_css-node_modules_flatpickr_dist_flatpickr_min_css-node_modu-fd4718.css",
-        "/build/default.css"
+        "/build/341.a95ed0fe.css",
+        "/build/default.b4ccd988.css"
       ]
     },
     "icons": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.2e07592d.js"
       ],
       "css": [
-        "/build/assets_fonts_fontawesome_css_all_min_css.css",
-        "/build/icons.css"
+        "/build/437.968ce4dc.css",
+        "/build/icons.31d6cfe0.css"
       ]
     }
   }

@@ -3,25 +3,37 @@
 		<img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="">
 		<p>{{ 's4.arrow'|trans({}, 'home') }}</p>
 	</div>
-	<img
-		src="{{ asset('images/home/section-4/bm_restaurant.jpg') }}"
-		data-aos="fade-down" data-aos-delay="200"
-		class="section-4__table"
-		alt="{{ 'img.table'|trans({}, 'home')|e('html_attr') }}"
-		loading="lazy" decoding="async" width="800" height="600">
-	<img
-		src="{{ asset('images/home/section-4/fire.jpg') }}"
-		data-aos="fade-up" data-aos-delay="400"
-		class="section-4__fire-mobile"
-		alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}"
-		loading="lazy" decoding="async" width="480" height="640">
-	<div class="section-4__image-mobile">
+	<picture>
+		<source type="image/webp" srcset="{{ asset('images/home/section-4/bm_restaurant.webp') }}" sizes="(max-width: 768px) 100vw, 60vw">
 		<img
 			src="{{ asset('images/home/section-4/bm_restaurant.jpg') }}"
 			data-aos="fade-down" data-aos-delay="200"
-			class="section-4__table-mobile"
+			class="section-4__table"
 			alt="{{ 'img.table'|trans({}, 'home')|e('html_attr') }}"
+			sizes="(max-width: 768px) 100vw, 60vw"
 			loading="lazy" decoding="async" width="800" height="600">
+	</picture>
+	<picture>
+		<source type="image/webp" srcset="{{ asset('images/home/section-4/fire.webp') }}" sizes="(max-width: 768px) 80vw, 25vw">
+		<img
+			src="{{ asset('images/home/section-4/fire.jpg') }}"
+			data-aos="fade-up" data-aos-delay="400"
+			class="section-4__fire-mobile"
+			alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}"
+			sizes="(max-width: 768px) 80vw, 25vw"
+			loading="lazy" decoding="async" width="480" height="640">
+	</picture>
+	<div class="section-4__image-mobile">
+		<picture>
+			<source type="image/webp" srcset="{{ asset('images/home/section-4/bm_restaurant.webp') }}" sizes="(max-width: 768px) 100vw, 60vw">
+			<img
+				src="{{ asset('images/home/section-4/bm_restaurant.jpg') }}"
+				data-aos="fade-down" data-aos-delay="200"
+				class="section-4__table-mobile"
+				alt="{{ 'img.table'|trans({}, 'home')|e('html_attr') }}"
+				sizes="(max-width: 768px) 100vw, 60vw"
+				loading="lazy" decoding="async" width="800" height="600">
+		</picture>
 	</div>
 	<div class="section-4__content">
 		<div class="section-4__left">
@@ -34,12 +46,16 @@
 				</a>
 			</div>
 			<div class="section-4__image">
-				<img
-					src="{{ asset('images/home/section-4/fire.jpg') }}"
-					data-aos="fade-up" data-aos-delay="400"
-					class="section-4__fire"
-					alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}"
-					loading="lazy" decoding="async" width="480" height="640">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/home/section-4/fire.webp') }}" sizes="(max-width: 768px) 80vw, 25vw">
+					<img
+						src="{{ asset('images/home/section-4/fire.jpg') }}"
+						data-aos="fade-up" data-aos-delay="400"
+						class="section-4__fire"
+						alt="{{ 'img.fire_mob'|trans({}, 'home')|e('html_attr') }}"
+						sizes="(max-width: 768px) 80vw, 25vw"
+						loading="lazy" decoding="async" width="480" height="640">
+				</picture>
 			</div>
 		</div>
 	</div>
