@@ -82,3 +82,4 @@ s8.sub_postcard: Postcard
 s8.subcontent: <span>Meet us</span> just a short flight from <span class="shape">Tahiti Faa'a</span> International Airport.
 s8.title: Bora Bora
 reservation.book_mobile: Book now
+reservation.error.dates: "Please select your check-in and check-out dates."

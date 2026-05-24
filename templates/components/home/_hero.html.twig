@@ -31,7 +31,7 @@
 				<button type="button" class="reservation-module__guests-done" id="reservation-guests-done">{{ 'reservation.popover.done'|trans({}, 'home') }}</button>
 			</div>
 		</div>
-		<form id="hero-reservation-form" class="reservation-module__form" action="https://booking.prox-i.pf" method="get" accept-charset="utf-8" data-guests-summary-i18n="{{ { adults_one: 'reservation.guests_summary.adults_one'|trans({}, 'home'), adults: 'reservation.guests_summary.adults'|trans({}, 'home'), kid_one: 'reservation.guests_summary.kid_one'|trans({}, 'home'), kids: 'reservation.guests_summary.kids'|trans({}, 'home'), sep: 'reservation.guests_summary.sep'|trans({}, 'home'), }|json_encode|e('html_attr') }}">
+		<form id="hero-reservation-form" class="reservation-module__form" action="https://booking.prox-i.pf" method="get" accept-charset="utf-8" data-guests-summary-i18n="{{ { adults_one: 'reservation.guests_summary.adults_one'|trans({}, 'home'), adults: 'reservation.guests_summary.adults'|trans({}, 'home'), kid_one: 'reservation.guests_summary.kid_one'|trans({}, 'home'), kids: 'reservation.guests_summary.kids'|trans({}, 'home'), sep: 'reservation.guests_summary.sep'|trans({}, 'home'), }|json_encode|e('html_attr') }}" data-dates-error="{{ 'reservation.error.dates'|trans({}, 'home')|e('html_attr') }}">
 			<div class="reservation-module__content">
 				<div class="reservation-module__items">
 					<div class="reservation-module__dates" data-reservation-dates role="group" aria-label="{{ 'reservation.dates_aria'|trans({}, 'home')|e('html_attr') }}" aria-expanded="false">
@@ -84,6 +84,7 @@
 					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
 				</button>
 			</div>
+			<p id="reservation-dates-error" class="reservation-module__error" aria-live="assertive" aria-atomic="true"></p>
 		</form>
 	</div>
 	<picture>

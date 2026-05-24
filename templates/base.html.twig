@@ -9,6 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<meta name="theme-color" content="#951914">
 		<meta name="robots" content="index,follow"/>
 		<meta name="owner" content=""/>
 		<meta name="copyright" content="#PROX-I"/>
@@ -32,6 +33,8 @@
 			<meta property="og:description" content="{{ app.request.attributes.get('seo').metaDescription }}"/>
 			{% if app.request.attributes.get('seo').metaImageName != null %}
 				<meta property="og:image" content="{{ absolute_url(app.request.attributes.get('seo').metaImageName) }}"/>
+			{% elseif app.request.attributes.get('_route') == 'app_home_page' %}
+				<meta property="og:image" content="{{ absolute_url(asset('images/home/hero-section/background.jpg')) }}"/>
 			{% endif %}
 		{% endblock %}
 

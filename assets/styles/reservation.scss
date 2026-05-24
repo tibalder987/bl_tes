@@ -123,9 +123,24 @@
     display: flex;
     align-items: stretch;
     flex: 1 1 auto;
+    flex-direction: column;
     min-width: 0;
     width: 100%;
     margin: 0;
+  }
+
+  .reservation-module__error {
+    font-family: $font-epilogue;
+    font-size: 13px;
+    color: $color-white;
+    background: rgba($color-red, 0.9);
+    border-radius: $radius-card;
+    padding: 5px 10px;
+    margin: 6px 0 0;
+
+    &:empty {
+      display: none;
+    }
   }
 
   .reservation-module__content {

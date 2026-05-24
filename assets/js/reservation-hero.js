@@ -543,6 +543,26 @@ function initReservationHero() {
             closeCalendar(true);
         }
     });
+
+    const errorEl = document.getElementById('reservation-dates-error');
+    const datesErrorMsg = form.getAttribute('data-dates-error') || '';
+
+    form.addEventListener('submit', function (e) {
+        if (!checkinHidden.value || !checkoutHidden.value) {
+            e.preventDefault();
+            if (errorEl) {
+                errorEl.textContent = datesErrorMsg;
+            }
+            if (!calendarOpen) {
+                openCalendar(datesBlock);
+            }
+            datesBlock.focus();
+            return;
+        }
+        if (errorEl) {
+            errorEl.textContent = '';
+        }
+    });
 }
 
 if (document.readyState === 'loading') {
