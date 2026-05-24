@@ -20,7 +20,7 @@ import { isMobileAosViewport, scaleDownAosDelaysForMobile } from './js/aos-utils
 import './images/deco.png';
 
 const pageLoadStart = Date.now();
-const minimumLoaderDuration = 300;
+const minimumLoaderDuration = 0;
 
 // Scripts are at end of <body> — DOM is fully parsed here.
 const body = document.body;
