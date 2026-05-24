@@ -67,14 +67,29 @@ const hideMainLoader = () => {
     window.setTimeout(cleanup, 500);
 };
 
-// Cap loader at 2500ms so LCP is never blocked beyond this threshold.
-// window.load fires sooner in real usage; the cap only activates on throttled connections.
-window.setTimeout(hideMainLoader, 2500);
-
-$(window).on('load', function() {
+// Hide loader as soon as the hero LCP image is loaded, respecting 500ms minimum.
+// Falls back to window.load (non-home pages) and 2500ms cap (slow connections).
+const scheduleHide = () => {
     const elapsed = Date.now() - pageLoadStart;
     const remaining = Math.max(0, minimumLoaderDuration - elapsed);
     window.setTimeout(hideMainLoader, remaining);
+};
+
+const heroImg = document.querySelector('.hero-section__background');
+if (heroImg) {
+    if (heroImg.complete) {
+        scheduleHide();
+    } else {
+        heroImg.addEventListener('load', scheduleHide, { once: true });
+        heroImg.addEventListener('error', scheduleHide, { once: true });
+    }
+}
+
+// Absolute cap: 2500ms in case heroImg is absent or never fires.
+window.setTimeout(hideMainLoader, 2500);
+
+$(window).on('load', function() {
+    scheduleHide();
 
     $(".copy-to-clipboard").on('click', function() {
         const textToCopy = $(this).attr('data-link');
