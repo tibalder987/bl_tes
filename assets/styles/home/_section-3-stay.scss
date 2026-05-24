@@ -1,0 +1,182 @@
+// Dégradé section-3 : angle fixe 90deg ; seules les couleurs sont animées (@property).
+@property --homepage-section3-bg-c1 {
+  syntax: "<color>";
+  initial-value: #941914;
+  inherits: false;
+}
+
+@property --homepage-section3-bg-c2 {
+  syntax: "<color>";
+  initial-value: #941914;
+  inherits: false;
+}
+
+@property --homepage-section3-bg-c3 {
+  syntax: "<color>";
+  initial-value: #941914;
+  inherits: false;
+}
+
+.homepage {
+  .section-3 {
+    background-color: #941914;
+    background-image: linear-gradient(
+      90deg,
+      var(--homepage-section3-bg-c1) 38.94%,
+      var(--homepage-section3-bg-c2) 75.96%,
+      var(--homepage-section3-bg-c3) 100%
+    );
+    transition:
+      --homepage-section3-bg-c1 var(--gradient-transition-duration, 0.5s) ease,
+      --homepage-section3-bg-c2 var(--gradient-transition-duration, 0.5s) ease,
+      --homepage-section3-bg-c3 var(--gradient-transition-duration, 0.5s) ease;
+
+    &.is-animated {
+      --homepage-section3-bg-c1: #787a55;
+      --homepage-section3-bg-c2: #a38247;
+      --homepage-section3-bg-c3: #ce8a39;
+    }
+    padding-bottom: 304px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 210px;
+    }
+    .section-3__content {
+      display: flex;
+      gap: 117px;
+      padding-right: 50px;
+      position: relative;
+      padding-top: 50px;
+
+      @media (max-width: 1430px) {
+        gap: 90px;
+      }
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+      }
+
+      @media (max-width: 768px) {
+        gap: 70px;
+      }
+
+      @media (max-width: 500px) {
+        gap: 50px;
+      }
+
+      .section-3__sunset {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 323px;
+        z-index: 1;
+        translate: 0 -50%;
+
+        @media (max-width: 768px) {
+          top: -65px;
+          width: 260px;
+        }
+
+        @media (max-width: 500px) {
+          top: -$space-7;
+          width: 200px;
+        }
+      }
+      .section-3__left {
+        padding-left: 150px;
+        margin-top: -120px;
+        @media (max-width: 1280px) {
+          padding-left: 50px;
+        }
+        @media (max-width: 991px) {
+          padding-left: 0px;
+        }
+        .section-3__images {
+          position: relative;
+          width: fit-content;
+          display: flex;
+          .section-3__fare-peaks {
+            object-fit: contain;
+            height: 855px;
+            object-position: center;
+
+            max-width: min(638px, 44vw);
+            width: 100%;
+            min-width: 40vw;
+
+            @media (max-width: 1430px) {
+              max-width: 540px;
+            }
+            @media (max-width: 991px) {
+              height: auto;
+            }
+          }
+        }
+      }
+      .section-3__right {
+        padding-top: 210px;
+        @media (max-width: 991px) {
+          padding-top: 0px;
+          max-width: 540px;
+        }
+        .section-3__title {
+          color: $color-gold;
+          font-family: $font-balney;
+          font-size: 110px;
+          font-weight: 400;
+          line-height: 124px;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          @media (max-width: 768px) {
+            font-size: 90px;
+            line-height: 100px;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 70px;
+            line-height: 80px;
+          }
+        }
+        p {
+          color: #ffffff;
+          font-family: $font-epilogue;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 42px;
+          margin-top: $space-5;
+          max-width: 550px;
+
+          @media (max-width: 1470px) {
+            font-size: 22px;
+            line-height: 35px;
+          }
+          @media (max-width: 1024px) {
+            font-size: 20px;
+            line-height: 32px;
+          }
+          @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: $space-4;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: $space-3;
+          }
+        }
+        .btn-secondary {
+          margin-top: 60px;
+          @media (max-width: 768px) {
+            margin-top: $space-5;
+          }
+        }
+      }
+    }
+  }
+}

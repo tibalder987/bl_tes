@@ -1,0 +1,146 @@
+// Section 6 : 2 arrêts, angle fixe 90deg (équivalent 270deg animé avec couleurs inversées).
+@property --homepage-section6-bg-c1 {
+  syntax: "<color>";
+  initial-value: #e3cca3;
+  inherits: false;
+}
+
+@property --homepage-section6-bg-c2 {
+  syntax: "<color>";
+  initial-value: #3c849c;
+  inherits: false;
+}
+
+@property --homepage-section6-bg-p2 {
+  syntax: "<percentage>";
+  initial-value: 75.96%;
+  inherits: false;
+}
+
+.homepage {
+  .section-6 {
+    background-color: #e3cca3;
+    background-image: linear-gradient(
+      90deg,
+      var(--homepage-section6-bg-c1) 0%,
+      var(--homepage-section6-bg-c2) var(--homepage-section6-bg-p2)
+    );
+    transition:
+      --homepage-section6-bg-c1 var(--gradient-transition-duration, 0.5s) ease,
+      --homepage-section6-bg-c2 var(--gradient-transition-duration, 0.5s) ease,
+      --homepage-section6-bg-p2 var(--gradient-transition-duration, 0.5s) ease;
+
+    // Équivalent visuel de linear-gradient(270deg, #E3CCA3 0%, #7B5330 100%).
+    &.is-animated {
+      --homepage-section6-bg-c1: #7b5330;
+      --homepage-section6-bg-c2: #e3cca3;
+      --homepage-section6-bg-p2: 100%;
+    }
+
+    position: relative;
+    display: flex;
+    padding-top: 184px;
+    padding-bottom: 490px;
+    padding-left: 180px;
+    @media (max-width: 991px) {
+      padding: $space-7 65px 120px 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .vertical-arrow {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      background-image: url("../../shapes/frise.svg");
+      right: 153px;
+      width: 120px;
+      top: 0px;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+      background-repeat: repeat-y;
+      background-size: 120px;
+
+      @media (max-width: 991px) {
+        width: 55px;
+        right: 0px;
+        background-size: 55px;
+      }
+    }
+
+    .section-6__content {
+      margin-left: 10vw;
+      @media (max-width: 991px) {
+        margin-left: 0px;
+      }
+      .section-6__left {
+        @media (max-width: 991px) {
+          max-width: 540px;
+          width: 100%;
+        }
+        .section-6__title {
+          color: $color-gold;
+          font-family: $font-balney;
+          font-size: 110px;
+          font-weight: 400;
+          line-height: 124px;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          @media (max-width: 768px) {
+            font-size: 90px;
+            line-height: 100px;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 70px;
+            line-height: 80px;
+          }
+        }
+        p {
+          color: #ffffff;
+          font-family: $font-epilogue;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 42px;
+          margin-top: $space-5;
+
+          max-width: 550px;
+
+          @media (max-width: 1470px) {
+            font-size: 22px;
+            line-height: 35px;
+          }
+          @media (max-width: 1024px) {
+            font-size: 20px;
+            line-height: 32px;
+          }
+          @media (max-width: 991px) {
+            max-width: 100%;
+          }
+          @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: $space-4;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: $space-3;
+          }
+        }
+        .btn-secondary {
+          margin-top: 60px;
+          @media (max-width: 768px) {
+            margin-top: $space-5;
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,23 @@
     font-display: swap;
 }
 
+// ─── Skip-to-content ────────────────────────────────────────────────────────
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: $space-2 $space-3;
+    background: $color-dark;
+    color: $color-gold;
+    font-family: $font-epilogue;
+    font-size: 14px;
+    text-decoration: none;
+    z-index: $z-menu + 1;
+    &:focus {
+        top: 0;
+    }
+}
+
 // ─── Focus visible global ──────────────────────────────────────────────────
 :focus-visible {
     outline: 2px solid $color-gold;

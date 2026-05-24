@@ -6,7 +6,7 @@
 // Flatpickr : idem — importé depuis reservation-hero.js il irait dans l’entrée « app », non liée dans base.html.twig.
 @import "~flatpickr/dist/flatpickr.min.css";
 @import "~selectize/dist/css/selectize.css";
-@import "~select2/dist/css/select2.css";
+// select2 intentionally removed here — only used in admin builder (ElementFormMounter.js imports it directly).
 
 @import "variables";
 @import "main";

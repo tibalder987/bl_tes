@@ -1,0 +1,194 @@
+// Section 5 : 2 arrêts, angle fixe 90deg (équivalent 270deg avec couleurs inversées).
+@property --homepage-section5-bg-c1 {
+  syntax: "<color>";
+  initial-value: #951914;
+  inherits: false;
+}
+
+@property --homepage-section5-bg-c2 {
+  syntax: "<color>";
+  initial-value: #ce8a39;
+  inherits: false;
+}
+
+@property --homepage-section5-bg-p2 {
+  syntax: "<percentage>";
+  initial-value: 100%;
+  inherits: false;
+}
+
+.homepage {
+  .section-5 {
+    background-color: #ce8a39;
+    background-image: linear-gradient(
+      90deg,
+      var(--homepage-section5-bg-c1) 0%,
+      var(--homepage-section5-bg-c2) var(--homepage-section5-bg-p2)
+    );
+    transition:
+      --homepage-section5-bg-c1 var(--gradient-transition-duration, 0.5s) ease,
+      --homepage-section5-bg-c2 var(--gradient-transition-duration, 0.5s) ease,
+      --homepage-section5-bg-p2 var(--gradient-transition-duration, 0.5s) ease;
+
+    &.is-animated {
+      --homepage-section5-bg-c1: #e3cca3;
+      --homepage-section5-bg-c2: #3c849c;
+
+      --homepage-section5-bg-p2: 75.96%;
+
+      @media (max-width: 768px) {
+        --homepage-section5-bg-c1: #3c849c;
+        --homepage-section5-bg-c2: #e3cca3;
+        --homepage-section5-bg-p2: 105%;
+      }
+    }
+
+    padding-bottom: 270px;
+    margin-top: -140px;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 991px) {
+      margin-top: 0px;
+    }
+    @media (max-width: 768px) {
+      padding-bottom: 70px;
+    }
+    .section-5__eagle-rays {
+      position: absolute;
+      right: 60px;
+      bottom: -190px;
+      width: 514px;
+      z-index: 1;
+      @media (max-width: 991px) {
+        bottom: 500px;
+        top: unset;
+        width: 260px;
+        right: 0px;
+        @media (max-width: 768px) {
+          width: 200px;
+          bottom: 350px;
+        }
+      }
+    }
+    .section-5__content {
+      display: flex;
+      gap: 267px;
+      padding-right: 150px;
+      position: relative;
+
+      @media (max-width: 1530px) {
+        gap: 135px;
+      }
+
+      @media (max-width: 1400px) {
+        padding-right: 100px;
+        gap: 100px;
+      }
+      @media (max-width: 1280px) {
+        padding-right: $space-7;
+        gap: $space-7;
+      }
+      @media (max-width: 1024px) {
+        padding-right: 50px;
+        gap: 50px;
+      }
+      @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+      }
+
+      .section-5__left {
+        margin-top: -100px;
+        .section-5__images {
+          position: relative;
+          width: fit-content;
+          display: flex;
+          .section-5__sunset-sailboat {
+            max-width: 656px;
+            object-fit: contain;
+
+            @media (max-width: 1400px) {
+              height: 986px;
+              width: 520px;
+              object-fit: contain;
+              object-position: top;
+            }
+            @media (max-width: 991px) {
+              height: auto;
+              width: 100%;
+              max-width: 540px;
+            }
+          }
+        }
+      }
+      .section-5__right {
+        padding-top: 190px;
+        @media (max-width: 991px) {
+          padding-top: 0px;
+          max-width: 540px;
+          width: 100%;
+          margin-top: $space-7;
+        }
+        .section-5__title {
+          color: $color-gold;
+          font-family: $font-balney;
+          font-size: 110px;
+          font-weight: 400;
+          line-height: 124px;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          @media (max-width: 768px) {
+            font-size: 90px;
+            line-height: 100px;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 70px;
+            line-height: 80px;
+          }
+        }
+        p {
+          color: #ffffff;
+          font-family: $font-epilogue;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 42px;
+          margin-top: $space-5;
+          max-width: 550px;
+
+          @media (max-width: 1470px) {
+            font-size: 22px;
+            line-height: 35px;
+          }
+          @media (max-width: 1024px) {
+            font-size: 20px;
+            line-height: 32px;
+          }
+          @media (max-width: 991px) {
+            max-width: 100%;
+          }
+          @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: $space-4;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: $space-3;
+          }
+        }
+        .btn-secondary {
+          margin-top: 60px;
+          @media (max-width: 768px) {
+            margin-top: $space-5;
+          }
+        }
+      }
+    }
+  }
+}

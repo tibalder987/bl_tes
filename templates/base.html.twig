@@ -42,6 +42,7 @@
 		{% endblock %}
 	</head>
 	<body class="{% if bodyClass is defined %}{{ bodyClass }} {% endif %}is-locale-{{ app.request.locale }} is-loading" data-locale="{{ app.request.locale }}">
+		<a href="#main-content" class="skip-to-content">{{ 'nav.skip_to_content'|trans({}, 'menu') }}</a>
 		<div class="main-loader"><img src="{{ asset('images/loader/logo.svg') }}" alt="Chargement…"></div>
 		{% block menu %}
 			{% set menu_params = { homepage: false } %}
