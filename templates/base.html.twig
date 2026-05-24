@@ -41,7 +41,10 @@
 		{% block stylesheets %}
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			{# Google Fonts chargé en différé — élimine le render-blocking ; display=swap gère le FOUT #}
+			<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap">
+			<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+			<noscript><link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></noscript>
 			{# Preload critical fonts: Balney (custom) + FA woff2 subsets actually used (solid, regular) #}
 			<link rel="preload" as="font" href="{{ asset('build/fonts/Balney.otf') }}" crossorigin="anonymous" type="font/otf">
 			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-solid-900.woff2') }}" crossorigin="anonymous" type="font/woff2">
