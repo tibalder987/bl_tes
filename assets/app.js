@@ -20,46 +20,58 @@ import { isMobileAosViewport, scaleDownAosDelaysForMobile } from './js/aos-utils
 import './images/deco.png';
 
 const pageLoadStart = Date.now();
+const minimumLoaderDuration = 500;
 
-$(window).on('load', function() {
-    const body = document.body;
-    const mainLoader = document.querySelector('.main-loader');
-    const minimumLoaderDuration = 500;
+// Scripts are at end of <body> — DOM is fully parsed here.
+const body = document.body;
+const mainLoader = document.querySelector('.main-loader');
+let loaderHiding = false;
 
-    const hideMainLoader = () => {
-        if (!mainLoader) {
-            body.classList.remove('is-loading');
-            return;
-        }
+function runAosInit() {
+    scaleDownAosDelaysForMobile();
+    const mobile = isMobileAosViewport();
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    AOS.init({
+        once: true,
+        easing: 'ease-out',
+        // Mobile : déclenchement plus tôt (offset plus bas), animation plus courte.
+        duration: reducedMotion ? 0 : (mobile ? 500 : 1000),
+        offset: mobile ? 24 : 120,
+        throttleDelay: mobile ? 40 : 99,
+        disable: reducedMotion,
+    });
+}
 
-        mainLoader.classList.add('is-hiding');
-        let isCleanedUp = false;
+const hideMainLoader = () => {
+    if (loaderHiding) return;
+    loaderHiding = true;
 
-        const cleanup = () => {
-            if (isCleanedUp) {
-                return;
-            }
-            isCleanedUp = true;
-            body.classList.remove('is-loading');
-            mainLoader.remove();
-            scaleDownAosDelaysForMobile();
-            const mobile = isMobileAosViewport();
-            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            AOS.init({
-                once: true,
-                easing: 'ease-out',
-                // Mobile : déclenchement plus tôt (offset plus bas), animation plus courte.
-                duration: reducedMotion ? 0 : (mobile ? 500 : 1000),
-                offset: mobile ? 24 : 120,
-                throttleDelay: mobile ? 40 : 99,
-                disable: reducedMotion,
-            });
-        };
+    if (!mainLoader) {
+        body.classList.remove('is-loading');
+        runAosInit();
+        return;
+    }
 
-        mainLoader.addEventListener('transitionend', cleanup, { once: true });
-        window.setTimeout(cleanup, 900);
+    mainLoader.classList.add('is-hiding');
+    let isCleanedUp = false;
+
+    const cleanup = () => {
+        if (isCleanedUp) return;
+        isCleanedUp = true;
+        body.classList.remove('is-loading');
+        mainLoader.remove();
+        runAosInit();
     };
 
+    mainLoader.addEventListener('transitionend', cleanup, { once: true });
+    window.setTimeout(cleanup, 900);
+};
+
+// Cap loader at 2500ms so LCP is never blocked beyond this threshold.
+// window.load fires sooner in real usage; the cap only activates on throttled connections.
+window.setTimeout(hideMainLoader, 2500);
+
+$(window).on('load', function() {
     const elapsed = Date.now() - pageLoadStart;
     const remaining = Math.max(0, minimumLoaderDuration - elapsed);
     window.setTimeout(hideMainLoader, remaining);
