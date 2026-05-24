@@ -556,7 +556,10 @@ function initReservationHero() {
             if (!calendarOpen) {
                 openCalendar(datesBlock);
             }
-            datesBlock.focus();
+            const firstDateField = datesBlock.querySelector('[data-reservation-field]');
+            if (firstDateField) {
+                firstDateField.focus();
+            }
             return;
         }
         if (errorEl) {
