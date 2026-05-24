@@ -1,10 +1,14 @@
 <section class="section-5 have-animation" aria-labelledby="section-flow-heading">
-	<img
-		src="{{ asset('images/home/section-5/water.jpg') }}"
-		data-aos="fade-down" data-aos-delay="200"
-		class="section-5__eagle-rays"
-		alt="{{ 'img.water'|trans({}, 'home')|e('html_attr') }}"
-		loading="lazy" decoding="async" width="800" height="600">
+	<picture>
+		<source type="image/webp" srcset="{{ asset('images/home/section-5/water.webp') }}" sizes="(max-width: 768px) 100vw, 50vw">
+		<img
+			src="{{ asset('images/home/section-5/water.jpg') }}"
+			data-aos="fade-down" data-aos-delay="200"
+			class="section-5__eagle-rays"
+			alt="{{ 'img.water'|trans({}, 'home')|e('html_attr') }}"
+			sizes="(max-width: 768px) 100vw, 50vw"
+			loading="lazy" decoding="async" width="514" height="692">
+	</picture>
 	<div class="section-5__content">
 		<div class="section-5__left">
 			<div class="section-5__images">

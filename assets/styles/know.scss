@@ -16,7 +16,7 @@
     &__hero {
         position: relative;
         padding: clamp(100px, 14vw, 180px) 24px clamp(90px, 10vw, 140px);
-        background-image: linear-gradient(270deg, #ce8a39 0%, $color-red 100%);
+        background-image: linear-gradient(270deg, $color-sand 0%, $color-red 100%);
         text-align: center;
         color: #fff;
 
@@ -264,7 +264,7 @@
             text-align: center;
 
             a {
-                color: #951914;
+                color: $color-red;
             }
         }
     }

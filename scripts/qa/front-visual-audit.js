@@ -1,4 +1,4 @@
-// Playwright visual audit for Bloody Mary's Bora Bora
+// Playwright visual + functional audit for Bloody Mary's Bora Bora
 // Usage: node scripts/qa/front-visual-audit.js
 const { chromium } = require('playwright');
 const path = require('path');
@@ -22,7 +22,7 @@ async function run() {
   const results = [];
 
   for (const vp of VIEWPORTS) {
-    console.log(`Capturing ${vp.name} (${vp.width}x${vp.height})...`);
+    console.log(`\nCapturing ${vp.name} (${vp.width}x${vp.height})...`);
     const context = await browser.newContext({
       viewport: { width: vp.width, height: vp.height },
       userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120 Safari/537.36',
@@ -46,72 +46,140 @@ async function run() {
       issues.push(`navigation-timeout: ${e.message}`);
     }
 
-    // Wait for AOS animations to settle
-    await page.waitForTimeout(1200);
+    // Wait for AOS / JS to settle
+    await page.waitForTimeout(1500);
 
     // Full-page screenshot
     const screenshotPath = path.join(OUT_DIR, `${vp.name}.png`);
     await page.screenshot({ path: screenshotPath, fullPage: true });
 
-    // Accessibility checks
-    const a11y = await page.evaluate(() => {
-      const checks = {};
+    // === Automated checks ===
+    const checks = await page.evaluate((viewportWidth) => {
+      const r = {};
 
-      // skip-link present
-      checks.skipLink = !!document.querySelector('.skip-to-content');
+      // 1. H1 count
+      r.h1Count = document.querySelectorAll('h1').length;
 
-      // lang attribute on html
-      checks.htmlLang = document.documentElement.getAttribute('lang') || null;
+      // 2. Skip link exists and is correct
+      const skipLink = document.querySelector('.skip-to-content, [href="#main-content"]');
+      r.skipLink = !!skipLink;
+      r.skipLinkHref = skipLink ? skipLink.getAttribute('href') : null;
 
-      // All images have alt text
+      // 3. Unique IDs
+      const allIds = Array.from(document.querySelectorAll('[id]')).map(el => el.id);
+      const idCounts = {};
+      allIds.forEach(id => { idCounts[id] = (idCounts[id] || 0) + 1; });
+      r.duplicateIds = Object.keys(idCounts).filter(id => idCounts[id] > 1);
+
+      // 4. Images without alt
       const imgs = Array.from(document.querySelectorAll('img'));
-      const imgsWithoutAlt = imgs.filter(img => !img.hasAttribute('alt')).map(i => i.src);
-      checks.imgsWithoutAlt = imgsWithoutAlt;
+      r.imgsWithoutAlt = imgs.filter(img => !img.hasAttribute('alt')).map(i => i.src?.split('/').pop());
 
-      // Buttons have accessible label
-      const btns = Array.from(document.querySelectorAll('button'));
-      const btnsWithoutLabel = btns.filter(b => !b.textContent.trim() && !b.getAttribute('aria-label')).map(b => b.className);
-      checks.btnsWithoutLabel = btnsWithoutLabel;
+      // 5. Images without explicit dimensions
+      const contentImgs = imgs.filter(img => !img.closest('svg') && img.src && !img.src.includes('data:'));
+      r.imgsWithoutDimensions = contentImgs.filter(img => !img.width && !img.getAttribute('width')).map(i => i.src?.split('/').pop()).slice(0, 5);
 
-      // Headings hierarchy
-      const h1s = document.querySelectorAll('h1');
-      checks.h1Count = h1s.length;
+      // 6. Picture / WebP sources
+      r.pictureCount = document.querySelectorAll('picture').length;
+      r.webpSourceCount = document.querySelectorAll('source[type="image/webp"]').length;
 
-      // Reservation form
-      checks.reservationForm = !!document.querySelector('#hero-reservation-form');
-      checks.checkinInput = !!document.querySelector('#reservation-checkin');
-      checks.checkoutInput = !!document.querySelector('#reservation-checkout');
+      // 7. Reservation module present
+      r.reservationForm = !!document.querySelector('#hero-reservation-form');
+      r.reservationCheckin = !!document.querySelector('#reservation-checkin');
+      r.reservationCheckout = !!document.querySelector('#reservation-checkout');
 
-      // WebP images actually loaded
-      const sources = Array.from(document.querySelectorAll('source[type="image/webp"]'));
-      checks.webpSourceCount = sources.length;
+      // 8. Interactive reservation items have tabindex
+      const dateItems = document.querySelectorAll('[data-reservation-field]');
+      r.dateItemsTabindex = Array.from(dateItems).every(el => {
+        const tag = el.tagName.toLowerCase();
+        return tag === 'button' || el.getAttribute('tabindex') === '0' || el.tabIndex >= 0;
+      });
 
-      // picture elements
-      checks.pictureCount = document.querySelectorAll('picture').length;
+      // 9. Guest button type
+      const guestBtn = document.querySelector('[data-reservation-field="guests"]');
+      r.guestButtonType = guestBtn ? guestBtn.tagName.toLowerCase() + (guestBtn.getAttribute('type') ? '[type=' + guestBtn.getAttribute('type') + ']' : '') : null;
 
-      return checks;
-    });
+      // 10. FAB visible on mobile
+      const fab = document.querySelector('.book-fab');
+      if (fab) {
+        const style = window.getComputedStyle(fab);
+        r.fabDisplay = style.display;
+      } else {
+        r.fabDisplay = null;
+      }
 
-    // Check font awesome loaded
-    const faLoaded = await page.evaluate(() => {
-      const icons = document.querySelectorAll('.fa-arrow-right, .fa-calendar, .fa-user-group');
-      if (!icons.length) return 'no-fa-icons-found';
-      const style = window.getComputedStyle(icons[0], '::before');
-      return style.fontFamily || 'unknown';
-    });
+      // 11. Horizontal overflow detection
+      const bodyWidth = document.body.scrollWidth;
+      const viewWidth = window.innerWidth;
+      r.horizontalOverflow = bodyWidth > viewWidth + 2;
+      r.bodyScrollWidth = bodyWidth;
+      r.viewportWidth = viewWidth;
+
+      // 12. Buttons have accessible labels
+      const buttons = Array.from(document.querySelectorAll('button'));
+      r.unlabeledButtons = buttons
+        .filter(b => !b.textContent.trim() && !b.getAttribute('aria-label') && !b.getAttribute('aria-labelledby'))
+        .map(b => b.className.slice(0, 50));
+
+      // 13. Links have accessible names
+      const links = Array.from(document.querySelectorAll('a[href]'));
+      r.unlabeledLinks = links
+        .filter(a => !a.textContent.trim() && !a.getAttribute('aria-label') && !a.querySelector('img[alt]'))
+        .map(a => a.href?.split('/').slice(-2).join('/'))
+        .slice(0, 5);
+
+      // 14. Heading hierarchy (no skipped levels) — exclude aria-hidden containers
+      const headings = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"]'))
+        .filter(h => !h.closest('[aria-hidden="true"]'))
+        .map(h => {
+          const level = h.tagName.startsWith('H') ? parseInt(h.tagName[1]) : parseInt(h.getAttribute('aria-level') || '2');
+          return { level, text: h.textContent.trim().slice(0, 40) };
+        });
+      r.headings = headings;
+
+      // 15. JSON-LD present
+      r.jsonLd = !!document.querySelector('script[type="application/ld+json"]');
+
+      // 16. Canonical link
+      const canonical = document.querySelector('link[rel="canonical"]');
+      r.canonical = canonical ? canonical.href : null;
+
+      // 17. lang attribute on html
+      r.htmlLang = document.documentElement.getAttribute('lang');
+
+      return r;
+    }, vp.width);
+
+    // Report any overflow
+    if (checks.horizontalOverflow) {
+      issues.push(`horizontal-overflow: body=${checks.bodyScrollWidth}px, viewport=${checks.viewportWidth}px`);
+    }
+    if (checks.imgsWithoutAlt.length > 0) {
+      issues.push(`imgs-no-alt: ${checks.imgsWithoutAlt.join(', ')}`);
+    }
+    if (checks.unlabeledButtons.length > 0) {
+      issues.push(`unlabeled-buttons: ${checks.unlabeledButtons.join(', ')}`);
+    }
+    if (checks.unlabeledLinks.length > 0) {
+      issues.push(`unlabeled-links: ${checks.unlabeledLinks.join(', ')}`);
+    }
+    if (checks.duplicateIds.length > 0) {
+      issues.push(`duplicate-ids: ${checks.duplicateIds.join(', ')}`);
+    }
 
     results.push({
       viewport: vp.name,
       size: `${vp.width}x${vp.height}`,
-      screenshot: screenshotPath,
+      screenshot: path.basename(screenshotPath),
       issues,
-      a11y,
-      faLoaded,
+      checks,
     });
 
     await context.close();
-    console.log(`  → screenshot saved: ${path.basename(screenshotPath)}`);
-    console.log(`  → issues: ${issues.length}, webp sources: ${a11y.webpSourceCount}, pictures: ${a11y.pictureCount}`);
+
+    const statusIcon = issues.filter(i => !i.includes('request-failed: ') || !i.includes('video')).length === 0 ? '✓' : issues.length === 1 && issues[0].includes('video') ? '≈' : '✗';
+    console.log(`  ${statusIcon} issues: ${issues.length} | picture: ${checks.pictureCount} | webp: ${checks.webpSourceCount} | h1: ${checks.h1Count} | overflow: ${checks.horizontalOverflow ? 'YES' : 'no'}`);
+    if (issues.length > 0) issues.forEach(i => console.log(`    - ${i}`));
   }
 
   await browser.close();
@@ -119,15 +187,24 @@ async function run() {
   // Write JSON report
   const reportPath = path.join(__dirname, '../../docs/qa/playwright-report.json');
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
-  console.log(`\nReport saved: ${reportPath}`);
 
-  // Summary
+  // Console summary
   console.log('\n=== AUDIT SUMMARY ===');
-  for (const r of results) {
-    const status = r.issues.length === 0 ? '✓' : `✗ (${r.issues.length} issues)`;
-    console.log(`${r.viewport}: ${status} | webp sources: ${r.a11y.webpSourceCount} | pictures: ${r.a11y.pictureCount} | h1: ${r.a11y.h1Count}`);
-    if (r.issues.length > 0) r.issues.forEach(i => console.log(`  - ${i}`));
+  const videoOnlyIssue = r => r.issues.length === 1 && r.issues[0].includes('video');
+  const passed = results.filter(r => r.issues.length === 0).length;
+  const videoOnly = results.filter(videoOnlyIssue).length;
+  const failed = results.filter(r => r.issues.length > 0 && !videoOnlyIssue(r)).length;
+  console.log(`Viewports: ${VIEWPORTS.length} | Pass: ${passed} | Video-only: ${videoOnly} | Fail: ${failed}`);
+  console.log('Horizontal overflow: ' + (results.some(r => r.checks.horizontalOverflow) ? 'DETECTED' : 'none'));
+  console.log('H1 unique: ' + (results.every(r => r.checks.h1Count === 1) ? 'yes' : 'NO'));
+  console.log('Skip link: ' + (results.every(r => r.checks.skipLink) ? 'present' : 'MISSING'));
+  console.log('JSON-LD: ' + (results[0].checks.jsonLd ? 'present' : 'missing'));
+  console.log('HTML lang: ' + results[0].checks.htmlLang);
+  console.log('Heading hierarchy:');
+  if (results[0].checks.headings) {
+    results[0].checks.headings.forEach(h => console.log(`  H${h.level}: ${h.text}`));
   }
+  console.log(`\nReport: ${reportPath}`);
 }
 
 run().catch(err => {

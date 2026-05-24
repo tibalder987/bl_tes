@@ -8,10 +8,10 @@
         "/build/759.b3822804.js",
         "/build/249.047bdf44.js",
         "/build/848.b7e19f1f.js",
-        "/build/61.4bd317c8.js",
+        "/build/120.4af30373.js",
         "/build/237.4ad2bd0a.js",
         "/build/18.ad1b34b4.js",
-        "/build/app.7954e559.js"
+        "/build/app.1a41fab7.js"
       ]
     },
     "app-article": {
@@ -66,10 +66,10 @@
         "/build/249.047bdf44.js",
         "/build/648.5b69016c.js",
         "/build/848.b7e19f1f.js",
-        "/build/61.4bd317c8.js",
+        "/build/120.4af30373.js",
         "/build/731.ab8aa878.js",
-        "/build/162.ac8669be.js",
-        "/build/file-manager.11562ac0.js"
+        "/build/340.a9416819.js",
+        "/build/file-manager.3058b397.js"
       ],
       "css": [
         "/build/file-manager.3006c411.css"
@@ -111,7 +111,7 @@
       ],
       "css": [
         "/build/341.a95ed0fe.css",
-        "/build/default.b4ccd988.css"
+        "/build/default.9ac734a8.css"
       ]
     },
     "icons": {

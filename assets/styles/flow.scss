@@ -131,7 +131,7 @@
   }
 
   .section-1 {
-    background-color: #951914;
+    background-color: $color-red;
     background-image: linear-gradient(
       270deg,
       var(--flow-section1-bg-c1) var(--flow-section1-bg-p1),
@@ -144,8 +144,8 @@
       --flow-section1-bg-p2 var(--gradient-transition-duration, 0.5s) ease;
 
     &.is-animated {
-      --flow-section1-bg-c1: #e3cca3;
-      --flow-section1-bg-c2: #3c849c;
+      --flow-section1-bg-c1: #{$color-gold};
+      --flow-section1-bg-c2: #{$color-blue};
       --flow-section1-bg-p1: 0%;
       --flow-section1-bg-p2: 75.96%;
     }
@@ -771,7 +771,7 @@
     padding-top: 320px;
     padding-bottom: 140px;
     padding-left: 200px;
-    background-color: #951914;
+    background-color: $color-red;
     background-image: linear-gradient(
       270deg,
       var(--flow-section4-bg-c1) var(--flow-section4-bg-p1),
@@ -784,8 +784,8 @@
       --flow-section4-bg-p2 var(--gradient-transition-duration, 0.5s) ease;
 
     &.is-animated {
-      --flow-section4-bg-c1: #e3cca3;
-      --flow-section4-bg-c2: #3c849c;
+      --flow-section4-bg-c1: #{$color-gold};
+      --flow-section4-bg-c2: #{$color-blue};
       --flow-section4-bg-p1: 0%;
       --flow-section4-bg-p2: 75.96%;
     }

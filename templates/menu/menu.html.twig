@@ -6,7 +6,7 @@
 		<a href="{{ locale_switch_url }}" class="header__button-switch" hreflang="{{ locale_switch_target }}" lang="{{ locale_switch_target }}">
 			{{ locale_switch_target == 'en' ? 'EN' : 'FR' }}
 		</a>
-		<button type="button" class="header__menu" id="header-menu-toggle" aria-expanded="false" aria-controls="header-drawer" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}">
+		<button type="button" class="header__menu" id="header-menu-toggle" aria-expanded="false" aria-controls="header-drawer" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}" data-label-open="{{ 'aria.open_menu'|trans({}, 'menu')|e('html_attr') }}" data-label-close="{{ 'aria.close_menu'|trans({}, 'menu')|e('html_attr') }}">
 			<div class="header__menu-label">{{ 'label.menu'|trans({}, 'menu') }}</div>
 			<div class="header__menu-icon" aria-hidden="true">
 				<span class="header__menu-line header__menu-line--top"></span>
@@ -61,7 +61,7 @@
 		</div>
 	</div>
 </nav>
-<button type="button" class="header__menu-fab js-header-menu-fab" id="header-menu-fab" aria-controls="header-drawer" aria-expanded="false" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}" aria-hidden="true" tabindex="-1">
+<button type="button" class="header__menu-fab js-header-menu-fab" id="header-menu-fab" aria-controls="header-drawer" aria-expanded="false" aria-label="{{ 'aria.open_menu'|trans({}, 'menu') }}" data-label-open="{{ 'aria.open_menu'|trans({}, 'menu')|e('html_attr') }}" data-label-close="{{ 'aria.close_menu'|trans({}, 'menu')|e('html_attr') }}" aria-hidden="true" tabindex="-1">
 	<span class="header__menu-icon" aria-hidden="true">
 		<span class="header__menu-line header__menu-line--top"></span>
 		<span class="header__menu-line header__menu-line--middle"></span>
