@@ -32,9 +32,9 @@
       --homepage-section3-bg-c3 var(--gradient-transition-duration, 0.5s) ease;
 
     &.is-animated {
-      --homepage-section3-bg-c1: #787a55;
+      --homepage-section3-bg-c1: #{$color-green};
       --homepage-section3-bg-c2: #a38247;
-      --homepage-section3-bg-c3: #ce8a39;
+      --homepage-section3-bg-c3: #{$color-sand};
     }
     padding-bottom: 304px;
 
@@ -141,7 +141,7 @@
           }
         }
         p {
-          color: #ffffff;
+          color: $color-white;
           font-family: $font-epilogue;
           font-size: 25px;
           font-style: normal;

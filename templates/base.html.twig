@@ -8,7 +8,7 @@
 		</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="robots" content="index,follow"/>
 		<meta name="owner" content=""/>
 		<meta name="copyright" content="#PROX-I"/>
@@ -37,7 +37,10 @@
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+			{# Preload critical fonts: Balney (custom) + FA woff2 subsets actually used (solid, regular) #}
+			<link rel="preload" as="font" href="{{ asset('build/fonts/Balney.otf') }}" crossorigin="anonymous" type="font/otf">
+			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-solid-900.woff2') }}" crossorigin="anonymous" type="font/woff2">
+			<link rel="preload" as="font" href="{{ asset('build/fonts/fa-regular-400.woff2') }}" crossorigin="anonymous" type="font/woff2">
 			{{ encore_entry_link_tags('default') }}
 		{% endblock %}
 	</head>

@@ -19,7 +19,7 @@
 
 .homepage {
   .section-5 {
-    background-color: #ce8a39;
+    background-color: $color-sand;
     background-image: linear-gradient(
       90deg,
       var(--homepage-section5-bg-c1) 0%,
@@ -31,14 +31,14 @@
       --homepage-section5-bg-p2 var(--gradient-transition-duration, 0.5s) ease;
 
     &.is-animated {
-      --homepage-section5-bg-c1: #e3cca3;
-      --homepage-section5-bg-c2: #3c849c;
+      --homepage-section5-bg-c1: #{$color-gold};
+      --homepage-section5-bg-c2: #{$color-blue};
 
       --homepage-section5-bg-p2: 75.96%;
 
       @media (max-width: 768px) {
-        --homepage-section5-bg-c1: #3c849c;
-        --homepage-section5-bg-c2: #e3cca3;
+        --homepage-section5-bg-c1: #{$color-blue};
+        --homepage-section5-bg-c2: #{$color-gold};
         --homepage-section5-bg-p2: 105%;
       }
     }
@@ -150,7 +150,7 @@
           }
         }
         p {
-          color: #ffffff;
+          color: $color-white;
           font-family: $font-epilogue;
           font-size: 25px;
           font-style: normal;

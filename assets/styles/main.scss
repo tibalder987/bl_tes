@@ -176,6 +176,7 @@ p {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    min-height: 44px;
     line-height: 1;
     position: relative;
     transition: $transition-btn;

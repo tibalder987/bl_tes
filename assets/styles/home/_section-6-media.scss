@@ -19,7 +19,7 @@
 
 .homepage {
   .section-6 {
-    background-color: #e3cca3;
+    background-color: $color-gold;
     background-image: linear-gradient(
       90deg,
       var(--homepage-section6-bg-c1) 0%,
@@ -32,8 +32,8 @@
 
     // Équivalent visuel de linear-gradient(270deg, #E3CCA3 0%, #7B5330 100%).
     &.is-animated {
-      --homepage-section6-bg-c1: #7b5330;
-      --homepage-section6-bg-c2: #e3cca3;
+      --homepage-section6-bg-c1: #{$color-light-brown};
+      --homepage-section6-bg-c2: #{$color-gold};
       --homepage-section6-bg-p2: 100%;
     }
 
@@ -101,7 +101,7 @@
           }
         }
         p {
-          color: #ffffff;
+          color: $color-white;
           font-family: $font-epilogue;
           font-size: 25px;
           font-style: normal;

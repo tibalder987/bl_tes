@@ -47,7 +47,7 @@
           font-size: $font-size-medium;
           font-family: $font-epilogue;
           font-weight: 300;
-          color: #ffffff;
+          color: $color-white;
           line-height: 1;
           margin-left: -155px;
 
@@ -63,7 +63,7 @@
           font-size: $font-size-medium;
           font-family: $font-epilogue;
           font-weight: 500;
-          color: #ffffff;
+          color: $color-white;
           line-height: 1;
           white-space: nowrap;
           width: fit-content;
@@ -81,7 +81,7 @@
             font-family: $font-balney;
             font-weight: 400;
             position: relative;
-            color: #ffffff;
+            color: $color-white;
             line-height: 1;
 
             &::before {
@@ -105,7 +105,7 @@
             margin-top: 60px;
           }
           p {
-            color: #fff;
+            color: $color-white;
             font-family: $font-epilogue;
             font-size: 25px;
             font-weight: 400;
@@ -166,7 +166,7 @@
       }
       .section-8__subcontent-text {
         font-family: $font-epilogue;
-        color: #fff;
+        color: $color-white;
         font-size: 25px;
         font-weight: 400;
         line-height: 50px;
