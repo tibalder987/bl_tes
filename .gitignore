@@ -1,1 +1,22 @@
+# Symfony
+/.env.local
+/.env.local.php
+/.env.*.local
+/var/
+/vendor/phpunit/
+/public/bundles/
+
+# Node
+/node_modules/
+/package-lock.json
+/yarn-error.log
+
+# Build cache (webpack)
+/node_modules/.cache/
+/node_modules/.package-lock.json
+
+# macOS
+.DS_Store
+
+# Docker logs
 docker/log-symfony/dev.log
