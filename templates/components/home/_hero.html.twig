@@ -72,7 +72,7 @@
 								<span>{{ 'reservation.guests'|trans({}, 'home') }}</span>
 							</div>
 							<div class="reservation-module__item-value">
-								<span id="reservation-guests-summary" class="reservation-module__guests-summary">{{ 'reservation.guests_summary_default'|trans({}, 'home') }}</span>
+								<span id="reservation-guests-summary" class="reservation-module__guests-summary" aria-live="polite" aria-atomic="true">{{ 'reservation.guests_summary_default'|trans({}, 'home') }}</span>
 								<input type="hidden" name="adults" id="reservation-adults" value="2" required>
 								<input type="hidden" name="kids" id="reservation-kids" value="0" required>
 							</div>
@@ -102,7 +102,7 @@
 		<h1 class="hero-section__title">{{ 'hero.opening'|trans({}, 'home') }}</h1>
 		<p class="hero-section__subtitle">{{ 'hero.summer'|trans({}, 'home') }}</p>
 	</div>
-	<a href="https://booking.prox-i.pf" class="book-fab" aria-label="{{ 'reservation.book_mobile'|trans({}, 'home')|e('html_attr') }}">
+	<a href="https://booking.prox-i.pf" class="book-fab" aria-label="{{ 'reservation.book_mobile'|trans({}, 'home')|e('html_attr') }}" target="_blank" rel="noopener noreferrer">
 		{{ 'reservation.book_mobile'|trans({}, 'home') }}
 	</a>
 </section>
