@@ -11,6 +11,7 @@
         "ext-pdo": "*",
         "ext-pdo_mysql": "*",
         "ext-intl": "*",
+        "ext-gd": "*",
         "a2lix/translation-form-bundle": "^3.2",
         "cocur/slugify": "^4.5",
         "doctrine/doctrine-bundle": "^2.10",
