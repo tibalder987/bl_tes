@@ -1,4 +1,16 @@
 <section class="hero-section" aria-label="{{ 'hero.title'|trans({}, 'our_story')|e('html_attr') }}">
+	<picture>
+		<source type="image/webp" srcset="{{ asset('images/our-story/section-hero/background.webp') }}">
+		<img
+			src="{{ asset('images/our-story/section-hero/background.jpg') }}"
+			class="hero-section__background"
+			alt="{{ 'hero.background_alt'|trans({}, 'our_story')|e('html_attr') }}"
+			loading="eager"
+			fetchpriority="high"
+			width="1536"
+			height="1024"
+			sizes="100vw">
+	</picture>
 	<div class="hero-section__content">
 		<div class="hero-section__title">{{ 'hero.title'|trans({}, 'our_story') }}</div>
 		<div class="hero-section__subtitle">
