@@ -1,5 +1,6 @@
 <section class="hero-section" aria-label="{{ 'hero.title'|trans({}, 'our_story')|e('html_attr') }}">
 	<picture>
+		<source media="(max-width: 768px)" type="image/webp" srcset="{{ asset('images/our-story/section-hero/background-800.webp') }}">
 		<source type="image/webp" srcset="{{ asset('images/our-story/section-hero/background.webp') }}">
 		<img
 			src="{{ asset('images/our-story/section-hero/background.jpg') }}"

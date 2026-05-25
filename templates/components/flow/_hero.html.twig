@@ -1,5 +1,6 @@
 <section class="hero-section" aria-label="{{ 'hero.title'|trans({}, 'flow')|e('html_attr') }}">
 	<picture>
+		<source media="(max-width: 768px)" type="image/webp" srcset="{{ asset('images/flow/section-hero/background-800.webp') }}">
 		<source type="image/webp" srcset="{{ asset('images/flow/section-hero/background.webp') }}">
 		<img
 			src="{{ asset('images/flow/section-hero/background.jpg') }}"
