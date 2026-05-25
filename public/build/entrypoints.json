@@ -2,100 +2,102 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/755.ff3a52bf.js",
-        "/build/879.6b257cce.js",
-        "/build/713.18d714b3.js",
-        "/build/app.9e84d697.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_jquery_dist_jquery_js.js",
+        "/build/vendors-node_modules_selectize_dist_js_standalone_selectize_min_js.js",
+        "/build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-faf8c8.js",
+        "/build/app.js"
       ]
     },
     "app-article": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/755.ff3a52bf.js",
-        "/build/app-article.d4e46f58.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_jquery_dist_jquery_js.js",
+        "/build/app-article.js"
       ]
     },
     "app-mediatheque": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/755.ff3a52bf.js",
-        "/build/app-mediatheque.d4e60ebd.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_jquery_dist_jquery_js.js",
+        "/build/app-mediatheque.js"
       ]
     },
     "app-admin": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/755.ff3a52bf.js",
-        "/build/239.7d130d3a.js",
-        "/build/658.61566cd4.js",
-        "/build/980.3abf583b.js",
-        "/build/786.b86e5eec.js",
-        "/build/app-admin.03f38fc1.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_jquery_dist_jquery_js.js",
+        "/build/vendors-node_modules_vue-loader_lib_runtime_componentNormalizer_js-node_modules_vue_dist_vue_esm_js.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_push_js.js",
+        "/build/vendors-node_modules_vuedraggable_dist_vuedraggable_umd_js.js",
+        "/build/vendors-node_modules_select2_dist_css_select2_css-node_modules_select2_dist_js_select2_js-nod-245fd3.js",
+        "/build/app-admin.js"
       ],
       "css": [
-        "/build/437.968ce4dc.css",
-        "/build/app-admin.f8454866.css"
+        "/build/vendors-node_modules_select2_dist_css_select2_css-node_modules_select2_dist_js_select2_js-nod-245fd3.css",
+        "/build/assets_fonts_fontawesome_css_all_min_css.css",
+        "/build/app-admin.css"
       ]
     },
     "app-map": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/app-map.5e7a9a38.js"
+        "/build/runtime.js",
+        "/build/app-map.js"
       ]
     },
     "file-manager": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/755.ff3a52bf.js",
-        "/build/239.7d130d3a.js",
-        "/build/658.61566cd4.js",
-        "/build/879.6b257cce.js",
-        "/build/file-manager.1cff4233.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_jquery_dist_jquery_js.js",
+        "/build/vendors-node_modules_vue-loader_lib_runtime_componentNormalizer_js-node_modules_vue_dist_vue_esm_js.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_push_js.js",
+        "/build/vendors-node_modules_selectize_dist_js_standalone_selectize_min_js.js",
+        "/build/file-manager.js"
       ],
       "css": [
-        "/build/file-manager.3006c411.css"
+        "/build/vendors-node_modules_selectize_dist_css_selectize_bootstrap3_css.css",
+        "/build/file-manager.css"
       ]
     },
     "file-selector": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/239.7d130d3a.js",
-        "/build/file-selector.36089998.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_vue-loader_lib_runtime_componentNormalizer_js-node_modules_vue_dist_vue_esm_js.js",
+        "/build/file-selector.js"
       ],
       "css": [
-        "/build/file-selector.1ff1d5cb.css"
+        "/build/file-selector.css"
       ]
     },
     "form-builder": {
       "js": [
-        "/build/runtime.b16de59f.js",
-        "/build/755.ff3a52bf.js",
-        "/build/239.7d130d3a.js",
-        "/build/658.61566cd4.js",
-        "/build/980.3abf583b.js",
-        "/build/form-builder.eb26fe3b.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_jquery_dist_jquery_js.js",
+        "/build/vendors-node_modules_vue-loader_lib_runtime_componentNormalizer_js-node_modules_vue_dist_vue_esm_js.js",
+        "/build/vendors-node_modules_core-js_modules_es_array_push_js.js",
+        "/build/vendors-node_modules_vuedraggable_dist_vuedraggable_umd_js.js",
+        "/build/form-builder.js"
       ],
       "css": [
-        "/build/form-builder.aabca461.css"
+        "/build/form-builder.css"
       ]
     },
     "default": {
       "js": [
-        "/build/runtime.b16de59f.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/build/341.a95ed0fe.css",
-        "/build/default.cad6285a.css"
+        "/build/vendors-node_modules_aos_dist_aos_css-node_modules_flatpickr_dist_flatpickr_min_css-node_modu-fd4718.css",
+        "/build/default.css"
       ]
     },
     "icons": {
       "js": [
-        "/build/runtime.b16de59f.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/build/437.968ce4dc.css",
-        "/build/icons.31d6cfe0.css"
+        "/build/assets_fonts_fontawesome_css_all_min_css.css",
+        "/build/icons.css"
       ]
     }
   }

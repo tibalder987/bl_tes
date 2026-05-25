@@ -4,6 +4,13 @@
 	{{ 'page_title'|trans({}, 'know') }}
 {% endblock %}
 
+{% block meta %}
+	<meta name="description" content="{{ 'meta_description'|trans({}, 'know')|e('html_attr') }}"/>
+	<meta name="keywords" content="{{ 'meta_keywords'|trans({}, 'know')|e('html_attr') }}"/>
+	<meta property="og:title" content="{{ 'og_title'|trans({}, 'know')|e('html_attr') }}"/>
+	<meta property="og:description" content="{{ 'og_description'|trans({}, 'know')|e('html_attr') }}"/>
+{% endblock %}
+
 {% block stylesheets %}
 	{{ parent() }}
 {% endblock %}

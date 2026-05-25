@@ -155,3 +155,52 @@ H1: A Vivre → H2: Bora Bora Lived Differently → H2: Island Hospitality → H
 3. **Arithmétique** : si post-deploy C10 passe à 8.5 et C8 à 9 et C15 à 8.5 → 134/150 = 8,93/10 — toujours sous 135. Pour atteindre 135, il faudrait qu'un ou plusieurs critères actuellement à 8.5 passent à 9.
 
 **Verdict honnête** : le site est à **8,67/10** (pré-deploy) et sera vraisemblablement à **8,93/10** post-deploy — proche de 9/10 mais sans atteindre les 135/150 requis sans un effort supplémentaire sur C5 ou C7.
+
+---
+
+## Cycle 8 — Pages internes (2026-05-24)
+
+### Lighthouse Desktop — Pages internes (run réel Railway production, preset=desktop)
+
+| Page | Perf | A11y | BP | SEO | LCP | CLS | TBT | SI |
+|------|------|------|----|-----|-----|-----|-----|----|
+| /fr/sejour | **93** | 96 | 100 | 100 | 1.1 s | 0.007 | 0 ms | 2.2 s |
+| /fr/savourer | **88** | 96 | 100 | 100 | 1.9 s | 0.003 | 0 ms | 1.9 s |
+| /fr/vivre | **93** | 91 | 100 | 100 | 1.4 s | 0.003 | 0 ms | 1.9 s |
+| /fr/notre-histoire | **89** | 96 | 100 | 100 | 1.9 s | 0.008 | 0 ms | 1.8 s |
+| /fr/a-savoir | **99** | 93 | 100 | **92** | 0.6 s | 0.001 | 0 ms | 1.4 s |
+
+**Fichiers** : `docs/qa/lighthouse/{page}-desktop.json`
+
+### Playwright QA — 6 pages × 7 viewports (42/42 ✓)
+
+Run réel `node scripts/qa/front-visual-audit.js`, Railway production.  
+Contrôles : H1 unique, skip-link, imgs alt, imgs sans dimensions, picture/WebP count, overflow horizontal (via documentElement), boutons/liens sans label, IDs dupliqués, hiérarchie headings, sections aria-label.
+
+**Résultat : 42 / 42 passes — 0 fail.**
+
+### Fixes appliqués en Cycle 8
+
+| Problème | Fix | Fichier(s) |
+|----------|-----|------------|
+| H1 manquant (4 pages) | Promotion du premier titre vers `<h1>` | components/{stay,dine,flow,our_story}/_section-*.html.twig |
+| Templates monolithiques (5 pages) | 32 composants Twig créés | templates/components/{stay,dine,flow,our_story,know}/ |
+| Images sans WebP (5 pages) | 37 WebP générés + `<picture>` | public/images/, tous les templates components |
+| Images sans width/height | Attributs ajoutés sur chaque `<img>` | Idem |
+| Images sans decoding/sizes | `decoding="async"` + `sizes` ajoutés | Idem |
+| Icons FA sans aria-hidden | `aria-hidden="true"` ajouté | Tous composants |
+| Sections sans landmark name | `aria-labelledby` sur toutes sections | Tous composants |
+| Liste équipements `<div>` → `<ul>` | Sémantique corrigée | components/stay/_section-amenities.html.twig |
+| `<h6>` list-heading (a-savoir) | Promu `<h3>` | components/know/_section-practical.html.twig |
+| Meta description manquante (a-savoir) | Clés YAML + block meta Twig | know.fr.yaml, know.en.yaml, know/index.html.twig |
+| Menu drawer focus (aria-hidden-focus) | `setDrawerFocusable()` — tabindex toggleé ouverture/fermeture | assets/main.js |
+| Sources JPEG trop grandes (22 imgs) | `sips -Z 1500` + WebP regénérés | public/images/ (pages internes) |
+
+### Issues résiduelles (connues, non bloquantes)
+
+| Issue | Pages | Raison | Action |
+|-------|-------|--------|--------|
+| Hero CSS background-image | sejour, savourer, vivre, notre-histoire | CSS design figé — LCP non optimisable sans refactor | Future session |
+| `color-contrast` (a11y 91 vivre) | vivre | Couleurs client-validées | Wontfix |
+| Savourer perf 88 | savourer | 7 images + hero CSS background | Amélioration future : convertir hero en `<picture>` |
+| Layout overflow (Slick track) | sejour | body.scrollWidth=3035px — masqué par overflow-x:hidden | Pas de scroll visible, pre-existing |

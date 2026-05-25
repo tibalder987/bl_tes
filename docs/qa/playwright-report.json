@@ -1,8 +1,10 @@
 [
   {
+    "page": "home",
+    "url": "https://bltes-production.up.railway.app/fr/",
     "viewport": "mobile-375",
     "size": "375x812",
-    "screenshot": "mobile-375.png",
+    "screenshot": "home/mobile-375.png",
     "issues": [],
     "checks": {
       "h1Count": 1,
@@ -17,7 +19,6 @@
       "reservationCheckin": true,
       "reservationCheckout": true,
       "dateItemsTabindex": true,
-      "guestButtonType": "button[type=button]",
       "fabDisplay": "block",
       "horizontalOverflow": false,
       "bodyScrollWidth": 375,
@@ -35,7 +36,7 @@
         },
         {
           "level": 2,
-          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPulse"
         },
         {
           "level": 3,
@@ -58,15 +59,20 @@
           "text": "Bora Bora"
         }
       ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 8,
       "jsonLd": true,
       "canonical": "https://bltes-production.up.railway.app/fr/",
-      "htmlLang": "fr"
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Bienvenue"
     }
   },
   {
+    "page": "home",
+    "url": "https://bltes-production.up.railway.app/fr/",
     "viewport": "mobile-390",
     "size": "390x844",
-    "screenshot": "mobile-390.png",
+    "screenshot": "home/mobile-390.png",
     "issues": [],
     "checks": {
       "h1Count": 1,
@@ -81,7 +87,6 @@
       "reservationCheckin": true,
       "reservationCheckout": true,
       "dateItemsTabindex": true,
-      "guestButtonType": "button[type=button]",
       "fabDisplay": "block",
       "horizontalOverflow": false,
       "bodyScrollWidth": 390,
@@ -99,7 +104,7 @@
         },
         {
           "level": 2,
-          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPulse"
         },
         {
           "level": 3,
@@ -122,15 +127,20 @@
           "text": "Bora Bora"
         }
       ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 8,
       "jsonLd": true,
       "canonical": "https://bltes-production.up.railway.app/fr/",
-      "htmlLang": "fr"
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Bienvenue"
     }
   },
   {
+    "page": "home",
+    "url": "https://bltes-production.up.railway.app/fr/",
     "viewport": "mobile-430",
     "size": "430x932",
-    "screenshot": "mobile-430.png",
+    "screenshot": "home/mobile-430.png",
     "issues": [],
     "checks": {
       "h1Count": 1,
@@ -145,7 +155,6 @@
       "reservationCheckin": true,
       "reservationCheckout": true,
       "dateItemsTabindex": true,
-      "guestButtonType": "button[type=button]",
       "fabDisplay": "block",
       "horizontalOverflow": false,
       "bodyScrollWidth": 430,
@@ -163,7 +172,7 @@
         },
         {
           "level": 2,
-          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPulse"
         },
         {
           "level": 3,
@@ -186,15 +195,20 @@
           "text": "Bora Bora"
         }
       ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 8,
       "jsonLd": true,
       "canonical": "https://bltes-production.up.railway.app/fr/",
-      "htmlLang": "fr"
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Bienvenue"
     }
   },
   {
+    "page": "home",
+    "url": "https://bltes-production.up.railway.app/fr/",
     "viewport": "tablet-768",
     "size": "768x1024",
-    "screenshot": "tablet-768.png",
+    "screenshot": "home/tablet-768.png",
     "issues": [],
     "checks": {
       "h1Count": 1,
@@ -209,7 +223,6 @@
       "reservationCheckin": true,
       "reservationCheckout": true,
       "dateItemsTabindex": true,
-      "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
       "horizontalOverflow": false,
       "bodyScrollWidth": 768,
@@ -227,7 +240,7 @@
         },
         {
           "level": 2,
-          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPulse"
         },
         {
           "level": 3,
@@ -250,15 +263,20 @@
           "text": "Bora Bora"
         }
       ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 8,
       "jsonLd": true,
       "canonical": "https://bltes-production.up.railway.app/fr/",
-      "htmlLang": "fr"
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Bienvenue"
     }
   },
   {
+    "page": "home",
+    "url": "https://bltes-production.up.railway.app/fr/",
     "viewport": "desktop-1024",
     "size": "1024x768",
-    "screenshot": "desktop-1024.png",
+    "screenshot": "home/desktop-1024.png",
     "issues": [],
     "checks": {
       "h1Count": 1,
@@ -273,7 +291,6 @@
       "reservationCheckin": true,
       "reservationCheckout": true,
       "dateItemsTabindex": true,
-      "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
       "horizontalOverflow": false,
       "bodyScrollWidth": 1024,
@@ -291,7 +308,7 @@
         },
         {
           "level": 2,
-          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPulse"
         },
         {
           "level": 3,
@@ -314,15 +331,20 @@
           "text": "Bora Bora"
         }
       ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 8,
       "jsonLd": true,
       "canonical": "https://bltes-production.up.railway.app/fr/",
-      "htmlLang": "fr"
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Bienvenue"
     }
   },
   {
+    "page": "home",
+    "url": "https://bltes-production.up.railway.app/fr/",
     "viewport": "desktop-1280",
     "size": "1280x800",
-    "screenshot": "desktop-1280.png",
+    "screenshot": "home/desktop-1280.png",
     "issues": [],
     "checks": {
       "h1Count": 1,
@@ -337,7 +359,6 @@
       "reservationCheckin": true,
       "reservationCheckout": true,
       "dateItemsTabindex": true,
-      "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
       "horizontalOverflow": false,
       "bodyScrollWidth": 1280,
@@ -355,7 +376,7 @@
         },
         {
           "level": 2,
-          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPulse"
         },
         {
           "level": 3,
@@ -378,15 +399,20 @@
           "text": "Bora Bora"
         }
       ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 8,
       "jsonLd": true,
       "canonical": "https://bltes-production.up.railway.app/fr/",
-      "htmlLang": "fr"
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Bienvenue"
     }
   },
   {
+    "page": "home",
+    "url": "https://bltes-production.up.railway.app/fr/",
     "viewport": "desktop-1440",
     "size": "1440x900",
-    "screenshot": "desktop-1440.png",
+    "screenshot": "home/desktop-1440.png",
     "issues": [],
     "checks": {
       "h1Count": 1,
@@ -401,7 +427,6 @@
       "reservationCheckin": true,
       "reservationCheckout": true,
       "dateItemsTabindex": true,
-      "guestButtonType": "button[type=button]",
       "fabDisplay": "none",
       "horizontalOverflow": false,
       "bodyScrollWidth": 1440,
@@ -419,7 +444,7 @@
         },
         {
           "level": 2,
-          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPul"
+          "text": "Island\n\t\tHospitality\n\t\t\n\t\t\twith a\n\t\t\tPulse"
         },
         {
           "level": 3,
@@ -442,9 +467,2625 @@
           "text": "Bora Bora"
         }
       ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 8,
       "jsonLd": true,
       "canonical": "https://bltes-production.up.railway.app/fr/",
-      "htmlLang": "fr"
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Bienvenue"
+    }
+  },
+  {
+    "page": "sejour",
+    "url": "https://bltes-production.up.railway.app/fr/sejour",
+    "viewport": "mobile-375",
+    "size": "375x812",
+    "screenshot": "sejour/mobile-375.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 15,
+      "webpSourceCount": 15,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 375,
+      "viewportWidth": 375,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "C'est ici qu'onse rejoint"
+        },
+        {
+          "level": 2,
+          "text": "Explore our\n\t\t\tRooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 4,
+          "text": "Entre Terre et Lagon"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Suspendus"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Au Coeur"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 4,
+          "text": "Au Couchant"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 4,
+          "text": "Ancrés"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 2,
+          "text": "Tout ce\n\t\t\t\t\tQu'il faut"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/sejour",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Stay"
+    }
+  },
+  {
+    "page": "sejour",
+    "url": "https://bltes-production.up.railway.app/fr/sejour",
+    "viewport": "mobile-390",
+    "size": "390x844",
+    "screenshot": "sejour/mobile-390.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 15,
+      "webpSourceCount": 15,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 390,
+      "viewportWidth": 390,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "C'est ici qu'onse rejoint"
+        },
+        {
+          "level": 2,
+          "text": "Explore our\n\t\t\tRooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 4,
+          "text": "Entre Terre et Lagon"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Suspendus"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Au Coeur"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 4,
+          "text": "Au Couchant"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 4,
+          "text": "Ancrés"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 2,
+          "text": "Tout ce\n\t\t\t\t\tQu'il faut"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/sejour",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Stay"
+    }
+  },
+  {
+    "page": "sejour",
+    "url": "https://bltes-production.up.railway.app/fr/sejour",
+    "viewport": "mobile-430",
+    "size": "430x932",
+    "screenshot": "sejour/mobile-430.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 15,
+      "webpSourceCount": 15,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 430,
+      "viewportWidth": 430,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "C'est ici qu'onse rejoint"
+        },
+        {
+          "level": 2,
+          "text": "Explore our\n\t\t\tRooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 4,
+          "text": "Entre Terre et Lagon"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Suspendus"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Au Coeur"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 4,
+          "text": "Au Couchant"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 4,
+          "text": "Ancrés"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 2,
+          "text": "Tout ce\n\t\t\t\t\tQu'il faut"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/sejour",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Stay"
+    }
+  },
+  {
+    "page": "sejour",
+    "url": "https://bltes-production.up.railway.app/fr/sejour",
+    "viewport": "tablet-768",
+    "size": "768x1024",
+    "screenshot": "sejour/tablet-768.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 15,
+      "webpSourceCount": 15,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 768,
+      "viewportWidth": 768,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "C'est ici qu'onse rejoint"
+        },
+        {
+          "level": 2,
+          "text": "Explore our\n\t\t\tRooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalow"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 4,
+          "text": "Entre Terre et Lagon"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Suspendus"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Au Coeur"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 4,
+          "text": "Au Couchant"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 4,
+          "text": "Ancrés"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 2,
+          "text": "Tout ce\n\t\t\t\t\tQu'il faut"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/sejour",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Stay"
+    }
+  },
+  {
+    "page": "sejour",
+    "url": "https://bltes-production.up.railway.app/fr/sejour",
+    "viewport": "desktop-1024",
+    "size": "1024x768",
+    "screenshot": "sejour/desktop-1024.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 15,
+      "webpSourceCount": 15,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1024,
+      "viewportWidth": 1024,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "C'est ici qu'onse rejoint"
+        },
+        {
+          "level": 2,
+          "text": "Explore our\n\t\t\tRooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalow"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 4,
+          "text": "Entre Terre et Lagon"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Suspendus"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Au Coeur"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 4,
+          "text": "Au Couchant"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 4,
+          "text": "Ancrés"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 2,
+          "text": "Tout ce\n\t\t\t\t\tQu'il faut"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/sejour",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Stay"
+    }
+  },
+  {
+    "page": "sejour",
+    "url": "https://bltes-production.up.railway.app/fr/sejour",
+    "viewport": "desktop-1280",
+    "size": "1280x800",
+    "screenshot": "sejour/desktop-1280.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 15,
+      "webpSourceCount": 15,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1280,
+      "viewportWidth": 1280,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "C'est ici qu'onse rejoint"
+        },
+        {
+          "level": 2,
+          "text": "Explore our\n\t\t\tRooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalow"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 4,
+          "text": "Entre Terre et Lagon"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Suspendus"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Au Coeur"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 4,
+          "text": "Au Couchant"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 4,
+          "text": "Ancrés"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 2,
+          "text": "Tout ce\n\t\t\t\t\tQu'il faut"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/sejour",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Stay"
+    }
+  },
+  {
+    "page": "sejour",
+    "url": "https://bltes-production.up.railway.app/fr/sejour",
+    "viewport": "desktop-1440",
+    "size": "1440x900",
+    "screenshot": "sejour/desktop-1440.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 15,
+      "webpSourceCount": 15,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1440,
+      "viewportWidth": 1440,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "C'est ici qu'onse rejoint"
+        },
+        {
+          "level": 2,
+          "text": "Explore our\n\t\t\tRooms"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalow"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 3,
+          "text": "Motu View Rooms"
+        },
+        {
+          "level": 4,
+          "text": "Entre Terre et Lagon"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Horizon View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Suspendus"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Otemanu View Bungalows"
+        },
+        {
+          "level": 4,
+          "text": "Au Coeur"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Sunset View Suites"
+        },
+        {
+          "level": 4,
+          "text": "Au Couchant"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 3,
+          "text": "Panoramic View Rooms& Penthouse Suites"
+        },
+        {
+          "level": 4,
+          "text": "Ancrés"
+        },
+        {
+          "level": 5,
+          "text": "Capacité"
+        },
+        {
+          "level": 2,
+          "text": "Tout ce\n\t\t\t\t\tQu'il faut"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/sejour",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Stay"
+    }
+  },
+  {
+    "page": "savourer",
+    "url": "https://bltes-production.up.railway.app/fr/savourer",
+    "viewport": "mobile-375",
+    "size": "375x812",
+    "screenshot": "savourer/mobile-375.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 7,
+      "webpSourceCount": 7,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 375,
+      "viewportWidth": 375,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Le plaisir de\n\t\t\t\tPartager"
+        },
+        {
+          "level": 2,
+          "text": "Bloody Mary's Restaurant\n\t\t\t\t\t\n\t\t\t\t\tL'Original"
+        },
+        {
+          "level": 2,
+          "text": "Povai Bay Bistro\n\t\t\t\tSur l'Eau"
+        },
+        {
+          "level": 2,
+          "text": "La Bella Matira\n\t\t\t\t\tHorizons Lointains"
+        },
+        {
+          "level": 2,
+          "text": "Tiki Tide Bar\n\t\t\t\t\tPour les Moments\n\t\t\t\t\tde Pause"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/savourer",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Dine"
+    }
+  },
+  {
+    "page": "savourer",
+    "url": "https://bltes-production.up.railway.app/fr/savourer",
+    "viewport": "mobile-390",
+    "size": "390x844",
+    "screenshot": "savourer/mobile-390.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 7,
+      "webpSourceCount": 7,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 390,
+      "viewportWidth": 390,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Le plaisir de\n\t\t\t\tPartager"
+        },
+        {
+          "level": 2,
+          "text": "Bloody Mary's Restaurant\n\t\t\t\t\t\n\t\t\t\t\tL'Original"
+        },
+        {
+          "level": 2,
+          "text": "Povai Bay Bistro\n\t\t\t\tSur l'Eau"
+        },
+        {
+          "level": 2,
+          "text": "La Bella Matira\n\t\t\t\t\tHorizons Lointains"
+        },
+        {
+          "level": 2,
+          "text": "Tiki Tide Bar\n\t\t\t\t\tPour les Moments\n\t\t\t\t\tde Pause"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/savourer",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Dine"
+    }
+  },
+  {
+    "page": "savourer",
+    "url": "https://bltes-production.up.railway.app/fr/savourer",
+    "viewport": "mobile-430",
+    "size": "430x932",
+    "screenshot": "savourer/mobile-430.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 7,
+      "webpSourceCount": 7,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 430,
+      "viewportWidth": 430,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Le plaisir de\n\t\t\t\tPartager"
+        },
+        {
+          "level": 2,
+          "text": "Bloody Mary's Restaurant\n\t\t\t\t\t\n\t\t\t\t\tL'Original"
+        },
+        {
+          "level": 2,
+          "text": "Povai Bay Bistro\n\t\t\t\tSur l'Eau"
+        },
+        {
+          "level": 2,
+          "text": "La Bella Matira\n\t\t\t\t\tHorizons Lointains"
+        },
+        {
+          "level": 2,
+          "text": "Tiki Tide Bar\n\t\t\t\t\tPour les Moments\n\t\t\t\t\tde Pause"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/savourer",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Dine"
+    }
+  },
+  {
+    "page": "savourer",
+    "url": "https://bltes-production.up.railway.app/fr/savourer",
+    "viewport": "tablet-768",
+    "size": "768x1024",
+    "screenshot": "savourer/tablet-768.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 7,
+      "webpSourceCount": 7,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 768,
+      "viewportWidth": 768,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Le plaisir de\n\t\t\t\tPartager"
+        },
+        {
+          "level": 2,
+          "text": "Bloody Mary's Restaurant\n\t\t\t\t\t\n\t\t\t\t\tL'Original"
+        },
+        {
+          "level": 2,
+          "text": "Povai Bay Bistro\n\t\t\t\tSur l'Eau"
+        },
+        {
+          "level": 2,
+          "text": "La Bella Matira\n\t\t\t\t\tHorizons Lointains"
+        },
+        {
+          "level": 2,
+          "text": "Tiki Tide Bar\n\t\t\t\t\tPour les Moments\n\t\t\t\t\tde Pause"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/savourer",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Dine"
+    }
+  },
+  {
+    "page": "savourer",
+    "url": "https://bltes-production.up.railway.app/fr/savourer",
+    "viewport": "desktop-1024",
+    "size": "1024x768",
+    "screenshot": "savourer/desktop-1024.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 7,
+      "webpSourceCount": 7,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1024,
+      "viewportWidth": 1024,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Le plaisir de\n\t\t\t\tPartager"
+        },
+        {
+          "level": 2,
+          "text": "Bloody Mary's Restaurant\n\t\t\t\t\t\n\t\t\t\t\tL'Original"
+        },
+        {
+          "level": 2,
+          "text": "Povai Bay Bistro\n\t\t\t\tSur l'Eau"
+        },
+        {
+          "level": 2,
+          "text": "La Bella Matira\n\t\t\t\t\tHorizons Lointains"
+        },
+        {
+          "level": 2,
+          "text": "Tiki Tide Bar\n\t\t\t\t\tPour les Moments\n\t\t\t\t\tde Pause"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/savourer",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Dine"
+    }
+  },
+  {
+    "page": "savourer",
+    "url": "https://bltes-production.up.railway.app/fr/savourer",
+    "viewport": "desktop-1280",
+    "size": "1280x800",
+    "screenshot": "savourer/desktop-1280.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 7,
+      "webpSourceCount": 7,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1280,
+      "viewportWidth": 1280,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Le plaisir de\n\t\t\t\tPartager"
+        },
+        {
+          "level": 2,
+          "text": "Bloody Mary's Restaurant\n\t\t\t\t\t\n\t\t\t\t\tL'Original"
+        },
+        {
+          "level": 2,
+          "text": "Povai Bay Bistro\n\t\t\t\tSur l'Eau"
+        },
+        {
+          "level": 2,
+          "text": "La Bella Matira\n\t\t\t\t\tHorizons Lointains"
+        },
+        {
+          "level": 2,
+          "text": "Tiki Tide Bar\n\t\t\t\t\tPour les Moments\n\t\t\t\t\tde Pause"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/savourer",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Dine"
+    }
+  },
+  {
+    "page": "savourer",
+    "url": "https://bltes-production.up.railway.app/fr/savourer",
+    "viewport": "desktop-1440",
+    "size": "1440x900",
+    "screenshot": "savourer/desktop-1440.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 7,
+      "webpSourceCount": 7,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1440,
+      "viewportWidth": 1440,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Le plaisir de\n\t\t\t\tPartager"
+        },
+        {
+          "level": 2,
+          "text": "Bloody Mary's Restaurant\n\t\t\t\t\t\n\t\t\t\t\tL'Original"
+        },
+        {
+          "level": 2,
+          "text": "Povai Bay Bistro\n\t\t\t\tSur l'Eau"
+        },
+        {
+          "level": 2,
+          "text": "La Bella Matira\n\t\t\t\t\tHorizons Lointains"
+        },
+        {
+          "level": 2,
+          "text": "Tiki Tide Bar\n\t\t\t\t\tPour les Moments\n\t\t\t\t\tde Pause"
+        }
+      ],
+      "sectionCount": 6,
+      "sectionsWithLabel": 6,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/savourer",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Dine"
+    }
+  },
+  {
+    "page": "vivre",
+    "url": "https://bltes-production.up.railway.app/fr/vivre",
+    "viewport": "mobile-375",
+    "size": "375x812",
+    "screenshot": "vivre/mobile-375.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 375,
+      "viewportWidth": 375,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Au Bloody Mary's Hotel,\n\t\t\t\trien\n\t\t\t\tn'est\n\t\t\t\tfig"
+        },
+        {
+          "level": 2,
+          "text": "A Quelques Pas de Tout"
+        },
+        {
+          "level": 2,
+          "text": "Sous le\n\t\t\t\tSoleil"
+        },
+        {
+          "level": 2,
+          "text": "À\n\t\t\t\t\tTable"
+        },
+        {
+          "level": 2,
+          "text": "En\n\t\t\t\t\tMouvement"
+        },
+        {
+          "level": 2,
+          "text": "Movement\n\t\t\tdoesn't stop\n\t\t\n\t\tat the\n\t\twater edge"
+        },
+        {
+          "level": 2,
+          "text": "Un Temps pour\n\t\t\t\t\t\tVibrer\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tUn Te"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/vivre",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Flow"
+    }
+  },
+  {
+    "page": "vivre",
+    "url": "https://bltes-production.up.railway.app/fr/vivre",
+    "viewport": "mobile-390",
+    "size": "390x844",
+    "screenshot": "vivre/mobile-390.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 390,
+      "viewportWidth": 390,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Au Bloody Mary's Hotel,\n\t\t\t\trien\n\t\t\t\tn'est\n\t\t\t\tfig"
+        },
+        {
+          "level": 2,
+          "text": "A Quelques Pas de Tout"
+        },
+        {
+          "level": 2,
+          "text": "Sous le\n\t\t\t\tSoleil"
+        },
+        {
+          "level": 2,
+          "text": "À\n\t\t\t\t\tTable"
+        },
+        {
+          "level": 2,
+          "text": "En\n\t\t\t\t\tMouvement"
+        },
+        {
+          "level": 2,
+          "text": "Movement\n\t\t\tdoesn't stop\n\t\t\n\t\tat the\n\t\twater edge"
+        },
+        {
+          "level": 2,
+          "text": "Un Temps pour\n\t\t\t\t\t\tVibrer\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tUn Te"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/vivre",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Flow"
+    }
+  },
+  {
+    "page": "vivre",
+    "url": "https://bltes-production.up.railway.app/fr/vivre",
+    "viewport": "mobile-430",
+    "size": "430x932",
+    "screenshot": "vivre/mobile-430.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 430,
+      "viewportWidth": 430,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Au Bloody Mary's Hotel,\n\t\t\t\trien\n\t\t\t\tn'est\n\t\t\t\tfig"
+        },
+        {
+          "level": 2,
+          "text": "A Quelques Pas de Tout"
+        },
+        {
+          "level": 2,
+          "text": "Sous le\n\t\t\t\tSoleil"
+        },
+        {
+          "level": 2,
+          "text": "À\n\t\t\t\t\tTable"
+        },
+        {
+          "level": 2,
+          "text": "En\n\t\t\t\t\tMouvement"
+        },
+        {
+          "level": 2,
+          "text": "Movement\n\t\t\tdoesn't stop\n\t\t\n\t\tat the\n\t\twater edge"
+        },
+        {
+          "level": 2,
+          "text": "Un Temps pour\n\t\t\t\t\t\tVibrer\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tUn Te"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/vivre",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Flow"
+    }
+  },
+  {
+    "page": "vivre",
+    "url": "https://bltes-production.up.railway.app/fr/vivre",
+    "viewport": "tablet-768",
+    "size": "768x1024",
+    "screenshot": "vivre/tablet-768.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 768,
+      "viewportWidth": 768,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Au Bloody Mary's Hotel,\n\t\t\t\trien\n\t\t\t\tn'est\n\t\t\t\tfig"
+        },
+        {
+          "level": 2,
+          "text": "A Quelques Pas de Tout"
+        },
+        {
+          "level": 2,
+          "text": "Sous le\n\t\t\t\tSoleil"
+        },
+        {
+          "level": 2,
+          "text": "À\n\t\t\t\t\tTable"
+        },
+        {
+          "level": 2,
+          "text": "En\n\t\t\t\t\tMouvement"
+        },
+        {
+          "level": 2,
+          "text": "Movement\n\t\t\tdoesn't stop\n\t\t\n\t\tat the\n\t\twater edge"
+        },
+        {
+          "level": 2,
+          "text": "Un Temps pour\n\t\t\t\t\t\tVibrer\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tUn Te"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/vivre",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Flow"
+    }
+  },
+  {
+    "page": "vivre",
+    "url": "https://bltes-production.up.railway.app/fr/vivre",
+    "viewport": "desktop-1024",
+    "size": "1024x768",
+    "screenshot": "vivre/desktop-1024.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1024,
+      "viewportWidth": 1024,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Au Bloody Mary's Hotel,\n\t\t\t\trien\n\t\t\t\tn'est\n\t\t\t\tfig"
+        },
+        {
+          "level": 2,
+          "text": "A Quelques Pas de Tout"
+        },
+        {
+          "level": 2,
+          "text": "Sous le\n\t\t\t\tSoleil"
+        },
+        {
+          "level": 2,
+          "text": "À\n\t\t\t\t\tTable"
+        },
+        {
+          "level": 2,
+          "text": "En\n\t\t\t\t\tMouvement"
+        },
+        {
+          "level": 2,
+          "text": "Movement\n\t\t\tdoesn't stop\n\t\t\n\t\tat the\n\t\twater edge"
+        },
+        {
+          "level": 2,
+          "text": "Un Temps pour\n\t\t\t\t\t\tVibrer\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tUn Te"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/vivre",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Flow"
+    }
+  },
+  {
+    "page": "vivre",
+    "url": "https://bltes-production.up.railway.app/fr/vivre",
+    "viewport": "desktop-1280",
+    "size": "1280x800",
+    "screenshot": "vivre/desktop-1280.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1280,
+      "viewportWidth": 1280,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Au Bloody Mary's Hotel,\n\t\t\t\trien\n\t\t\t\tn'est\n\t\t\t\tfig"
+        },
+        {
+          "level": 2,
+          "text": "A Quelques Pas de Tout"
+        },
+        {
+          "level": 2,
+          "text": "Sous le\n\t\t\t\tSoleil"
+        },
+        {
+          "level": 2,
+          "text": "À\n\t\t\t\t\tTable"
+        },
+        {
+          "level": 2,
+          "text": "En\n\t\t\t\t\tMouvement"
+        },
+        {
+          "level": 2,
+          "text": "Movement\n\t\t\tdoesn't stop\n\t\t\n\t\tat the\n\t\twater edge"
+        },
+        {
+          "level": 2,
+          "text": "Un Temps pour\n\t\t\t\t\t\tVibrer\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tUn Te"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/vivre",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Flow"
+    }
+  },
+  {
+    "page": "vivre",
+    "url": "https://bltes-production.up.railway.app/fr/vivre",
+    "viewport": "desktop-1440",
+    "size": "1440x900",
+    "screenshot": "vivre/desktop-1440.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1440,
+      "viewportWidth": 1440,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Au Bloody Mary's Hotel,\n\t\t\t\trien\n\t\t\t\tn'est\n\t\t\t\tfig"
+        },
+        {
+          "level": 2,
+          "text": "A Quelques Pas de Tout"
+        },
+        {
+          "level": 2,
+          "text": "Sous le\n\t\t\t\tSoleil"
+        },
+        {
+          "level": 2,
+          "text": "À\n\t\t\t\t\tTable"
+        },
+        {
+          "level": 2,
+          "text": "En\n\t\t\t\t\tMouvement"
+        },
+        {
+          "level": 2,
+          "text": "Movement\n\t\t\tdoesn't stop\n\t\t\n\t\tat the\n\t\twater edge"
+        },
+        {
+          "level": 2,
+          "text": "Un Temps pour\n\t\t\t\t\t\tVibrer\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tUn Te"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/vivre",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Flow"
+    }
+  },
+  {
+    "page": "notre-histoire",
+    "url": "https://bltes-production.up.railway.app/fr/notre-histoire",
+    "viewport": "mobile-375",
+    "size": "375x812",
+    "screenshot": "notre-histoire/mobile-375.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 375,
+      "viewportWidth": 375,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ici, tout a toujours été une histoire de rencontre"
+        },
+        {
+          "level": 2,
+          "text": "Là où Tout a Commencé"
+        },
+        {
+          "level": 2,
+          "text": "Le Tournant"
+        },
+        {
+          "level": 2,
+          "text": "D'une Tableà un Art de Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Prolonger un Héritage Précieux"
+        },
+        {
+          "level": 2,
+          "text": "Un Nouveau Chapitre,La Même Energie"
+        },
+        {
+          "level": 2,
+          "text": "Prêts à Unir votre Histoire à la Nôtre ?"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/notre-histoire",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Our Story"
+    }
+  },
+  {
+    "page": "notre-histoire",
+    "url": "https://bltes-production.up.railway.app/fr/notre-histoire",
+    "viewport": "mobile-390",
+    "size": "390x844",
+    "screenshot": "notre-histoire/mobile-390.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 390,
+      "viewportWidth": 390,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ici, tout a toujours été une histoire de rencontre"
+        },
+        {
+          "level": 2,
+          "text": "Là où Tout a Commencé"
+        },
+        {
+          "level": 2,
+          "text": "Le Tournant"
+        },
+        {
+          "level": 2,
+          "text": "D'une Tableà un Art de Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Prolonger un Héritage Précieux"
+        },
+        {
+          "level": 2,
+          "text": "Un Nouveau Chapitre,La Même Energie"
+        },
+        {
+          "level": 2,
+          "text": "Prêts à Unir votre Histoire à la Nôtre ?"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/notre-histoire",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Our Story"
+    }
+  },
+  {
+    "page": "notre-histoire",
+    "url": "https://bltes-production.up.railway.app/fr/notre-histoire",
+    "viewport": "mobile-430",
+    "size": "430x932",
+    "screenshot": "notre-histoire/mobile-430.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 430,
+      "viewportWidth": 430,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ici, tout a toujours été une histoire de rencontre"
+        },
+        {
+          "level": 2,
+          "text": "Là où Tout a Commencé"
+        },
+        {
+          "level": 2,
+          "text": "Le Tournant"
+        },
+        {
+          "level": 2,
+          "text": "D'une Tableà un Art de Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Prolonger un Héritage Précieux"
+        },
+        {
+          "level": 2,
+          "text": "Un Nouveau Chapitre,La Même Energie"
+        },
+        {
+          "level": 2,
+          "text": "Prêts à Unir votre Histoire à la Nôtre ?"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/notre-histoire",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Our Story"
+    }
+  },
+  {
+    "page": "notre-histoire",
+    "url": "https://bltes-production.up.railway.app/fr/notre-histoire",
+    "viewport": "tablet-768",
+    "size": "768x1024",
+    "screenshot": "notre-histoire/tablet-768.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 768,
+      "viewportWidth": 768,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ici, tout a toujours été une histoire de rencontre"
+        },
+        {
+          "level": 2,
+          "text": "Là où Tout a Commencé"
+        },
+        {
+          "level": 2,
+          "text": "Le Tournant"
+        },
+        {
+          "level": 2,
+          "text": "D'une Tableà un Art de Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Prolonger un Héritage Précieux"
+        },
+        {
+          "level": 2,
+          "text": "Un Nouveau Chapitre,La Même Energie"
+        },
+        {
+          "level": 2,
+          "text": "Prêts à Unir votre Histoire à la Nôtre ?"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/notre-histoire",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Our Story"
+    }
+  },
+  {
+    "page": "notre-histoire",
+    "url": "https://bltes-production.up.railway.app/fr/notre-histoire",
+    "viewport": "desktop-1024",
+    "size": "1024x768",
+    "screenshot": "notre-histoire/desktop-1024.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1024,
+      "viewportWidth": 1024,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ici, tout a toujours été une histoire de rencontre"
+        },
+        {
+          "level": 2,
+          "text": "Là où Tout a Commencé"
+        },
+        {
+          "level": 2,
+          "text": "Le Tournant"
+        },
+        {
+          "level": 2,
+          "text": "D'une Tableà un Art de Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Prolonger un Héritage Précieux"
+        },
+        {
+          "level": 2,
+          "text": "Un Nouveau Chapitre,La Même Energie"
+        },
+        {
+          "level": 2,
+          "text": "Prêts à Unir votre Histoire à la Nôtre ?"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/notre-histoire",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Our Story"
+    }
+  },
+  {
+    "page": "notre-histoire",
+    "url": "https://bltes-production.up.railway.app/fr/notre-histoire",
+    "viewport": "desktop-1280",
+    "size": "1280x800",
+    "screenshot": "notre-histoire/desktop-1280.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1280,
+      "viewportWidth": 1280,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ici, tout a toujours été une histoire de rencontre"
+        },
+        {
+          "level": 2,
+          "text": "Là où Tout a Commencé"
+        },
+        {
+          "level": 2,
+          "text": "Le Tournant"
+        },
+        {
+          "level": 2,
+          "text": "D'une Tableà un Art de Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Prolonger un Héritage Précieux"
+        },
+        {
+          "level": 2,
+          "text": "Un Nouveau Chapitre,La Même Energie"
+        },
+        {
+          "level": 2,
+          "text": "Prêts à Unir votre Histoire à la Nôtre ?"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/notre-histoire",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Our Story"
+    }
+  },
+  {
+    "page": "notre-histoire",
+    "url": "https://bltes-production.up.railway.app/fr/notre-histoire",
+    "viewport": "desktop-1440",
+    "size": "1440x900",
+    "screenshot": "notre-histoire/desktop-1440.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 10,
+      "webpSourceCount": 10,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1440,
+      "viewportWidth": 1440,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ici, tout a toujours été une histoire de rencontre"
+        },
+        {
+          "level": 2,
+          "text": "Là où Tout a Commencé"
+        },
+        {
+          "level": 2,
+          "text": "Le Tournant"
+        },
+        {
+          "level": 2,
+          "text": "D'une Tableà un Art de Vivre"
+        },
+        {
+          "level": 2,
+          "text": "Prolonger un Héritage Précieux"
+        },
+        {
+          "level": 2,
+          "text": "Un Nouveau Chapitre,La Même Energie"
+        },
+        {
+          "level": 2,
+          "text": "Prêts à Unir votre Histoire à la Nôtre ?"
+        }
+      ],
+      "sectionCount": 9,
+      "sectionsWithLabel": 9,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/notre-histoire",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel - Bora Bora | Our Story"
+    }
+  },
+  {
+    "page": "a-savoir",
+    "url": "https://bltes-production.up.railway.app/fr/a-savoir",
+    "viewport": "mobile-375",
+    "size": "375x812",
+    "screenshot": "a-savoir/mobile-375.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 1,
+      "webpSourceCount": 1,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 375,
+      "viewportWidth": 375,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Avant votre arrivée."
+        },
+        {
+          "level": 2,
+          "text": "Comment rejoindre la Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Airlines"
+        },
+        {
+          "level": 2,
+          "text": "Là où tout commence à devenir réel..."
+        },
+        {
+          "level": 3,
+          "text": "Check-in & check-out"
+        },
+        {
+          "level": 3,
+          "text": "Quelle est la monnaie en Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Quel temps fait-il à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et le wifi à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et les pourboires à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Que glisser dans sa valise pour Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Vous louez une voiture ?"
+        },
+        {
+          "level": 3,
+          "text": "Quelles sont les langues officielles en Polynésie "
+        },
+        {
+          "level": 3,
+          "text": "Electricité"
+        },
+        {
+          "level": 3,
+          "text": "L’eau du robinet est-elle potable à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Aurions-nous oublié quelque chose ?"
+        }
+      ],
+      "sectionCount": 4,
+      "sectionsWithLabel": 3,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/a-savoir",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel — Bora Bora | À savoir"
+    }
+  },
+  {
+    "page": "a-savoir",
+    "url": "https://bltes-production.up.railway.app/fr/a-savoir",
+    "viewport": "mobile-390",
+    "size": "390x844",
+    "screenshot": "a-savoir/mobile-390.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 1,
+      "webpSourceCount": 1,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 390,
+      "viewportWidth": 390,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Avant votre arrivée."
+        },
+        {
+          "level": 2,
+          "text": "Comment rejoindre la Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Airlines"
+        },
+        {
+          "level": 2,
+          "text": "Là où tout commence à devenir réel..."
+        },
+        {
+          "level": 3,
+          "text": "Check-in & check-out"
+        },
+        {
+          "level": 3,
+          "text": "Quelle est la monnaie en Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Quel temps fait-il à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et le wifi à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et les pourboires à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Que glisser dans sa valise pour Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Vous louez une voiture ?"
+        },
+        {
+          "level": 3,
+          "text": "Quelles sont les langues officielles en Polynésie "
+        },
+        {
+          "level": 3,
+          "text": "Electricité"
+        },
+        {
+          "level": 3,
+          "text": "L’eau du robinet est-elle potable à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Aurions-nous oublié quelque chose ?"
+        }
+      ],
+      "sectionCount": 4,
+      "sectionsWithLabel": 3,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/a-savoir",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel — Bora Bora | À savoir"
+    }
+  },
+  {
+    "page": "a-savoir",
+    "url": "https://bltes-production.up.railway.app/fr/a-savoir",
+    "viewport": "mobile-430",
+    "size": "430x932",
+    "screenshot": "a-savoir/mobile-430.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 1,
+      "webpSourceCount": 1,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 430,
+      "viewportWidth": 430,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Avant votre arrivée."
+        },
+        {
+          "level": 2,
+          "text": "Comment rejoindre la Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Airlines"
+        },
+        {
+          "level": 2,
+          "text": "Là où tout commence à devenir réel..."
+        },
+        {
+          "level": 3,
+          "text": "Check-in & check-out"
+        },
+        {
+          "level": 3,
+          "text": "Quelle est la monnaie en Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Quel temps fait-il à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et le wifi à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et les pourboires à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Que glisser dans sa valise pour Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Vous louez une voiture ?"
+        },
+        {
+          "level": 3,
+          "text": "Quelles sont les langues officielles en Polynésie "
+        },
+        {
+          "level": 3,
+          "text": "Electricité"
+        },
+        {
+          "level": 3,
+          "text": "L’eau du robinet est-elle potable à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Aurions-nous oublié quelque chose ?"
+        }
+      ],
+      "sectionCount": 4,
+      "sectionsWithLabel": 3,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/a-savoir",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel — Bora Bora | À savoir"
+    }
+  },
+  {
+    "page": "a-savoir",
+    "url": "https://bltes-production.up.railway.app/fr/a-savoir",
+    "viewport": "tablet-768",
+    "size": "768x1024",
+    "screenshot": "a-savoir/tablet-768.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 1,
+      "webpSourceCount": 1,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 768,
+      "viewportWidth": 768,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Avant votre arrivée."
+        },
+        {
+          "level": 2,
+          "text": "Comment rejoindre la Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Airlines"
+        },
+        {
+          "level": 2,
+          "text": "Là où tout commence à devenir réel..."
+        },
+        {
+          "level": 3,
+          "text": "Check-in & check-out"
+        },
+        {
+          "level": 3,
+          "text": "Quelle est la monnaie en Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Quel temps fait-il à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et le wifi à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et les pourboires à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Que glisser dans sa valise pour Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Vous louez une voiture ?"
+        },
+        {
+          "level": 3,
+          "text": "Quelles sont les langues officielles en Polynésie "
+        },
+        {
+          "level": 3,
+          "text": "Electricité"
+        },
+        {
+          "level": 3,
+          "text": "L’eau du robinet est-elle potable à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Aurions-nous oublié quelque chose ?"
+        }
+      ],
+      "sectionCount": 4,
+      "sectionsWithLabel": 3,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/a-savoir",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel — Bora Bora | À savoir"
+    }
+  },
+  {
+    "page": "a-savoir",
+    "url": "https://bltes-production.up.railway.app/fr/a-savoir",
+    "viewport": "desktop-1024",
+    "size": "1024x768",
+    "screenshot": "a-savoir/desktop-1024.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 1,
+      "webpSourceCount": 1,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1024,
+      "viewportWidth": 1024,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Avant votre arrivée."
+        },
+        {
+          "level": 2,
+          "text": "Comment rejoindre la Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Airlines"
+        },
+        {
+          "level": 2,
+          "text": "Là où tout commence à devenir réel..."
+        },
+        {
+          "level": 3,
+          "text": "Check-in & check-out"
+        },
+        {
+          "level": 3,
+          "text": "Quelle est la monnaie en Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Quel temps fait-il à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et le wifi à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et les pourboires à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Que glisser dans sa valise pour Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Vous louez une voiture ?"
+        },
+        {
+          "level": 3,
+          "text": "Quelles sont les langues officielles en Polynésie "
+        },
+        {
+          "level": 3,
+          "text": "Electricité"
+        },
+        {
+          "level": 3,
+          "text": "L’eau du robinet est-elle potable à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Aurions-nous oublié quelque chose ?"
+        }
+      ],
+      "sectionCount": 4,
+      "sectionsWithLabel": 3,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/a-savoir",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel — Bora Bora | À savoir"
+    }
+  },
+  {
+    "page": "a-savoir",
+    "url": "https://bltes-production.up.railway.app/fr/a-savoir",
+    "viewport": "desktop-1280",
+    "size": "1280x800",
+    "screenshot": "a-savoir/desktop-1280.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 1,
+      "webpSourceCount": 1,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1280,
+      "viewportWidth": 1280,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Avant votre arrivée."
+        },
+        {
+          "level": 2,
+          "text": "Comment rejoindre la Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Airlines"
+        },
+        {
+          "level": 2,
+          "text": "Là où tout commence à devenir réel..."
+        },
+        {
+          "level": 3,
+          "text": "Check-in & check-out"
+        },
+        {
+          "level": 3,
+          "text": "Quelle est la monnaie en Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Quel temps fait-il à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et le wifi à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et les pourboires à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Que glisser dans sa valise pour Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Vous louez une voiture ?"
+        },
+        {
+          "level": 3,
+          "text": "Quelles sont les langues officielles en Polynésie "
+        },
+        {
+          "level": 3,
+          "text": "Electricité"
+        },
+        {
+          "level": 3,
+          "text": "L’eau du robinet est-elle potable à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Aurions-nous oublié quelque chose ?"
+        }
+      ],
+      "sectionCount": 4,
+      "sectionsWithLabel": 3,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/a-savoir",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel — Bora Bora | À savoir"
+    }
+  },
+  {
+    "page": "a-savoir",
+    "url": "https://bltes-production.up.railway.app/fr/a-savoir",
+    "viewport": "desktop-1440",
+    "size": "1440x900",
+    "screenshot": "a-savoir/desktop-1440.png",
+    "issues": [],
+    "checks": {
+      "h1Count": 1,
+      "skipLink": true,
+      "skipLinkHref": "#main-content",
+      "duplicateIds": [],
+      "imgsWithoutAlt": [],
+      "imgsWithoutDimensions": [],
+      "pictureCount": 1,
+      "webpSourceCount": 1,
+      "horizontalOverflow": false,
+      "bodyScrollWidth": 1440,
+      "viewportWidth": 1440,
+      "unlabeledButtons": [],
+      "unlabeledLinks": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Avant votre arrivée."
+        },
+        {
+          "level": 2,
+          "text": "Comment rejoindre la Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Airlines"
+        },
+        {
+          "level": 2,
+          "text": "Là où tout commence à devenir réel..."
+        },
+        {
+          "level": 3,
+          "text": "Check-in & check-out"
+        },
+        {
+          "level": 3,
+          "text": "Quelle est la monnaie en Polynésie française ?"
+        },
+        {
+          "level": 3,
+          "text": "Quel temps fait-il à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et le wifi à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Et les pourboires à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Que glisser dans sa valise pour Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Vous louez une voiture ?"
+        },
+        {
+          "level": 3,
+          "text": "Quelles sont les langues officielles en Polynésie "
+        },
+        {
+          "level": 3,
+          "text": "Electricité"
+        },
+        {
+          "level": 3,
+          "text": "L’eau du robinet est-elle potable à Bora Bora ?"
+        },
+        {
+          "level": 3,
+          "text": "Aurions-nous oublié quelque chose ?"
+        }
+      ],
+      "sectionCount": 4,
+      "sectionsWithLabel": 3,
+      "jsonLd": true,
+      "canonical": "https://bltes-production.up.railway.app/fr/a-savoir",
+      "htmlLang": "fr",
+      "title": "Bloody Mary's Hotel — Bora Bora | À savoir"
     }
   }
 ]

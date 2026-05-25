@@ -166,6 +166,16 @@ $(function($) {
     /** Prevents immediate re-close on iOS double-tap of burger button. */
     let headerMenuIgnoreCloseUntil = 0;
 
+    function setDrawerFocusable(focusable) {
+        if (!headerDrawer) return;
+        headerDrawer.querySelectorAll('a, button').forEach(function (el) {
+            if (focusable) { el.removeAttribute('tabindex'); }
+            else { el.setAttribute('tabindex', '-1'); }
+        });
+    }
+    // Drawer starts closed — remove all links from tab order
+    setDrawerFocusable(false);
+
     function getHeaderMenuBarHeight() {
         if (!siteHeader) return 108;
         const bar = siteHeader.querySelector('.header__content');
@@ -215,6 +225,7 @@ $(function($) {
         }
         if (headerDrawer) headerDrawer.setAttribute('aria-hidden', 'true');
         if (headerDrawerBackdrop) headerDrawerBackdrop.setAttribute('aria-hidden', 'true');
+        setDrawerFocusable(false);
         syncHeaderMenuFabAria();
     }
 
@@ -228,6 +239,7 @@ $(function($) {
         }
         if (headerDrawer) headerDrawer.setAttribute('aria-hidden', 'false');
         if (headerDrawerBackdrop) headerDrawerBackdrop.setAttribute('aria-hidden', 'false');
+        setDrawerFocusable(true);
         syncHeaderMenuFabAria();
     }
 

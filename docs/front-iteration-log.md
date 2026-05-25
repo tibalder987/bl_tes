@@ -687,4 +687,45 @@ LCP: 0,9 s (96) | FCP: 0,5 s (99) | TBT: 0 ms (100) | CLS: 0,001 (100) | SI: 1,4
 | Après cycle 4 | 7,87/10 | +1,97 |
 | Après cycle 5 | 8,23/10 | +2,33 |
 | Après cycle 7 | 8,67/10 (pré-deploy) | +2,77 |
-| **Cycle 8 — FINAL** | **9,0/10** | **+3,1** |
+| **Cycle 8 — FINAL (home)** | **9,0/10** | **+3,1** |
+
+---
+
+## Cycle 9 — Durcissement pages internes (2026-05-24)
+
+> Scope : /fr/sejour, /fr/savourer, /fr/vivre, /fr/notre-histoire, /fr/a-savoir
+> Sans changer la DA validée par le client.
+
+### Preuves d'audit (production Railway — run réel)
+
+**Playwright 6 pages × 7 viewports = 42/42 ✓ (0 fail)**  
+Script : `node scripts/qa/front-visual-audit.js` — étendu pour couvrir 6 pages.
+
+**Lighthouse desktop (--preset=desktop, Railway production) :**
+
+| Page | Perf | A11y | BP | SEO | LCP |
+|------|------|------|----|-----|-----|
+| /fr/sejour | 93 | 96 | 100 | 100 | 1,1 s |
+| /fr/savourer | 88 | 96 | 100 | 100 | 1,9 s |
+| /fr/vivre | 93 | 91 | 100 | 100 | 1,4 s |
+| /fr/notre-histoire | 89 | 96 | 100 | 100 | 1,9 s |
+| /fr/a-savoir | 99 | 93 | 100 | 92 | 0,6 s |
+
+**Fichiers** : `docs/qa/lighthouse/{page}-desktop.json`
+
+### Principaux fixes
+
+- H1 manquant (4 pages) → promu
+- 5 templates monolithiques → 32 composants Twig
+- 37 WebP générés + `<picture>` sur toutes images content
+- `width`/`height`/`decoding="async"`/`sizes` sur toutes `<img>`
+- `aria-labelledby` sur toutes sections
+- Meta description manquante sur a-savoir → ajoutée (YAML + Twig)
+- Menu drawer `aria-hidden-focus` → `setDrawerFocusable()` dans main.js
+- Sources JPEG >1500px redimensionnées (22 images)
+- Script Playwright étendu à 6 pages × 7 viewports (42 runs)
+
+### Note pages internes : 8,5/10
+
+Scores Lighthouse réels confirmés sur Railway production.  
+Contraintes restantes documentées dans `docs/front-final-verification.md`.
