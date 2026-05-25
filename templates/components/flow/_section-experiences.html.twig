@@ -1,0 +1,61 @@
+<section class="section-8" aria-labelledby="flow-experiences-heading">
+	<div class="section-8__content">
+		<div class="section-8__left">
+			<div class="section-8__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/flow/section-8/lagoon_picnic.webp') }}" sizes="(max-width: 991px) 70vw, 35vw">
+					<img
+						data-aos="fade-down" data-aos-delay="200"
+						src="{{ asset('images/flow/section-8/lagoon_picnic.jpg') }}"
+						class="section-8__lagoon-picnic"
+						alt="{{ 'img.show'|trans({}, 'flow')|e('html_attr') }}"
+						width="2113" height="1409"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 70vw, 35vw">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/flow/section-8/welcome.webp') }}" sizes="(max-width: 991px) 70vw, 35vw">
+					<img
+						data-aos="fade-up" data-aos-delay="400"
+						src="{{ asset('images/flow/section-8/welcome.jpg') }}"
+						class="section-8__lobby-reception"
+						alt="{{ 'img.welcome'|trans({}, 'flow')|e('html_attr') }}"
+						width="572" height="858"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 70vw, 35vw">
+				</picture>
+			</div>
+		</div>
+		<div class="section-8__right">
+			<h2 id="flow-experiences-heading" class="section-8__title">
+				<div class="section-8__title-container">
+					<div class="section-8__title-1">{{ 's8.t1'|trans({}, 'flow') }}
+						<b>{{ 's8.play'|trans({}, 'flow') }}</b>
+					</div>
+					<div>
+						<div class="section-8__title-2">{{ 's8.t2'|trans({}, 'flow') }}</div>
+						<div class="section-8__title-3">
+							<span class="shape">{{ 's8.stay'|trans({}, 'flow') }}</span>
+						</div>
+					</div>
+				</div>
+			</h2>
+			<div class="section-8__text">
+				<p>{{ 's8.p1'|trans({}, 'flow')|raw }}</p>
+				<p>{{ 's8.p2'|trans({}, 'flow') }}</p>
+			</div>
+			<div class="section-8__subcontent-content">
+				<p class="section-8__subcontent-text">
+					{{ 's8.sub1'|trans({}, 'flow') }}
+					<span>{{ 's8.sub_rhythm'|trans({}, 'flow') }}</span>
+					{{ 's8.sub2'|trans({}, 'flow')|raw }}
+				</p>
+			</div>
+			<div>
+				<a href="{{ path('app_contact', { service: 'play' }) }}" class="btn-secondary">{{ 's8.btn'|trans({}, 'flow') }}
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

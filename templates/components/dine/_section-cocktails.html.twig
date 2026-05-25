@@ -1,0 +1,31 @@
+<section class="section-6" aria-labelledby="dine-cocktails-heading">
+	<div class="section-6__content">
+		<div class="section-6__left">
+			<h2 id="dine-cocktails-heading" class="section-6__title icon-title-red">
+				<div>{{ 's6.title'|trans({}, 'dine') }}<br>
+					<span>{{ 's6.span1'|trans({}, 'dine') }}</span><br>
+					<span>{{ 's6.span2'|trans({}, 'dine') }}</span>
+				</div>
+			</h2>
+			<div class="section-6__left-content">
+				<div>
+					<p>{{ 's6.p1'|trans({}, 'dine')|raw }}</p>
+					<p>{{ 's6.p2'|trans({}, 'dine') }}</p>
+				</div>
+				<div class="section-6__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/dine/section-6/tiki.webp') }}" sizes="(max-width: 991px) 60vw, 30vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/dine/section-6/tiki.png') }}"
+							class="section-6__tiki-mug"
+							alt="{{ 'img.tiki_mug'|trans({}, 'dine')|e('html_attr') }}"
+							width="1080" height="1350"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 60vw, 30vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

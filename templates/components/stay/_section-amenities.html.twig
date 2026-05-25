@@ -1,0 +1,96 @@
+<section class="section-4" aria-labelledby="stay-amenities-heading">
+	<div class="section-4__content">
+		<div class="section-4__mobile">
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/stay/section-4/overwater.webp') }}" sizes="(max-width: 540px) 100vw, 540px">
+				<img
+					src="{{ asset('images/stay/section-4/overwater.jpg') }}"
+					class="section-4__suite-interior"
+					loading="lazy" decoding="async"
+					data-aos="fade-up" data-aos-delay="200"
+					alt="{{ 'img.hotel_mob'|trans({}, 'stay')|e('html_attr') }}"
+					width="1536" height="1024"
+					sizes="(max-width: 540px) 100vw, 540px">
+			</picture>
+		</div>
+		<div class="section-4__left">
+			<h2 id="stay-amenities-heading" class="section-4__title icon-title-red">
+				<div>{{ 's4.title1'|trans({}, 'stay') }}<br>
+					<span>{{ 's4.title2'|trans({}, 'stay') }}</span>
+				</div>
+			</h2>
+			<div class="section-4__left-content">
+				<div>
+					<p>{{ 's4.p1'|trans({}, 'stay')|raw }}</p>
+					<p>{{ 's4.p2'|trans({}, 'stay')|raw }}</p>
+				</div>
+				<div class="section-4__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-4/overwater.webp') }}" sizes="(max-width: 1080px) 300px, (max-width: 1250px) 400px, (max-width: 1410px) 500px, 600px">
+						<img
+							src="{{ asset('images/stay/section-4/overwater.jpg') }}"
+							class="section-4__suite-interior"
+							loading="lazy" decoding="async"
+							data-aos="fade-up" data-aos-delay="300"
+							alt="{{ 'img.hotel'|trans({}, 'stay')|e('html_attr') }}"
+							width="1536" height="1024"
+							sizes="(max-width: 1080px) 300px, (max-width: 1250px) 400px, (max-width: 1410px) 500px, 600px">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-4__equipments">
+		<ul class="section-4__equipments-list" aria-label="{{ 'eq.list_aria'|trans({}, 'stay')|default('Équipements inclus')|e('html_attr') }}">
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/wifi.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.wifi'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/clim.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.ac'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/shower.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.shower'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/bathrobes.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.bathrobes'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/hairdryer.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.hairdryer'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/iron.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.iron'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/minibar.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.minibar'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/nespresso.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.nespresso'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/desk.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.desk'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/tray.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.tray'|trans({}, 'stay') }}</p>
+			</li>
+			<li class="section-4__equipments-item">
+				<img src="{{ asset('images/stay/section-4/icones/electronic.png') }}" alt="" aria-hidden="true" loading="lazy" width="180" height="180">
+				<p>{{ 'eq.safe'|trans({}, 'stay') }}</p>
+			</li>
+		</ul>
+	</div>
+	<div class="section-4__button">
+		<a href="https://agilysis.com" class="btn-primary">{{ 's4.btn'|trans({}, 'stay') }}
+			<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+		</a>
+	</div>
+</section>

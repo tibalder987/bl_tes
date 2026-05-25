@@ -1,0 +1,45 @@
+<section class="section-4 have-animation" aria-labelledby="dine-cuisine-heading">
+	<div class="section-4__content">
+		<div class="section-4__left">
+			<h2 id="dine-cuisine-heading" class="section-4__title icon-title">
+				<div>{{ 's4.title'|trans({}, 'dine') }}<br>
+					<span>{{ 's4.title_span'|trans({}, 'dine') }}</span>
+				</div>
+			</h2>
+			<div class="section-4__left-content">
+				<div class="section-4__left-content-text">
+					<p>{{ 's4.p1'|trans({}, 'dine') }}</p>
+					<p>{{ 's4.p2'|trans({}, 'dine') }}</p>
+					<p>{{ 's4.p3'|trans({}, 'dine') }}</p>
+					<a href="{{ path('app_contact', { service: 'dine' }) }}" class="btn-secondary section-4__left-content-btn">{{ 's4.btn'|trans({}, 'dine') }}
+						<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="section-4__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/dine/section-4/food.webp') }}" sizes="(max-width: 991px) 90vw, 40vw">
+						<img
+							data-aos="fade-down" data-aos-delay="200"
+							src="{{ asset('images/dine/section-4/food.jpg') }}"
+							class="section-4__seaside-plate"
+							alt="{{ 'img.pergola'|trans({}, 'dine')|e('html_attr') }}"
+							width="2160" height="2700"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 90vw, 40vw">
+					</picture>
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/dine/section-4/la_belle_matira.webp') }}" sizes="(max-width: 991px) 90vw, 40vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/dine/section-4/la_belle_matira.jpg') }}"
+							class="section-4__matira-view"
+							alt="{{ 'img.tiki'|trans({}, 'dine')|e('html_attr') }}"
+							width="2986" height="3982"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 90vw, 40vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

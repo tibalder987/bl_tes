@@ -1,0 +1,36 @@
+<section class="section-1 have-animation" aria-labelledby="dine-intro-heading">
+	<div class="section-1__content">
+		<div class="section-1__left">
+			<div class="section-1__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/dine/section-1/manuia.webp') }}" sizes="(max-width: 991px) 80vw, (max-width: 1430px) 35vw, 500px">
+					<img
+						data-aos="fade-up"
+						src="{{ asset('images/dine/section-1/manuia.png') }}"
+						class="section-1__toast"
+						alt="{{ 'img.manuia'|trans({}, 'dine')|e('html_attr') }}"
+						width="1023" height="1537"
+						loading="eager"
+						decoding="async"
+						sizes="(max-width: 991px) 80vw, (max-width: 1430px) 35vw, 500px">
+				</picture>
+			</div>
+		</div>
+		<div class="section-1__right">
+			<h1 id="dine-intro-heading" class="section-1__title">{{ 's1.title'|trans({}, 'dine') }}
+				<span>{{ 's1.title_span'|trans({}, 'dine') }}</span>
+			</h1>
+			<div class="section-1__text">
+				<p>{{ 's1.p1'|trans({}, 'dine')|raw }}</p>
+				<p>{{ 's1.p2'|trans({}, 'dine')|raw }}</p>
+				<p>{{ 's1.p3'|trans({}, 'dine') }}</p>
+			</div>
+			<div class="section-1__subcontent-content">
+				<p class="section-1__subcontent-text">
+					{{ 's1.sub'|trans({}, 'dine') }}<br>
+					<span class="shape">{{ 's1.sub_span'|trans({}, 'dine') }}</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

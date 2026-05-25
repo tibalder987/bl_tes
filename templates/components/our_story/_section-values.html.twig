@@ -1,0 +1,30 @@
+<section class="section-6 have-animation" aria-labelledby="story-values-heading">
+	<div class="section-6__content">
+		<div class="section-6__left">
+			<h2 id="story-values-heading" class="section-6__title icon-title">
+				<div>{{ 's6.title'|trans({}, 'our_story')|raw }}</div>
+			</h2>
+			<div class="section-6__left-content">
+				<div class="section-6__left-content-text">
+					<p>{{ 's6.p1'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's6.p2'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's6.p3'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's6.p4'|trans({}, 'our_story')|raw }}</p>
+				</div>
+				<div class="section-6__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/our-story/section-6/name-board.webp') }}" sizes="(max-width: 991px) 70vw, 35vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/our-story/section-6/name-board.png') }}"
+							class="section-6__hotel-name-board"
+							alt="{{ 'img.hotel_name_board'|trans({}, 'our_story')|e('html_attr') }}"
+							width="1536" height="1024"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 70vw, 35vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

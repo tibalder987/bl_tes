@@ -1,0 +1,49 @@
+<section class="section-3" aria-labelledby="dine-bar-heading">
+	<div class="section-3__content">
+		<div class="section-3__left">
+			<div class="section-3__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/dine/section-3/glass.webp') }}" sizes="(max-width: 991px) 60vw, 25vw">
+					<img
+						data-aos="fade-down" data-aos-delay="200"
+						src="{{ asset('images/dine/section-3/glass.png') }}"
+						class="section-3__wine-glass"
+						alt="{{ 'img.glass'|trans({}, 'dine')|e('html_attr') }}"
+						width="1080" height="1350"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 60vw, 25vw">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/dine/section-3/marina.webp') }}" sizes="(max-width: 991px) 80vw, 35vw">
+					<img
+						data-aos="fade-up" data-aos-delay="400"
+						src="{{ asset('images/dine/section-3/marina.jpg') }}"
+						class="section-3__overwater-bistro"
+						alt="{{ 'img.fire'|trans({}, 'dine')|e('html_attr') }}"
+						width="2160" height="2700"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 80vw, 35vw">
+				</picture>
+			</div>
+		</div>
+		<div class="section-3__right">
+			<h2 id="dine-bar-heading" class="section-3__title icon-title-red">{{ 's3.title'|trans({}, 'dine') }}<br>
+				<span>{{ 's3.title_span'|trans({}, 'dine') }}</span>
+			</h2>
+			<div class="section-3__text">
+				<p>{{ 's3.p1'|trans({}, 'dine') }}</p>
+				<p>{{ 's3.p2'|trans({}, 'dine')|raw }}</p>
+			</div>
+			<div class="section-3__subcontent-content">
+				<p class="section-3__subcontent-text">
+					{{ 's3.sub1'|trans({}, 'dine') }}<br>
+					<span class="shape">{{ 's3.sub_span'|trans({}, 'dine') }}</span>
+					<br><a href="{{ path('app_contact', { service: 'dine' }) }}" class="btn-secondary section-3__subcontent-btn">{{ 's3.btn'|trans({}, 'dine') }}
+						<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+					</a>
+				</p>
+
+			</div>
+		</div>
+	</div>
+</section>

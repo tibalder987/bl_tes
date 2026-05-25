@@ -1,0 +1,44 @@
+<section class="section-3" aria-labelledby="flow-nature-heading">
+	<div class="section-3__content">
+		<div class="section-3__left">
+			<div class="section-3__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/flow/section-3/sunset.webp') }}" sizes="(max-width: 991px) 60vw, 30vw">
+					<img
+						data-aos="fade-down" data-aos-delay="200"
+						src="{{ asset('images/flow/section-3/sunset.jpg') }}"
+						class="section-3__sunset"
+						alt="{{ 'img.sunset'|trans({}, 'flow')|e('html_attr') }}"
+						width="3000" height="4000"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 60vw, 30vw">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/flow/section-3/beach.webp') }}" sizes="(max-width: 991px) 70vw, 35vw">
+					<img
+						data-aos="fade-up" data-aos-delay="400"
+						src="{{ asset('images/flow/section-3/beach.jpg') }}"
+						class="section-3__lagoon-walk"
+						alt="{{ 'img.beach'|trans({}, 'flow')|e('html_attr') }}"
+						width="686" height="1032"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 70vw, 35vw">
+				</picture>
+			</div>
+		</div>
+		<div class="section-3__right">
+			<h2 id="flow-nature-heading" class="section-3__title icon-title-red">{{ 's3.title'|trans({}, 'flow') }}
+				<span>{{ 's3.sun'|trans({}, 'flow') }}</span>
+			</h2>
+			<div class="section-3__text">
+				<p>{{ 's3.p1'|trans({}, 'flow') }}</p>
+				<p>{{ 's3.p2'|trans({}, 'flow') }}</p>
+			</div>
+			<div class="section-3__subcontent-content">
+				<p class="section-3__subcontent-text">
+					{{ 's3.sub'|trans({}, 'flow')|raw }}
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

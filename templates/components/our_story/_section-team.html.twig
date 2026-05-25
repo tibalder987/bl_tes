@@ -1,0 +1,52 @@
+<section class="section-5" aria-labelledby="story-team-heading">
+	<div class="section-5__content">
+		<div class="section-5__left">
+			<div class="section-5__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/our-story/section-5/group_dexter.webp') }}" sizes="(max-width: 991px) 80vw, 40vw">
+					<img
+						data-aos="fade-up" data-aos-delay="200"
+						src="{{ asset('images/our-story/section-5/group_dexter.jpg') }}"
+						class="section-5__dexter-team-portrait"
+						alt="{{ 'img.dexter_team'|trans({}, 'our_story')|e('html_attr') }}"
+						width="800" height="500"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 80vw, 40vw">
+				</picture>
+			</div>
+		</div>
+		<div class="section-5__right">
+			<h2 id="story-team-heading" class="section-5__title icon-title-red">{{ 's5.title'|trans({}, 'our_story')|raw }}</h2>
+			<div class="section-5__text">
+				<p>{{ 's5.p1'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's5.p2'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's5.p3'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's5.p4'|trans({}, 'our_story')|raw }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="section-5__content reverse">
+		<div class="section-5__right">
+			<div class="section-5__text">
+				<p>{{ 's5.rev.p1'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's5.rev.p2'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's5.rev.p3'|trans({}, 'our_story')|raw }}</p>
+			</div>
+		</div>
+		<div class="section-5__left">
+			<div class="section-5__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/our-story/section-5/overview.webp') }}" sizes="(max-width: 991px) 80vw, 40vw">
+					<img
+						data-aos="fade-up" data-aos-delay="200"
+						src="{{ asset('images/our-story/section-5/overview.jpg') }}"
+						class="section-5__aerial-overview"
+						alt="{{ 'img.aerial_overview'|trans({}, 'our_story')|e('html_attr') }}"
+						width="1920" height="1080"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 80vw, 40vw">
+				</picture>
+			</div>
+		</div>
+	</div>
+</section>

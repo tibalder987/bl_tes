@@ -1,0 +1,46 @@
+{# ====================================================================
+		How to get to French Polynesia ?
+==================================================================== #}
+<section class="know-page__section know-page__section--getting" aria-labelledby="know-getting-heading">
+	<h2 id="know-getting-heading" class="know-page__section-title">
+		{{ 'getting.title'|trans({}, 'know')|raw }}
+	</h2>
+
+	<div class="know-page__section-content">
+		<div class="know-page__section-text">
+			<p>{{ 'getting.p1'|trans({}, 'know')|raw }}</p>
+			<p>{{ 'getting.p2'|trans({}, 'know')|raw }}</p>
+			<p>{{ 'getting.p3'|trans({}, 'know')|raw }}</p>
+
+			<h3 class="know-page__list-heading">{{ 'getting.list_heading'|trans({}, 'know') }}</h3>
+			<ul class="know-page__list">
+				<li>{{ 'getting.li1'|trans({}, 'know')|raw }}</li>
+				<li>{{ 'getting.li2'|trans({}, 'know')|raw }}</li>
+				<li>{{ 'getting.li3'|trans({}, 'know')|raw }}</li>
+				<li>{{ 'getting.li4'|trans({}, 'know')|raw }}</li>
+				<li>{{ 'getting.li5'|trans({}, 'know')|raw }}</li>
+				<li>{{ 'getting.li6'|trans({}, 'know')|raw }}</li>
+				<li>{{ 'getting.li7'|trans({}, 'know')|raw }}</li>
+			</ul>
+
+			<div class="section-1__subcontent-content">
+				<p class="section-1__subcontent-text">
+					{{ 'getting.cta'|trans({}, 'know')|raw }}
+				</p>
+			</div>
+		</div>
+
+		<div class="know-page__section-image">
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/home/section-3/stay.webp') }}" sizes="(max-width: 991px) 100vw, 50vw">
+				<img
+					src="{{ asset('images/home/section-3/stay.jpg') }}"
+					loading="lazy"
+					decoding="async"
+					alt="{{ 'img.stay'|trans({}, 'know')|e('html_attr') }}"
+					width="480" height="640"
+					sizes="(max-width: 991px) 100vw, 50vw">
+			</picture>
+		</div>
+	</div>
+</section>

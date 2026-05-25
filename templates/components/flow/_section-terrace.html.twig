@@ -1,0 +1,36 @@
+<section class="section-5" aria-labelledby="flow-terrace-heading">
+	<div class="section-5__content">
+		<div class="section-5__left">
+			<div class="section-5__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/flow/section-5/restaurant.webp') }}" sizes="(max-width: 991px) 90vw, 45vw">
+					<img
+						data-aos="fade-up" data-aos-delay="200"
+						src="{{ asset('images/flow/section-5/restaurant.jpg') }}"
+						class="section-5__deck-beach-view"
+						alt="{{ 'img.restaurant'|trans({}, 'flow')|e('html_attr') }}"
+						width="2954" height="3938"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 90vw, 45vw">
+				</picture>
+			</div>
+		</div>
+		<div class="section-5__right">
+			<p>{{ 's5.p1'|trans({}, 'flow') }}</p>
+			<p>{{ 's5.p2'|trans({}, 'flow') }}</p>
+			<p>{{ 's5.p3'|trans({}, 'flow')|raw }}</p>
+		</div>
+	</div>
+	<div class="section-5__subcontent-container">
+		<div class="section-5__subcontent">
+			<p class="section-5__subcontent-text">
+				{{ 's5.sub'|trans({}, 'flow')|raw }}
+			</p>
+			<div>
+				<a href="{{ path('app_dine') }}" class="btn-secondary">{{ 's5.btn'|trans({}, 'flow') }}
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

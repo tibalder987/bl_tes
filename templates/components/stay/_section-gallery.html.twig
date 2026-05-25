@@ -1,0 +1,28 @@
+<section class="section-3 have-animation" aria-label="{{ 'img.gallery_aria'|trans({}, 'stay')|default('Galerie photos')|e('html_attr') }}">
+	<div class="section-3__content-container">
+		<div class="section-3__images">
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/stay/section-3/sunset.webp') }}" sizes="(max-width: 540px) 50vw, (max-width: 768px) 40vw, 30vw">
+				<img
+					src="{{ asset('images/stay/section-3/sunset.jpg') }}"
+					class="section-3__dusk-palm"
+					loading="lazy" decoding="async"
+					data-aos="fade-down"
+					alt="{{ 'img.flower'|trans({}, 'stay')|e('html_attr') }}"
+					width="2936" height="3914"
+					sizes="(max-width: 540px) 50vw, (max-width: 768px) 40vw, 30vw">
+			</picture>
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/stay/section-3/otemanu.webp') }}" sizes="(max-width: 540px) 70vw, (max-width: 768px) 55vw, 40vw">
+				<img
+					src="{{ asset('images/stay/section-3/otemanu.jpg') }}"
+					class="section-3__otemanu-fare"
+					loading="lazy" decoding="async"
+					data-aos="fade-up" data-aos-delay="200"
+					alt="{{ 'img.sea'|trans({}, 'stay')|e('html_attr') }}"
+					width="3000" height="4000"
+					sizes="(max-width: 540px) 70vw, (max-width: 768px) 55vw, 40vw">
+			</picture>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,35 @@
+<section class="section-2" aria-labelledby="flow-explore-heading">
+	<div class="vertical-arrow">
+		<img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true">
+		<p>{{ 'arrow.flow'|trans({}, 'flow') }}</p>
+	</div>
+	<div class="section-2__content">
+		<div class="section-2__left">
+			<h2 id="flow-explore-heading" class="section-2__title icon-title-red">
+				<div>{{ 's2.title'|trans({}, 'flow')|raw }}</div>
+			</h2>
+			<div class="section-2__left-content">
+				<div>
+					<p>{{ 's2.p1'|trans({}, 'flow')|raw }}</p>
+					<p>{{ 's2.p2'|trans({}, 'flow')|raw }}</p>
+					<p>{{ 's2.p3'|trans({}, 'flow') }}
+						<span class="shape">{{ 's2.shape'|trans({}, 'flow') }}</span>
+					</p>
+				</div>
+				<div class="section-2__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/flow/section-2/boat.webp') }}" sizes="(max-width: 991px) 90vw, 45vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/flow/section-2/boat.jpg') }}"
+							class="section-2__aerial-resort"
+							alt="{{ 'img.boat'|trans({}, 'flow')|e('html_attr') }}"
+							width="1620" height="2025"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 90vw, 45vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

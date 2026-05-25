@@ -1,0 +1,47 @@
+<section class="section-4 have-animation" aria-labelledby="flow-dining-heading">
+	<div class="vertical-arrow">
+		<img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true">
+		<p>{{ 'arrow.rhythm'|trans({}, 'flow') }}</p>
+	</div>
+	<div class="section-4__content">
+		<div class="section-4__left">
+			<h2 id="flow-dining-heading" class="section-4__title icon-title">
+				<div>{{ 's4.title_at'|trans({}, 'flow') }}
+					<span>{{ 's4.table'|trans({}, 'flow') }}</span>
+				</div>
+			</h2>
+			<div class="section-4__left-content">
+				<div class="section-4__left-content-text">
+					<p>{{ 's4.p1'|trans({}, 'flow')|raw }}</p>
+					<div class="section-4__left-content-text-subtext">
+						<p>{{ 's4.sub'|trans({}, 'flow')|raw }}</p>
+					</div>
+				</div>
+				<div class="section-4__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/flow/section-4/group.webp') }}" sizes="(max-width: 991px) 90vw, 40vw">
+						<img
+							data-aos="fade-down" data-aos-delay="200"
+							src="{{ asset('images/flow/section-4/group.jpg') }}"
+							class="section-4__vintage-feast"
+							alt="{{ 'img.group'|trans({}, 'flow')|e('html_attr') }}"
+							width="594" height="493"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 90vw, 40vw">
+					</picture>
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/flow/section-4/table.webp') }}" sizes="(max-width: 991px) 90vw, 40vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/flow/section-4/table.jpg') }}"
+							class="section-4__sand-dining"
+							alt="{{ 'img.table'|trans({}, 'flow')|e('html_attr') }}"
+							width="607" height="826"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 90vw, 40vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,259 @@
+<section class="section-2" aria-labelledby="stay-rooms-heading">
+	<div class="section-2__content">
+		<h2 id="stay-rooms-heading" class="section-2__title">{{ 's2.title'|trans({}, 'stay') }}
+			<span class="shape">{{ 's2.title_shape'|trans({}, 'stay') }}</span>
+		</h2>
+		<div class="section-2__rooms">
+
+			<div class="section-2__room-slide">
+				<a href="{{ path('app_stay') }}#room-motu" class="section-2__room-item">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-2.webp') }}" sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+						<img
+							src="{{ asset('images/stay/section-2/room-2.jpg') }}"
+							alt="{{ 'img.motu'|trans({}, 'stay')|e('html_attr') }}"
+							width="3876" height="2908"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+					</picture>
+					<h3 class="section-2__room-title">{{ 'room.motu.title'|trans({}, 'stay') }}</h3>
+				</a>
+			</div>
+			<div class="section-2__room-slide">
+				<a href="{{ path('app_stay') }}#room-horizon" class="section-2__room-item">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-3.webp') }}" sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+						<img
+							src="{{ asset('images/stay/section-2/room-3.jpg') }}"
+							alt="{{ 'img.horizon'|trans({}, 'stay')|e('html_attr') }}"
+							width="3000" height="4000"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+					</picture>
+					<h3 class="section-2__room-title">{{ 'room.horizon.title'|trans({}, 'stay') }}</h3>
+				</a>
+			</div>
+			<div class="section-2__room-slide">
+				<a href="{{ path('app_stay') }}#room-otemanu" class="section-2__room-item">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-4.webp') }}" sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+						<img
+							src="{{ asset('images/stay/section-2/room-4.png') }}"
+							alt="{{ 'img.otemanu'|trans({}, 'stay')|e('html_attr') }}"
+							width="1536" height="1024"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+					</picture>
+					<h3 class="section-2__room-title">{{ 'room.otemanu.title'|trans({}, 'stay') }}</h3>
+				</a>
+			</div>
+			<div class="section-2__room-slide">
+				<a href="{{ path('app_stay') }}#room-sunset" class="section-2__room-item">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-5.webp') }}" sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+						<img
+							src="{{ asset('images/stay/section-2/room-5.jpg') }}"
+							alt="{{ 'img.sunset'|trans({}, 'stay')|e('html_attr') }}"
+							width="2914" height="3886"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+					</picture>
+					<h3 class="section-2__room-title">{{ 'room.sunset.title'|trans({}, 'stay') }}</h3>
+				</a>
+			</div>
+			<div class="section-2__room-slide">
+				<a href="{{ path('app_stay') }}#room-panoramic" class="section-2__room-item">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-1.webp') }}" sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+						<img
+							src="{{ asset('images/stay/section-2/room-1.png') }}"
+							alt="{{ 'img.panoramic'|trans({}, 'stay')|e('html_attr') }}"
+							width="1536" height="1024"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 768px) 260px, (max-width: 1080px) 200px, 248px">
+					</picture>
+					<h3 class="section-2__room-title">{{ 'room.panoramic.title'|trans({}, 'stay')|raw }}</h3>
+				</a>
+			</div>
+
+		</div>
+		<div class="section-2__rooms-list">
+			<article class="section-2__room-list-item reverse" id="room-motu">
+				<div class="section-2__room-list-item-image">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-2-big.webp') }}" sizes="(max-width: 991px) 100vw, 50vw">
+						<img
+							src="{{ asset('images/stay/section-2/room-2-big.jpg') }}"
+							loading="lazy" decoding="async"
+							data-aos="fade-up"
+							alt="{{ 'img.motu_big'|trans({}, 'stay')|e('html_attr') }}"
+							width="3876" height="2908"
+							sizes="(max-width: 991px) 100vw, 50vw">
+					</picture>
+				</div>
+				<div class="section-2__room-list-item-content">
+					<h3 class="section-2__room-list-item-title icon-title-red">{{ 'room.motu.title'|trans({}, 'stay') }}</h3>
+					<div class="section-2__room-list-item-text">
+						<h4>{{ 'room.motu.h5'|trans({}, 'stay') }}</h4>
+						<p>{{ 'room.motu.p1'|trans({}, 'stay') }}</p>
+						<br>
+						<p>{{ 'room.motu.p2'|trans({}, 'stay') }}</p>
+					</div>
+					<div class="section-2__room-list-item-subtext">
+						<h5>{{ 'room.occupancy'|trans({}, 'stay') }}</h5>
+						<ul>
+							<li>{{ 'room.motu.li1'|trans({}, 'stay') }}</li>
+							<li>{{ 'room.motu.li2'|trans({}, 'stay') }}</li>
+						</ul>
+					</div>
+					<div class="section-2__room-list-item-button">
+						<a href="https://agilysis.com" class="btn-secondary">{{ 'room.motu.btn'|trans({}, 'stay') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="section-2__room-list-item" id="room-horizon">
+				<div class="section-2__room-list-item-image">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-3-big.webp') }}" sizes="(max-width: 991px) 100vw, 50vw">
+						<img
+							src="{{ asset('images/stay/section-2/room-3-big.jpg') }}"
+							loading="lazy" decoding="async"
+							data-aos="fade-up"
+							alt="{{ 'img.horizon_big'|trans({}, 'stay')|e('html_attr') }}"
+							width="3000" height="4000"
+							sizes="(max-width: 991px) 100vw, 50vw">
+					</picture>
+				</div>
+				<div class="section-2__room-list-item-content">
+					<h3 class="section-2__room-list-item-title icon-title-red">{{ 'room.horizon.title_list'|trans({}, 'stay') }}</h3>
+					<div class="section-2__room-list-item-text">
+						<h4>{{ 'room.horizon.h5'|trans({}, 'stay') }}</h4>
+						<p>{{ 'room.horizon.p1'|trans({}, 'stay')|raw }}</p>
+					</div>
+					<div class="section-2__room-list-item-subtext">
+						<h5>{{ 'room.occupancy'|trans({}, 'stay') }}</h5>
+						<ul>
+							<li>{{ 'room.horizon.li1'|trans({}, 'stay') }}</li>
+						</ul>
+					</div>
+					<div class="section-2__room-list-item-button">
+						<a href="https://agilysis.com" class="btn-secondary">{{ 'room.horizon.btn'|trans({}, 'stay') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="section-2__room-list-item reverse" id="room-otemanu">
+				<div class="section-2__room-list-item-image">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-4-big.webp') }}" sizes="(max-width: 991px) 100vw, 50vw">
+						<img
+							src="{{ asset('images/stay/section-2/room-4-big.png') }}"
+							loading="lazy" decoding="async"
+							data-aos="fade-up"
+							alt="{{ 'img.otemanu_big'|trans({}, 'stay')|e('html_attr') }}"
+							width="1536" height="1024"
+							sizes="(max-width: 991px) 100vw, 50vw">
+					</picture>
+				</div>
+				<div class="section-2__room-list-item-content">
+					<h3 class="section-2__room-list-item-title icon-title-red">{{ 'room.otemanu.title'|trans({}, 'stay') }}</h3>
+					<div class="section-2__room-list-item-text">
+						<h4>{{ 'room.otemanu.h5'|trans({}, 'stay') }}</h4>
+						<p>{{ 'room.otemanu.p1'|trans({}, 'stay') }}</p>
+						<br>
+						<p>{{ 'room.otemanu.p2'|trans({}, 'stay') }}</p>
+					</div>
+					<div class="section-2__room-list-item-subtext">
+						<h5>{{ 'room.occupancy'|trans({}, 'stay') }}</h5>
+						<ul>
+							<li>{{ 'room.otemanu.li1'|trans({}, 'stay') }}</li>
+						</ul>
+					</div>
+					<div class="section-2__room-list-item-button">
+						<a href="https://agilysis.com" class="btn-secondary">{{ 'room.otemanu.btn'|trans({}, 'stay') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="section-2__room-list-item" id="room-sunset">
+				<div class="section-2__room-list-item-image">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-5-big.webp') }}" sizes="(max-width: 991px) 100vw, 50vw">
+						<img
+							src="{{ asset('images/stay/section-2/room-5-big.jpg') }}"
+							loading="lazy" decoding="async"
+							data-aos="fade-up"
+							alt="{{ 'img.sunset_big'|trans({}, 'stay')|e('html_attr') }}"
+							width="2914" height="3886"
+							sizes="(max-width: 991px) 100vw, 50vw">
+					</picture>
+				</div>
+				<div class="section-2__room-list-item-content">
+					<h3 class="section-2__room-list-item-title icon-title-red">{{ 'room.sunset.title'|trans({}, 'stay') }}</h3>
+					<div class="section-2__room-list-item-text">
+						<h4>{{ 'room.sunset.h5'|trans({}, 'stay') }}</h4>
+						<p>{{ 'room.sunset.p1'|trans({}, 'stay') }}</p>
+						<p>{{ 'room.sunset.p2'|trans({}, 'stay') }}</p>
+						<p>{{ 'room.sunset.p3'|trans({}, 'stay') }}</p>
+					</div>
+					<div class="section-2__room-list-item-subtext">
+						<h5>{{ 'room.occupancy'|trans({}, 'stay') }}</h5>
+						<ul>
+							<li>{{ 'room.sunset.li1'|trans({}, 'stay') }}</li>
+						</ul>
+					</div>
+					<div class="section-2__room-list-item-button">
+						<a href="https://agilysis.com" class="btn-secondary">{{ 'room.sunset.btn'|trans({}, 'stay') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="section-2__room-list-item reverse" id="room-panoramic">
+				<div class="section-2__room-list-item-image">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/stay/section-2/room-1-big.webp') }}" sizes="(max-width: 991px) 100vw, 50vw">
+						<img
+							src="{{ asset('images/stay/section-2/room-1-big.png') }}"
+							loading="lazy" decoding="async"
+							data-aos="fade-up"
+							alt="{{ 'img.panoramic_big'|trans({}, 'stay')|e('html_attr') }}"
+							width="1536" height="1024"
+							sizes="(max-width: 991px) 100vw, 50vw">
+					</picture>
+				</div>
+				<div class="section-2__room-list-item-content">
+					<h3 class="section-2__room-list-item-title icon-title-red">{{ 'room.panoramic.title'|trans({}, 'stay')|raw }}</h3>
+					<div class="section-2__room-list-item-text">
+						<h4>{{ 'room.panoramic.h5'|trans({}, 'stay') }}</h4>
+						<p>{{ 'room.panoramic.p1'|trans({}, 'stay') }}</p>
+						<p class="hide-fr">{{ 'room.panoramic.p2'|trans({}, 'stay') }}</p>
+					</div>
+					<div class="section-2__room-list-item-subtext">
+						<h5>{{ 'room.occupancy'|trans({}, 'stay') }}</h5>
+						<ul>
+							<li>{{ 'room.panoramic.li1'|trans({}, 'stay') }}</li>
+							<li>{{ 'room.panoramic.li2'|trans({}, 'stay') }}</li>
+							<li>{{ 'room.panoramic.li3'|trans({}, 'stay') }}</li>
+						</ul>
+					</div>
+					<div class="section-2__room-list-item-button">
+						<a href="https://agilysis.com" class="btn-secondary">{{ 'room.panoramic.btn'|trans({}, 'stay') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</article>
+
+		</div>
+
+	</div>
+</section>

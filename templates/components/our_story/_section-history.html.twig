@@ -1,0 +1,62 @@
+<section class="section-2" aria-labelledby="story-history-heading">
+	<div class="section-2__content">
+		<div class="section-2__left">
+			<h2 id="story-history-heading" class="section-2__title icon-title-red">
+				<div>{{ 's2.title'|trans({}, 'our_story')|raw }}</div>
+			</h2>
+			<div class="section-2__left-content">
+				<div class="section-2__left-content-text">
+					<p>{{ 's2.p1'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's2.p2'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's2.p3'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's2.p4'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's2.p5'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's2.p6'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's2.p7'|trans({}, 'our_story')|raw }}</p>
+				</div>
+				<div class="section-2__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/our-story/section-2/entrance.webp') }}" sizes="(max-width: 991px) 90vw, 45vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/our-story/section-2/entrance.jpg') }}"
+							class="section-2__entrance-signage"
+							alt="{{ 'img.entrance_signage'|trans({}, 'our_story')|e('html_attr') }}"
+							width="2160" height="2700"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 90vw, 45vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-2-bis" aria-labelledby="story-history-bis-heading">
+	<div class="section-2-bis__content">
+		<div class="section-2-bis__left">
+			<div class="section-2-bis__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/our-story/section-2/entrance_2.webp') }}" sizes="(max-width: 991px) 80vw, 40vw">
+					<img
+						data-aos="fade-up" data-aos-delay="200"
+						src="{{ asset('images/our-story/section-2/entrance_2.jpg') }}"
+						class="section-2-bis__sunset"
+						alt="{{ 'img.lagoon_sunset'|trans({}, 'our_story')|e('html_attr') }}"
+						width="2160" height="2700"
+						loading="lazy" decoding="async"
+						sizes="(max-width: 991px) 80vw, 40vw">
+				</picture>
+			</div>
+		</div>
+		<div class="section-2-bis__right">
+			<div class="section-2-bis__text">
+				<p>{{ 's2bis.p1'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's2bis.p2'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's2bis.p3'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's2bis.p4'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's2bis.p5'|trans({}, 'our_story')|raw }}</p>
+			</div>
+		</div>
+	</div>
+</section>

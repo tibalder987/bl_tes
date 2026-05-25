@@ -1,0 +1,39 @@
+<section class="section-3" aria-labelledby="story-spirit-heading">
+	<div class="section-3__content">
+		<div class="section-3__left">
+			<h2 id="story-spirit-heading" class="section-3__title icon-title-red">{{ 's3.title'|trans({}, 'our_story')|raw }}</h2>
+			<div class="section-3__text">
+				<p>{{ 's3.p1'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's3.p2'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's3.p3'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's3.p4'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's3.p5'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's3.p6'|trans({}, 'our_story')|raw }}</p>
+			</div>
+		</div>
+		<div class="section-3__right">
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/our-story/section-3/beach.webp') }}" sizes="(max-width: 991px) 80vw, 35vw">
+				<img
+					data-aos="fade-down" data-aos-delay="200"
+					src="{{ asset('images/our-story/section-3/beach.jpg') }}"
+					class="section-3__lagoon-beach"
+					alt="{{ 'img.lagoon_beach'|trans({}, 'our_story')|e('html_attr') }}"
+					width="861" height="672"
+					loading="lazy" decoding="async"
+					sizes="(max-width: 991px) 80vw, 35vw">
+			</picture>
+			<picture>
+				<source type="image/webp" srcset="{{ asset('images/our-story/section-3/welcome.webp') }}" sizes="(max-width: 991px) 80vw, 35vw">
+				<img
+					data-aos="fade-up" data-aos-delay="400"
+					src="{{ asset('images/our-story/section-3/welcome.jpg') }}"
+					class="section-3__lagoon-boardwalk"
+					alt="{{ 'img.lagoon_boardwalk'|trans({}, 'our_story')|e('html_attr') }}"
+					width="2160" height="2700"
+					loading="lazy" decoding="async"
+					sizes="(max-width: 991px) 80vw, 35vw">
+			</picture>
+		</div>
+	</div>
+</section>

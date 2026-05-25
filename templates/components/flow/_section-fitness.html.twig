@@ -1,0 +1,34 @@
+<section class="section-6" aria-labelledby="flow-fitness-heading">
+	<div class="vertical-arrow">
+		<img src="{{ asset('shapes/vertical-arrow.svg') }}" class="vertical-arrow__icon" alt="" aria-hidden="true">
+		<p>{{ 'arrow.pulse'|trans({}, 'flow') }}</p>
+	</div>
+	<div class="section-6__content">
+		<div class="section-6__left">
+			<h2 id="flow-fitness-heading" class="section-6__title icon-title-red">
+				<div>{{ 's6.title1'|trans({}, 'flow') }}
+					<span>{{ 's6.fitness'|trans({}, 'flow') }}</span>
+				</div>
+			</h2>
+			<div class="section-6__left-content">
+				<div>
+					<p>{{ 's6.p1'|trans({}, 'flow')|raw }}</p>
+					<p>{{ 's6.p2'|trans({}, 'flow')|raw }}</p>
+				</div>
+				<div class="section-6__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/flow/section-6/fitness.webp') }}" sizes="(max-width: 991px) 60vw, 30vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/flow/section-6/fitness.png') }}"
+							class="section-6__treadmill"
+							alt="{{ 'img.fitness'|trans({}, 'flow')|e('html_attr') }}"
+							width="1080" height="1350"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 60vw, 30vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

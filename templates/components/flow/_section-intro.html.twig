@@ -1,0 +1,36 @@
+<section class="section-1 have-animation" aria-labelledby="flow-intro-heading">
+	<div class="section-1__content">
+		<div class="section-1__left">
+			<div class="section-1__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/flow/section-1/water.webp') }}" sizes="(max-width: 991px) 80vw, (max-width: 1430px) 35vw, 500px">
+					<img
+						data-aos="fade-up"
+						src="{{ asset('images/flow/section-1/water.jpg') }}"
+						class="section-1__lagoon-snorkel"
+						alt="{{ 'img.water'|trans({}, 'flow')|e('html_attr') }}"
+						width="1080" height="1350"
+						loading="eager"
+						decoding="async"
+						sizes="(max-width: 991px) 80vw, (max-width: 1430px) 35vw, 500px">
+				</picture>
+			</div>
+		</div>
+		<div class="section-1__right">
+			<h1 id="flow-intro-heading" class="section-1__title">{{ 's1.title_p1'|trans({}, 'flow') }}
+				<span>{{ 's1.title_nothing'|trans({}, 'flow') }}</span>
+				{{ 's1.title_mid'|trans({}, 'flow') }}
+				<span>{{ 's1.title_fixed'|trans({}, 'flow') }}</span>
+			</h1>
+			<div class="section-1__text">
+				<p>{{ 's1.p1'|trans({}, 'flow')|raw }}</p>
+				<p>{{ 's1.p2'|trans({}, 'flow')|raw }}</p>
+			</div>
+			<div class="section-1__subcontent-content">
+				<p class="section-1__subcontent-text">
+					{{ 's1.sub'|trans({}, 'flow')|raw }}
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

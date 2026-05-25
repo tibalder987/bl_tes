@@ -616,7 +616,7 @@
                         }
                     }
                     .section-2__room-list-item-text {
-                        h5 {
+                        h4, h5 {
                             color: $color-green;
                             font-family: $font-epilogue;
                             font-size: 35px;
@@ -662,7 +662,7 @@
                             margin-top: 50px;
                             margin-bottom: 50px;
                         }
-                        h6 {
+                        h5, h6 {
                             color: $color-green;
                             font-family: $font-epilogue;
                             font-size: 25px;

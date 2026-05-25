@@ -1,0 +1,28 @@
+<section class="section-1 have-animation" aria-labelledby="story-origin-heading">
+	<div class="section-1__content">
+		<div class="section-1__left">
+			<div class="section-1__images">
+				<picture>
+					<source type="image/webp" srcset="{{ asset('images/our-story/section-1/jimmy-buffet.webp') }}" sizes="(max-width: 991px) 80vw, (max-width: 1430px) 35vw, 500px">
+					<img
+						data-aos="fade-up"
+						src="{{ asset('images/our-story/section-1/jimmy-buffet.jpg') }}"
+						class="section-1__jimmy-buffet-toast"
+						alt="{{ 'img.jimmy_buffet'|trans({}, 'our_story')|e('html_attr') }}"
+						width="1284" height="1957"
+						loading="eager"
+						decoding="async"
+						sizes="(max-width: 991px) 80vw, (max-width: 1430px) 35vw, 500px">
+				</picture>
+			</div>
+		</div>
+		<div class="section-1__right">
+			<h1 id="story-origin-heading" class="section-1__title">{{ 's1.title'|trans({}, 'our_story')|raw }}</h1>
+			<div class="section-1__text">
+				<p>{{ 's1.p1'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's1.p2'|trans({}, 'our_story')|raw }}</p>
+				<p>{{ 's1.p3'|trans({}, 'our_story')|raw }}</p>
+			</div>
+		</div>
+	</div>
+</section>

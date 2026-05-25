@@ -1,0 +1,39 @@
+<section class="section-2" aria-labelledby="dine-restaurant-heading">
+	<div class="section-2__content">
+		<div class="section-2__left">
+			<h2 id="dine-restaurant-heading" class="section-2__title icon-title-red">
+				<div>{{ 's2.title'|trans({}, 'dine') }}
+					<br>
+					<span>{{ 's2.title_br'|trans({}, 'dine') }}</span>
+				</div>
+			</h2>
+			<div class="section-2__left-content">
+				<div>
+					<p>{{ 's2.p1'|trans({}, 'dine')|raw }}</p>
+					<p>{{ 's2.p2'|trans({}, 'dine') }}</p>
+					<p>{{ 's2.p3'|trans({}, 'dine')|raw }}</p>
+
+					<div class="section-2__left-content-btn">
+						<a href="{{ path('app_contact', { service: 'dine' }) }}" class="btn-primary">{{ 's2.btn'|trans({}, 'dine') }}
+							<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+
+				</div>
+				<div class="section-2__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/dine/section-2/bmr_the_original.webp') }}" sizes="(max-width: 991px) 90vw, 45vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/dine/section-2/bmr_the_original.jpg') }}"
+							class="section-2__bmr-entrance"
+							alt="{{ 'img.terrace'|trans({}, 'dine')|e('html_attr') }}"
+							width="2986" height="3982"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 90vw, 45vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

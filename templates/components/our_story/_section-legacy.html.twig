@@ -1,0 +1,45 @@
+<section class="section-4 have-animation" aria-labelledby="story-legacy-heading">
+	<div class="section-4__content">
+		<div class="section-4__left">
+			<h2 id="story-legacy-heading" class="section-4__title icon-title">
+				<div>{{ 's4.title'|trans({}, 'our_story')|raw }}</div>
+			</h2>
+			<div class="section-4__left-content">
+				<div class="section-4__left-content-text">
+					<p>{{ 's4.p1'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's4.p2'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's4.p3'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's4.p4'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's4.p5'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's4.p6'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's4.p7'|trans({}, 'our_story')|raw }}</p>
+					<p>{{ 's4.p8'|trans({}, 'our_story')|raw }}</p>
+				</div>
+				<div class="section-4__right">
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/our-story/section-4/marilu-henner.webp') }}" sizes="(max-width: 991px) 80vw, 38vw">
+						<img
+							data-aos="fade-down" data-aos-delay="200"
+							src="{{ asset('images/our-story/section-4/marilu-henner.jpg') }}"
+							class="section-4__marilu-henner"
+							alt="{{ 'img.marilu_henner'|trans({}, 'our_story')|e('html_attr') }}"
+							width="4032" height="3024"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 80vw, 38vw">
+					</picture>
+					<picture>
+						<source type="image/webp" srcset="{{ asset('images/our-story/section-4/dining.webp') }}" sizes="(max-width: 991px) 80vw, 38vw">
+						<img
+							data-aos="fade-up" data-aos-delay="400"
+							src="{{ asset('images/our-story/section-4/dining.jpg') }}"
+							class="section-4__sand-floor-dining"
+							alt="{{ 'img.sand_floor_dining'|trans({}, 'our_story')|e('html_attr') }}"
+							width="854" height="1280"
+							loading="lazy" decoding="async"
+							sizes="(max-width: 991px) 80vw, 38vw">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
