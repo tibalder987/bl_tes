@@ -47,12 +47,28 @@
 			<noscript><link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></noscript>
 			{# Preload Balney (custom display font used in headings — critical) #}
 			<link rel="preload" as="font" href="{{ asset('build/fonts/Balney.otf') }}" crossorigin="anonymous" type="font/otf">
-			{% if app.request.attributes.get('_route') == 'app_home_page' %}
-				{# Preload hero image LCP — WebP pour les navigateurs compatibles, fallback JPG #}
+			{% set _route = app.request.attributes.get('_route') %}
+			{% set _hero_preloads = {
+				'app_home_page': 'images/home/hero-section/background',
+				'app_stay':      'images/stay/section-hero/background',
+				'app_dine':      'images/dine/section-hero/background',
+				'app_flow':      'images/flow/section-hero/background',
+				'app_our_story': 'images/our-story/section-hero/background'
+			} %}
+			{% if _hero_preloads[_route] is defined %}
+				{% set _img = _hero_preloads[_route] %}
 				<link rel="preload" as="image"
-					href="{{ asset('images/home/hero-section/background.webp') }}"
-					imagesrcset="{{ asset('images/home/hero-section/background.webp') }}"
+					href="{{ asset(_img ~ '-800.webp') }}"
+					imagesrcset="{{ asset(_img ~ '-800.webp') }}"
+					imagesizes="800px"
+					media="(max-width: 768px)"
+					type="image/webp"
+					fetchpriority="high">
+				<link rel="preload" as="image"
+					href="{{ asset(_img ~ '.webp') }}"
+					imagesrcset="{{ asset(_img ~ '.webp') }}"
 					imagesizes="100vw"
+					media="(min-width: 769px)"
 					type="image/webp"
 					fetchpriority="high">
 			{% endif %}
