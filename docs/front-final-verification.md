@@ -200,7 +200,71 @@ Contrôles : H1 unique, skip-link, imgs alt, imgs sans dimensions, picture/WebP 
 
 | Issue | Pages | Raison | Action |
 |-------|-------|--------|--------|
-| Hero CSS background-image | sejour, savourer, vivre, notre-histoire | CSS design figé — LCP non optimisable sans refactor | Future session |
+| Hero CSS background-image | sejour, savourer, vivre, notre-histoire | CSS design figé — LCP non optimisable sans refactor | Traité en Cycle 9 |
 | `color-contrast` (a11y 91 vivre) | vivre | Couleurs client-validées | Wontfix |
-| Savourer perf 88 | savourer | 7 images + hero CSS background | Amélioration future : convertir hero en `<picture>` |
+| Savourer perf 88 | savourer | 7 images + hero CSS background | Traité en Cycle 9 |
 | Layout overflow (Slick track) | sejour | body.scrollWidth=3035px — masqué par overflow-x:hidden | Pas de scroll visible, pre-existing |
+
+---
+
+## Cycle 9 — LCP/Performance finale (2026-05-24)
+
+### Fixes appliqués
+
+| Problème | Fix | Commits |
+|----------|-----|---------|
+| Hero CSS `background-image` (dine, our-story) | Converti en `<picture><img fetchpriority="high">` | 04fae837 |
+| Hero CSS `background-image` (stay, flow) | Même conversion | b6319f85 |
+| Images hero trop lourdes sur mobile (231–324KB) | WebP 800px : 43–102KB via `<source media="(max-width:768px)">` | 3d09973a |
+| Home hero sans variante mobile | WebP 800px (40KB vs 130KB) | c9a3599b |
+| Pas de preload hero dans `<head>` | `<link rel="preload" as="image">` par route dans base.html.twig | 7cf589e4 |
+
+### Lighthouse Mobile — run final post-deploy (2026-05-24, Lighthouse 13.3.0)
+
+| Page | Perf | A11y | BP | SEO | LCP | CLS | TBT |
+|------|------|------|----|-----|-----|-----|-----|
+| /fr/ | **92** | 100 | 100 | 100 | 2.94 s | 0.002 | 5 ms |
+| /fr/sejour | **86** | 100 | 100 | 100 | 4.06 s | 0.003 | 4 ms |
+| /fr/savourer | **88** | 100 | 100 | 100 | 3.86 s | 0.001 | 4 ms |
+| /fr/vivre | **92** | 100 | 100 | 100 | 3.26 s | 0.001 | 0 ms |
+| /fr/notre-histoire | **87** | 100 | 100 | 100 | 3.72 s | 0.004 | 1 ms |
+| /fr/a-savoir | **97** | 97 | 100 | 100 | 2.44 s | 0.002 | 6 ms |
+
+### Lighthouse Desktop — run final post-deploy (2026-05-24, preset=desktop)
+
+| Page | Perf | A11y | BP | SEO | LCP | CLS | TBT |
+|------|------|------|----|-----|-----|-----|-----|
+| /fr/ | **99** | 100 | 100 | 100 | 0.82 s | 0.001 | 0 ms |
+| /fr/sejour | **95** | 100 | 100 | 100 | 1.22 s | 0.007 | 0 ms |
+| /fr/savourer | **97** | 100 | 100 | 100 | 1.17 s | 0.003 | 0 ms |
+| /fr/vivre | **98** | 96 | 100 | 100 | 0.89 s | 0.003 | 0 ms |
+| /fr/notre-histoire | **98** | 100 | 100 | 100 | 1.01 s | 0.008 | 0 ms |
+| /fr/a-savoir | **99** | 97 | 100 | 100 | 0.60 s | 0.001 | 0 ms |
+
+**Fichiers** : `docs/qa/lighthouse/{page}-mobile.json` et `{page}-desktop.json`
+
+### Vérification conformité graphisme — Production vs Référence client
+
+**Référence validée** : https://bloody-marys.application-proxi.com/fr/  
+**Production** : https://bltes-production.up.railway.app/fr/  
+**Date vérification** : 2026-05-24
+
+| Page | Contenu identique | Structure sections | Navigation | Verdict |
+|------|------------------|--------------------|-----------|---------|
+| /fr/ | ✓ | ✓ | ✓ | Conforme |
+| /fr/sejour | ✓ | ✓ | ✓ | Conforme |
+| /fr/savourer | ✓ | ✓ | ✓ | Conforme |
+| /fr/vivre | ✓ | ✓ | ✓ | Conforme |
+| /fr/notre-histoire | ✓ | ✓ | ✓ | Conforme |
+| /fr/a-savoir | ✓ | ✓ | ✓ | Conforme |
+
+**Note sémantique** : La production a une hiérarchie H1→H2→H3 correcte sur toutes les pages. La référence client utilise H3 direct sans H1 sur les pages internes — la production est sémantiquement supérieure sans altérer le design validé.
+
+### Issues résiduelles (connues, non bloquantes)
+
+| Issue | Pages | Raison | Action |
+|-------|-------|--------|--------|
+| `color-contrast` (a11y 96 vivre) | vivre | Couleurs client-validées | Wontfix |
+| Layout overflow (Slick track) | sejour | Masqué par overflow-x:hidden, pas de scroll visible | Pre-existing |
+| JavaScript bundle jQuery/Slick/Bootstrap | global | Architecture existante — tous utilisés | Hors scope graphisme |
+| LCP mobile 4.06s sejour | sejour | Slick carousel + TTFB Railway sans CDN | Acceptable sans CDN |

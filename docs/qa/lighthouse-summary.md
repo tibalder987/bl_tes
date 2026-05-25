@@ -1,82 +1,68 @@
-# Lighthouse Audit Summary
-**Branch**: autonomous-front-hardening  
-**URL audited**: https://bltes-production.up.railway.app/fr/  
+# Lighthouse Audit Summary — Final
+**Branch**: main  
+**URL**: https://bltes-production.up.railway.app  
 **Date**: 2026-05-24  
-**Lighthouse version**: 13.3.0  
-**Note**: Scores reflect **current production** (main branch). Branch improvements pending deployment.
+**Lighthouse**: 13.3.0  
 
-## Scores
+---
 
-| Category       | Mobile | Desktop |
-|----------------|--------|---------|
-| Performance    | 53     | 55      |
-| Accessibility  | 96     | 92      |
-| Best Practices | 81     | 81      |
-| SEO            | 100    | 100     |
+## Mobile (throttling simulé : 150ms RTT, 1 638 Kbps, CPU ×4, 390×844 px)
 
-## Mobile Key Metrics
+| Page | Perf | A11y | BP | SEO | LCP | CLS | TBT |
+|------|------|------|----|-----|-----|-----|-----|
+| /fr/ | **92** | 100 | 100 | 100 | 2.94 s | 0.002 | 5 ms |
+| /fr/sejour | **86** | 100 | 100 | 100 | 4.06 s | 0.003 | 4 ms |
+| /fr/savourer | **88** | 100 | 100 | 100 | 3.86 s | 0.001 | 4 ms |
+| /fr/vivre | **92** | 100 | 100 | 100 | 3.26 s | 0.001 | 0 ms |
+| /fr/notre-histoire | **87** | 100 | 100 | 100 | 3.72 s | 0.004 | 1 ms |
+| /fr/a-savoir | **97** | 97 | 100 | 100 | 2.44 s | 0.002 | 6 ms |
 
-| Metric                       | Value   |
-|------------------------------|---------|
-| First Contentful Paint (FCP) | 7.3 s   |
-| Speed Index (SI)             | 16.8 s  |
-| Largest Contentful Paint (LCP)| 30.8 s |
-| Time to Interactive (TTI)    | 30.8 s  |
-| Total Blocking Time (TBT)    | 160 ms  |
-| Cumulative Layout Shift (CLS)| 0       |
+**Moyenne Performance mobile : 90/100**
 
-## Desktop Key Metrics
+---
 
-| Metric                       | Value   |
-|------------------------------|---------|
-| First Contentful Paint (FCP) | 6.5 s   |
-| Speed Index (SI)             | 13.9 s  |
-| Largest Contentful Paint (LCP)| 22.2 s |
-| Time to Interactive (TTI)    | 27.6 s  |
-| Total Blocking Time (TBT)    | 80 ms   |
-| Cumulative Layout Shift (CLS)| 0.001   |
+## Desktop (preset=desktop : 40ms RTT, 10 Mbps, 1 340×900 px)
 
-## Performance Blockers (current production)
+| Page | Perf | A11y | BP | SEO | LCP | CLS | TBT |
+|------|------|------|----|-----|-----|-----|-----|
+| /fr/ | **99** | 100 | 100 | 100 | 0.82 s | 0.001 | 0 ms |
+| /fr/sejour | **95** | 100 | 100 | 100 | 1.22 s | 0.007 | 0 ms |
+| /fr/savourer | **97** | 100 | 100 | 100 | 1.17 s | 0.003 | 0 ms |
+| /fr/vivre | **98** | 96 | 100 | 100 | 0.89 s | 0.003 | 0 ms |
+| /fr/notre-histoire | **98** | 100 | 100 | 100 | 1.01 s | 0.008 | 0 ms |
+| /fr/a-savoir | **99** | 97 | 100 | 100 | 0.60 s | 0.001 | 0 ms |
 
-| Issue                        | Est. Saving |
-|------------------------------|-------------|
-| Render-blocking resources    | 6,080 ms    |
-| Unminified CSS               | 980 KiB     |
-| Unminified JavaScript        | 2,190 KiB   |
-| Unused CSS rules             | 1,368 KiB   |
-| Unused JavaScript            | 546 KiB     |
-| Image delivery (no WebP)     | 1,715 KiB   |
-| Total page weight            | 19,306 KiB  |
+**Moyenne Performance desktop : 97.7/100**
 
-## Accessibility Failures (current production, mobile)
+---
 
-| Rule                       | Status | Fix Applied |
-|----------------------------|--------|-------------|
-| link-name (logo link)      | FAIL   | ✓ aria-label added in this branch |
-| label-content-name-mismatch| FAIL   | ✓ aria-label removed from guests btn |
-| color-contrast             | PASS   | n/a         |
+## Résumé par catégorie (6 pages)
 
-## Accessibility Failures (current production, desktop)
+| Catégorie | Mobile min | Mobile moy | Desktop min | Desktop moy |
+|-----------|-----------|------------|-------------|-------------|
+| Performance | 86 | **90** | 95 | **97.7** |
+| Accessibility | 97 | **99.5** | 96 | **98.8** |
+| Best Practices | 100 | **100** | 100 | **100** |
+| SEO | 100 | **100** | 100 | **100** |
 
-| Rule                       | Status | Fix Applied |
-|----------------------------|--------|-------------|
-| color-contrast             | FAIL   | Not fixable from code (inline styles?) |
-| link-name (logo link)      | FAIL   | ✓ Fixed in this branch |
-| label-content-name-mismatch| FAIL   | ✓ Fixed in this branch |
+---
 
-## Best Practices Failures
+## Contexte technique
 
-| Rule                       | Status | Notes |
-|----------------------------|--------|-------|
-| paste-preventing-inputs    | FAIL   | Caused by Selectize.js (newsletter country) — third-party library |
-| image-aspect-ratio         | FAIL   | ✓ Fixed in this branch (chicago_1999, sunset) |
-| errors-in-console          | FAIL   | section-7.mp4 missing from production — video file needed |
+- **Hébergement** : Railway (serveur unique, pas de CDN)
+- **Images hero** : `<img fetchpriority="high">` + WebP 800px pour mobile (<source media="(max-width:768px)">)
+- **Preloads** : `<link rel="preload" as="image">` par route dans `<head>`
+- **A11y 97 (a-savoir)** : contraste non bloquant, wontfix (décision client)
+- **A11y 96 (vivre)** : contraste client-validé, wontfix
+- **LCP mobile sejour 4.06s** : Slick carousel images + TTFB Railway sans CDN — pas de scroll visible, acceptable
+- **JSON bruts** : `docs/qa/lighthouse/{page}-mobile.json` et `{page}-desktop.json`
 
-## Branch Improvements Not Yet Deployed
+---
 
-These changes in `autonomous-front-hardening` should improve scores after merge:
+## Historique
 
-- **Accessibility** → estimated 99+ mobile (link-name, label-mismatch, SVG dimensions fixed)
-- **Best Practices** → estimated 88+ (aspect-ratio fixed)
-- **Performance** → estimated +5-10 pts (FA deferred, WebP for 10+ images, hero preloaded)
-- **SEO** → 100 (already)
+| Date | Événement | Perf mobile /fr | Perf desktop /fr |
+|------|-----------|-----------------|------------------|
+| 2026-05-23 | Pre-deploy (build dev non minifié) | 53 | 55 |
+| 2026-05-24 matin | Post-deploy Cycle 7 (home optimisée) | 87 | 99 |
+| 2026-05-24 soir | Post-deploy Cycle 9 (hero img + WebP 800px + preloads) | **92** | **99** |
